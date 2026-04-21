@@ -66,7 +66,7 @@ export const SERVICES: Record<ServiceKey, {
       "Kontorsanpassning med kvarvarande hyresgäst",
       "Nyproduktion flerbostadshus",
       "Restaurering av kulturbyggnader",
-      "Projektering in-house och via konsultnätverk",
+      "Projektering internt och via konsultnätverk",
     ],
     icon: "bygg",
   },
@@ -139,7 +139,7 @@ export const PROJECTS: Project[] = [
     category: "Bygg",
     type: "Totalentreprenad",
     summary:
-      "Total­ombyggnad av flera våningsplan omfattande 3 000 kvm kontorsanpassningar, nya personalkök, wc-grupper och omklädningsrum. Samtliga discipliner levererade in-house: bygg, VS, vent, styr, el och målning.",
+      "Total­ombyggnad av flera våningsplan omfattande 3 000 kvm kontorsanpassningar, nya personalkök, wc-grupper och omklädningsrum. Samtliga discipliner levererade i egen regi: bygg, VS, ventilation och styr, el samt målning.",
     challenges:
       "Samtliga arbeten utfördes med kvarvarande hyresgäster i direkt anslutning till arbetsområdet. Krävde minutiös logistik kring nytt material och avfall — inga driftstörningar accepterades.",
     image: "/projekt/foretag_4.webp",
@@ -228,7 +228,7 @@ export const PROJECTS: Project[] = [
     type: "Utförandeentreprenad",
     summary:
       "Schakt, grundläggning, ledningsarbeten och finplanering för skolbyggnad. Utfört i etapp med Skanska som generalentreprenör.",
-    challenges: "Koordinering mot Skanskas parallella produktion och hårda deadlines kring skolstart.",
+    challenges: "Samordning mot Skanskas parallella produktion och hårda tidsfrister kring skolstart.",
     featured: false,
   },
   {
