@@ -1,0 +1,90 @@
+---
+import { SITE } from "../lib/site";
+
+const nav = [
+  { href: "/tjanster", label: "Tjänster" },
+  { href: "/projekt", label: "Referensprojekt" },
+  { href: "/om-oss", label: "Om oss" },
+  { href: "/kontakt", label: "Kontakt" },
+];
+
+const path = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-40 bg-[color:var(--color-paper)]/80 backdrop-blur-md border-b border-[color:var(--color-ink-10)]">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 h-16 lg:h-20 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3" aria-label={SITE.name}>
+      <img src="/logo.svg" alt={SITE.name} class="h-9 lg:h-11 w-auto" />
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-8" aria-label="Huvudnavigation">
+      {
+        nav.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              "text-sm font-medium transition-colors hover:text-[color:var(--color-brand-red)]",
+              path.startsWith(item.href) ? "text-[color:var(--color-brand-red)]" : "text-[color:var(--color-ink)]",
+            ]}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a
+        href={`tel:${SITE.phoneDisplay.replace(/\s/g, "")}`}
+        class="hidden md:inline-flex items-center text-sm font-medium text-[color:var(--color-ink)] hover:text-[color:var(--color-brand-red)] transition-colors"
+      >
+        {SITE.phoneDisplay}
+      </a>
+      <a
+        href="/kontakt"
+        class="inline-flex items-center gap-2 bg-[color:var(--color-ink)] text-white px-4 lg:px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-[color:var(--color-brand-red)] transition-colors"
+      >
+        Begär offert
+      </a>
+      <button
+        id="mobile-menu-btn"
+        class="lg:hidden p-2 -mr-2"
+        aria-label="Öppna meny"
+        aria-expanded="false"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="lg:hidden hidden border-t border-[color:var(--color-ink-10)] bg-[color:var(--color-paper)]">
+    <nav class="px-6 py-4 flex flex-col gap-4" aria-label="Mobilnavigation">
+      {
+        nav.map((item) => (
+          <a
+            href={item.href}
+            class="text-base font-medium py-2 border-b border-[color:var(--color-ink-10)] last:border-0"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+      <a href={`tel:${SITE.phoneDisplay.replace(/\s/g, "")}`} class="text-base font-semibold text-[color:var(--color-brand-red)] py-2">
+        {SITE.phoneDisplay}
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  btn?.addEventListener("click", () => {
+    const open = menu?.classList.toggle("hidden");
+    btn.setAttribute("aria-expanded", open ? "false" : "true");
+  });
+</script>

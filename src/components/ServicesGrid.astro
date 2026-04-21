@@ -1,0 +1,54 @@
+---
+import { SERVICES } from "../lib/site";
+
+const iconMap: Record<string, string> = {
+  mark: `<path d="M3 20h18M3 20l4-8 4 4 3-6 3 3 3-5 3 4"/>`,
+  bygg: `<path d="M3 21V8l9-5 9 5v13M9 21v-7h6v7M3 21h18"/>`,
+  el: `<path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/>`,
+  fasad: `<path d="M4 21V5a2 2 0 012-2h12a2 2 0 012 2v16M4 21h16M8 8h2M8 12h2M8 16h2M14 8h2M14 12h2M14 16h2"/>`,
+};
+---
+
+<section class="py-20 lg:py-32 bg-[color:var(--color-paper)]">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10">
+    <div class="max-w-3xl mb-16 lg:mb-20">
+      <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">Tjänster</p>
+      <h2 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight mb-6">
+        Fyra discipliner. Ett ansvar.
+      </h2>
+      <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+        Vi täcker hela entreprenadkedjan in-house, från mark under fasaden till ljuset i taket.
+        Det gör att vi kan styra kvalitet, tid och budget utan mellanhänder.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4 lg:gap-6">
+      {
+        Object.values(SERVICES).map((service, idx) => (
+          <a
+            href={`/tjanster/${service.slug}`}
+            class="group relative p-8 lg:p-10 bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500"
+          >
+            <div class="flex items-start justify-between mb-12">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="text-[color:var(--color-brand-red)]" aria-hidden="true" set:html={iconMap[service.icon]}>
+              </svg>
+              <span class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 transition-colors">
+                0{idx + 1}
+              </span>
+            </div>
+            <h3 class="text-2xl lg:text-3xl font-semibold mb-3 tracking-tight">{service.title}</h3>
+            <p class="text-[color:var(--color-ink-60)] group-hover:text-white/70 transition-colors leading-relaxed mb-6">
+              {service.short}
+            </p>
+            <span class="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--color-brand-red)] group-hover:text-white transition-colors">
+              Läs mer
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="transition-transform group-hover:translate-x-1" aria-hidden="true">
+                <path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

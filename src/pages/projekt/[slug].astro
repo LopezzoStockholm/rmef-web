@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { PROJECTS, SITE } from "../../lib/site";
+
+export function getStaticPaths() {
+  return PROJECTS.map((p) => ({
+    params: { slug: p.slug },
+    props: { project: p },
+  }));
+}
+
+const { project } = Astro.props;
+
+const projectSchema = {
+  "@context": "https://schema.org",
+  "@type": "Project",
+  name: project.title,
+  description: project.summary,
+  provider: { "@id": `${SITE.url}/#organization` },
+  client: project.client,
+  url: `${SITE.url}/projekt/${project.slug}`,
+};
+---
+
+<BaseLayout
+  title={project.title}
+  description={project.summary.slice(0, 155)}
+  schema={projectSchema}
+>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-16">
+      <div class="mx-auto max-w-5xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <a href="/projekt" class="hover:text-[color:var(--color-brand-red)]">Referensprojekt</a>
+          <span class="mx-2">/</span>
+          <span>{project.title}</span>
+        </nav>
+
+        <span class="text-xs uppercase tracking-wider bg-[color:var(--color-brand-red)] text-white px-3 py-1 rounded-full font-semibold">
+          {project.category}
+        </span>
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight mt-6 mb-8">
+          {project.title}
+        </h1>
+
+        <dl class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 border-t border-[color:var(--color-ink-10)]">
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Kund</dt>
+            <dd class="text-base font-semibold">{project.client}</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Volym</dt>
+            <dd class="text-base font-semibold">{project.volume}</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Period</dt>
+            <dd class="text-base font-semibold">{project.period}</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Entreprenadform</dt>
+            <dd class="text-base font-semibold">{project.type}</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20">
+      <div class="mx-auto max-w-5xl px-6 lg:px-10">
+        <div class="aspect-[16/9] bg-gradient-to-br from-[color:var(--color-steel)] to-[#1a1a1a] rounded-3xl relative overflow-hidden mb-12">
+          <div class="absolute inset-0 flex items-center justify-center opacity-10" aria-hidden="true">
+            <svg width="400" height="400" viewBox="0 0 96 96" fill="none" stroke="white" stroke-width="0.5">
+              <path d="M8 80h80M12 80V40l20-16 20 16v40M52 80V32l20-16 12 10v54M20 80V56h12v24M60 80V48h12v32M24 48h4M24 60h4M64 56h4M64 64h4"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="prose prose-lg max-w-3xl">
+          <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-6">Uppdraget</h2>
+          <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-12">
+            {project.summary}
+          </p>
+
+          {project.challenges && (
+            <>
+              <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-6">Utmaningar</h2>
+              <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+                {project.challenges}
+              </p>
+            </>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>

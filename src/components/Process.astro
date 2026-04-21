@@ -1,0 +1,59 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Dialog & förstudie",
+    body: "Vi lyssnar på era krav, analyserar underlag och tar fram en realistisk tid- och kostnadsram. En kontaktperson från start till kontraktsskrivning.",
+  },
+  {
+    number: "02",
+    title: "Projektering",
+    body: "Egen och extern projektörskompetens. Vi tar fram de handlingar ni behöver — eller utgår från era — och löser gränssnitten innan vi lyfter spaden.",
+  },
+  {
+    number: "03",
+    title: "Produktion",
+    body: "One Point of Entry — en projektledare genom hela utförandet. KMA-plan anpassad för ert projekt, tydliga veckoavstämningar, dokumenterade egenkontroller.",
+  },
+  {
+    number: "04",
+    title: "Överlämning & förvaltning",
+    body: "Vi lämnar över en driftklar anläggning med kompletta egenkontroller, relationsritningar och instruktioner. Garantibesiktning vid 2 och 5 år.",
+  },
+];
+---
+
+<section class="py-20 lg:py-32 bg-[color:var(--color-paper)]">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10">
+    <div class="grid lg:grid-cols-3 gap-12 lg:gap-20">
+      <div class="lg:sticky lg:top-32 lg:self-start">
+        <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">Så jobbar vi</p>
+        <h2 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight mb-6">
+          One Point of Entry.
+        </h2>
+        <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+          En kontakt under upphandlingen, en projektledare under utförandet. Inga överlämningar,
+          inga försvunna ansvar.
+        </p>
+      </div>
+
+      <div class="lg:col-span-2 space-y-4">
+        {
+          steps.map((step) => (
+            <div class="group p-8 lg:p-10 bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-paper-2)]/70 transition-colors">
+              <div class="flex items-start gap-6">
+                <span class="text-4xl lg:text-5xl font-semibold text-[color:var(--color-brand-red)] tracking-tighter leading-none min-w-[80px]">
+                  {step.number}
+                </span>
+                <div>
+                  <h3 class="text-xl lg:text-2xl font-semibold mb-3 tracking-tight">{step.title}</h3>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">{step.body}</p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import ServicesGrid from "../components/ServicesGrid.astro";
+import FeaturedProjects from "../components/FeaturedProjects.astro";
+import Process from "../components/Process.astro";
+import CTA from "../components/CTA.astro";
+import { SITE } from "../lib/site";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Vad kostar det att bygga en totalentreprenad med RM?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Det beror på projektets omfattning. Kontorsanpassningar landar ofta mellan 5 000–15 000 kr/kvm, fasadrenoveringar mellan 1 500–3 000 kr/kvm fasadyta. Vi ger fast pris efter att ha sett era handlingar.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Vilka typer av projekt tar RM Entreprenad & Fasad?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Totalentreprenader och utförandeentreprenader inom mark, bygg, el och fasad. Vi arbetar främst B2B med fastighetsägare, kommuner, byggherrar och generalentreprenörer. Projekt från 3 Mkr och uppåt.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Arbetar ni utanför Stockholm?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Vårt kontor ligger i Stockholm men vi arbetar rikstäckande. Vi har gjort större projekt i Mälardalen, på Lidingö, i Sigtuna, Knivsta och Norrtälje.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Hur snabbt kan ni starta ett projekt?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Efter godkänd offert kan vi vanligen starta inom 4–8 veckor, beroende på projektets storlek och bemanningsbehov. Akuta insatser hanteras snabbare.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Har ni egen personal eller använder ni underentreprenörer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Båda. Vi har kärnkompetens in-house inom bygg, mark och el, plus ett brett nätverk av kvalitetssäkrade underentreprenörer. Det gör att vi kan anpassa bemanningen exakt efter projektet.",
+      },
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title={SITE.defaultTitle}
+  description={SITE.defaultDescription}
+  schema={faqSchema}
+>
+  <Hero />
+  <ServicesGrid />
+  <FeaturedProjects />
+  <Process />
+  <CTA />
+</BaseLayout>

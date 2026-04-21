@@ -1,0 +1,75 @@
+---
+import { SITE } from "../lib/site";
+import { SERVICES } from "../lib/site";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-[color:var(--color-ink)] text-white mt-24">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 py-16 lg:py-24">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+      <div class="col-span-2 lg:col-span-1">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center">
+            <span class="text-[color:var(--color-brand-red)] font-bold text-base">RM</span>
+          </div>
+          <span class="font-semibold text-sm">RM Entreprenad<br />& Fasad AB</span>
+        </div>
+        <p class="text-sm text-white/60 leading-relaxed">
+          Totalentreprenader i Stockholm. Mark, bygg, el och fasad — en kontakt hela vägen.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-wider text-white/40 mb-4">Tjänster</h3>
+        <ul class="space-y-3 text-sm">
+          {
+            Object.values(SERVICES).map((s) => (
+              <li>
+                <a href={`/tjanster/${s.slug}`} class="text-white/80 hover:text-[color:var(--color-brand-red)] transition-colors">
+                  {s.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-wider text-white/40 mb-4">Företag</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/projekt" class="text-white/80 hover:text-[color:var(--color-brand-red)] transition-colors">Referensprojekt</a></li>
+          <li><a href="/om-oss" class="text-white/80 hover:text-[color:var(--color-brand-red)] transition-colors">Om oss</a></li>
+          <li><a href="/kontakt" class="text-white/80 hover:text-[color:var(--color-brand-red)] transition-colors">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-wider text-white/40 mb-4">Kontakt</h3>
+        <ul class="space-y-3 text-sm">
+          <li>
+            <a href={`tel:${SITE.phoneDisplay.replace(/\s/g, "")}`} class="text-white/80 hover:text-[color:var(--color-brand-red)] transition-colors">
+              {SITE.phoneDisplay}
+            </a>
+          </li>
+          <li>
+            <a href={`mailto:${SITE.email}`} class="text-white/80 hover:text-[color:var(--color-brand-red)] transition-colors">
+              {SITE.email}
+            </a>
+          </li>
+          <li class="text-white/60">
+            {SITE.address.city}, Sverige
+          </li>
+          <li class="text-white/40 text-xs pt-2">
+            Org.nr {SITE.orgNumber}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-4 text-xs text-white/40">
+      <p>© {year} {SITE.name}. Alla rättigheter förbehållna.</p>
+      <p>En kontakt — från projektering till driftklar anläggning.</p>
+    </div>
+  </div>
+</footer>

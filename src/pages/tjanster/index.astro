@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { SERVICES } from "../../lib/site";
+---
+
+<BaseLayout
+  title="Tjänster"
+  description="Totalentreprenader inom mark, bygg, el och fasad. RM Entreprenad & Fasad täcker hela entreprenadkedjan in-house — från grundläggning till färdig fasad."
+>
+  <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">Tjänster</p>
+      <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+        Fyra discipliner som pratar med varandra från start.
+      </h1>
+      <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+        Vi är inte en generalentreprenör som köper in allt externt. Kärnan i varje område ligger hos oss —
+        det gör att vi äger kvalitet, tid och gränssnitt från dag ett.
+      </p>
+    </div>
+  </section>
+
+  <section class="pb-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 space-y-6">
+      {
+        Object.values(SERVICES).map((service, idx) => (
+          <article class="grid lg:grid-cols-5 gap-8 lg:gap-12 p-8 lg:p-12 bg-[color:var(--color-paper-2)] rounded-3xl">
+            <div class="lg:col-span-2">
+              <span class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] font-semibold">0{idx + 1}</span>
+              <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mt-4 mb-6">{service.title}</h2>
+              <p class="text-[color:var(--color-ink-60)] leading-relaxed">{service.long}</p>
+            </div>
+            <div class="lg:col-span-3">
+              <ul class="space-y-3">
+                {service.bullets.map((b) => (
+                  <li class="flex items-start gap-3 text-[color:var(--color-ink)]">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="mt-0.5 flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+                      <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+                      <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="leading-relaxed">{b}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href={`/tjanster/${service.slug}`} class="inline-flex items-center gap-2 mt-8 text-sm font-semibold text-[color:var(--color-brand-red)] hover:gap-3 transition-all">
+                Läs mer om {service.title.toLowerCase()}
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>

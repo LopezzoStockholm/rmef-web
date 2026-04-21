@@ -1,0 +1,124 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+
+const team = [
+  { name: "Daniel Lopez", role: "VD", bio: "Affärsutveckling och koncernstruktur. Bakgrund inom juridik, fastighets- och markutveckling." },
+  { name: "Mattias Bylund", role: "Operativ chef", bio: "Daglig drift, kundkontakt, leverans." },
+  { name: "Alexandra Eriksson Antfolk", role: "Controller", bio: "KPI-uppföljning, kvalitetssäkring, ekonomistyrning." },
+  { name: "Janne", role: "Projektchef Mark & betong", bio: "Kalkyl och genomförande av mark- och anläggningsprojekt." },
+  { name: "Putte", role: "Försäljning & byggprojekt", bio: "Kundkontakt och byggsida." },
+  { name: "Erik Bylund", role: "Projektingenjör", bio: "Kalkyl och projektering." },
+];
+
+const values = [
+  {
+    title: "Helhetsansvar",
+    body: "Vi tar ansvar för hela processen. Inga \"det är inte mitt område\" — vi löser det som behöver lösas.",
+  },
+  {
+    title: "Leverantörsoberoende",
+    body: "Vi är inte bundna till specifika leverantörer, vilket låter oss handplocka bästa möjliga lösning för varje projekt.",
+  },
+  {
+    title: "Snabb och flexibel",
+    body: "Korta beslutsvägar. När ni ringer pratar ni med någon som kan fatta beslut — inte någon som måste återkomma.",
+  },
+  {
+    title: "Bevisad kvalitet",
+    body: "Vi arbetar med beställare som har höga krav på säkerhet och precision: sjukhus, datahallar, K-märkta byggnader.",
+  },
+];
+---
+
+<BaseLayout
+  title="Om oss"
+  description="RM Entreprenad & Fasad AB är ett Stockholmsbaserat entreprenadbolag med djup erfarenhet från komplexa projekt. 96 % soliditet, VD Daniel Lopez."
+>
+  <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">Om RM Entreprenad & Fasad</p>
+      <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+        Entreprenörskap med fötterna i marken och ansvar hela vägen upp.
+      </h1>
+      <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+        RM Entreprenad & Fasad AB är byggt kring ett team med lång erfarenhet av komplexa entreprenader —
+        från grundläggning för hela kvarter åt Stockholmshem till lyft av K-märkta byggnader på Lidingö.
+        Vi arbetar B2B med professionella beställare som värderar kvalitet, kommunikation och leverans i tid.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-24 bg-[color:var(--color-paper-2)]">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-12">I siffror</h2>
+      <dl class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div>
+          <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Nettoomsättning</dt>
+          <dd class="text-3xl lg:text-4xl font-semibold">14,7 Mkr</dd>
+          <p class="text-sm text-[color:var(--color-ink-60)] mt-1">senaste räkenskapsåret</p>
+        </div>
+        <div>
+          <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Soliditet</dt>
+          <dd class="text-3xl lg:text-4xl font-semibold">96 %</dd>
+          <p class="text-sm text-[color:var(--color-ink-60)] mt-1">stark balansräkning</p>
+        </div>
+        <div>
+          <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Största projekt</dt>
+          <dd class="text-3xl lg:text-4xl font-semibold">75 Mkr</dd>
+          <p class="text-sm text-[color:var(--color-ink-60)] mt-1">Stockholmshem / Kv Persikan</p>
+        </div>
+        <div>
+          <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Erfarenhet</dt>
+          <dd class="text-3xl lg:text-4xl font-semibold">15+ år</dd>
+          <p class="text-sm text-[color:var(--color-ink-60)] mt-1">i kärnteamet</p>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="grid lg:grid-cols-3 gap-12 lg:gap-20">
+        <div>
+          <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">Värderingar</p>
+          <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-6">Det här står vi för.</h2>
+        </div>
+        <div class="lg:col-span-2 grid sm:grid-cols-2 gap-8">
+          {
+            values.map((v) => (
+              <div>
+                <h3 class="text-xl font-semibold mb-3 tracking-tight">{v.title}</h3>
+                <p class="text-[color:var(--color-ink-60)] leading-relaxed">{v.body}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-32 bg-[color:var(--color-paper-2)]">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">Teamet</p>
+      <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-16">Människor bakom projekten.</h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          team.map((m) => (
+            <div class="bg-[color:var(--color-paper)] rounded-2xl p-8">
+              <div class="w-16 h-16 rounded-full bg-[color:var(--color-ink)] text-white flex items-center justify-center text-xl font-semibold mb-6">
+                {m.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+              </div>
+              <h3 class="text-lg font-semibold tracking-tight">{m.name}</h3>
+              <p class="text-sm text-[color:var(--color-brand-red)] font-medium mb-3">{m.role}</p>
+              <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">{m.bio}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>
