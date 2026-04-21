@@ -21,7 +21,7 @@ const {
   schema,
 } = Astro.props;
 
-const fullTitle = title === SITE.defaultTitle ? title : `${title} — ${SITE.shortName}`;
+const fullTitle = title === SITE.defaultTitle ? title : `${title}, ${SITE.shortName}`;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? SITE.url).toString();
 const ogImage = new URL(image, Astro.site ?? SITE.url).toString();
 
