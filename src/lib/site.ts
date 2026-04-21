@@ -7,7 +7,7 @@ export const SITE = {
   defaultDescription:
     "RM Entreprenad & Fasad AB levererar totalentreprenader inom mark, bygg, el och fasad i Stockholm. Hög kvalitet, leverantörsoberoende, One Point of Entry.",
   orgNumber: "559251-1462",
-  phone: "+4687128757 00",
+  phone: "+468128757 00",
   phoneDisplay: "08-12 87 57 00",
   email: "info@rmef.se",
   whatsapp: "+46871287570",
@@ -95,7 +95,22 @@ export const SERVICES: Record<ServiceKey, {
   },
 };
 
-export const PROJECTS = [
+export interface Project {
+  slug: string;
+  title: string;
+  client: string;
+  volume: string;
+  period: string;
+  category: "Mark & anläggning" | "Bygg" | "El" | "Fasad";
+  type: string;
+  summary: string;
+  challenges?: string;
+  image: string;
+  imageAlt: string;
+  featured: boolean;
+}
+
+export const PROJECTS: Project[] = [
   {
     slug: "kvarteret-persikan",
     title: "Kvarteret Persikan",
@@ -105,9 +120,11 @@ export const PROJECTS = [
     category: "Mark & anläggning",
     type: "Utförandeentreprenad",
     summary:
-      "Grundläggning för 152 lägenheter, ICA-butik och förskola på Södermalm. Schakt, bottenplatta, skyddsrum, platsgjutna källarväggar, ledningsarbeten.",
+      "Grundläggning för 152 lägenheter, ICA-butik och förskola på Södermalm. Schakt, bottenplatta, skyddsrum, platsgjutna källarväggar, ledningsarbeten, isodrän och tätskikt.",
     challenges:
-      "Omfattande projekt med pressad tidplan och små APD-ytor. Gjutplaner hölls trots ovanligt långa kallperioder.",
+      "Omfattande projekt med pressad tidplan och små APD-ytor, vilket medförde svårarbetad logistik. Gjutplaner hölls trots ovanligt långa kallperioder.",
+    image: "/projekt/mark_image2.webp",
+    imageAlt: "Grundläggningsarbete på Kvarteret Persikan, Stockholmshem",
     featured: true,
   },
   {
@@ -119,8 +136,11 @@ export const PROJECTS = [
     category: "Bygg",
     type: "Totalentreprenad",
     summary:
-      "Totalombyggnad av flera våningsplan — kontorsanpassningar, nya personalkök, wc-grupper, omklädningsrum. Byggarbetena utfördes med pågående verksamhet i direkt anslutning.",
-    challenges: "Logistik med nytt material och avfall vid kvarvarande hyresgäst.",
+      "Totalombyggnad av flera våningsplan — 3 000 kvm kontorsanpassningar, nya personalkök, wc-grupper, omklädningsrum. Samtliga discipliner: bygg, VS, vent/styr, el, målning.",
+    challenges:
+      "Alla arbeten utfördes med kvarvarande hyresgäster i direkt anslutning till arbetsområdet. Krävde minutiös logistik kring nytt material och avfall.",
+    image: "/projekt/bygg_image2.webp",
+    imageAlt: "Axfoods huvudkontor efter kontorsombyggnad",
     featured: true,
   },
   {
@@ -132,8 +152,11 @@ export const PROJECTS = [
     category: "Bygg",
     type: "Restaurering",
     summary:
-      "K-märkt byggnad på Lidingöbron. Lyft bort, komplett restaurering och återmontering i ursprungligt läge.",
-    challenges: "Precision i lyft och återställning. Antikvariska krav genom hela processen.",
+      "K-märkt byggnad på Lidingöbron. Lyft bort från befintligt läge, komplett restaurering och återmontering i ursprungligt läge.",
+    challenges:
+      "Precision i lyft och återställning. Antikvariska krav genom hela processen.",
+    image: "/projekt/bygg_image5.webp",
+    imageAlt: "Vindarnas tempel under restaurering på Lidingö",
     featured: true,
   },
   {
@@ -144,9 +167,12 @@ export const PROJECTS = [
     period: "Pågående",
     category: "Mark & anläggning",
     type: "Utförandeentreprenad",
-    summary: "Grundförstärkning, sprängning, pålning, betongarbeten och ledningsarbeten.",
-    challenges: "Central stadsmiljö med högt kulturhistoriskt värde.",
-    featured: false,
+    summary:
+      "Grundförstärkning, sprängning, pålning, betongarbeten och ledningsarbeten i central stadsmiljö med högt kulturhistoriskt värde.",
+    challenges: "Arbete i känslig kulturmiljö med stor publikt flöde runt arbetsområdet.",
+    image: "/projekt/portfolj_image6.webp",
+    imageAlt: "T11 Katarinahuset och Mosebackebron, betongarbeten",
+    featured: true,
   },
   {
     slug: "malongen",
@@ -157,8 +183,10 @@ export const PROJECTS = [
     category: "Mark & anläggning",
     type: "Utförandeentreprenad",
     summary:
-      "Grundläggning för flerbostadshus — sprängning, spontning, platta på mark.",
-    challenges: "Trångt arbetsområde.",
+      "Grundläggning för flerbostadshus — sprängning, spontning, platta på mark, bottenplatta och ledningsarbeten.",
+    challenges: "Trångt arbetsområde mitt i stadsmiljö.",
+    image: "/projekt/mark_image3.webp",
+    imageAlt: "Grundläggning Malongen, Habitek Bygg",
     featured: false,
   },
   {
@@ -169,21 +197,26 @@ export const PROJECTS = [
     period: "2022–2023",
     category: "Bygg",
     type: "Restaurering",
-    summary: "Restaurering av gammal byggnad samt lada på Hustegaholm, Lidingö.",
-    challenges: "Antikvariska krav, känslig stomme.",
+    summary:
+      "Restaurering av gammal byggnad samt lada på Hustegaholm, Lidingö. Antikvarisk hänsyn till känslig stomme.",
+    challenges: "Stora antikvariska krav, originalmaterial återanvänt där möjligt.",
+    image: "/projekt/bygg_image3.webp",
+    imageAlt: "Kaptensstugan på Hustegaholm under restaurering",
     featured: false,
   },
   {
     slug: "danderyds-sjukhus",
-    title: "Danderyds sjukhus — flera uppdrag",
+    title: "Danderyds sjukhus — kallvatten, sjökyla, godsmottagning",
     client: "Locum",
     volume: "7 Mkr + löpande",
     period: "2022–pågående",
     category: "Mark & anläggning",
     type: "Utförandeentreprenad",
     summary:
-      "Kallvattenservis, sjökyla, godsmottagning. Arbete i drift­känslig sjukhusmiljö med höga krav på planering.",
-    challenges: "Ingen driftstörning tillåten.",
+      "Flera uppdrag: kallvattenservis, sjökyla och godsmottagning. Arbete i driftkänslig sjukhusmiljö med höga krav på planering.",
+    challenges: "Ingen driftstörning tillåten — dygnet-runt-verksamhet.",
+    image: "/projekt/mark_image10.webp",
+    imageAlt: "Ledningsarbete vid Danderyds sjukhus",
     featured: false,
   },
   {
@@ -194,8 +227,104 @@ export const PROJECTS = [
     period: "2022",
     category: "Mark & anläggning",
     type: "Utförandeentreprenad",
-    summary: "Schakt och grundläggning för skola, ledningsarbeten och finplanering.",
-    challenges: "",
+    summary:
+      "Schakt och grundläggning för skola, ledningsarbeten och finplanering i etapp med Skanska som generalentreprenör.",
+    challenges: "Koordinering mot Skanskas parallella produktion.",
+    image: "/projekt/mark_image8.webp",
+    imageAlt: "Grundläggning Noshörningen — skolbyggnad",
+    featured: false,
+  },
+  {
+    slug: "norrtalje-sjukhus",
+    title: "Norrtälje sjukhus — sprinklercentral",
+    client: "Norrtälje sjukhus",
+    volume: "Ej publikt",
+    period: "2023",
+    category: "Mark & anläggning",
+    type: "Utförandeentreprenad",
+    summary:
+      "Projektering och byggnation av sprinklercentral för sjukhuset, inkl. anslutningar, dränering och finplanering.",
+    image: "/projekt/mark_image12.webp",
+    imageAlt: "Norrtälje sjukhus sprinklercentral",
+    featured: false,
+  },
+  {
+    slug: "raul-wallenberg-bagartorp",
+    title: "Raul Wallenbergskolan Bagartorp",
+    client: "Raul Wallenberg Academy",
+    volume: "Ej publikt",
+    period: "2023",
+    category: "Mark & anläggning",
+    type: "Utförandeentreprenad",
+    summary: "Mark- och anläggningsarbeten kring skolbyggnad i Bagartorp.",
+    image: "/projekt/mark_image14.webp",
+    imageAlt: "Raul Wallenbergskolan, markarbeten",
+    featured: false,
+  },
+  {
+    slug: "engelska-skolan-sigtuna",
+    title: "Engelska skolan Sigtuna",
+    client: "Internationella Engelska skolan",
+    volume: "Ej publikt",
+    period: "2023",
+    category: "Mark & anläggning",
+    type: "Utförandeentreprenad",
+    summary: "Markanläggning och ledningsarbeten för skola i Sigtuna.",
+    image: "/projekt/mark_image16.webp",
+    imageAlt: "Markanläggning Engelska skolan Sigtuna",
+    featured: false,
+  },
+  {
+    slug: "octapharma-lindhagen",
+    title: "Octapharma AB Lindhagen",
+    client: "Octapharma AB",
+    volume: "Ej publikt",
+    period: "2023",
+    category: "Mark & anläggning",
+    type: "Utförandeentreprenad",
+    summary:
+      "Markanläggning vid Octapharmas anläggning på Lindhagen, hög hygieniska krav på utförande.",
+    image: "/projekt/mark_image20.webp",
+    imageAlt: "Markanläggning Octapharma Lindhagen",
+    featured: false,
+  },
+  {
+    slug: "tennisakademien",
+    title: "Good to Great Tennisakademien",
+    client: "Good to Great Tennis Academy",
+    volume: "Ej publikt",
+    period: "2022",
+    category: "Mark & anläggning",
+    type: "Utförandeentreprenad",
+    summary: "Markanläggning och finplanering vid tennisakademi.",
+    image: "/projekt/mark_image11.webp",
+    imageAlt: "Markarbete Good to Great Tennisakademien",
+    featured: false,
+  },
+  {
+    slug: "ledningsomlaggning-knivsta",
+    title: "Ledningsomläggning Knivsta",
+    client: "Knivsta kommun",
+    volume: "Ej publikt",
+    period: "2022",
+    category: "Mark & anläggning",
+    type: "Utförandeentreprenad",
+    summary: "Omfattande ledningsomläggning för kommunal infrastruktur i Knivsta.",
+    image: "/projekt/mark_image18.webp",
+    imageAlt: "Ledningsomläggning i Knivsta",
+    featured: false,
+  },
+  {
+    slug: "patriam-stocksund",
+    title: "Patriam Stocksund",
+    client: "Patriam",
+    volume: "Ej publikt",
+    period: "2023",
+    category: "Mark & anläggning",
+    type: "Utförandeentreprenad",
+    summary: "Grundläggning och markanläggning för bostadsprojekt i Stocksund.",
+    image: "/projekt/mark_image22.webp",
+    imageAlt: "Patriam Stocksund, grundläggning",
     featured: false,
   },
 ];
@@ -208,6 +337,8 @@ export const CLIENTS = [
   "Locum",
   "Lidingö Stad",
   "Habitek",
-  "Sveab",
+  "Patriam",
   "Octapharma",
+  "Sigtuna kommun",
+  "Knivsta kommun",
 ];

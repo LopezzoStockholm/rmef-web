@@ -19,17 +19,21 @@ const projectSchema = {
   description: project.summary,
   provider: { "@id": `${SITE.url}/#organization` },
   client: project.client,
+  image: `${SITE.url}${project.image}`,
   url: `${SITE.url}/projekt/${project.slug}`,
 };
+
+const otherProjects = PROJECTS.filter((p) => p.slug !== project.slug && p.category === project.category).slice(0, 3);
 ---
 
 <BaseLayout
   title={project.title}
   description={project.summary.slice(0, 155)}
+  image={project.image}
   schema={projectSchema}
 >
   <article>
-    <section class="pt-24 lg:pt-32 pb-12 lg:pb-16">
+    <section class="pt-24 lg:pt-32 pb-8 lg:pb-12">
       <div class="mx-auto max-w-5xl px-6 lg:px-10">
         <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
           <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
@@ -39,7 +43,7 @@ const projectSchema = {
           <span>{project.title}</span>
         </nav>
 
-        <span class="text-xs uppercase tracking-wider bg-[color:var(--color-brand-red)] text-white px-3 py-1 rounded-full font-semibold">
+        <span class="text-[10px] uppercase tracking-[0.2em] bg-[color:var(--color-brand-red)] text-white px-3 py-1.5 rounded-full font-semibold">
           {project.category}
         </span>
         <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight mt-6 mb-8">
@@ -48,52 +52,77 @@ const projectSchema = {
 
         <dl class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 border-t border-[color:var(--color-ink-10)]">
           <div>
-            <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Kund</dt>
+            <dt class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Kund</dt>
             <dd class="text-base font-semibold">{project.client}</dd>
           </div>
           <div>
-            <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Volym</dt>
+            <dt class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Volym</dt>
             <dd class="text-base font-semibold">{project.volume}</dd>
           </div>
           <div>
-            <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Period</dt>
+            <dt class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Period</dt>
             <dd class="text-base font-semibold">{project.period}</dd>
           </div>
           <div>
-            <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Entreprenadform</dt>
+            <dt class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Entreprenadform</dt>
             <dd class="text-base font-semibold">{project.type}</dd>
           </div>
         </dl>
       </div>
     </section>
 
-    <section class="py-12 lg:py-20">
-      <div class="mx-auto max-w-5xl px-6 lg:px-10">
-        <div class="aspect-[16/9] bg-gradient-to-br from-[color:var(--color-steel)] to-[#1a1a1a] rounded-3xl relative overflow-hidden mb-12">
-          <div class="absolute inset-0 flex items-center justify-center opacity-10" aria-hidden="true">
-            <svg width="400" height="400" viewBox="0 0 96 96" fill="none" stroke="white" stroke-width="0.5">
-              <path d="M8 80h80M12 80V40l20-16 20 16v40M52 80V32l20-16 12 10v54M20 80V56h12v24M60 80V48h12v32M24 48h4M24 60h4M64 56h4M64 64h4"/>
-            </svg>
-          </div>
-        </div>
-
-        <div class="prose prose-lg max-w-3xl">
-          <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-6">Uppdraget</h2>
-          <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-12">
-            {project.summary}
-          </p>
-
-          {project.challenges && (
-            <>
-              <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-6">Utmaningar</h2>
-              <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">
-                {project.challenges}
-              </p>
-            </>
-          )}
+    <section class="pb-12 lg:pb-20">
+      <div class="mx-auto max-w-6xl px-6 lg:px-10">
+        <div class="aspect-[16/9] rounded-3xl overflow-hidden bg-[color:var(--color-steel)]">
+          <img
+            src={project.image}
+            alt={project.imageAlt}
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            class="w-full h-full object-cover"
+          />
         </div>
       </div>
     </section>
+
+    <section class="pb-20 lg:pb-32">
+      <div class="mx-auto max-w-3xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-6">Uppdraget</h2>
+        <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-12">
+          {project.summary}
+        </p>
+
+        {project.challenges && (
+          <>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-6">Utmaningar</h2>
+            <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+              {project.challenges}
+            </p>
+          </>
+        )}
+      </div>
+    </section>
+
+    {otherProjects.length > 0 && (
+      <section class="pb-20 lg:pb-32 bg-[color:var(--color-paper-2)] pt-20 lg:pt-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
+          <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Fler projekt inom {project.category.toLowerCase()}</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {otherProjects.map((p) => (
+              <a href={`/projekt/${p.slug}`} class="group block">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden relative mb-4 bg-[color:var(--color-steel)]">
+                  <img src={p.image.replace('/projekt/', '/projekt/thumb/')} alt={p.imageAlt} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <h3 class="text-lg font-semibold tracking-tight group-hover:text-[color:var(--color-brand-red)] transition-colors">{p.title}</h3>
+                <p class="text-sm text-[color:var(--color-ink-60)]">{p.client} · {p.volume}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
 
     <CTA />
   </article>

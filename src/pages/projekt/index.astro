@@ -8,17 +8,17 @@ const categories = Array.from(new Set(PROJECTS.map((p) => p.category)));
 
 <BaseLayout
   title="Referensprojekt"
-  description="Utvalda projekt från RM Entreprenad & Fasad — grundläggning för Stockholmshem, totalombyggnad av Axfoods huvudkontor, restaurering av K-märkta byggnader på Lidingö."
+  description="Utvalda projekt från RM Entreprenad & Fasad — grundläggning för Stockholmshem 75 Mkr, totalombyggnad Axfood, restaurering av K-märkta byggnader på Lidingö."
 >
   <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
     <div class="mx-auto max-w-7xl px-6 lg:px-10">
-      <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">Referensprojekt</p>
+      <p class="text-xs uppercase tracking-[0.2em] text-[color:var(--color-brand-red)] font-semibold mb-6">Referensprojekt</p>
       <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
-        Ett urval ur projektportföljen.
+        Från 3 Mkr-restaureringar till 75 Mkr-grundläggningar.
       </h1>
       <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
-        Från grundläggning för 152 lägenheter på Södermalm till lyft av K-märkta byggnader på Lidingön —
-        ett axplock av projekt som teamet bakom RM Entreprenad & Fasad genomfört.
+        Ett urval av projekt som teamet bakom RM Entreprenad & Fasad genomfört de senaste åren —
+        för Stockholmshem, Atrium Ljungberg, Skanska, Axfood, Lidingö Stad, Locum och flera kommuner.
       </p>
     </div>
   </section>
@@ -26,15 +26,18 @@ const categories = Array.from(new Set(PROJECTS.map((p) => p.category)));
   <section class="pb-20">
     <div class="mx-auto max-w-7xl px-6 lg:px-10">
       <div class="flex flex-wrap gap-2 mb-12" role="tablist" aria-label="Filtrera projekt">
-        <button data-filter="all" class="filter-btn active bg-[color:var(--color-ink)] text-white px-4 py-2 rounded-full text-sm font-medium" role="tab" aria-selected="true">
-          Alla
+        <button data-filter="all" class="filter-btn active bg-[color:var(--color-ink)] text-white px-4 py-2 rounded-full text-sm font-medium transition-colors" role="tab" aria-selected="true">
+          Alla ({PROJECTS.length})
         </button>
         {
-          categories.map((c) => (
-            <button data-filter={c} class="filter-btn bg-[color:var(--color-paper-2)] text-[color:var(--color-ink)] px-4 py-2 rounded-full text-sm font-medium hover:bg-[color:var(--color-ink)] hover:text-white transition-colors" role="tab" aria-selected="false">
-              {c}
-            </button>
-          ))
+          categories.map((c) => {
+            const count = PROJECTS.filter((p) => p.category === c).length;
+            return (
+              <button data-filter={c} class="filter-btn bg-[color:var(--color-paper-2)] text-[color:var(--color-ink)] px-4 py-2 rounded-full text-sm font-medium hover:bg-[color:var(--color-ink)] hover:text-white transition-colors" role="tab" aria-selected="false">
+                {c} ({count})
+              </button>
+            );
+          })
         }
       </div>
 
@@ -46,19 +49,22 @@ const categories = Array.from(new Set(PROJECTS.map((p) => p.category)));
               data-category={p.category}
               class="project-card group block"
             >
-              <div class="aspect-[4/3] bg-gradient-to-br from-[color:var(--color-steel)] to-[#1a1a1a] rounded-2xl overflow-hidden relative mb-5">
+              <div class="aspect-[4/3] bg-[color:var(--color-steel)] rounded-2xl overflow-hidden relative mb-5">
+                <img
+                  src={p.image.replace('/projekt/', '/projekt/thumb/')}
+                  alt={p.imageAlt}
+                  loading="lazy"
+                  decoding="async"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent"></div>
                 <div class="absolute top-4 left-4">
-                  <span class="text-[10px] uppercase tracking-wider bg-white/15 backdrop-blur-md text-white px-3 py-1 rounded-full font-semibold">
+                  <span class="text-[10px] uppercase tracking-[0.14em] bg-white/15 backdrop-blur-md text-white px-3 py-1 rounded-full font-semibold">
                     {p.category}
                   </span>
                 </div>
                 <div class="absolute bottom-4 left-4 right-4 text-white">
-                  <p class="text-xs text-white/60">{p.period}</p>
-                </div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-20 group-hover:opacity-40 group-hover:scale-110 transition-all duration-700" aria-hidden="true">
-                  <svg width="180" height="180" viewBox="0 0 96 96" fill="none" stroke="white" stroke-width="1">
-                    <path d="M8 80h80M12 80V40l20-16 20 16v40M52 80V32l20-16 12 10v54M20 80V56h12v24M60 80V48h12v32"/>
-                  </svg>
+                  <p class="text-xs text-white/70">{p.period}</p>
                 </div>
               </div>
               <div class="flex items-baseline justify-between gap-3 mb-2">
