@@ -158,6 +158,8 @@ export const PROJECTS: Project[] = [
       "K-märkt byggnad på Lidingöbron. Byggnaden lyftes bort från ursprungsläget, genomgick komplett restaurering och återmonterades i ursprungligt läge med antikvarisk hänsyn.",
     challenges:
       "Precision i lyft och återställning. Löpande antikvariska krav och extern kontroll genom hela processen. Originalmaterial återanvändes där det var möjligt.",
+    image: "/projekt/bygg_image4.webp",
+    imageAlt: "Vindarnas tempel — paviljong lyfts med mobilkran från Lidingöbron",
     featured: true,
   },
   {
@@ -201,6 +203,8 @@ export const PROJECTS: Project[] = [
     summary:
       "Restaurering av gammal byggnad samt lada på Hustegaholm, Lidingö. Antikvarisk hänsyn till känslig stomme, originalmaterial återanvänt där möjligt.",
     challenges: "Omfattande antikvariska krav och kontroll genom hela processen.",
+    image: "/projekt/bygg_image7.webp",
+    imageAlt: "Kaptensstugan — rödmålad timmerstuga med tegeltak vid Hustegaholm",
     featured: false,
   },
   {
@@ -229,6 +233,8 @@ export const PROJECTS: Project[] = [
     summary:
       "Schakt, grundläggning, ledningsarbeten och finplanering för skolbyggnad. Utfört i etapp med Skanska som generalentreprenör.",
     challenges: "Samordning mot Skanskas parallella produktion och hårda tidsfrister kring skolstart.",
+    image: "/projekt/foretag_13.webp",
+    imageAlt: "Noshörningen — byggarbetsplats med tornkranar under vinterproduktion",
     featured: false,
   },
   {
@@ -240,6 +246,8 @@ export const PROJECTS: Project[] = [
     type: "Totalentreprenad",
     summary:
       "Projektering och utförande av sprinklercentral för sjukhuset. Inkluderar anslutningar, dränering och finplanering. Arbete i driftkänslig miljö.",
+    image: "/projekt/mark_image9.webp",
+    imageAlt: "Norrtälje sjukhus — färdigställd entré med finplanering och ramper",
     featured: false,
   },
   {
@@ -250,6 +258,8 @@ export const PROJECTS: Project[] = [
     category: "Mark & anläggning",
     type: "Utförandeentreprenad",
     summary: "Mark- och anläggningsarbeten kring skolbyggnad i Bagartorp, Solna.",
+    image: "/projekt/mark_image13.webp",
+    imageAlt: "Raul Wallenbergskolan — skolgård med konstgräsplan och skolbyggnad",
     featured: false,
   },
   {
