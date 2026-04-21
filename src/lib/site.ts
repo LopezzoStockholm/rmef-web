@@ -108,8 +108,8 @@ export interface Project {
   type: string;
   summary: string;
   challenges?: string;
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
   featured: boolean;
 }
 
@@ -126,8 +126,8 @@ export const PROJECTS: Project[] = [
       "Grundläggning för 152 lägenheter, ICA-butik och förskola på Södermalm. Omfattar schakt, bottenplatta, skyddsrum, platsgjutna källarväggar, ledningsarbeten, isodrän och tätskikt.",
     challenges:
       "Pressad tidplan och begränsade APD-ytor i innerstadsmiljö. Gjutplaner hölls trots ovanligt långa kallperioder under två vintersäsonger.",
-    image: "/projekt/mark_image2.webp",
-    imageAlt: "Grundläggningsarbete på Kvarteret Persikan, Stockholmshem",
+    image: "/projekt/foretag_2.webp",
+    imageAlt: "Byggarbetsplats Kvarteret Persikan, Stockholmshem — betonggjutning med lyftkran",
     featured: true,
   },
   {
@@ -142,8 +142,8 @@ export const PROJECTS: Project[] = [
       "Total­ombyggnad av flera våningsplan omfattande 3 000 kvm kontorsanpassningar, nya personalkök, wc-grupper och omklädningsrum. Samtliga discipliner levererade in-house: bygg, VS, vent, styr, el och målning.",
     challenges:
       "Samtliga arbeten utfördes med kvarvarande hyresgäster i direkt anslutning till arbetsområdet. Krävde minutiös logistik kring nytt material och avfall — inga driftstörningar accepterades.",
-    image: "/projekt/bygg_image2.webp",
-    imageAlt: "Axfoods huvudkontor efter kontorsombyggnad",
+    image: "/projekt/foretag_4.webp",
+    imageAlt: "Axfoods huvudkontor — nyinredda kontorsmoduler med glaspartitioner",
     featured: true,
   },
   {
@@ -158,8 +158,6 @@ export const PROJECTS: Project[] = [
       "K-märkt byggnad på Lidingöbron. Byggnaden lyftes bort från ursprungsläget, genomgick komplett restaurering och återmonterades i ursprungligt läge med antikvarisk hänsyn.",
     challenges:
       "Precision i lyft och återställning. Löpande antikvariska krav och extern kontroll genom hela processen. Originalmaterial återanvändes där det var möjligt.",
-    image: "/projekt/bygg_image5.webp",
-    imageAlt: "Vindarnas tempel under restaurering på Lidingö",
     featured: true,
   },
   {
@@ -173,8 +171,8 @@ export const PROJECTS: Project[] = [
     summary:
       "Grundförstärkning, sprängning, pålning, betongarbeten och ledningsarbeten i central stadsmiljö med högt kulturhistoriskt värde.",
     challenges: "Arbete i kulturhistoriskt känslig miljö vid Slussen med stor publik gångtrafik direkt intill arbetsområdet.",
-    image: "/projekt/portfolj_image6.webp",
-    imageAlt: "T11 Katarinahuset och Mosebackebron, betongarbeten",
+    image: "/projekt/foretag_15.webp",
+    imageAlt: "T11 Katarinahuset — betong- och armeringsarbeten",
     featured: true,
   },
   {
@@ -203,8 +201,6 @@ export const PROJECTS: Project[] = [
     summary:
       "Restaurering av gammal byggnad samt lada på Hustegaholm, Lidingö. Antikvarisk hänsyn till känslig stomme, originalmaterial återanvänt där möjligt.",
     challenges: "Omfattande antikvariska krav och kontroll genom hela processen.",
-    image: "/projekt/bygg_image3.webp",
-    imageAlt: "Kaptensstugan på Hustegaholm under restaurering",
     featured: false,
   },
   {
@@ -233,8 +229,6 @@ export const PROJECTS: Project[] = [
     summary:
       "Schakt, grundläggning, ledningsarbeten och finplanering för skolbyggnad. Utfört i etapp med Skanska som generalentreprenör.",
     challenges: "Koordinering mot Skanskas parallella produktion och hårda deadlines kring skolstart.",
-    image: "/projekt/mark_image8.webp",
-    imageAlt: "Grundläggning Noshörningen, skolbyggnad",
     featured: false,
   },
   {
@@ -246,8 +240,6 @@ export const PROJECTS: Project[] = [
     type: "Totalentreprenad",
     summary:
       "Projektering och utförande av sprinklercentral för sjukhuset. Inkluderar anslutningar, dränering och finplanering. Arbete i driftkänslig miljö.",
-    image: "/projekt/mark_image12.webp",
-    imageAlt: "Norrtälje sjukhus sprinklercentral",
     featured: false,
   },
   {
@@ -258,8 +250,6 @@ export const PROJECTS: Project[] = [
     category: "Mark & anläggning",
     type: "Utförandeentreprenad",
     summary: "Mark- och anläggningsarbeten kring skolbyggnad i Bagartorp, Solna.",
-    image: "/projekt/mark_image14.webp",
-    imageAlt: "Raul Wallenbergskolan, markarbeten",
     featured: false,
   },
   {
@@ -271,7 +261,7 @@ export const PROJECTS: Project[] = [
     type: "Utförandeentreprenad",
     summary: "Markanläggning och ledningsarbeten i anslutning till skolbyggnad i Sigtuna.",
     image: "/projekt/mark_image16.webp",
-    imageAlt: "Markanläggning Engelska skolan Sigtuna",
+    imageAlt: "Markanläggning Engelska skolan Sigtuna — markvibrator och isolering",
     featured: false,
   },
   {
@@ -284,7 +274,7 @@ export const PROJECTS: Project[] = [
     summary:
       "Markanläggning i anslutning till Octapharmas verksamhet på Lindhagen. Hygieniska krav och stram arbetsordning pga produktionsmiljön.",
     image: "/projekt/mark_image20.webp",
-    imageAlt: "Markanläggning Octapharma Lindhagen",
+    imageAlt: "Octapharma Lindhagen — betonggjutning och armering",
     featured: false,
   },
   {
@@ -295,8 +285,6 @@ export const PROJECTS: Project[] = [
     category: "Mark & anläggning",
     type: "Utförandeentreprenad",
     summary: "Markanläggning och finplanering vid tennisakademin.",
-    image: "/projekt/mark_image11.webp",
-    imageAlt: "Markarbete Good to Great Tennisakademien",
     featured: false,
   },
   {
@@ -308,7 +296,7 @@ export const PROJECTS: Project[] = [
     type: "Utförandeentreprenad",
     summary: "Omläggning av kommunal infrastruktur för vatten och avlopp i centrala Knivsta.",
     image: "/projekt/mark_image18.webp",
-    imageAlt: "Ledningsomläggning i Knivsta",
+    imageAlt: "Ledningsomläggning Knivsta — VA-rör och schakt i gatumiljö",
     featured: false,
   },
   {
@@ -320,7 +308,7 @@ export const PROJECTS: Project[] = [
     type: "Utförandeentreprenad",
     summary: "Grundläggning och markanläggning för bostadsprojekt i Stocksund.",
     image: "/projekt/mark_image22.webp",
-    imageAlt: "Patriam Stocksund, grundläggning",
+    imageAlt: "Patriam Stocksund — schakt med spontväggar och armering",
     featured: false,
   },
 ];

@@ -50,15 +50,28 @@ const categories = Array.from(new Set(PROJECTS.map((p) => p.category)));
               data-category={p.category}
               class="project-card group block"
             >
-              <div class="aspect-[4/3] bg-[color:var(--color-steel)] rounded-2xl overflow-hidden relative mb-5">
-                <img
-                  src={p.image.replace('/projekt/', '/projekt/thumb/')}
-                  alt={p.imageAlt}
-                  loading="lazy"
-                  decoding="async"
-                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/5 to-transparent"></div>
+              <div class="aspect-[4/3] bg-gradient-to-br from-[color:var(--color-steel)] to-[#0a0a0a] rounded-2xl overflow-hidden relative mb-5">
+                {p.image ? (
+                  <>
+                    <img
+                      src={p.image.replace('/projekt/', '/projekt/thumb/')}
+                      alt={p.imageAlt ?? p.title}
+                      loading="lazy"
+                      decoding="async"
+                      class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/5 to-transparent"></div>
+                  </>
+                ) : (
+                  <>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-25 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700" aria-hidden="true">
+                      <svg width="140" height="140" viewBox="0 0 96 96" fill="none" stroke="#C8381F" stroke-width="0.7">
+                        <path d="M8 80h80M12 80V40l20-16 20 16v40M52 80V32l20-16 12 10v54M20 80V56h12v24M60 80V48h12v32"/>
+                      </svg>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                  </>
+                )}
                 <div class="absolute top-4 left-4">
                   <span class="text-[10px] uppercase tracking-[0.14em] bg-white/15 backdrop-blur-md text-white px-3 py-1 rounded-full font-semibold">
                     {p.category}

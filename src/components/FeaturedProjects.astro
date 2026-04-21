@@ -27,15 +27,28 @@ const featured = PROJECTS.filter((p) => p.featured);
       {
         featured.map((p) => (
           <a href={`/projekt/${p.slug}`} class="group block">
-            <div class="aspect-[4/5] rounded-2xl overflow-hidden relative mb-5 bg-[color:var(--color-steel)]">
-              <img
-                src={p.image.replace('/projekt/', '/projekt/thumb/')}
-                alt={p.imageAlt}
-                loading="lazy"
-                decoding="async"
-                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
+            <div class="aspect-[4/5] rounded-2xl overflow-hidden relative mb-5 bg-gradient-to-br from-[color:var(--color-steel)] to-[#0a0a0a]">
+              {p.image ? (
+                <>
+                  <img
+                    src={p.image.replace('/projekt/', '/projekt/thumb/')}
+                    alt={p.imageAlt ?? p.title}
+                    loading="lazy"
+                    decoding="async"
+                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
+                </>
+              ) : (
+                <>
+                  <div class="absolute inset-0 flex items-center justify-center opacity-20 group-hover:opacity-35 group-hover:scale-110 transition-all duration-700" aria-hidden="true">
+                    <svg width="180" height="180" viewBox="0 0 96 96" fill="none" stroke="#C8381F" stroke-width="0.8">
+                      <path d="M8 80h80M12 80V40l20-16 20 16v40M52 80V32l20-16 12 10v54M20 80V56h12v24M60 80V48h12v32M24 48h4M24 60h4M64 56h4M64 64h4"/>
+                    </svg>
+                  </div>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                </>
+              )}
               <div class="absolute top-5 left-5">
                 <span class="text-[10px] uppercase tracking-[0.18em] bg-[color:var(--color-brand-red)] text-white px-3 py-1.5 rounded-full font-semibold">
                   {p.category}

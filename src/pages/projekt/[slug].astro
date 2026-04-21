@@ -73,20 +73,22 @@ const otherProjects = PROJECTS.filter((p) => p.slug !== project.slug && p.catego
       </div>
     </section>
 
-    <section class="pb-12 lg:pb-20">
-      <div class="mx-auto max-w-6xl px-6 lg:px-10">
-        <div class="aspect-[16/9] rounded-3xl overflow-hidden bg-[color:var(--color-steel)]">
-          <img
-            src={project.image}
-            alt={project.imageAlt}
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-            class="w-full h-full object-cover"
-          />
+    {project.image && (
+      <section class="pb-12 lg:pb-20">
+        <div class="mx-auto max-w-6xl px-6 lg:px-10">
+          <div class="aspect-[16/9] rounded-3xl overflow-hidden bg-[color:var(--color-steel)]">
+            <img
+              src={project.image}
+              alt={project.imageAlt ?? project.title}
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              class="w-full h-full object-cover"
+            />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    )}
 
     <section class="pb-20 lg:pb-32">
       <div class="mx-auto max-w-3xl px-6 lg:px-10">
@@ -113,12 +115,22 @@ const otherProjects = PROJECTS.filter((p) => p.slug !== project.slug && p.catego
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {otherProjects.map((p) => (
               <a href={`/projekt/${p.slug}`} class="group block">
-                <div class="aspect-[4/3] rounded-2xl overflow-hidden relative mb-4 bg-[color:var(--color-steel)]">
-                  <img src={p.image.replace('/projekt/', '/projekt/thumb/')} alt={p.imageAlt} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"/>
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden relative mb-4 bg-gradient-to-br from-[color:var(--color-steel)] to-[#0a0a0a]">
+                  {p.image ? (
+                    <>
+                      <img src={p.image.replace('/projekt/', '/projekt/thumb/')} alt={p.imageAlt ?? p.title} loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"/>
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </>
+                  ) : (
+                    <div class="absolute inset-0 flex items-center justify-center opacity-25" aria-hidden="true">
+                      <svg width="120" height="120" viewBox="0 0 96 96" fill="none" stroke="#C8381F" stroke-width="0.7">
+                        <path d="M8 80h80M12 80V40l20-16 20 16v40M52 80V32l20-16 12 10v54M20 80V56h12v24M60 80V48h12v32"/>
+                      </svg>
+                    </div>
+                  )}
                 </div>
                 <h3 class="text-lg font-semibold tracking-tight group-hover:text-[color:var(--color-brand-red)] transition-colors">{p.title}</h3>
-                <p class="text-sm text-[color:var(--color-ink-60)]">{p.client} · {p.volume}</p>
+                <p class="text-sm text-[color:var(--color-ink-60)]">{p.client}{p.volume ? ` · ${p.volume}` : ''}</p>
               </a>
             ))}
           </div>
