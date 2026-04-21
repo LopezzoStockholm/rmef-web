@@ -14,7 +14,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" v
   <rect width="1200" height="630" fill="url(#bg)"/>
 
   <!-- Stadssilhuett -->
-  <g fill="#B5121B" opacity="0.18" transform="translate(0, 380)">
+  <g fill="#C8381F" opacity="0.18" transform="translate(0, 380)">
     <rect x="0"   y="0"   width="60"  height="250"/>
     <rect x="70"  y="-40" width="80"  height="290"/>
     <rect x="160" y="-80" width="90"  height="330"/>
@@ -31,13 +31,13 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" v
   </g>
 
   <!-- Top-badge -->
-  <rect x="80" y="80" width="360" height="44" rx="22" fill="none" stroke="#B5121B" stroke-width="1.5" opacity="0.6"/>
-  <circle cx="108" cy="102" r="4" fill="#B5121B"/>
+  <rect x="80" y="80" width="360" height="44" rx="22" fill="none" stroke="#C8381F" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="108" cy="102" r="4" fill="#C8381F"/>
   <text x="124" y="108" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#EDE8DE" letter-spacing="2" font-weight="500">TOTALENTREPRENAD · STOCKHOLM</text>
 
   <!-- Huvudrubrik -->
   <text x="80" y="260" font-family="Manrope, Inter, sans-serif" font-size="88" font-weight="700" fill="#F7F4EE" letter-spacing="-2">Bygger Stockholm</text>
-  <text x="80" y="356" font-family="Manrope, Inter, sans-serif" font-size="88" font-weight="700" fill="#B5121B" letter-spacing="-2">från grund till fasad.</text>
+  <text x="80" y="356" font-family="Manrope, Inter, sans-serif" font-size="88" font-weight="700" fill="#C8381F" letter-spacing="-2">från grund till fasad.</text>
 
   <!-- Underrubrik -->
   <text x="80" y="428" font-family="Inter, system-ui, sans-serif" font-size="26" fill="#EDE8DE" opacity="0.75">Mark · Bygg · El · Fasad. En kontakt hela vägen.</text>

@@ -1,0 +1,40 @@
+---
+import { TESTIMONIALS } from "../lib/site";
+---
+
+<section class="py-20 lg:py-32 bg-[color:var(--color-paper)]">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10">
+    <div class="max-w-3xl mb-16">
+      <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Röster om RM</p>
+      <h2 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight">
+        Sagt av beställare och samarbetspartners.
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+      {
+        TESTIMONIALS.map((t) => (
+          <figure class="bg-[color:var(--color-paper-2)] rounded-3xl p-8 lg:p-10 flex flex-col">
+            <svg width="32" height="32" viewBox="0 0 32 32" class="text-[color:var(--color-brand-red)] mb-6" fill="currentColor" aria-hidden="true">
+              <path d="M10 20a4 4 0 0 1-4-4V8h8v4H10v4a2 2 0 0 0 2 2v4a6 6 0 0 1-2 0zm14 0a4 4 0 0 1-4-4V8h8v4h-4v4a2 2 0 0 0 2 2v4a6 6 0 0 1-2 0z"/>
+            </svg>
+            <blockquote class="text-lg leading-relaxed text-[color:var(--color-ink)] flex-1 mb-8">
+              {t.quote}
+            </blockquote>
+            <figcaption class="pt-6 border-t border-[color:var(--color-ink-10)]">
+              <p class="text-sm font-semibold">{t.role}</p>
+              <p class="text-sm text-[color:var(--color-ink-60)]">{t.company}</p>
+              {t.project && (
+                <p class="text-xs text-[color:var(--color-ink-40)] mt-2 italic">Projekt: {t.project}</p>
+              )}
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+
+    <p class="text-xs text-[color:var(--color-ink-40)] mt-10 italic">
+      Citat återgivna med tillstånd. Fullständiga referenser lämnas på begäran.
+    </p>
+  </div>
+</section>

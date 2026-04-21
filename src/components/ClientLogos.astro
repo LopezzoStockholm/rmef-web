@@ -1,0 +1,47 @@
+---
+// Kundlogotyper som SVG-wordmarks. Generisk design eftersom vi inte har officiella logofiler,
+// men typografiskt neutralt och professionellt — inte bara text-marquee.
+const clients = [
+  { name: "Stockholmshem", font: "serif" },
+  { name: "Atrium Ljungberg", font: "sans" },
+  { name: "Skanska", font: "bold" },
+  { name: "Axfood", font: "sans" },
+  { name: "Locum", font: "serif" },
+  { name: "Lidingö Stad", font: "sans" },
+  { name: "Habitek", font: "bold" },
+  { name: "Patriam", font: "serif" },
+  { name: "Octapharma", font: "sans" },
+];
+
+const fontClass: Record<string, string> = {
+  serif: "font-serif italic tracking-tight",
+  sans: "font-medium tracking-tight",
+  bold: "font-bold tracking-[-0.02em]",
+};
+---
+
+<section class="py-16 lg:py-20 border-y border-[color:var(--color-ink-10)] bg-[color:var(--color-paper-2)]/40">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-10">
+      <div>
+        <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-2">Utvalda beställare</p>
+        <h2 class="text-2xl lg:text-3xl font-semibold tracking-tight max-w-xl">
+          Vi levererar till några av Sveriges mest krävande beställare.
+        </h2>
+      </div>
+      <p class="text-sm text-[color:var(--color-ink-60)] max-w-sm">
+        Gemensamt för våra kunder: de ställer höga krav på precision, säkerhet och förutsägbarhet.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-x-8 gap-y-10 items-center">
+      {
+        clients.map((c) => (
+          <div class={`text-center text-[color:var(--color-ink)] opacity-60 hover:opacity-100 transition-opacity ${fontClass[c.font]}`}>
+            <span class="text-base sm:text-lg lg:text-xl">{c.name}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

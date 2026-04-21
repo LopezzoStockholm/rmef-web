@@ -1,26 +1,27 @@
 ---
-import { SITE, CLIENTS, PROJECTS } from "../lib/site";
+import { PROJECTS } from "../lib/site";
 const heroImage = PROJECTS[0]?.image ?? "/projekt/foretag_2.webp";
+const heroProject = PROJECTS[0];
 ---
 
 <section class="relative overflow-hidden bg-[color:var(--color-paper)]">
-  <!-- Splitlayout: vänster = text, höger = bild (desktop). Stackat på mobil. -->
   <div class="relative mx-auto max-w-7xl px-6 lg:px-10 pt-14 lg:pt-24 pb-16 lg:pb-28">
     <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
       <div class="lg:col-span-7">
         <div class="inline-flex items-center gap-2 bg-[color:var(--color-paper-2)] border border-[color:var(--color-ink-10)] rounded-full px-3.5 py-1.5 text-[11px] font-medium text-[color:var(--color-ink-60)] mb-8 tracking-wide fade-in">
           <span class="w-1.5 h-1.5 rounded-full bg-[color:var(--color-brand-red)]" aria-hidden="true"></span>
-          Totalentreprenad i Stockholm sedan 2020
+          Entreprenader för professionella beställare · Stockholm
         </div>
 
         <h1 class="text-[length:var(--text-hero)] font-semibold leading-[0.95] tracking-tight mb-8 fade-in" style="animation-delay: 80ms">
-          Bygger Stockholm
-          <span class="block text-[color:var(--color-brand-red)]">från grund till fasad.</span>
+          Mark, bygg och fasad
+          <span class="block text-[color:var(--color-brand-red)]">levererat med precision.</span>
         </h1>
 
         <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-xl mb-10 fade-in" style="animation-delay: 160ms">
-          Mark. Bygg. El. Fasad. Fyra discipliner, en kontakt, hela vägen till driftklar anläggning.
-          Vi jobbar B2B med beställare som har höga krav på kvalitet, precision och leverans i tid.
+          RM Entreprenad & Fasad levererar total- och utförandeentreprenader åt fastighetsägare,
+          generalentreprenörer, kommuner och regioner. En projektledare, fyra kompetensområden in-house,
+          hela vägen till driftklar anläggning.
         </p>
 
         <div class="flex flex-wrap items-center gap-4 fade-in" style="animation-delay: 240ms">
@@ -46,17 +47,17 @@ const heroImage = PROJECTS[0]?.image ?? "/projekt/foretag_2.webp";
         <div class="relative aspect-[4/5] rounded-3xl overflow-hidden bg-[color:var(--color-steel)] shadow-2xl shadow-black/10">
           <img
             src={heroImage}
-            alt="Pågående projekt — RM Entreprenad & Fasad"
+            alt={heroProject?.imageAlt ?? "Pågående projekt — RM Entreprenad & Fasad"}
             loading="eager"
             fetchpriority="high"
             decoding="async"
             class="absolute inset-0 w-full h-full object-cover"
           />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent"></div>
           <div class="absolute bottom-6 left-6 right-6 text-white">
-            <p class="text-[10px] uppercase tracking-[0.2em] text-white/60 mb-2">Pågående projekt</p>
-            <p class="text-lg font-semibold">Kvarteret Persikan</p>
-            <p class="text-sm text-white/70">Stockholmshem · 75 Mkr</p>
+            <p class="text-[10px] uppercase tracking-[0.22em] text-white/60 mb-2 font-semibold">Pågående projekt</p>
+            <p class="text-lg font-semibold mb-1">{heroProject?.title}</p>
+            <p class="text-sm text-white/70">{heroProject?.client} · {heroProject?.volume}</p>
           </div>
         </div>
       </div>
@@ -65,7 +66,7 @@ const heroImage = PROJECTS[0]?.image ?? "/projekt/foretag_2.webp";
     <!-- Nyckeltal -->
     <dl class="mt-20 lg:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 border-t border-[color:var(--color-ink-10)] pt-10">
       <div class="fade-in" style="animation-delay: 400ms">
-        <dt class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Omsättning senaste år</dt>
+        <dt class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Nettoomsättning 2024/25</dt>
         <dd class="text-3xl lg:text-4xl font-semibold tabular-nums">14,7 Mkr</dd>
       </div>
       <div class="fade-in" style="animation-delay: 440ms">
@@ -77,28 +78,9 @@ const heroImage = PROJECTS[0]?.image ?? "/projekt/foretag_2.webp";
         <dd class="text-3xl lg:text-4xl font-semibold tabular-nums">75 Mkr</dd>
       </div>
       <div class="fade-in" style="animation-delay: 520ms">
-        <dt class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Erfarenhet i teamet</dt>
-        <dd class="text-3xl lg:text-4xl font-semibold tabular-nums">15+ år</dd>
+        <dt class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Projekt levererade sedan 2018</dt>
+        <dd class="text-3xl lg:text-4xl font-semibold tabular-nums">40+</dd>
       </div>
     </dl>
-  </div>
-
-  <!-- Kundlogos-marquee -->
-  <div class="border-y border-[color:var(--color-ink-10)] bg-[color:var(--color-paper-2)]/60 py-6 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 mb-4">
-      <p class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-ink-40)] font-semibold">
-        Vi levererar till
-      </p>
-    </div>
-    <div class="overflow-hidden">
-      <div class="marquee text-xl lg:text-2xl font-semibold text-[color:var(--color-ink-40)]">
-        {CLIENTS.concat(CLIENTS).map((c) => (
-          <span class="flex items-center gap-12">
-            {c}
-            <span class="w-1 h-1 rounded-full bg-[color:var(--color-brand-red)]" aria-hidden="true"></span>
-          </span>
-        ))}
-      </div>
-    </div>
   </div>
 </section>

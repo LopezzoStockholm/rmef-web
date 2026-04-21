@@ -139,12 +139,12 @@ const contactSchema = {
                     form.reset();
                   } else {
                     status.textContent = 'Något gick fel — ring oss eller mejla info@rmef.se istället.';
-                    status.style.color = '#B5121B';
+                    status.style.color = '#C8381F';
                     btn.disabled = false;
                   }
                 } catch {
                   status.textContent = 'Nätverksfel — ring oss eller mejla info@rmef.se.';
-                  status.style.color = '#B5121B';
+                  status.style.color = '#C8381F';
                   btn.disabled = false;
                 }
               });

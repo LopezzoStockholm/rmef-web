@@ -3,92 +3,130 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 
 const team = [
-  { name: "Daniel Lopez", role: "VD", bio: "Affärsutveckling och koncernstruktur. Bakgrund inom juridik, fastighets- och markutveckling." },
-  { name: "Mattias Bylund", role: "Operativ chef", bio: "Daglig drift, kundkontakt, leverans." },
-  { name: "Alexandra Eriksson Antfolk", role: "Controller", bio: "KPI-uppföljning, kvalitetssäkring, ekonomistyrning." },
-  { name: "Janne", role: "Projektchef Mark & betong", bio: "Kalkyl och genomförande av mark- och anläggningsprojekt." },
-  { name: "Putte", role: "Försäljning & byggprojekt", bio: "Kundkontakt och byggsida." },
-  { name: "Erik Bylund", role: "Projektingenjör", bio: "Kalkyl och projektering." },
+  {
+    name: "Daniel Lopez",
+    role: "VD",
+    bio: "Ansvarig för affärsutveckling, större kundrelationer och koncernstruktur. Juridisk bakgrund inom fastighets- och markutveckling.",
+    years: "15+ år",
+  },
+  {
+    name: "Mattias Bylund",
+    role: "Operativ chef",
+    bio: "Leder den dagliga verksamheten och har löpande kundkontakt. Ansvarig för produktionens leverans och kvalitet på byggarbetsplatsen.",
+    years: "20+ år",
+  },
+  {
+    name: "Alexandra Eriksson Antfolk",
+    role: "Controller",
+    bio: "Bygger upp och följer KPI-struktur, kassaflöde och projektuppföljning. Säkerställer finansiell kvalitet genom hela projektcykeln.",
+    years: "10+ år",
+  },
+  {
+    name: "Jan Norlin",
+    role: "Projektchef Mark & anläggning",
+    bio: "Leder våra markentreprenader från kalkyl till överlämning. Erfarenhet från komplexa grundläggnings­uppdrag i innerstadsmiljö.",
+    years: "25+ år",
+  },
+  {
+    name: "Patrik Svensson",
+    role: "Försäljning & byggprojekt",
+    bio: "Kundansvarig för byggsidan. Leder anbudsarbete och tidig dialog med beställare.",
+    years: "20+ år",
+  },
+  {
+    name: "Erik Bylund",
+    role: "Projektingenjör",
+    bio: "Kalkyl, projektering och teknisk projektledning. Ansvarig för att handlingar och utförande stämmer överens.",
+    years: "10+ år",
+  },
 ];
 
 const values = [
   {
     title: "Helhetsansvar",
-    body: "Vi tar ansvar för hela processen. Inga \"det är inte mitt område\" — vi löser det som behöver lösas.",
+    body: "Vi tar ansvar för hela processen — från första dialog till överlämning. Gränssnitt mellan discipliner hanteras in-house så beställaren slipper samordning.",
   },
   {
     title: "Leverantörsoberoende",
-    body: "Vi är inte bundna till specifika leverantörer, vilket låter oss handplocka bästa möjliga lösning för varje projekt.",
+    body: "Vi är inte bundna till specifika leverantörer eller systemval. Vi handplockar lösningar efter projektets krav, inte efter befintliga ramavtal.",
   },
   {
-    title: "Snabb och flexibel",
-    body: "Korta beslutsvägar. När ni ringer pratar ni med någon som kan fatta beslut — inte någon som måste återkomma.",
+    title: "Korta beslutsvägar",
+    body: "När beställaren ringer pratar ni med någon som kan fatta beslut — inte någon som återkommer efter ett internmöte. Det kortar ledtider.",
   },
   {
-    title: "Bevisad kvalitet",
-    body: "Vi arbetar med beställare som har höga krav på säkerhet och precision: sjukhus, datahallar, K-märkta byggnader.",
+    title: "Dokumenterad kvalitet",
+    body: "KMA-plan anpassad per projekt. Egenkontroller dokumenteras löpande. Överlämning sker med kompletta relationsritningar och drifts­anvisningar.",
   },
 ];
 ---
 
 <BaseLayout
   title="Om oss"
-  description="RM Entreprenad & Fasad AB är ett Stockholmsbaserat entreprenadbolag med djup erfarenhet från komplexa projekt. 96 % soliditet, VD Daniel Lopez."
+  description="RM Entreprenad & Fasad AB är ett Stockholmsbaserat entreprenadbolag med soliditet 96% och projekterfarenhet från 3 Mkr-restaureringar till 75 Mkr-grundläggningar. VD Daniel Lopez."
 >
   <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
     <div class="mx-auto max-w-7xl px-6 lg:px-10">
-      <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">Om RM Entreprenad & Fasad</p>
+      <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-6">Om RM Entreprenad & Fasad</p>
       <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
-        Entreprenörskap med fötterna i marken och ansvar hela vägen upp.
+        Ett entreprenadbolag byggt kring erfarenhet, balansräkning och leverans.
       </h1>
       <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
-        RM Entreprenad & Fasad AB är byggt kring ett team med lång erfarenhet av komplexa entreprenader —
-        från grundläggning för hela kvarter åt Stockholmshem till lyft av K-märkta byggnader på Lidingö.
-        Vi arbetar B2B med professionella beställare som värderar kvalitet, kommunikation och leverans i tid.
+        RM Entreprenad & Fasad AB är ett Stockholmsbaserat entreprenadbolag grundat kring ett team
+        med lång erfarenhet från komplexa uppdrag — från 75 Mkr-grundläggningar åt Stockholmshem
+        till lyft och restaurering av K-märkta byggnader åt Lidingö Stad. Vi arbetar enbart B2B
+        med professionella beställare som värderar precision, säkerhet och förutsägbarhet.
       </p>
     </div>
   </section>
 
+  <!-- I siffror -->
   <section class="py-16 lg:py-24 bg-[color:var(--color-paper-2)]">
     <div class="mx-auto max-w-7xl px-6 lg:px-10">
-      <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-12">I siffror</h2>
-      <dl class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-12">Bolaget i siffror</h2>
+      <dl class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
         <div>
-          <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Nettoomsättning</dt>
-          <dd class="text-3xl lg:text-4xl font-semibold">14,7 Mkr</dd>
-          <p class="text-sm text-[color:var(--color-ink-60)] mt-1">senaste räkenskapsåret</p>
+          <dt class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Nettoomsättning 2024/25</dt>
+          <dd class="text-3xl lg:text-4xl font-semibold tabular-nums">14,7 Mkr</dd>
+          <p class="text-sm text-[color:var(--color-ink-60)] mt-2">Räkenskapsår nov 2024 – okt 2025</p>
         </div>
         <div>
-          <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Soliditet</dt>
-          <dd class="text-3xl lg:text-4xl font-semibold">96 %</dd>
-          <p class="text-sm text-[color:var(--color-ink-60)] mt-1">stark balansräkning</p>
+          <dt class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Soliditet</dt>
+          <dd class="text-3xl lg:text-4xl font-semibold tabular-nums">96 %</dd>
+          <p class="text-sm text-[color:var(--color-ink-60)] mt-2">Eget kapital / totala tillgångar</p>
         </div>
         <div>
-          <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Största projekt</dt>
-          <dd class="text-3xl lg:text-4xl font-semibold">75 Mkr</dd>
-          <p class="text-sm text-[color:var(--color-ink-60)] mt-1">Stockholmshem / Kv Persikan</p>
+          <dt class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Största projekt</dt>
+          <dd class="text-3xl lg:text-4xl font-semibold tabular-nums">75 Mkr</dd>
+          <p class="text-sm text-[color:var(--color-ink-60)] mt-2">Kv Persikan · Stockholmshem</p>
         </div>
         <div>
-          <dt class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-2">Erfarenhet</dt>
-          <dd class="text-3xl lg:text-4xl font-semibold">15+ år</dd>
-          <p class="text-sm text-[color:var(--color-ink-60)] mt-1">i kärnteamet</p>
+          <dt class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Samlad branscherfarenhet</dt>
+          <dd class="text-3xl lg:text-4xl font-semibold tabular-nums">100+ år</dd>
+          <p class="text-sm text-[color:var(--color-ink-60)] mt-2">Summa år i kärnteamet</p>
         </div>
       </dl>
+      <p class="text-sm text-[color:var(--color-ink-60)] max-w-2xl">
+        Senast reviderade årsredovisning finns hos Bolagsverket. Samtliga siffror lämnas mot tecknat NDA
+        och via Creditsafe/UC vid upphandlingsförfrågan.
+      </p>
     </div>
   </section>
 
+  <!-- Värderingar -->
   <section class="py-20 lg:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-10">
       <div class="grid lg:grid-cols-3 gap-12 lg:gap-20">
         <div>
-          <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">Värderingar</p>
-          <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-6">Det här står vi för.</h2>
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Så här arbetar vi</p>
+          <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-6">Fyra principer som inte är förhandlingsbara.</h2>
         </div>
-        <div class="lg:col-span-2 grid sm:grid-cols-2 gap-8">
+        <div class="lg:col-span-2 grid sm:grid-cols-2 gap-x-10 gap-y-12">
           {
-            values.map((v) => (
+            values.map((v, i) => (
               <div>
-                <h3 class="text-xl font-semibold mb-3 tracking-tight">{v.title}</h3>
+                <span class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold">0{i + 1}</span>
+                <h3 class="text-xl font-semibold mt-3 mb-3 tracking-tight">{v.title}</h3>
                 <p class="text-[color:var(--color-ink-60)] leading-relaxed">{v.body}</p>
               </div>
             ))
@@ -98,17 +136,25 @@ const values = [
     </div>
   </section>
 
+  <!-- Team -->
   <section class="py-20 lg:py-32 bg-[color:var(--color-paper-2)]">
     <div class="mx-auto max-w-7xl px-6 lg:px-10">
-      <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">Teamet</p>
-      <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-16">Människor bakom projekten.</h2>
+      <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Ledningsgrupp</p>
+      <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-4">Människor med bevisad leverans.</h2>
+      <p class="text-lg text-[color:var(--color-ink-60)] max-w-2xl mb-16">
+        Ledningsgruppen och projektcheferna har tillsammans över 100 års samlad erfarenhet från
+        entreprenadbranschen. Samtliga nyckelpersoner är långsiktigt knutna till bolaget.
+      </p>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {
           team.map((m) => (
             <div class="bg-[color:var(--color-paper)] rounded-2xl p-8">
-              <div class="w-16 h-16 rounded-full bg-[color:var(--color-ink)] text-white flex items-center justify-center text-xl font-semibold mb-6">
-                {m.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+              <div class="flex items-start justify-between mb-6">
+                <div class="w-14 h-14 rounded-full bg-[color:var(--color-ink)] text-white flex items-center justify-center text-base font-semibold">
+                  {m.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+                </div>
+                <span class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] font-semibold">{m.years}</span>
               </div>
               <h3 class="text-lg font-semibold tracking-tight">{m.name}</h3>
               <p class="text-sm text-[color:var(--color-brand-red)] font-medium mb-3">{m.role}</p>
@@ -116,6 +162,15 @@ const values = [
             </div>
           ))
         }
+      </div>
+
+      <!-- Styrelse -->
+      <div class="mt-16 pt-12 border-t border-[color:var(--color-ink-10)]">
+        <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-6">Styrelse</p>
+        <p class="text-lg leading-relaxed max-w-3xl">
+          <strong>Bernt Kristensson</strong>, styrelseledamot med lång erfarenhet inom bygg- och fastighetsbranschen.
+          Revisor <strong>Krister Holmgren</strong>, auktoriserad revisor.
+        </p>
       </div>
     </div>
   </section>
