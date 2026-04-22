@@ -115,6 +115,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: "rocmore-signalisten",
+    title: "Rocmore / Signalisten — Solna",
+    client: "Rocmore (strategisk partner) · Signalisten (Solna Stad)",
+    volume: "40 Mkr/år",
+    period: "Löpande avtal",
+    category: "Mark & anläggning",
+    type: "Ramavtal · strategiskt partnerskap",
+    summary:
+      "Långsiktigt ramavtal inom mark och anläggning i Solna. Vi är strategisk samarbetspartner till Rocmore och arbetar direkt mot Signalisten, Solna Stads allmännyttiga bostadsbolag. Uppdrag omfattar grundläggning, schakt, ledningsarbeten, finplanering och markanläggning kring nyproduktion och förvaltning av befintligt bestånd. Årlig projektvolym cirka 40 Mkr.",
+    challenges:
+      "Återkommande arbete i bebodd stadsmiljö med höga krav på samordning mot hyresgäster, trafik och logistik. Långsiktig relation kräver förutsägbar leverans, konsekvent KMA-arbete och dokumentation över tid.",
+    image: "/projekt/mark_image6.webp",
+    imageAlt: "Pågående markarbete i Solna med betongpump, betongbil och flerbostadshus i bakgrunden",
+    featured: true,
+  },
+  {
     slug: "kvarteret-persikan",
     title: "Kvarteret Persikan",
     client: "Stockholmshem AB",
@@ -294,7 +310,9 @@ export const PROJECTS: Project[] = [
     period: "2022",
     category: "Mark & anläggning",
     type: "Utförandeentreprenad",
-    summary: "Markanläggning och finplanering vid tennisakademin.",
+    summary: "Markanläggning, asfaltering och finplanering i anslutning till tennisakademin.",
+    image: "/projekt/mark_image17.webp",
+    imageAlt: "Tennisakademien — asfalterad yta och entré efter finplanering",
     featured: false,
   },
   {
@@ -324,11 +342,14 @@ export const PROJECTS: Project[] = [
 ];
 
 export const CLIENTS = [
+  { name: "Signalisten", type: "allmännyttan Solna" },
+  { name: "Rocmore", type: "fastighetsutvecklare" },
   { name: "Stockholmshem", type: "allmännyttan" },
   { name: "Atrium Ljungberg", type: "fastighetsägare" },
   { name: "Skanska", type: "generalentreprenör" },
   { name: "Axfood", type: "koncern" },
   { name: "Locum", type: "regionfastighet" },
+  { name: "Solna Stad", type: "kommun" },
   { name: "Lidingö Stad", type: "kommun" },
   { name: "Habitek", type: "byggherre" },
   { name: "Patriam", type: "fastighetsutvecklare" },
