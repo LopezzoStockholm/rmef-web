@@ -69,11 +69,14 @@ const contactSchema = {
             id="contact-form"
             name="kontakt"
             method="POST"
-            action="/api/contact"
+            action="https://formsubmit.co/ajax/info@rmef.se"
             class="space-y-4"
             novalidate
           >
-            <input type="text" name="_hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true" />
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true" />
+            <input type="hidden" name="_subject" value="Ny projektförfrågan från rmef.se" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
             <div class="grid sm:grid-cols-2 gap-4">
               <label class="block">
                 <span class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] font-semibold">Namn</span>
@@ -127,13 +130,13 @@ const contactSchema = {
                 status.style.color = '';
                 const data = Object.fromEntries(new FormData(form));
                 try {
-                  const resp = await fetch('/api/contact', {
+                  const resp = await fetch('https://formsubmit.co/ajax/info@rmef.se', {
                     method: 'POST',
-                    headers: { 'content-type': 'application/json' },
+                    headers: { 'content-type': 'application/json', 'accept': 'application/json' },
                     body: JSON.stringify(data),
                   });
                   const j = await resp.json().catch(() => ({}));
-                  if (resp.ok && j.ok) {
+                  if (resp.ok && (j.success === 'true' || j.success === true)) {
                     status.textContent = 'Tack! Vi hör av oss inom 24 timmar.';
                     status.style.color = '#2E7D32';
                     form.reset();

@@ -30,3 +30,4 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://rmef.se/sitemap-index.xml
+Host: https://rmef.se

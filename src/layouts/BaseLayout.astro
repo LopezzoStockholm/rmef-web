@@ -25,37 +25,79 @@ const fullTitle = title === SITE.defaultTitle ? title : `${title}, ${SITE.shortN
 const canonical = new URL(Astro.url.pathname, Astro.site ?? SITE.url).toString();
 const ogImage = new URL(image, Astro.site ?? SITE.url).toString();
 
-// Organization schema används överallt
+// Organization schema används överallt (LocalBusiness + GeneralContractor för best AI-indexering)
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "GeneralContractor",
+  "@type": ["GeneralContractor", "LocalBusiness", "Organization"],
   "@id": `${SITE.url}/#organization`,
   name: SITE.name,
   alternateName: SITE.shortName,
+  legalName: SITE.name,
   url: SITE.url,
   logo: `${SITE.url}/logo.svg`,
   image: `${SITE.url}/og-default.jpg`,
   telephone: SITE.phoneDisplay,
   email: SITE.email,
   taxID: SITE.orgNumber,
+  vatID: `SE${SITE.orgNumber.replace(/-/g, "")}01`,
   foundingDate: SITE.founded,
-  areaServed: { "@type": "AdministrativeArea", name: "Stockholm" },
+  founder: { "@type": "Person", name: SITE.vd },
+  numberOfEmployees: { "@type": "QuantitativeValue", minValue: 5, maxValue: 25 },
+  priceRange: "$$$",
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "Stockholm" },
+    { "@type": "AdministrativeArea", name: "Stockholms län" },
+    { "@type": "AdministrativeArea", name: "Uppland" },
+    { "@type": "AdministrativeArea", name: "Mälardalen" },
+  ],
   address: {
     "@type": "PostalAddress",
     addressLocality: SITE.address.city,
     addressRegion: SITE.address.region,
     addressCountry: SITE.address.country,
   },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: SITE.phoneDisplay,
+      contactType: "customer service",
+      email: SITE.email,
+      availableLanguage: ["Swedish", "English"],
+      areaServed: "SE",
+    },
+  ],
   sameAs: Object.values(SITE.socials).filter(Boolean),
   knowsAbout: [
-    "Totalentreprenad",
+    "Totalentreprenad ABT 06",
+    "Utförandeentreprenad AB 04",
     "Markarbeten",
     "Grundläggning",
+    "Schakt och sprängning",
+    "Spontning",
+    "Skyddsrum",
+    "Betongarbeten",
     "Fasadrenovering",
-    "Byggnation",
+    "Putsarbeten",
+    "Tilläggsisolering",
+    "Nyproduktion flerbostadshus",
+    "Kontorsanpassning",
     "Elinstallation",
     "Restaurering av kulturbyggnader",
+    "K-märkta byggnader",
+    "KMA-plan",
   ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Entreprenadtjänster",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mark och anläggning" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Bygg och totalentreprenad" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "El" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Fasad" } },
+    ],
+  },
+  award: "Över 100 års samlad branscherfarenhet i kärnteamet",
+  slogan: "Mark, bygg och fasad levererat med precision.",
 };
 
 const websiteSchema = {
