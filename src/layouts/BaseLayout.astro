@@ -145,13 +145,23 @@ const allSchemas = [organizationSchema, websiteSchema, ...(schema ? (Array.isArr
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
-    <!-- Fonts (Manrope + Inter via Google Fonts, preconnect för snabbhet) -->
+    <!-- Fonts (Manrope + Inter via Google Fonts, preconnect + preload) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap"
     />
+
+    <!-- Preload hero image om angiven -->
+    {image && image !== "/og-default.jpg" && (
+      <link rel="preload" as="image" href={image} fetchpriority="high" />
+    )}
 
     <!-- JSON-LD Structured Data -->
     {

@@ -1,0 +1,144 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+
+const faqs = [
+  {
+    category: "Projekt och upphandling",
+    items: [
+      {
+        q: "Vilka projektvolymer tar RM Entreprenad & Fasad?",
+        a: "Total- och utförandeentreprenader från cirka 3 Mkr upp till 75+ Mkr. Vårt största genomförda projekt är grundläggning åt Stockholmshem på 75 Mkr (Kvarteret Persikan). Minsta typiska uppdrag är fasad- eller restaureringsprojekt runt 3 Mkr. Vi har även ramavtal med återkommande projektvolym (t.ex. 40 Mkr/år i Solna).",
+      },
+      {
+        q: "Vilka entreprenadformer arbetar ni med?",
+        a: "Totalentreprenader enligt ABT 06 och utförandeentreprenader enligt AB 04. Varje projekt har en dokumenterad KMA-plan anpassad efter beställarens krav. Vi är F-skatt-registrerade och har full ansvarsförsäkring.",
+      },
+      {
+        q: "Hur snabbt kan ni starta ett nytt projekt?",
+        a: "Efter godkänd offert kan vi vanligen påbörja produktion inom 4–8 veckor beroende på projektets storlek och bemanningsbehov. Akuta insatser hanteras snabbare vid ledig kapacitet.",
+      },
+      {
+        q: "Har ni egen personal eller används underentreprenörer?",
+        a: "Båda. Kärnkompetens internt inom mark, bygg och el, plus ett brett nätverk av kvalitetssäkrade underentreprenörer för spontning, pålning, målning etc. Bemanningen anpassas exakt efter varje projekt.",
+      },
+    ],
+  },
+  {
+    category: "Kunder och geografi",
+    items: [
+      {
+        q: "Vilka typer av kunder arbetar ni med?",
+        a: "Professionella beställare: fastighetsägare (Stockholmshem, Atrium Ljungberg, Axfood, Signalisten), generalentreprenörer (Skanska), regionfastigheter (Locum), kommuner (Solna, Lidingö, Sigtuna, Knivsta) och byggherrar (Habitek, Patriam, Rocmore). Vi arbetar enbart mot företagskunder.",
+      },
+      {
+        q: "Arbetar ni utanför Stockholm?",
+        a: "Huvudkontoret ligger i Stockholm med projekt i hela Mälardalen: Stockholm, Solna, Lidingö, Sigtuna, Knivsta, Norrtälje, Sollentuna, Danderyd. Större uppdrag kan tas utanför regionen efter avtal.",
+      },
+    ],
+  },
+  {
+    category: "Tjänster och teknik",
+    items: [
+      {
+        q: "Vilka tjänster levererar ni in-house utan underentreprenörer?",
+        a: "Mark och anläggning (schakt, grundläggning, sprängning, spontning, ledningsarbeten), bygg (totalentreprenad, kontorsanpassning, restaurering), el (installation, styr) och fasad (puts, isolering). Fyra kompetensområden i egen regi gör att vi äger kvalitet och gränssnitt.",
+      },
+      {
+        q: "Har ni erfarenhet av driftkänsliga miljöer?",
+        a: "Ja. Vi har levererat uppdrag på Danderyds sjukhus (kallvattenservis, sjökyla, godsmottagning), Norrtälje sjukhus (sprinklercentral) och Octapharma (läkemedelsindustri). Gemensamt: noll driftstörningar tillåtna, arbete förläggs i tidsfönster.",
+      },
+      {
+        q: "Arbetar ni med K-märkta byggnader?",
+        a: "Ja. Vi har genomfört flera restaureringar av kulturbyggnader för Lidingö Stad — bland annat Vindarnas tempel (lyft bort, restaurerat och återmonterat) och Kaptensstugan på Hustegaholm. Arbeten sker alltid under antikvarisk kontroll.",
+      },
+      {
+        q: "Hur hanteras kvalitetssäkring och KMA?",
+        a: "Företagsgemensam KMA-plan anpassas per projekt. Dokumenterade egenkontroller löpande. Överlämning sker med kompletta relationsritningar, driftsanvisningar och garantiintyg. Garantibesiktning vid 2 och 5 år.",
+      },
+    ],
+  },
+  {
+    category: "Priser och offert",
+    items: [
+      {
+        q: "Hur ser er offertprocess ut?",
+        a: "1) Vi tar emot underlag eller ritningar. 2) Platsbesök där det är lämpligt. 3) Offert med fast pris eller riktpris, kalkyl per post, tid- och produktionsplan, ÄTA-struktur och betalningsplan. Svar på projektförfrågningar inom 48 timmar, full offert vanligen inom 1–3 veckor beroende på komplexitet.",
+      },
+      {
+        q: "Vad kostar en fasadrenovering?",
+        a: "Typiskt 1 500–3 500 kr per kvm fasadyta i Stockholm beroende på omfattning, material och tilläggsisolering. Se vår detaljerade kostnadsguide under Artiklar.",
+      },
+      {
+        q: "Hur fungerar garantier?",
+        a: "Enligt AB 04 respektive ABT 06 — 5 års garantitid på utförande med garantibesiktning vid 2 och 5 år. För material följer vi tillverkarens garantivillkor.",
+      },
+    ],
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.flatMap((c) =>
+    c.items.map((i) => ({
+      "@type": "Question",
+      name: i.q,
+      acceptedAnswer: { "@type": "Answer", text: i.a },
+    }))
+  ),
+};
+---
+
+<BaseLayout
+  title="Vanliga frågor"
+  description="Svar på de vanligaste frågorna om RM Entreprenad & Fasad — projektvolymer, entreprenadformer, priser, geografi, KMA och garantier."
+  schema={faqSchema}
+>
+  <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-6">Vanliga frågor</p>
+      <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+        Svar på det beställare oftast frågar.
+      </h1>
+      <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+        Om ni inte hittar svar på er fråga nedan, ring {" "}
+        <a href="tel:0812875700" class="text-[color:var(--color-brand-red)] font-semibold">08-12 87 57 00</a> {" "}
+        eller mejla <a href="mailto:info@rmef.se" class="text-[color:var(--color-brand-red)] font-semibold">info@rmef.se</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="pb-20 lg:pb-32">
+    <div class="mx-auto max-w-4xl px-6 lg:px-10 space-y-16">
+      {
+        faqs.map((cat) => (
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8 pb-4 border-b border-[color:var(--color-ink-10)]">
+              {cat.category}
+            </h2>
+            <div class="space-y-6">
+              {cat.items.map((f) => (
+                <details class="group bg-[color:var(--color-paper-2)] rounded-2xl p-6 lg:p-8 open:bg-[color:var(--color-paper-2)]">
+                  <summary class="cursor-pointer list-none flex items-start justify-between gap-6">
+                    <h3 class="text-lg lg:text-xl font-semibold tracking-tight flex-1 pr-4">
+                      {f.q}
+                    </h3>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="flex-shrink-0 mt-1 transition-transform group-open:rotate-45 text-[color:var(--color-brand-red)]" aria-hidden="true">
+                      <path d="M12 5v14M5 12h14" stroke-linecap="round"/>
+                    </svg>
+                  </summary>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed mt-4 pr-8">
+                    {f.a}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>
