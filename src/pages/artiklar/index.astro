@@ -1,0 +1,82 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+
+const articles = (await getCollection("artiklar")).sort(
+  (a, b) => b.data.published.valueOf() - a.data.published.valueOf()
+);
+
+const categories = Array.from(new Set(articles.map((a) => a.data.category)));
+---
+
+<BaseLayout
+  title="Artiklar och guider"
+  description="Branschguider från RM Entreprenad & Fasad. Kostnadsguider, upphandlingsråd och tekniska genomgångar för fastighetsägare, byggherrar och beställare."
+>
+  <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-6">Artiklar och guider</p>
+      <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+        Branschinsikt från ett team som bygger i Stockholm varje dag.
+      </h1>
+      <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+        Guider, kostnadsintervall och upphandlingsråd för fastighetsägare, byggherrar och
+        beställare som ska handla upp mark, bygg, el eller fasad.
+      </p>
+    </div>
+  </section>
+
+  <section class="pb-20 lg:pb-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          articles.map((a) => (
+            <a
+              href={`/artiklar/${a.slug}/`}
+              class="group block bg-[color:var(--color-paper-2)] rounded-3xl overflow-hidden hover:shadow-xl hover:shadow-black/5 transition-all duration-500"
+            >
+              {a.data.heroImage && (
+                <div class="aspect-[16/10] overflow-hidden bg-[color:var(--color-steel)]">
+                  <img
+                    src={a.data.heroImage.replace('/projekt/', '/projekt/thumb/')}
+                    alt={a.data.heroImageAlt ?? a.data.title}
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+                </div>
+              )}
+              <div class="p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <span class="text-[10px] uppercase tracking-[0.18em] bg-[color:var(--color-brand-red)] text-white px-3 py-1 rounded-full font-semibold">
+                    {a.data.category}
+                  </span>
+                  {a.data.readingTime && (
+                    <span class="text-xs text-[color:var(--color-ink-40)]">
+                      {a.data.readingTime} min läsning
+                    </span>
+                  )}
+                </div>
+                <h2 class="text-xl lg:text-2xl font-semibold tracking-tight mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">
+                  {a.data.title}
+                </h2>
+                <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">
+                  {a.data.description}
+                </p>
+                <div class="mt-6 flex items-center justify-between">
+                  <time class="text-xs text-[color:var(--color-ink-40)]" datetime={a.data.published.toISOString()}>
+                    {a.data.published.toLocaleDateString("sv-SE", { year: "numeric", month: "long", day: "numeric" })}
+                  </time>
+                  <span class="text-sm font-semibold text-[color:var(--color-brand-red)] group-hover:translate-x-1 transition-transform">Läs mer →</span>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>

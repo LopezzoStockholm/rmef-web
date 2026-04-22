@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../lib/site";
+const lastUpdated = "22 april 2026";
+---
+
+<BaseLayout
+  title="Integritetspolicy"
+  description="Så hanterar RM Entreprenad & Fasad AB personuppgifter enligt GDPR. Vilka uppgifter vi samlar in, varför, och dina rättigheter som registrerad."
+  noindex={false}
+>
+  <section class="pt-24 lg:pt-32 pb-16 lg:pb-24">
+    <div class="mx-auto max-w-3xl px-6 lg:px-10">
+      <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-6">Integritetspolicy</p>
+      <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight mb-8">
+        Så hanterar vi personuppgifter.
+      </h1>
+      <p class="text-sm text-[color:var(--color-ink-40)] mb-12">Senast uppdaterad: {lastUpdated}</p>
+
+      <div class="prose prose-lg max-w-none">
+        <h2>Personuppgiftsansvarig</h2>
+        <p>
+          {SITE.name} (org.nr {SITE.orgNumber}), {SITE.address.city}, är personuppgiftsansvarig för
+          de personuppgifter som hanteras via denna webbplats och i vår löpande affärsverksamhet.
+        </p>
+        <p>
+          Kontakt: <a href={`mailto:${SITE.email}`}>{SITE.email}</a> eller <a href={`tel:${SITE.phoneDisplay.replace(/\s/g, "")}`}>{SITE.phoneDisplay}</a>.
+        </p>
+
+        <h2>Vilka uppgifter vi samlar in</h2>
+        <p>Vi samlar endast in de uppgifter som behövs för att fullgöra våra uppdrag och kontakta dig:</p>
+        <ul>
+          <li><strong>Kontaktformulär:</strong> namn, företag, e-post, telefon, meddelande. Lämnas frivilligt av besökaren.</li>
+          <li><strong>Offert- och projektdata:</strong> uppgifter som krävs för att ta fram anbud och genomföra entreprenader (kontaktpersoner, fastighetsuppgifter, fakturauppgifter).</li>
+          <li><strong>Webbstatistik:</strong> aggregerad, anonym trafikstatistik via Cloudflare (cookielös, sparar inga personuppgifter).</li>
+        </ul>
+
+        <h2>Ändamål och rättslig grund</h2>
+        <ul>
+          <li><strong>Kontaktformulär och offertförfrågningar</strong> — berättigat intresse (GDPR art. 6.1.f) för att besvara förfrågningar.</li>
+          <li><strong>Genomförande av entreprenader</strong> — avtal med kund (GDPR art. 6.1.b).</li>
+          <li><strong>Bokföring och fakturering</strong> — rättslig förpliktelse enligt bokföringslagen (GDPR art. 6.1.c).</li>
+          <li><strong>Webbstatistik</strong> — berättigat intresse (GDPR art. 6.1.f) för att förbättra webbplatsen. Ingen individuell spårning.</li>
+        </ul>
+
+        <h2>Lagringstid</h2>
+        <ul>
+          <li>Kontaktförfrågningar: 24 månader om de inte leder till affärsrelation.</li>
+          <li>Projekt- och kunddata: 10 år efter avslutat uppdrag (bokföringslagen + preskriptionstid entreprenadjuridik).</li>
+          <li>Aggregerad webbstatistik: 12 månader.</li>
+        </ul>
+
+        <h2>Vem vi delar uppgifter med</h2>
+        <p>
+          Vi delar aldrig personuppgifter med tredje part för marknadsföringsändamål. Uppgifter
+          kan komma att delas med följande parter i den omfattning det krävs:
+        </p>
+        <ul>
+          <li>Underentreprenörer och leverantörer i specifika projekt (endast nödvändig kontaktinformation)</li>
+          <li>Revisor och redovisningsbyrå för bokföringsändamål</li>
+          <li>IT-leverantörer (Cloudflare som driftar webbplatsen, Microsoft 365 för e-post)</li>
+          <li>Myndigheter vid rättslig förpliktelse</li>
+        </ul>
+
+        <h2>Dina rättigheter</h2>
+        <p>Enligt GDPR har du rätt att:</p>
+        <ul>
+          <li>Få information om vilka uppgifter vi har om dig (registerutdrag)</li>
+          <li>Begära rättelse av felaktiga uppgifter</li>
+          <li>Begära radering ("rätten att bli glömd")</li>
+          <li>Begära begränsning av behandling</li>
+          <li>Invända mot behandling baserad på berättigat intresse</li>
+          <li>Begära dataportabilitet</li>
+          <li>Lämna klagomål till Integritetsskyddsmyndigheten (IMY)</li>
+        </ul>
+        <p>
+          För att utöva dina rättigheter, mejla <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+          Vi besvarar inom 30 dagar.
+        </p>
+
+        <h2>Säkerhet</h2>
+        <p>
+          All dataöverföring till och från webbplatsen är krypterad med TLS (HTTPS). Åtkomst till
+          personuppgifter är begränsad till personal som behöver det för sitt arbete. Vi använder
+          Microsoft 365 för e-post med tvåfaktorautentisering.
+        </p>
+
+        <h2>Ändringar av policyn</h2>
+        <p>
+          Vi kan uppdatera denna policy vid behov. Datum för senaste uppdatering anges längst upp
+          på sidan. Vid väsentliga förändringar informerar vi berörda kunder direkt.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

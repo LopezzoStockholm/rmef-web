@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../lib/site";
+const lastUpdated = "22 april 2026";
+---
+
+<BaseLayout
+  title="Cookiepolicy"
+  description="Information om cookies och liknande tekniker som används på rmef.se. Vår webbplats använder ingen spårande cookie."
+>
+  <section class="pt-24 lg:pt-32 pb-16 lg:pb-24">
+    <div class="mx-auto max-w-3xl px-6 lg:px-10">
+      <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-6">Cookies</p>
+      <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight mb-8">
+        Cookiepolicy.
+      </h1>
+      <p class="text-sm text-[color:var(--color-ink-40)] mb-12">Senast uppdaterad: {lastUpdated}</p>
+
+      <div class="prose prose-lg max-w-none">
+        <h2>Kort version</h2>
+        <p>
+          <strong>rmef.se använder inga spårande cookies.</strong> Vår webbstatistik via Cloudflare
+          är cookielös och sparar inga personuppgifter. Inga samtycken krävs enligt GDPR/ePrivacy.
+        </p>
+
+        <h2>Teknisk användning av cookies</h2>
+        <p>
+          Vi använder enbart <strong>strikt nödvändiga cookies</strong> som krävs för att
+          webbplatsen ska fungera:
+        </p>
+        <ul>
+          <li><strong>Cloudflare-cookies</strong> (<code>__cf_bm</code>, <code>cf_clearance</code>) — sätts av vår CDN-leverantör för att skilja riktiga besökare från bottar och hantera säkerhetsutmaningar. Teknisk funktion, ingen spårning.</li>
+        </ul>
+
+        <h2>Ingen analys- eller marknadsföringspårning</h2>
+        <p>Vi använder inte:</p>
+        <ul>
+          <li>Google Analytics, Google Tag Manager eller liknande spårningsskript (ej aktiverade)</li>
+          <li>Meta Pixel, LinkedIn Insight Tag eller andra annonsnätverk</li>
+          <li>Tredjepartscookies för remarketing</li>
+          <li>Fingerprinting</li>
+        </ul>
+
+        <h2>Webbstatistik</h2>
+        <p>
+          Vi använder Cloudflare Web Analytics som är en <strong>cookielös</strong> statistiklösning.
+          Den samlar aggregerad information om sidvisningar och geografisk region (landnivå), men
+          sätter inga cookies och sparar inga individuella besökardata. Inga personuppgifter behandlas
+          enligt GDPR.
+        </p>
+
+        <h2>Externa tjänster som öppnas via länk</h2>
+        <p>
+          Om du klickar på länkar till externa tjänster (Google Maps, WhatsApp, LinkedIn) gäller
+          respektive tjänsts egna cookie- och integritetspolicy.
+        </p>
+
+        <h2>Mer information</h2>
+        <p>
+          Se vår <a href="/integritetspolicy/">integritetspolicy</a> för hur vi hanterar
+          personuppgifter i övrigt. Frågor kan ställas till <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

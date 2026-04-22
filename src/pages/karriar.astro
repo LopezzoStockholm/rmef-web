@@ -1,0 +1,99 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import { SITE } from "../lib/site";
+---
+
+<BaseLayout
+  title="Karriär"
+  description="Arbeta hos RM Entreprenad & Fasad AB. Vi söker löpande erfarna hantverkare, arbetsledare och projektchefer till våra pågående projekt i Stockholm."
+>
+  <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-6">Karriär</p>
+      <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+        Bygg din karriär hos ett bolag där yrkeskunnande värdesätts.
+      </h1>
+      <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+        RM Entreprenad & Fasad söker löpande erfarna hantverkare, arbetsledare och projektchefer
+        till våra pågående projekt i Stockholm och Mälardalen. Vi är ett bolag där dörren till
+        ledningen alltid är öppen och där yrkeskunnande värdesätts högt.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-24 bg-[color:var(--color-paper-2)]">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-12">Därför arbetar folk hos oss</h2>
+      <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold">01</span>
+          <h3 class="text-xl font-semibold mt-3 mb-3 tracking-tight">Riktig yrkesstolthet</h3>
+          <p class="text-[color:var(--color-ink-60)] leading-relaxed">
+            Vi tar oss an projekt där precision, kvalitet och materialkunskap spelar roll.
+            Inte löpande band och billiga genvägar.
+          </p>
+        </div>
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold">02</span>
+          <h3 class="text-xl font-semibold mt-3 mb-3 tracking-tight">Korta beslutsvägar</h3>
+          <p class="text-[color:var(--color-ink-60)] leading-relaxed">
+            Du pratar direkt med den som bestämmer. Inga långa hierarkier, inga onödiga möten.
+            Problem löses där de uppstår.
+          </p>
+        </div>
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold">03</span>
+          <h3 class="text-xl font-semibold mt-3 mb-3 tracking-tight">Långa projekt, stabil lön</h3>
+          <p class="text-[color:var(--color-ink-60)] leading-relaxed">
+            Ramavtal och flerårsprojekt ger en trygg grund. Vi investerar i personalen —
+            utbildning, certifieringar och utrustning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Roller vi återkommande söker</h2>
+      <p class="text-lg text-[color:var(--color-ink-60)] max-w-3xl mb-12">
+        Vi har ingen aktuell annonserad tjänst just nu, men vi tar löpande emot spontanansökningar
+        inom följande områden. Kvalificerade kandidater kontaktas när behov uppstår.
+      </p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          [
+            { title: "Arbetsledare", body: "Mark och anläggning. Vana vid schakt, grundläggning och samordning mot UE." },
+            { title: "Platschef", body: "Med eget budget- och produktionsansvar. Gärna vana vid totalentreprenader." },
+            { title: "Projektingenjör", body: "Kalkyl, inköp och projektering. Mentala förmåga att hantera ÄTA och dokumentation." },
+            { title: "Betongarbetare", body: "Platsgjutning, armering, bottenplattor. Gärna erfarenhet av skyddsrum." },
+            { title: "Grävmaskinist", body: "CE-behörig, vana vid innerstadsmiljö och trånga arbetsområden." },
+            { title: "Fasadarbetare / putsare", body: "Klassisk puts och moderna system. Gärna vana vid ställningsarbete på hög höjd." },
+          ].map((r) => (
+            <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-8">
+              <h3 class="text-xl font-semibold tracking-tight mb-3">{r.title}</h3>
+              <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">{r.body}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-32 bg-[color:var(--color-paper-2)]">
+    <div class="mx-auto max-w-3xl px-6 lg:px-10">
+      <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-6">Spontanansökan</h2>
+      <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-8">
+        Skicka CV och kort beskrivning av dig själv och önskad roll till <a href={`mailto:${SITE.email}`} class="text-[color:var(--color-brand-red)] font-semibold">{SITE.email}</a>. Märk mejlet med <strong>"Spontanansökan"</strong> och vilken roll som är aktuell.
+      </p>
+      <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">
+        Vi sparar ansökningar i 12 månader och kontaktar dig när en passande roll öppnar sig.
+        Behandling av personuppgifter sker enligt vår <a href="/integritetspolicy/" class="text-[color:var(--color-brand-red)]">integritetspolicy</a>.
+      </p>
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>
