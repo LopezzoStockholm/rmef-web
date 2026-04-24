@@ -17,7 +17,7 @@ const contactSchema = {
   description="Kontakta RM Entreprenad & Fasad AB, ring, mejla, chatta via WhatsApp eller skicka projektförfrågan via formuläret. Vi svarar samma dag."
   schema={contactSchema}
 >
-  <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+  <section class="pt-24 lg:pt-32 pb-8 lg:pb-10">
     <div class="mx-auto max-w-7xl px-6 lg:px-10">
       <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">Kontakt</p>
       <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
@@ -26,6 +26,59 @@ const contactSchema = {
       <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
         Välj den kanal som passar dig. Alla vägar leder till samma team,
         ingen växel och ingen ärendekö.
+      </p>
+    </div>
+  </section>
+
+  <!-- Trovärdighet & compliance -->
+  <section class="pb-12">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 bg-[color:var(--color-paper-2)] rounded-2xl px-6 py-6 text-sm">
+        <div class="flex items-center gap-3">
+          <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+            <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+            <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-semibold">F-skatt</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+            <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+            <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-semibold">Momsreg.</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+            <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+            <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-semibold">Ansvarsförsäkring <span class="text-[color:var(--color-ink-60)] font-normal">(Trygg Hansa)</span></span>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+            <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+            <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-semibold">ABT 06 & AB 04</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+            <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+            <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-semibold">KMA-plan per projekt</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+            <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+            <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-semibold">MSB-kompetens skyddsrum</span>
+        </div>
+      </div>
+      <p class="text-xs text-[color:var(--color-ink-40)] mt-3 text-center">
+        Org.nr 559251-1462 · Soliditet 96 % · Över 100 års samlad branscherfarenhet i kärnteamet
       </p>
     </div>
   </section>
@@ -97,10 +150,14 @@ const contactSchema = {
             <label class="block">
               <span class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] font-semibold">Typ av projekt</span>
               <select name="typ" class="mt-1 w-full bg-[color:var(--color-paper)] border border-[color:var(--color-ink-10)] rounded-lg px-4 py-3 focus:outline-none focus:border-[color:var(--color-brand-red)]">
-                <option>Mark & anläggning</option>
+                <option>Skyddsrum (sanering, besiktning, MSB-åtgärd)</option>
+                <option>Mark & anläggning (grundläggning, schakt, spontning)</option>
                 <option>Bygg / Totalentreprenad</option>
+                <option>Betongrenovering (balkong, bjälklag)</option>
+                <option>Restaurering kulturbyggnad (K-märkt)</option>
+                <option>Kontorsanpassning / Ombyggnation</option>
+                <option>Fasadrenovering</option>
                 <option>El</option>
-                <option>Fasad</option>
                 <option>Annat</option>
               </select>
             </label>
