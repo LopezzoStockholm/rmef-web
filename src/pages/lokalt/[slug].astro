@@ -1,0 +1,146 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { LOCATIONS } from "../../lib/locations";
+import { SITE, PROJECTS } from "../../lib/site";
+
+export function getStaticPaths() {
+  return LOCATIONS.map((loc) => ({
+    params: { slug: loc.slug },
+    props: { location: loc },
+  }));
+}
+
+const { location } = Astro.props;
+
+const relatedProjects = location.referenser
+  ? location.referenser
+      .map((r) => PROJECTS.find((p) => p.slug === r.slug))
+      .filter((p): p is NonNullable<typeof p> => !!p)
+  : [];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      serviceType: location.serviceLabel,
+      provider: { "@id": `${SITE.url}/#organization` },
+      areaServed: { "@type": "City", name: location.ort },
+      description: location.description,
+      url: `${SITE.url}/lokalt/${location.slug}`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Lokalt", item: `${SITE.url}/lokalt` },
+        { "@type": "ListItem", position: 3, name: `${location.serviceLabel} ${location.ort}`, item: `${SITE.url}/lokalt/${location.slug}` },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout title={location.title} description={location.description} schema={schema}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <a href="/lokalt" class="hover:text-[color:var(--color-brand-red)]">Lokalt</a>
+          <span class="mx-2">/</span>
+          <span>{location.serviceLabel} {location.ort}</span>
+        </nav>
+
+        <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">
+          {location.serviceLabel} · {location.ort}
+        </p>
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          {location.h1 ?? `${location.serviceLabel} i ${location.ort}`}
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          {location.intro}
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">
+              Lokal förankring i {location.ort}
+            </h2>
+            <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">{location.localContext}</p>
+          </div>
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Så levererar vi</h2>
+            <ul class="space-y-4 text-lg">
+              <li class="flex items-start gap-3">
+                <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="mt-1 flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+                  <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+                  <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="leading-relaxed">Egen projektledning och egna hantverkare</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="mt-1 flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+                  <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+                  <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="leading-relaxed">Fast pris och tydlig dokumentation</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="mt-1 flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+                  <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+                  <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="leading-relaxed">Över 100 års samlad branscherfarenhet i kärnteamet</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="mt-1 flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+                  <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+                  <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="leading-relaxed">En projektledare genom hela uppdraget</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="mt-1 flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+                  <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+                  <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="leading-relaxed">Referensprojekt från beställare i Stockholmsregionen</span>
+              </li>
+            </ul>
+            <a href={location.tjansteLank} class="inline-flex items-center gap-2 mt-8 text-sm font-semibold text-[color:var(--color-brand-red)] hover:gap-3 transition-all">
+              Läs mer om {location.serviceLabel.toLowerCase()}
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {relatedProjects.length > 0 && (
+      <section class="py-20 lg:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
+          <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Referensprojekt i {location.ort}</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {relatedProjects.map((p) => (
+              <a href={`/projekt/${p.slug}`} class="group block p-8 bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+                <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">{p.client}</p>
+                <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">{p.title}</h3>
+                <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed line-clamp-3 mb-4">{p.summary}</p>
+                {p.volume && <p class="text-sm font-semibold text-[color:var(--color-brand-red)]">{p.volume}</p>}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <CTA />
+  </article>
+</BaseLayout>

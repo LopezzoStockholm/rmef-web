@@ -2,33 +2,82 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { SERVICES } from "../../lib/site";
+
+const specialtjanster = [
+  {
+    title: "Skyddsrum",
+    href: "/tjanster/skyddsrum",
+    desc: "Skyddsrumssanering, skyddsrumsbesiktning och nyproduktion av ersättnings­skyddsrum enligt MSB:s krav.",
+    tag: "Specialist",
+  },
+  {
+    title: "Betongrenovering",
+    href: "/tjanster/betongrenovering",
+    desc: "Karbonatisering, armeringskorrosion och spjälkning i balkonger, bjälklag och betongfasader.",
+    tag: "BRF & Fastighet",
+  },
+  {
+    title: "Ombyggnation",
+    href: "/tjanster/ombyggnation",
+    desc: "Totalentreprenad för kontorsanpassning, ändrad användning och tillbyggnad — med drift pågående.",
+    tag: "Kommersiellt",
+  },
+  {
+    title: "Restaurering kulturbyggnad",
+    href: "/tjanster/restaurering-kulturbyggnad",
+    desc: "Antikvariska restaureringar av K-märkta byggnader och byggnadsminnen med full myndighetsdialog.",
+    tag: "Antikvariskt",
+  },
+];
 ---
 
 <BaseLayout
-  title="Tjänster"
-  description="Totalentreprenader inom mark, bygg, el och fasad. RM Entreprenad & Fasad täcker hela entreprenadkedjan i egen regi, från grundläggning till färdig fasad."
+  title="Tjänster — skyddsrum, fasad, betong, totalentreprenad"
+  description="RM Entreprenad & Fasad levererar skyddsrumssanering, fasadrenovering, betongrenovering, ombyggnation och totalentreprenad i Stockholm och Mälardalen. Fast pris, egen projektledning, full dokumentation."
 >
   <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
     <div class="mx-auto max-w-7xl px-6 lg:px-10">
       <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">Tjänster</p>
       <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
-        Fyra discipliner som pratar med varandra från start.
+        Skyddsrum. Fasad. Betong. Totalentreprenad.
       </h1>
       <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
-        Vi är inte en generalentreprenör som köper in allt externt. Kärnan i varje område ligger hos oss,
-        det gör att vi äger kvalitet, tid och gränssnitt från dag ett.
+        Vi är specialister på skyddsrumssanering, skyddsrumsbesiktning och komplexa byggprojekt där andra entreprenörer tackar nej. Egen projektledning, egna hantverkare och beprövade underentreprenörer ger kontroll över tid, kvalitet och budget.
       </p>
     </div>
   </section>
 
-  <section class="pb-20">
-    <div class="mx-auto max-w-7xl px-6 lg:px-10 space-y-6">
-      {
-        Object.values(SERVICES).map((service, idx) => (
+  <section class="pb-12">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Specialistområden</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {specialtjanster.map((t) => (
+          <a href={t.href} class="group block p-10 bg-[color:var(--color-paper-2)] rounded-3xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">{t.tag}</p>
+            <h3 class="text-3xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">{t.title}</h3>
+            <p class="text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed mb-6">{t.desc}</p>
+            <span class="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--color-brand-red)] group-hover:text-white">
+              Läs mer
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Kärndiscipliner</h2>
+      <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl mb-10">
+        Vi är inte en generalentreprenör som köper in allt externt. Kärnan i varje område ligger hos oss, det gör att vi äger kvalitet, tid och gränssnitt från dag ett.
+      </p>
+      <div class="space-y-6">
+        {Object.values(SERVICES).map((service, idx) => (
           <article class="grid lg:grid-cols-5 gap-8 lg:gap-12 p-8 lg:p-12 bg-[color:var(--color-paper-2)] rounded-3xl">
             <div class="lg:col-span-2">
               <span class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] font-semibold">0{idx + 1}</span>
-              <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mt-4 mb-6">{service.title}</h2>
+              <h3 class="text-3xl lg:text-4xl font-semibold tracking-tight mt-4 mb-6">{service.title}</h3>
               <p class="text-[color:var(--color-ink-60)] leading-relaxed">{service.long}</p>
             </div>
             <div class="lg:col-span-3">
@@ -45,14 +94,36 @@ import { SERVICES } from "../../lib/site";
               </ul>
               <a href={`/tjanster/${service.slug}`} class="inline-flex items-center gap-2 mt-8 text-sm font-semibold text-[color:var(--color-brand-red)] hover:gap-3 transition-all">
                 Läs mer om {service.title.toLowerCase()}
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
             </div>
           </article>
-        ))
-      }
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">För olika beställartyper</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="/for-brf" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+          <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Bostads­rätts­föreningar</h3>
+          <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Skyddsrum, fasad, balkonger och totalentreprenader med tydliga beslutsunderlag.</p>
+        </a>
+        <a href="/for-fastighetsagare" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+          <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Fastighets­ägare</h3>
+          <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Ramavtal, löpande underhåll och större entreprenader för kvalificerade byggherrar.</p>
+        </a>
+        <a href="/for-kommun" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+          <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Kommuner</h3>
+          <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">LOU-upphandling, antikvariska restaureringar och skol- och institutionsbygg.</p>
+        </a>
+        <a href="/for-industri" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+          <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Industri</h3>
+          <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Driftkänsliga miljöer, hygieniska krav, nolltolerans för avbrott.</p>
+        </a>
+      </div>
     </div>
   </section>
 

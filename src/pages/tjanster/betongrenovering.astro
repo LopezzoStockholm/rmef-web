@@ -1,0 +1,141 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../lib/site";
+
+const title = "Betongrenovering Stockholm — karbonatisering, balkong och bjälklag";
+const description =
+  "Betongrenovering i Stockholm och Mälardalen. Vi åtgärdar karbonatisering, armeringskorrosion, spjälkning på balkonger, bjälklag och betongfasader för BRF och fastighetsägare.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      serviceType: "Betongrenovering",
+      provider: { "@id": `${SITE.url}/#organization` },
+      areaServed: ["Stockholm", "Stockholms län", "Mälardalen"],
+      description:
+        "Renovering av betongkonstruktioner — balkonger, bjälklag, fasader, betongkällare. Åtgärd mot karbonatisering, armeringskorrosion och spjälkning.",
+      url: `${SITE.url}/tjanster/betongrenovering`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Tjänster", item: `${SITE.url}/tjanster` },
+        { "@type": "ListItem", position: 3, name: "Betongrenovering", item: `${SITE.url}/tjanster/betongrenovering` },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster" class="hover:text-[color:var(--color-brand-red)]">Tjänster</a>
+          <span class="mx-2">/</span>
+          <span>Betongrenovering</span>
+        </nav>
+
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          Betongrenovering i Stockholm
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          Flerbostadshus från 1960–1980-talet börjar nu nå den ålder då betongen — balkonger, bjälklag och fasader — behöver renoveras. Vi hanterar hela processen från statusbedömning och provning till färdig betongkonstruktion med förlängd livslängd.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Typer av betongrenovering</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/tjanster/balkongrenovering" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <h3 class="text-2xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Balkongrenovering</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed mb-4">
+              Karbonatiserad betong, armeringskorrosion och sprickor i balkongplattor. Vi bilar bort skadad betong, rostskyddar armering, kompletterar och ytbehandlar.
+            </p>
+            <span class="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--color-brand-red)] group-hover:text-white">
+              Läs mer
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-2xl font-semibold mb-4">Bjälklag och pelare</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Renovering av bärande betongkonstruktioner i garage, källare och industri. Förstärkning med ny armering, kolfiberförstärkning vid kapacitetsbehov och skyddsytor mot framtida korrosion.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-2xl font-semibold mb-4">Betongfasad</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Renovering av exponerade betongytor på fasader från 60–80-talet. Åtgärd mot karbonatisering och sprickbildning, med möjlighet att ytbehandla mot fortsatt nedbrytning.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-2xl font-semibold mb-4">Garage och källare</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Klorid­skador i parkeringshus, sprickor i undermarksgarage och tätskikt. Vi hanterar åtgärder utan att parkeringen behöver stängas helt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Vad är karbonatisering?</h2>
+            <div class="space-y-6 text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+              <p>
+                Karbonatisering är den vanligaste orsaken till att betong måste renoveras. Koldioxid från luften reagerar över tid med cementens kalcium — betongens pH sjunker från alkaliskt till neutralt, och när pH-nivån når armeringen börjar stålet rosta.
+              </p>
+              <p>
+                Rostande armering expanderar volymmässigt med cirka 7 gånger, vilket spränger ut den skyddande betongen ovanför. Resultatet: spjälkningar, sprickor och i slutändan kapacitetsförlust.
+              </p>
+              <p>
+                Hastigheten beror på täckskikt, betongkvalitet och exponering. I Stockholmsklimat brukar karbonatiseringsfronten nå armeringen efter 30–60 år i ordinarie byggnationer — vilket förklarar varför så många fastigheter nu är inne i sitt första renoveringsbehov.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Betongrenovering — arbetsmoment</h2>
+            <ol class="space-y-6">
+              <li class="flex gap-6">
+                <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">1</span>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">Statusbesiktning</h3>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Okulär + täckskiktsmätning + karbonatiseringsprov + eventuella borrkärnor. Ger full skadebild.</p>
+                </div>
+              </li>
+              <li class="flex gap-6">
+                <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">2</span>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">Bilning av skadad betong</h3>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Skadad betong bilas bort så att armeringen exponeras runt hela omkretsen.</p>
+                </div>
+              </li>
+              <li class="flex gap-6">
+                <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">3</span>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">Rostskydd och komplettering</h3>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Armeringen blästras, rostskyddas och vid behov byts ut. Ny armering svetsas in vid kapacitetsbrist.</p>
+                </div>
+              </li>
+              <li class="flex gap-6">
+                <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">4</span>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">Ny betong och ytskikt</h3>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Reparationsbruk eller gjutning i form. Ytbehandling med karbonatiseringshämmande skikt för förlängd livslängd.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>

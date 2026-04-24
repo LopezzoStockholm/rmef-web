@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import { SITE } from "../lib/site";
+
+const title = "För fastighetsägare — skalbar partner i Stockholm";
+const description =
+  "RM Entreprenad & Fasad arbetar åt fastighetsägare i Stockholm och Mälardalen. Ramavtal, löpande underhåll och större entreprenader. Referens: Stockholmshem, Atrium Ljungberg, Locum.";
+---
+
+<BaseLayout title={title} description={description}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">För fastighetsägare</p>
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          Skalbar entreprenör för kvalificerade beställare
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          Vi är vana vid att leverera mot professionella byggherrar. Ramavtal, fleråriga underhållsuppdrag och större entreprenader är kärnan i vår verksamhet — Stockholmshem, Atrium Ljungberg, Locum och Axfood är några av våra referenser.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Vårt erbjudande</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Totalentreprenad (ABT 06)</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">När ni vill handla upp mot funktion och tidsplan utan egen projektering.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Utförandeentreprenad (AB 04)</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">När ni har färdiga handlingar och vill pressa pris mot ett konkret utförande.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Ramavtal</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Löpande uppdrag inom mark, bygg, fasad och skyddsrum med avtalade priser och SLA.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Referenser</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <a href="/projekt/kvarteret-persikan" class="group block p-8 bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">Stockholmshem</p>
+            <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Kvarteret Persikan</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed mb-4">Grundläggning för 152 lägenheter, ICA och förskola på Södermalm.</p>
+            <p class="text-sm font-semibold text-[color:var(--color-brand-red)]">75 Mkr</p>
+          </a>
+          <a href="/projekt/t11-katarinahuset" class="group block p-8 bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">Atrium Ljungberg</p>
+            <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">T11 Katarinahuset</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed mb-4">Grundförstärkning, pålning och betongarbeten i kulturhistorisk miljö vid Slussen.</p>
+            <p class="text-sm font-semibold text-[color:var(--color-brand-red)]">25 Mkr</p>
+          </a>
+          <a href="/projekt/rocmore-signalisten" class="group block p-8 bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">Signalisten / Rocmore</p>
+            <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Rocmore / Signalisten</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed mb-4">Ramavtal inom mark och anläggning i Solna. Strategisk samarbetspartner.</p>
+            <p class="text-sm font-semibold text-[color:var(--color-brand-red)]">40 Mkr/år</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>

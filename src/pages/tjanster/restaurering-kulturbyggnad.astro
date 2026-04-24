@@ -1,0 +1,116 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../lib/site";
+
+const title = "Restaurering av kulturbyggnad — K-märkt entreprenör Stockholm";
+const description =
+  "Restaurering av K-märkta byggnader och kulturhistoriskt värdefulla fastigheter i Stockholm och Mälardalen. Antikvariska krav, traditionella material och myndighetsdialog. Referens: Vindarnas tempel, Kaptensstugan.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      serviceType: "Restaurering av kulturbyggnad",
+      provider: { "@id": `${SITE.url}/#organization` },
+      areaServed: ["Stockholm", "Stockholms län", "Mälardalen"],
+      description:
+        "Antikvarisk restaurering av K-märkta byggnader, byggnadsminnen och kulturhistoriskt värdefulla fastigheter. Traditionella material, antikvarisk kontroll och dokumentation enligt kulturmiljölagen.",
+      url: `${SITE.url}/tjanster/restaurering-kulturbyggnad`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Tjänster", item: `${SITE.url}/tjanster` },
+        { "@type": "ListItem", position: 3, name: "Restaurering kulturbyggnad", item: `${SITE.url}/tjanster/restaurering-kulturbyggnad` },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster" class="hover:text-[color:var(--color-brand-red)]">Tjänster</a>
+          <span class="mx-2">/</span>
+          <span>Restaurering av kulturbyggnad</span>
+        </nav>
+
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          Restaurering av K-märkta byggnader
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          Vi restaurerar byggnadsminnen, K-märkta fastigheter och kulturhistoriskt värdefulla byggnader i Stockholm och Mälardalen. Vår erfarenhet sträcker sig från Vindarnas tempel på Lidingöbron till Kaptensstugan på Hustegaholm — båda åt Lidingö Stad.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Vad skiljer kulturbyggnadsentreprenad</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Materialkunskap</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Kalkbruk, linoljefärg, handhyvlad panel och smide — material som nästan försvunnit från ordinarie byggmarknad. Vi har leverantörsnätverk och rutiner för att arbeta med dem.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Originalmaterial</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Vid kulturbyggnadsarbete är originalmaterial ofta värdefullt i sig. Nummermärkning, demonterbara monteringar och mellanlagring i klimatkontrollerad miljö är standard.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Myndighetsdialog</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Byggnadsminnen kräver formellt tillstånd från länsstyrelsen. Kulturhistoriskt värdefulla byggnader i detaljplan kräver dialog med kommunens stadsantikvarie. Vi driver dialogen för er räkning.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Antikvarisk kontroll</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Antikvarien är på plats vid kritiska moment — rivning av inre skikt, putsning, takarbeten. Kontrollprogrammet skrivs innan arbetet börjar och följs noggrant.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Referensprojekt</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/projekt/vindarnas-tempel" class="group block p-8 bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">Lidingö Stad</p>
+            <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Vindarnas tempel</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed mb-4">
+              K-märkt byggnad på Lidingöbron som lyftes bort från ursprungsläget, genomgick komplett restaurering och återmonterades med antikvarisk hänsyn.
+            </p>
+            <p class="text-sm font-semibold text-[color:var(--color-brand-red)]">3 Mkr · 2022–2023</p>
+          </a>
+          <a href="/projekt/kaptensstugan" class="group block p-8 bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">Lidingö Stad</p>
+            <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Kaptensstugan</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed mb-4">
+              Restaurering av gammal byggnad samt lada på Hustegaholm. Antikvarisk hänsyn till känslig stomme, originalmaterial återanvänt där möjligt.
+            </p>
+            <p class="text-sm font-semibold text-[color:var(--color-brand-red)]">8 Mkr · 2022–2023</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10 max-w-3xl">Läs mer</h2>
+        <a href="/artiklar/restaurering-k-markt-byggnad-entreprenor" class="group block p-8 bg-white rounded-2xl max-w-4xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+          <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">Artikel</p>
+          <h3 class="text-2xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Restaurering av K-märkta byggnader — antikvariska krav och entreprenör</h3>
+          <p class="text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Så ser processen ut vid restaurering av K-märkta byggnader. Skyddsnivåer, antikvariska krav, myndighetsprocesser och vad som skiljer kulturbyggnadsentreprenör från vanlig byggfirma.</p>
+        </a>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>

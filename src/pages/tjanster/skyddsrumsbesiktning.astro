@@ -1,0 +1,132 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../lib/site";
+
+const title = "Skyddsrumsbesiktning — statusbedömning för BRF och fastighetsägare";
+const description =
+  "Skyddsrumsbesiktning i Stockholm och Mälardalen. Statusbedömning, åtgärdsplan och rapport till styrelsen — inför MSB-kontroll eller som årlig genomgång.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      serviceType: "Skyddsrumsbesiktning",
+      provider: { "@id": `${SITE.url}/#organization` },
+      areaServed: ["Stockholm", "Stockholms län", "Mälardalen"],
+      description:
+        "Statusbedömning av skyddsrum inför MSB-kontroll. Dokumentation, åtgärdsplan, kostnadsbedömning och underlag för styrelsen.",
+      url: `${SITE.url}/tjanster/skyddsrumsbesiktning`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Tjänster", item: `${SITE.url}/tjanster` },
+        { "@type": "ListItem", position: 3, name: "Skyddsrum", item: `${SITE.url}/tjanster/skyddsrum` },
+        { "@type": "ListItem", position: 4, name: "Skyddsrumsbesiktning", item: `${SITE.url}/tjanster/skyddsrumsbesiktning` },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster" class="hover:text-[color:var(--color-brand-red)]">Tjänster</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster/skyddsrum" class="hover:text-[color:var(--color-brand-red)]">Skyddsrum</a>
+          <span class="mx-2">/</span>
+          <span>Skyddsrumsbesiktning</span>
+        </nav>
+
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          Skyddsrumsbesiktning i Stockholm
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          Vi hjälper bostadsrättsföreningar, fastighetsägare och kommuner att få en oberoende bild av skyddsrummets status före MSB-kontrollen. Resultatet är en åtgärdsplan med kostnadsbedömning som styrelsen kan arbeta med.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Så går en besiktning till</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-8 bg-white rounded-2xl">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">Steg 1</p>
+            <h3 class="text-xl font-semibold mb-3">Dokumentation</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Vi läser befintliga ritningar, tidigare MSB-protokoll och åtgärdshistorik innan platsbesöket.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">Steg 2</p>
+            <h3 class="text-xl font-semibold mb-3">Platsbesök</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Okulär besiktning av konstruktion, slussar, ventilation, VS-system och ytor. Fotodokumentation av skador och avvikelser.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">Steg 3</p>
+            <h3 class="text-xl font-semibold mb-3">Rapport</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Skriftlig rapport med skadebild, åtgärdsbehov, kostnadsnivåer och prioritering. Underlag till styrelsen.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">Steg 4</p>
+            <h3 class="text-xl font-semibold mb-3">Handlingsplan</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Vid behov tar vi fram offert för åtgärderna. Ni kan fritt välja annan entreprenör — besiktningen är oberoende.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Vad kontrolleras</h2>
+            <ul class="space-y-4">
+              {[
+                "Bärande konstruktion — spjälkningar, sprickor, armeringsstatus",
+                "Slussar — gastäthet, stängningsmekanik, packningar",
+                "Ventilationssystem — filter, fläktar, beredskapsomkoppling",
+                "VA och avlopp — kan rummet tömmas under tryck",
+                "Elförsörjning — belysning, nödkraft, uttag",
+                "Dörr-, vägg- och takgenomföringar — oförseglade håltagningar",
+                "Inredning och skötsel — iordningställande inom 48 timmar",
+                "Skyddsrumsskyltning och ritningar i rummet",
+              ].map((item) => (
+                <li class="flex items-start gap-3">
+                  <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="mt-1 flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+                    <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+                    <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Därför beställer styrelser oss</h2>
+            <div class="space-y-6 text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+              <p>
+                En MSB-kontroll ger er få förvarningar. Föreläggandet kommer, ni har 12–24 månader att åtgärda, och det är mitt i upphandlingsstress och budgetstämma.
+              </p>
+              <p>
+                En egen besiktning gör att ni ligger steget före. Ni vet vad MSB kommer att peka på innan de pekar på det. Det ger tid för seriös upphandling, rätt budgetering och möjlighet att samordna åtgärderna med andra källarprojekt.
+              </p>
+              <p>
+                Vår rapport är oberoende. Ni kan ta den till vilken entreprenör som helst. Vi är förstås gärna en av dem ni tar offert från — men vår uppgift som besiktare är att ge en ärlig statusbild.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>

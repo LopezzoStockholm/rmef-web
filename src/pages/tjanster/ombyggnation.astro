@@ -1,0 +1,125 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../lib/site";
+
+const title = "Ombyggnation Stockholm — komplett totalentreprenad";
+const description =
+  "Ombyggnation i Stockholm och Mälardalen. Kontorsanpassning, ändrad användning och utökning för fastighetsägare, kommuner och kommersiella fastigheter.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      serviceType: "Ombyggnation",
+      provider: { "@id": `${SITE.url}/#organization` },
+      areaServed: ["Stockholm", "Stockholms län", "Mälardalen"],
+      description:
+        "Ombyggnation av kontor, bostäder och kommersiella fastigheter. Totalentreprenad från projektering till inflyttningsklar lokal.",
+      url: `${SITE.url}/tjanster/ombyggnation`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Tjänster", item: `${SITE.url}/tjanster` },
+        { "@type": "ListItem", position: 3, name: "Ombyggnation", item: `${SITE.url}/tjanster/ombyggnation` },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster" class="hover:text-[color:var(--color-brand-red)]">Tjänster</a>
+          <span class="mx-2">/</span>
+          <span>Ombyggnation</span>
+        </nav>
+
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          Ombyggnation — från skiss till inflyttningsklar lokal
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          Vi driver totalentreprenader (ABT 06) och utförandeentreprenader (AB 04) för fastighetsägare, kommuner och kommersiella fastigheter. Spetskompetens inom kontorsanpassning med pågående verksamhet och ändrad användning.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Typiska projekt</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/tjanster/kontorsanpassning" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <h3 class="text-2xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Kontorsanpassning</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed mb-4">
+              Ändrad planlösning, nya personalrum, modernisering av kök och omklädningsrum. Ofta utfört med kvarvarande hyresgäst i direkt anslutning.
+            </p>
+            <span class="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--color-brand-red)] group-hover:text-white">
+              Läs mer
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-2xl font-semibold mb-4">Ändrad användning</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Konvertering från kontor till bostäder eller vice versa. Byggtekniska krav skiljer sig kraftigt — ventilation, brand, tillgänglighet omprojekteras helt.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-2xl font-semibold mb-4">Tillbyggnad</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Påbyggnad eller sidobyggnad av befintlig fastighet. Kräver ofta förstärkning av bjälklag, ny grundläggning och koordinering av tekniska installationer.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-2xl font-semibold mb-4">Driftkänsliga miljöer</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Ombyggnation av sjukhus, datahallar och industri där drift måste upprätthållas genom hela byggfasen. Noggrann etappläggning och zon-koordinering.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Därför väljer beställare oss</h2>
+            <div class="space-y-6 text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+              <p>
+                Vi arbetar i egen regi med projektledning, egna hantverkare och beprövade underentreprenörer. Det ger oss kontroll över tid, kvalitet och budget — och en naturlig ansvarskedja mot beställaren.
+              </p>
+              <p>
+                Vårt team har över 100 års samlad branscherfarenhet. Vi har genomfört totalombyggnader åt Axfood, restaureringar åt Lidingö Stad och kontorsanpassningar åt Atrium Ljungberg. Gemensamt: beställare som inte accepterar driftstörningar.
+              </p>
+              <p>
+                Vi levererar med fast pris, tydlig dokumentation och full spårbarhet. Ingen ÄTA-överraskning, inga tidsplanseftersläpningar som inte avtalades.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Entreprenadform</h2>
+            <div class="space-y-6">
+              <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-6">
+                <h3 class="font-semibold mb-3">Totalentreprenad (ABT 06)</h3>
+                <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Vi tar hela ansvaret från projektering till färdig lokal. Beställaren ger programförutsättningar — vi löser resten. Lämpligt när ni inte har egna projekteringsresurser.</p>
+              </div>
+              <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-6">
+                <h3 class="font-semibold mb-3">Utförandeentreprenad (AB 04)</h3>
+                <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Ni har redan projektering klar och vill upphandla utförande. Vi utför enligt ritningar och beskrivningar. Lämpligt för erfarna beställare som vill pressa pris mot färdiga handlingar.</p>
+              </div>
+              <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-6">
+                <h3 class="font-semibold mb-3">Partnering</h3>
+                <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">För större eller komplexa projekt erbjuder vi samverkansbaserad entreprenad med öppen kalkyl. Lämpligt när omfattningen inte kan detaljprojekteras från start.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>

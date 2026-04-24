@@ -1,0 +1,171 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../lib/site";
+
+const title = "Skyddsrumssanering — åtgärd av MSB-brister i Stockholm";
+const description =
+  "Skyddsrumssanering efter MSB-kontroll i Stockholm och Mälardalen. Vi åtgärdar sprickor, fuktskador, otäta slussar, felaktiga ombyggnationer och ventilationsbrister.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      serviceType: "Skyddsrumssanering",
+      provider: { "@id": `${SITE.url}/#organization` },
+      areaServed: ["Stockholm", "Stockholms län", "Mälardalen"],
+      description:
+        "Åtgärd av MSB-brister i skyddsrum: sprickor, fuktskador, otäta slussar, ventilationssystem, återställning av felaktiga ombyggnationer och ersättning av filter.",
+      url: `${SITE.url}/tjanster/skyddsrumssanering`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Tjänster", item: `${SITE.url}/tjanster` },
+        { "@type": "ListItem", position: 3, name: "Skyddsrum", item: `${SITE.url}/tjanster/skyddsrum` },
+        { "@type": "ListItem", position: 4, name: "Skyddsrumssanering", item: `${SITE.url}/tjanster/skyddsrumssanering` },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster" class="hover:text-[color:var(--color-brand-red)]">Tjänster</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster/skyddsrum" class="hover:text-[color:var(--color-brand-red)]">Skyddsrum</a>
+          <span class="mx-2">/</span>
+          <span>Skyddsrumssanering</span>
+        </nav>
+
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          Skyddsrumssanering i Stockholm
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          När MSB har identifierat brister i ert skyddsrum tar vi hela åtgärdsarbetet från analys till godkänd status. Vi arbetar åt bostadsrättsföreningar, fastighetsägare, kommuner och industri i Stockholm och Mälardalen.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Vanliga saneringsmoment</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Betong­reparation</h3>
+            <p class="text-[color:var(--color-ink-60)] leading-relaxed">Strukturella sprickor i bärande väggar och tak armeras om och kompletteras med ny betong enligt ritningsanvisningarna. Spjälkningssprickor och ytskador åtgärdas samordnat.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Fukt­skador</h3>
+            <p class="text-[color:var(--color-ink-60)] leading-relaxed">Kristallisering och stående vatten pekar på tätskiktsbrister. Vi renoverar dränering, membrankomplettering och åtgärdar intilliggande ledningar som orsakat läckaget.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Sluss­dörrar</h3>
+            <p class="text-[color:var(--color-ink-60)] leading-relaxed">Packningar, gångjärn och stängningsmekanik kontrolleras och byts. Vi säkerställer att rummet blir gastätt inom föreskriven tid och att dörrmekaniken håller för 48-timmarskravet.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Ventilations­system</h3>
+            <p class="text-[color:var(--color-ink-60)] leading-relaxed">Service av filter, fläktar och omkopplare till beredskapsläge. Vid behov byter vi hela anläggningen — från filter-hus till koppling mot skalskyddet.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Återställning av ombyggnader</h3>
+            <p class="text-[color:var(--color-ink-60)] leading-relaxed">Otillåtna håltagningar för el- eller VS-dragningar täts. Felaktiga dörrar byts ut mot gastäta varianter. Original-utförandet dokumenteras i MSB-ritningarna.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Filter­byte med MSB-ersättning</h3>
+            <p class="text-[color:var(--color-ink-60)] leading-relaxed">När MSB i sin kontroll noterar filterbyte bekostar de åtgärden. Vi hanterar filterbytet och hjälper er att ansöka om ersättning från MSB enligt 100-miljoners-anslaget.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Tidsplan vid MSB-föreläggande</h2>
+            <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-6">
+              Ett typiskt saneringsprojekt för en BRF i Stockholm tar mellan 6 och 14 månader från beslut till godkänd status. MSB:s åtgärdsfrist är normalt 12–24 månader, så tidsplanen är genomförbar om beslut fattas tidigt.
+            </p>
+            <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-8 space-y-4">
+              <div class="flex justify-between text-sm">
+                <span class="font-semibold">Styrelsebeslut + ev. stämma</span>
+                <span class="text-[color:var(--color-ink-60)]">1–2 mån</span>
+              </div>
+              <div class="flex justify-between text-sm">
+                <span class="font-semibold">Upphandling (3 offerter)</span>
+                <span class="text-[color:var(--color-ink-60)]">1–2 mån</span>
+              </div>
+              <div class="flex justify-between text-sm">
+                <span class="font-semibold">Projektering mot MSB</span>
+                <span class="text-[color:var(--color-ink-60)]">1 mån</span>
+              </div>
+              <div class="flex justify-between text-sm">
+                <span class="font-semibold">Utförande</span>
+                <span class="text-[color:var(--color-ink-60)]">2–6 mån</span>
+              </div>
+              <div class="flex justify-between text-sm border-t border-[color:var(--color-ink-10)] pt-4">
+                <span class="font-semibold">Ombesiktning och godkännande</span>
+                <span class="text-[color:var(--color-ink-60)]">1–2 mån</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Det här ingår</h2>
+            <ul class="space-y-4">
+              {[
+                "Genomgång av MSB-protokollet och aktuella ritningar",
+                "Platsbesök med åtgärdsbedömning och provpoint",
+                "Fast pris per åtgärd eller totalpris för hela saneringen",
+                "Utförande enligt MSB:s ritningsanvisningar med hållfasthetsklass",
+                "Fotodokumentation före och efter varje moment",
+                "Protokoll för betongarbeten, gastäthet och ventilation",
+                "Koordinering av MSB:s ombesiktning",
+                "Komplett dokumentation levererad till er förvaltning",
+                "Garanti på utförande enligt AB 04 / ABT 06",
+              ].map((b) => (
+                <li class="flex items-start gap-3 text-[color:var(--color-ink)]">
+                  <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="mt-1 flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+                    <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+                    <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="leading-relaxed">{b}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Läs mer</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <a href="/artiklar/skyddsrumsbesiktning-brf-stockholm" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <h3 class="text-xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumsbesiktning för BRF</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Vad MSB kräver, typiska brister och kostnadsnivåer.</p>
+          </a>
+          <a href="/tjanster/skyddsrumsbesiktning" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <h3 class="text-xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumsbesiktning</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Statusbedömning och åtgärdsplan före MSB-kontrollen.</p>
+          </a>
+          <a href="/tjanster/skyddsrumsnyproduktion" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <h3 class="text-xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Nyproduktion skyddsrum</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Ersättnings­skyddsrum vid nybyggnation.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>

@@ -1,0 +1,224 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../lib/site";
+
+const title = "Skyddsrum — Sanering, besiktning och nyproduktion";
+const description =
+  "RM Entreprenad & Fasad är skyddsrumsspecialister i Stockholm och Mälardalen. Vi hanterar MSB-kontroll, åtgärdsplan, sanering, besiktning och nyproduktion av skyddsrum.";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      serviceType: "Skyddsrumsspecialist",
+      provider: { "@id": `${SITE.url}/#organization` },
+      areaServed: [
+        "Stockholm",
+        "Stockholms län",
+        "Mälardalen",
+        "Uppland",
+      ],
+      description:
+        "Skyddsrumssanering, skyddsrumsbesiktning, MSB-åtgärder och nyproduktion av ersättningsskyddsrum för bostadsrättsföreningar, fastighetsägare, kommuner och industri.",
+      url: `${SITE.url}/tjanster/skyddsrum`,
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Skyddsrumstjänster",
+        itemListElement: [
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Skyddsrumssanering" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Skyddsrumsbesiktning" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "MSB-åtgärdsplan" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Nyproduktion av skyddsrum" } },
+        ],
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Tjänster", item: `${SITE.url}/tjanster` },
+        { "@type": "ListItem", position: 3, name: "Skyddsrum", item: `${SITE.url}/tjanster/skyddsrum` },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={serviceSchema}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster" class="hover:text-[color:var(--color-brand-red)]">Tjänster</a>
+          <span class="mx-2">/</span>
+          <span>Skyddsrum</span>
+        </nav>
+
+        <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">
+          Skyddsrumsspecialist i Stockholm
+        </p>
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          Skyddsrum — från MSB-protokoll till godkänd status
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          Vi är specialister på skyddsrumssanering, skyddsrumsbesiktning och komplexa byggprojekt där andra entreprenörer tackar nej. Vi hanterar hela processen från MSB-kontroll och åtgärdsplan till färdigt, godkänt skyddsrum enligt gällande krav — för bostadsrättsföreningar, fastighetsägare, kommuner och industri i Stockholm och Mälardalen.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Våra skyddsrumstjänster</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/tjanster/skyddsrumssanering" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">01</p>
+            <h3 class="text-2xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumssanering</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">
+              Åtgärd av brister efter MSB-kontroll: sprickor, fukt, otäta slussar, ventilationssystem och återställning av felaktiga ombyggnationer.
+            </p>
+            <span class="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-[color:var(--color-brand-red)] group-hover:text-white">
+              Läs mer
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+          <a href="/tjanster/skyddsrumsbesiktning" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">02</p>
+            <h3 class="text-2xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumsbesiktning</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">
+              Statusbedömning, dokumentation och åtgärdsplan inför MSB-kontroll — eller som föreningsstyrelsens egen årliga genomgång.
+            </p>
+            <span class="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-[color:var(--color-brand-red)] group-hover:text-white">
+              Läs mer
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+          <a href="/tjanster/skyddsrumsnyproduktion" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">03</p>
+            <h3 class="text-2xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Nyproduktion av skyddsrum</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">
+              Nybyggnad av ersättnings­skyddsrum i samband med bostadsbyggnation — betongteknik, slussar, ventilation och MSB-dokumentation.
+            </p>
+            <span class="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-[color:var(--color-brand-red)] group-hover:text-white">
+              Läs mer
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+          <div class="p-8 bg-white rounded-2xl border border-[color:var(--color-ink-10)]">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-4">+</p>
+            <h3 class="text-2xl font-semibold mb-4">MSB-föreläggande?</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed mb-4">
+              Har ni fått ett föreläggande från MSB med åtgärdstid? Vi kan starta åtgärder inom 4–8 veckor och levererar inom föreläggandets tidsram.
+            </p>
+            <a href="/kontakt" class="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--color-brand-red)] hover:gap-3 transition-all">
+              Kontakta oss
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Därför specialister</h2>
+            <div class="space-y-6 text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+              <p>
+                Skyddsrumsarbete kräver en kombination av betongteknisk kompetens, kunskap om MSB:s regelverk och erfarenhet av gastäthet, ventilation och slussfunktion. Det är inte ett tilläggsarbete till ordinarie byggnation — det är en egen disciplin.
+              </p>
+              <p>
+                Vår kärnkompetens ligger i komplexa projekt där andra entreprenörer tackar nej: skyddsrum med svår åtkomst, kulturhistoriskt värdefulla miljöer, driftkänslig verksamhet ovan mark och projekt med snäva tidsramar efter MSB-föreläggande.
+              </p>
+              <p>
+                Vi arbetar i egen regi med projektledning, egna hantverkare och beprövade underentreprenörer. Det ger oss kontroll över tid, kvalitet och budget — och en naturlig ansvarskedja mot beställaren.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Från kontroll till godkänt</h2>
+            <ol class="space-y-6">
+              <li class="flex gap-6">
+                <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">1</span>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">Genomgång av protokoll</h3>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Vi läser MSB-protokollet och ritningar tillsammans med er, föreslår åtgärdsplan och tidsplan mot föreläggandets frist.</p>
+                </div>
+              </li>
+              <li class="flex gap-6">
+                <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">2</span>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">Fast pris och kontrakt</h3>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Offert med fast pris per åtgärd, tydlig dokumentation av vad som ingår och tidsplan. Ingen ÄTA-överraskning.</p>
+                </div>
+              </li>
+              <li class="flex gap-6">
+                <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">3</span>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">Utförande med dokumentation</h3>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Arbete utförs enligt MSB:s ritningsanvisningar. Fotodokumentation före och efter varje moment, protokoll för betongarbeten och gastäthet.</p>
+                </div>
+              </li>
+              <li class="flex gap-6">
+                <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">4</span>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">Ombesiktning och godkännande</h3>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Vi koordinerar ombesiktning med MSB och levererar komplett dokumentation till er förvaltning.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10 max-w-3xl">Vanliga frågor om skyddsrum</h2>
+        <div class="space-y-4 max-w-4xl">
+          <details class="group bg-white rounded-2xl p-6 lg:p-8">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+              Vad händer om vi inte åtgärdar bristen inom MSB:s frist?
+              <span class="text-[color:var(--color-brand-red)] group-open:rotate-45 transition-transform text-2xl leading-none">+</span>
+            </summary>
+            <p class="mt-4 text-[color:var(--color-ink-60)] leading-relaxed">MSB utfärdar vite som stiger stegvis vid fortsatt uteblivet åtgärdande. Vitet är normalt högre än åtgärdens kostnad efter ett par turer. Bättre att begära anstånd tidigt än att missa fristen.</p>
+          </details>
+          <details class="group bg-white rounded-2xl p-6 lg:p-8">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+              Kan vi få ekonomiskt stöd från MSB?
+              <span class="text-[color:var(--color-brand-red)] group-open:rotate-45 transition-transform text-2xl leading-none">+</span>
+            </summary>
+            <p class="mt-4 text-[color:var(--color-ink-60)] leading-relaxed">Ja — regeringen har avsatt 100 Mkr/år till MSB för skyddsrumsåtgärder. När MSB i sin kontroll noterar behov av filterbyte genomför fastighetsägaren åtgärden och får ersättning från MSB för kostnaden. Vi hjälper till med ansökan.</p>
+          </details>
+          <details class="group bg-white rounded-2xl p-6 lg:p-8">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+              Hur snabbt kan ni starta efter beställning?
+              <span class="text-[color:var(--color-brand-red)] group-open:rotate-45 transition-transform text-2xl leading-none">+</span>
+            </summary>
+            <p class="mt-4 text-[color:var(--color-ink-60)] leading-relaxed">Vanligen 4–8 veckor efter kontrakt, beroende på projektets omfattning och bemanning. För akuta föreläggande-situationer kan vi prioritera snabbare start.</p>
+          </details>
+          <details class="group bg-white rounded-2xl p-6 lg:p-8">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+              Kan skyddsrumsåtgärden samordnas med annan renovering?
+              <span class="text-[color:var(--color-brand-red)] group-open:rotate-45 transition-transform text-2xl leading-none">+</span>
+            </summary>
+            <p class="mt-4 text-[color:var(--color-ink-60)] leading-relaxed">Ja, det blir ofta billigare. Tätskikt, dränering och ventilationsarbeten som behövs både för skyddsrum och övrig källare samordnas med fördel till en entreprenad.</p>
+          </details>
+          <details class="group bg-white rounded-2xl p-6 lg:p-8">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
+              Vilka områden arbetar ni i?
+              <span class="text-[color:var(--color-brand-red)] group-open:rotate-45 transition-transform text-2xl leading-none">+</span>
+            </summary>
+            <p class="mt-4 text-[color:var(--color-ink-60)] leading-relaxed">Kontor i Stockholm. Vi arbetar i hela Stockholms län och Mälardalen — inklusive Lidingö, Solna, Sundbyberg, Sollentuna, Danderyd, Täby, Nacka, Sigtuna, Knivsta, Norrtälje, Uppsala och Västerås. Större projekt utanför regionen tar vi också.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>

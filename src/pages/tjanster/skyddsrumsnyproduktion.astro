@@ -1,0 +1,130 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../lib/site";
+
+const title = "Nyproduktion av skyddsrum — ersättnings­skyddsrum i flerbostadshus";
+const description =
+  "Nyproduktion av skyddsrum i Stockholm och Mälardalen. Ersättnings­skyddsrum i samband med bostadsbyggnation — betongteknik, slussar, ventilation och MSB-dokumentation.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      serviceType: "Nyproduktion av skyddsrum",
+      provider: { "@id": `${SITE.url}/#organization` },
+      areaServed: ["Stockholm", "Stockholms län", "Mälardalen"],
+      description:
+        "Nybyggnation av ersättningsskyddsrum i flerbostadshus och industrifastigheter. Betongteknik enligt MSB, slussar, filtersystem och komplett dokumentation.",
+      url: `${SITE.url}/tjanster/skyddsrumsnyproduktion`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Tjänster", item: `${SITE.url}/tjanster` },
+        { "@type": "ListItem", position: 3, name: "Skyddsrum", item: `${SITE.url}/tjanster/skyddsrum` },
+        { "@type": "ListItem", position: 4, name: "Nyproduktion", item: `${SITE.url}/tjanster/skyddsrumsnyproduktion` },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster" class="hover:text-[color:var(--color-brand-red)]">Tjänster</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster/skyddsrum" class="hover:text-[color:var(--color-brand-red)]">Skyddsrum</a>
+          <span class="mx-2">/</span>
+          <span>Nyproduktion</span>
+        </nav>
+
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          Nyproduktion av skyddsrum
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          När kommunen kräver nytt skyddsrum i samband med nybyggnation behöver entreprenören både betongteknisk kompetens och erfarenhet av MSB:s kontrollplan. Vi bygger in skyddsrummet i totalentreprenaden utan att lasta budget och tidsplan.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">När krävs nytt skyddsrum</h2>
+        <div class="space-y-6 text-lg text-[color:var(--color-ink-60)] leading-relaxed max-w-4xl">
+          <p>
+            Vid nyproduktion av flerbostadshus med fler än 50 boende aktualiseras kravet på skyddsrum enligt kommunens bedömning. Den avgör om det befintliga beståndet räcker eller om nytt ska uppföras — som ersättnings­skyddsrum eller som utökning.
+          </p>
+          <p>
+            Typiska situationer där krav kan utlösas:
+          </p>
+          <ul class="grid md:grid-cols-2 gap-4 mt-4">
+            {[
+              "Nya bostadskvarter över 50 lägenheter",
+              "Industrifastigheter med stor personaltäthet",
+              "Ombyggnation från kontor till bostäder",
+              "Förtätning i områden med skyddsrumsbrist",
+            ].map((item) => (
+              <li class="flex items-start gap-3 text-[color:var(--color-ink)] text-base">
+                <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="mt-1 flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+                  <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+                  <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Det här är annorlunda mot vanlig betongkällare</h2>
+            <div class="space-y-6 text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+              <p>
+                Ett skyddsrum har hårdare armeringskrav, särskilda kontrollprotokoll och en gastät skalintegritet som ordinarie källare saknar. Det påverkar:
+              </p>
+              <ul class="space-y-3 text-base">
+                <li class="flex items-start gap-3"><span class="text-[color:var(--color-brand-red)] font-semibold mt-0.5">·</span><span>Hållfasthetsklass och armeringstäthet enligt MSB:s tabeller</span></li>
+                <li class="flex items-start gap-3"><span class="text-[color:var(--color-brand-red)] font-semibold mt-0.5">·</span><span>Genomföringar som utförs och dokumenteras kontrollerat</span></li>
+                <li class="flex items-start gap-3"><span class="text-[color:var(--color-brand-red)] font-semibold mt-0.5">·</span><span>Slussdörrar och filtersystem specialanpassas till huset</span></li>
+                <li class="flex items-start gap-3"><span class="text-[color:var(--color-brand-red)] font-semibold mt-0.5">·</span><span>Ventilation, vatten och avlopp i beredskapsläge</span></li>
+                <li class="flex items-start gap-3"><span class="text-[color:var(--color-brand-red)] font-semibold mt-0.5">·</span><span>Formell slutbesiktning mot MSB innan rummet tas i bruk</span></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Kostnad</h2>
+            <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-6">
+              Ett nytt skyddsrum i flerbostadshus kostar typiskt 8 000–14 000 kr per kvm — betydligt mer än ordinarie källare på grund av armering, slussar och filtersystem.
+            </p>
+            <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-6">
+              Volymen bakas normalt in i projektets totalentreprenadpris. Viktigt: kommunens skyddsrumskrav måste klargöras i detaljplaneskedet — sent upptäckta krav är dyra att infoga i redan projekterad bottenplatta.
+            </p>
+            <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-8">
+              <h3 class="font-semibold mb-4">Tips till byggherrar</h3>
+              <ul class="space-y-3 text-sm">
+                <li class="flex items-start gap-3"><span class="text-[color:var(--color-brand-red)] font-semibold">→</span><span>Fråga kommunen tidigt om skyddsrumsbehov</span></li>
+                <li class="flex items-start gap-3"><span class="text-[color:var(--color-brand-red)] font-semibold">→</span><span>Välj entreprenör med dokumenterad skyddsrumserfarenhet</span></li>
+                <li class="flex items-start gap-3"><span class="text-[color:var(--color-brand-red)] font-semibold">→</span><span>Reservera 8–14 tkr/kvm i budget</span></li>
+                <li class="flex items-start gap-3"><span class="text-[color:var(--color-brand-red)] font-semibold">→</span><span>Planera skyddsrummets funktion i fredstid</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>

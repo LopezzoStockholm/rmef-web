@@ -1,0 +1,133 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../lib/site";
+
+const title = "Balkongrenovering BRF Stockholm — karbonatisering och armeringskorrosion";
+const description =
+  "Balkongrenovering för bostadsrättsföreningar i Stockholm och Mälardalen. Karbonatiserad betong, armeringskorrosion, räckesbyten och tätskikt — fast pris och full dokumentation.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      serviceType: "Balkongrenovering",
+      provider: { "@id": `${SITE.url}/#organization` },
+      areaServed: ["Stockholm", "Stockholms län", "Mälardalen"],
+      description:
+        "Renovering av betongbalkonger i flerbostadshus. Åtgärd av karbonatisering, armeringsrost, räcken, tätskikt och ytskikt.",
+      url: `${SITE.url}/tjanster/balkongrenovering`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Tjänster", item: `${SITE.url}/tjanster` },
+        { "@type": "ListItem", position: 3, name: "Betongrenovering", item: `${SITE.url}/tjanster/betongrenovering` },
+        { "@type": "ListItem", position: 4, name: "Balkongrenovering", item: `${SITE.url}/tjanster/balkongrenovering` },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster" class="hover:text-[color:var(--color-brand-red)]">Tjänster</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster/betongrenovering" class="hover:text-[color:var(--color-brand-red)]">Betongrenovering</a>
+          <span class="mx-2">/</span>
+          <span>Balkongrenovering</span>
+        </nav>
+
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          Balkongrenovering för BRF
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          De flesta betongbalkonger i Stockholms flerbostadshus börjar visa tecken på slitage efter 30–50 år. Balkongerna räknas som föreningens gemensamma egendom och är styrelsens ansvar — vi hjälper er att åtgärda innan skadorna blir säkerhetsfrågor.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Typiska balkongskador</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Spjälkningar</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Rostande armering spränger ut den skyddande betongen. Typiskt syns först på balkongkantens undersida.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Sprickor</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Sprickbildning från karbonatisering eller termisk påverkan. Vid ytliga sprickor räcker skyddsyta — vid genomgående krävs konstruktionsåtgärder.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Tätskikt</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Bristande tätskikt på balkonggolv leder till vatten-inträngning som accelererar armeringskorrosion. Åtgärdas samtidigt som ytskikt.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Räcken</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Rostande räckesinfästning, skador i glas och trä. Byts ut samordnat så att balkongen inte behöver öppnas två gånger.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Plåtavtäckning</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Kantbalkens plåtavtäckning blåser loss eller rostar sönder. Ofta ursprung till tätskiktsbrister.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Fästning i bjälklag</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Vid djup skada kan balkonginspänningen i bjälklaget behöva förstärkas. Kräver ingenjörsbedömning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Vad påverkar priset</h2>
+            <ul class="space-y-4 text-lg">
+              {[
+                ["Skadebild per balkong", "Lokal reparation vs helgjutning"],
+                ["Antal balkonger", "Volym ger skalfördelar i ställning"],
+                ["Tillgänglighet", "Höga våningar och innergårdar dyrare"],
+                ["Tätskikt och räcken", "Ofta samordnat med betongen"],
+                ["Antikvariska krav", "K-märkta byggnader fördyrar 15–40 %"],
+                ["Bygglov vs anmälan", "Utseendeändring kräver bygglov"],
+              ].map(([title, desc]) => (
+                <li class="flex items-start gap-4 border-b border-[color:var(--color-ink-10)] pb-4">
+                  <div class="flex-1">
+                    <div class="font-semibold">{title}</div>
+                    <div class="text-sm text-[color:var(--color-ink-60)]">{desc}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Bygglov eller anmälan?</h2>
+            <div class="space-y-6 text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+              <p>
+                Vid en ren balkongrenovering utan utseendeförändringar krävs inget bygglov. Däremot är en anmälan till byggnadsnämnden alltid nödvändig eftersom ingrepp görs i en bärande konstruktion.
+              </p>
+              <p>
+                Om ni byter räckestyp, ändrar balkongens djup eller ersätter betong med trä eller glas krävs bygglov. Vi hjälper till att bedöma gränsdragningen innan upphandlingen.
+              </p>
+              <p>
+                För platsgjutning av betong krävs kompetensklass 1-U enligt HUS AMA och standarderna SS EN 13670, 13700 och 206. En balkongplatta ska gjutas med lägst C28/35. Inte alla entreprenörer har rätt certifikat för detta.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>

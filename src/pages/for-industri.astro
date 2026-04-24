@@ -1,0 +1,86 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+
+const title = "För industri — entreprenad i driftkänsliga miljöer";
+const description =
+  "RM Entreprenad & Fasad arbetar åt industrin i Stockholm och Mälardalen. Driftkänsliga miljöer, hygieniska krav, noll driftstörningar accepteras. Referens: Octapharma, Axfood, Danderyds sjukhus.";
+---
+
+<BaseLayout title={title} description={description}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">För industri</p>
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          Entreprenad i driftkänsliga miljöer
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          Industri, sjukhus och datahallar har en sak gemensamt: driften får inte störas. Vi har erfarenhet från läkemedelsproduktion, sjukhusmiljöer och kontorsanpassningar med nolltolerans för avbrott.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Referensprojekt</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <a href="/projekt/octapharma-lindhagen" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">Octapharma AB</p>
+            <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Octapharma Lindhagen</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Markanläggning i anslutning till Octapharmas verksamhet. Hygieniska krav och stram arbetsordning.</p>
+          </a>
+          <a href="/projekt/danderyds-sjukhus" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">Locum AB</p>
+            <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Danderyds sjukhus</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Tre uppdrag i direkt anslutning till dygnet-runt-verksamhet. Noll driftstörningar.</p>
+          </a>
+          <a href="/projekt/axfood-huvudkontor" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">Axfood AB</p>
+            <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Axfood huvudkontor</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Totalombyggnad med kvarvarande hyresgäst. 3 000 kvm, minutiös logistik, inga driftstörningar.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Vad vi hanterar</h2>
+            <ul class="space-y-4 text-lg">
+              {[
+                "Hygieniska zoner och kontamineringsskydd",
+                "Vibrations- och ljudmätning med gränsvärden",
+                "Dammluckor och undertrycksventilation",
+                "Nattlig eller tidbokad logistik",
+                "Etappläggning med parallell drift",
+                "SSG-, BAS-U- och arbetsmiljödokumentation",
+                "GDPR och konfidentialitet vid känsliga miljöer",
+              ].map((b) => (
+                <li class="flex items-start gap-3">
+                  <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="mt-1 flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+                    <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+                    <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="leading-relaxed">{b}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Branscher</h2>
+            <div class="grid grid-cols-2 gap-4">
+              {["Läkemedel", "Sjukvård", "Datahallar", "Livsmedelsproduktion", "Logistik", "Kontor", "Forskning", "Industri"].map((b) => (
+                <div class="px-6 py-4 bg-[color:var(--color-paper-2)] rounded-xl text-center font-semibold">{b}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>
