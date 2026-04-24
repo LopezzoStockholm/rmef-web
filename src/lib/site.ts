@@ -23,6 +23,18 @@ export const SITE = {
     instagram: "",
     facebook: "",
   },
+  // sameAs-referenser till tredjepartssajter som verifierar vår identitet (sökmotorer och LLMs
+  // använder detta för att förstå att rmef.se hör till org.nr 559251-1462)
+  businessListings: {
+    allabolag: "https://www.allabolag.se/foretag/rm-entreprenad-fasad-ab/stockholm/byggm%C3%A4stare/2KHMXGMI5YDDT",
+    merinfo: "https://www.merinfo.se/foretag/RM-Entreprenad-&-Fasad-AB-5592511462/2khmxgm-203hh",
+    bygg: "https://bygg.se/rm-fasad-ab/",
+    hitta: "https://www.hitta.se/verksamhet/rm-entreprenad-och-fasad-ab-ngsvhlgu",
+    eniro: "https://www.eniro.se/rm+entreprenad+%26+fasad+ab+stockholm/158313683/firma",
+    bolagsfakta: "https://www.bolagsfakta.se/5592511462-RM_Entreprenad_&_Fasad_AB",
+    bolagssidorna: "https://www.bolagssidorna.se/foretag/rm+entreprenad+fasad+ab/stockholm/l3azBE",
+    bizzdo: "https://bizzdo.se/foretag/5592511462/RM-Fasad-AB",
+  },
   founded: "2020",
   vd: "Daniel Lopez",
   fskatt: true,
