@@ -50,7 +50,7 @@ Att isolera fasaden samtidigt som omputsning är **alltid billigare än att gör
 
 ### 4. Antikvariska krav
 
-K-märkta byggnader eller hus i bevarandeområden (t.ex. stora delar av Södermalm, Vasastan, Östermalm) kräver godkännande från Stadsmuseet och utförande med traditionella material — kalkbruk istället för modern KC-bruk, originalputsstruktur återskapad. Det höjer kostnaden med **15–40 %**.
+K-märkta byggnader eller hus i bevarandeområden (t.ex. stora delar av Södermalm, Vasastan, Östermalm) kräver godkännande från Stadsmuseet och utförande med traditionella material – kalkbruk istället för modern KC-bruk, originalputsstruktur återskapad. Det höjer kostnaden med **15–40 %**.
 
 ### 5. Årstid och bemanning
 
@@ -68,7 +68,7 @@ En seriös entreprenör levererar minst följande:
 6. **Ny puts eller motsvarande åtgärd**
 7. **Målning** med silikat- eller silikonfärg anpassad för fasad
 8. **Slutbesiktning** med protokoll
-9. **Garanti** — vanligen 5 år på utförande
+9. **Garanti** – vanligen 5 år på utförande
 
 ## Vanliga frågor inför offertförfrågan
 
@@ -99,7 +99,7 @@ Skicka följande till minst tre entreprenörer för jämförbara anbud:
 - [ ] **Fasadritningar** eller plan med mätbar fasadyta
 - [ ] **Befintligt material** (puts, tegel, trä) och ålder
 - [ ] **Kända skador** (spjälkning, sprickor, rötskada, missfärgning)
-- [ ] **Omfattning** — full renovering eller prioriterade ytor
+- [ ] **Omfattning** – full renovering eller prioriterade ytor
 - [ ] **Isolering** ja/nej och önskad tjocklek
 - [ ] **Antikvariska krav** om det finns bevarandeområde
 - [ ] **Önskad tidpunkt** för utförande

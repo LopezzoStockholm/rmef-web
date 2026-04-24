@@ -3,7 +3,7 @@ export const SITE = {
   shortName: "RM Entreprenad & Fasad",
   domain: "rmef.se",
   url: "https://rmef.se",
-  defaultTitle: "RM Entreprenad & Fasad AB — Skyddsrum och komplex entreprenad i Stockholm",
+  defaultTitle: "RM Entreprenad & Fasad AB – Skyddsrum och komplex entreprenad i Stockholm",
   defaultDescription:
     "Specialister på skyddsrumssanering, skyddsrumsbesiktning och komplexa byggprojekt i Stockholm och Mälardalen. Över 100 års samlad branscherfarenhet i kärnteamet. Referens: 75 Mkr grundläggning åt Stockholmshem, K-märkta restaureringar åt Lidingö Stad.",
   orgNumber: "559251-1462",
@@ -128,7 +128,7 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     slug: "rocmore-signalisten",
-    title: "Rocmore / Signalisten — Solna",
+    title: "Rocmore / Signalisten – Solna",
     client: "Rocmore (strategisk partner) · Signalisten (Solna Stad)",
     volume: "40 Mkr/år",
     period: "Löpande avtal",
@@ -324,7 +324,7 @@ export const PROJECTS: Project[] = [
     type: "Utförandeentreprenad",
     summary: "Markanläggning, asfaltering och finplanering i anslutning till tennisakademin.",
     image: "/projekt/mark_image17.webp",
-    imageAlt: "Tennisakademien — asfalterad yta och entré efter finplanering",
+    imageAlt: "Tennisakademien – asfalterad yta och entré efter finplanering",
     featured: false,
   },
   {
