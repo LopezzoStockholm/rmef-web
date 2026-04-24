@@ -19,7 +19,7 @@ export const SITE = {
     country: "SE",
   },
   socials: {
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/company/rm-entreprenad-fasad/",
     instagram: "",
     facebook: "",
   },
