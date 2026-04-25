@@ -211,6 +211,8 @@ const allSchemas = [organizationSchema, websiteSchema, ...(schema ? (Array.isArr
     <!-- Hints -->
     <meta name="format-detection" content="telephone=yes" />
     <meta name="author" content={SITE.name} />
+    <!-- Disable Cloudflare's email obfuscation script (saves ~460ms render-blocking) -->
+    <meta name="cf-no-email-decode" content="true" />
 
     <!-- Cloudflare Web Analytics (cookieless, GDPR-vänlig). Laddas efter window.load för att ej blockera LCP. -->
     {import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN && (
