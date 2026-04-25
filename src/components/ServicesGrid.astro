@@ -45,13 +45,24 @@ const serviceImages: Record<string, { src: string; alt: string }> = {
             style={`transition-delay: ${idx * 100}ms`}
           >
             <div class="relative aspect-[16/9] overflow-hidden bg-[color:var(--color-steel)]">
-              <img
-                src={serviceImages[service.icon]?.src ?? "/projekt/thumb/mark_image6.webp"}
-                alt={serviceImages[service.icon]?.alt ?? service.title}
-                loading="lazy"
-                decoding="async"
-                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-              />
+              {(() => {
+                const baseSrc = serviceImages[service.icon]?.src ?? "/projekt/thumb/mark_image3.webp";
+                const fullSrc = baseSrc.replace("/thumb/", "/");
+                const base = fullSrc.replace(/\.webp$/, "");
+                return (
+                  <img
+                    src={baseSrc}
+                    srcset={`${base}-400.webp 400w, ${base}-800.webp 800w, ${base}-1200.webp 1200w`}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    alt={serviceImages[service.icon]?.alt ?? service.title}
+                    width="800"
+                    height="450"
+                    loading="lazy"
+                    decoding="async"
+                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+                );
+              })()}
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent group-hover:from-black/80 transition-colors duration-500"></div>
               <span class="absolute top-5 right-5 text-xs uppercase tracking-[0.2em] text-white/70 font-semibold">
                 0{idx + 1}

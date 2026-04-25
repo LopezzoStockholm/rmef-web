@@ -30,13 +30,23 @@ const featured = PROJECTS.filter((p) => p.featured);
             <div class="aspect-[4/5] rounded-2xl overflow-hidden relative mb-5 bg-gradient-to-br from-[color:var(--color-steel)] to-[#0a0a0a]">
               {p.image ? (
                 <>
-                  <img
-                    src={p.image.replace('/projekt/', '/projekt/thumb/')}
-                    alt={p.imageAlt ?? p.title}
-                    loading="lazy"
-                    decoding="async"
-                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  />
+                  {(() => {
+                    const thumbSrc = p.image.replace("/projekt/", "/projekt/thumb/");
+                    const base = p.image.replace(/\.webp$/, "");
+                    return (
+                      <img
+                        src={thumbSrc}
+                        srcset={`${base}-400.webp 400w, ${base}-800.webp 800w`}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        alt={p.imageAlt ?? p.title}
+                        width="800"
+                        height="1000"
+                        loading="lazy"
+                        decoding="async"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                      />
+                    );
+                  })()}
                   <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
                 </>
               ) : (

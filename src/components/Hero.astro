@@ -64,7 +64,11 @@ const heroProjects = heroSlugs
             >
               <img
                 src={p.image}
+                srcset={`${p.image?.replace(".webp", "-400.webp")} 400w, ${p.image?.replace(".webp", "-800.webp")} 800w, ${p.image?.replace(".webp", "-1200.webp")} 1200w, ${p.image} 1600w`}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                 alt={p.imageAlt ?? p.title}
+                width="1600"
+                height={i === 0 ? "1200" : "1200"}
                 loading={i === 0 ? "eager" : "auto"}
                 fetchpriority={i === 0 ? "high" : "low"}
                 decoding="async"
