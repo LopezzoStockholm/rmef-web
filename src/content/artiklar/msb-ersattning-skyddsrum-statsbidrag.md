@@ -1,5 +1,5 @@
 ---
-title: "MSB-ersättning för skyddsrumsåtgärd – så söker BRF statsbidrag 2026"
+title: "MSB-ersättning skyddsrum 2026 — så söker BRF"
 description: "Regeringen har avsatt 100 Mkr/år till MSB för skyddsrumsåtgärder. Så fungerar ersättningen för fastighetsägare och bostadsrättsföreningar – vad som täcks, hur ansökan går till och vilka åtgärder som betalas."
 published: 2026-04-24
 category: "Upphandling"
@@ -7,6 +7,27 @@ tags: ["skyddsrum", "MSB", "statsbidrag", "BRF", "fastighetsägare"]
 readingTime: 7
 heroImage: "/projekt/mark_image10.webp"
 heroImageAlt: "Skyddsrumsutförande, platsgjutna betongväggar och armering"
+howToTotalTime: "P30D"
+howToSteps:
+  - name: "Beställ skyddsrumskontroll från MSB"
+    text: "MSB-kontrollanten utför kontrollen och dokumenterar eventuella behov, t.ex. filterbyte. Detta är gratis för fastighetsägaren."
+  - name: "Anlita entreprenör för åtgärden"
+    text: "Begär offert från godkänd entreprenör för det specifika åtgärdsbehov MSB-kontrollanten noterat (oftast filterbyte)."
+  - name: "Utför åtgärden och dokumentera"
+    text: "Entreprenören utför åtgärden, dokumenterar med foton och leverantörsintyg, och fakturerar fastighetsägaren."
+  - name: "Begär ersättning från MSB"
+    text: "Skicka in ansökan till MSB med faktura, dokumentation och kontrollrapport. MSB återbetalar kostnaden enligt 100 Mkr-anslaget."
+faq:
+  - q: "Hur mycket pengar har MSB avsatt till skyddsrumsåtgärder 2026?"
+    a: "Regeringen har sedan 2024 avsatt 100 miljoner kronor per år till MSB för upprustning av Sveriges skyddsrum. Anslaget används primärt till filterbyten."
+  - q: "Vad ersätter MSB?"
+    a: "Primärt filterbyten i skyddsrum efter MSB-kontroll. Andra åtgärder som sprickor, otäta slussar eller återställning av ombyggnationer omfattas inte."
+  - q: "Vem ansöker om MSB-ersättning?"
+    a: "Fastighetsägaren (eller bostadsrättsföreningen). Entreprenören kan hjälpa till med dokumentation och underlag."
+  - q: "Hur lång tid tar processen?"
+    a: "Från MSB-kontroll till utbetalning: vanligen 2-4 månader. Själva åtgärden tar 1-3 dagar, ansökan + handläggning hos MSB ca 4-8 veckor."
+  - q: "Kan en BRF få ersättning?"
+    a: "Ja, bostadsrättsföreningar är fastighetsägare och har samma rätt till MSB-ersättning för filterbyten som andra fastighetsägare."
 ---
 
 ## Kort svar

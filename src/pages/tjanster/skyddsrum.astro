@@ -3,9 +3,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { SITE } from "../../lib/site";
 
-const title = "Skyddsrum – Sanering, besiktning och nyproduktion";
+const title = "Skyddsrum Stockholm — sanering, besiktning, MSB";
 const description =
-  "RM Entreprenad & Fasad är skyddsrumsspecialister i Stockholm och Mälardalen. Vi hanterar MSB-kontroll, åtgärdsplan, sanering, besiktning och nyproduktion av skyddsrum.";
+  "Skyddsrumsspecialist i Stockholm och Mälardalen. MSB-kontroll, åtgärdsplan, sanering, besiktning och nyproduktion. Begär offert idag.";
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -40,6 +40,36 @@ const serviceSchema = {
         { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
         { "@type": "ListItem", position: 2, name: "Tjänster", item: `${SITE.url}/tjanster` },
         { "@type": "ListItem", position: 3, name: "Skyddsrum", item: `${SITE.url}/tjanster/skyddsrum` },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Vad ingår i en MSB-skyddsrumskontroll?",
+          acceptedAnswer: { "@type": "Answer", text: "MSB-kontrollanten besiktigar skyddsrummets täthet, ventilation, slussar, dörrar, filter och övriga komponenter. Kontrollen är gratis för fastighetsägaren och resulterar i ett protokoll med eventuella åtgärdskrav." }
+        },
+        {
+          "@type": "Question",
+          name: "Vad kostar en skyddsrumssanering?",
+          acceptedAnswer: { "@type": "Answer", text: "Sanering av enklare brister (filterbyte, mindre tätningar) kostar typiskt 30 000–80 000 kr. Större åtgärder med betongrenovering, slussbyte eller ombyggnad ligger på 150 000–500 000 kr beroende på omfattning." }
+        },
+        {
+          "@type": "Question",
+          name: "Vem är ansvarig för skyddsrum i en BRF?",
+          acceptedAnswer: { "@type": "Answer", text: "Fastighetsägaren är ansvarig — för en bostadsrättsförening innebär det styrelsen. Ansvaret omfattar löpande underhåll, säkerställd funktion och åtgärd av MSB-anmärkningar inom rimlig tid." }
+        },
+        {
+          "@type": "Question",
+          name: "Kan ni hjälpa till med MSB-ansökan om ersättning?",
+          acceptedAnswer: { "@type": "Answer", text: "Ja. Vi tillhandahåller komplett dokumentation, foton, fakturaunderlag och leverantörsintyg som krävs vid ansökan om MSB-ersättning för filterbyten enligt 100 Mkr-anslaget." }
+        },
+        {
+          "@type": "Question",
+          name: "Hur lång tid tar en skyddsrumssanering?",
+          acceptedAnswer: { "@type": "Answer", text: "Mindre åtgärder (filterbyte, tätningar): 1-3 dagar. Större saneringar med betong och ventilation: 2-6 veckor. Vi gör en realistisk tidsplan i samband med offerten." }
+        },
       ],
     },
   ],

@@ -38,13 +38,41 @@ const breadcrumbSchema = {
     { "@type": "ListItem", position: 3, name: data.title, item: `${SITE.url}/artiklar/${article.slug}/` },
   ],
 };
+
+// HowTo-schema (om artikeln har howToSteps i frontmatter)
+const howToSchema = data.howToSteps && data.howToSteps.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: data.title,
+  description: data.description,
+  totalTime: data.howToTotalTime,
+  step: data.howToSteps.map((s, i) => ({
+    "@type": "HowToStep",
+    position: i + 1,
+    name: s.name,
+    text: s.text,
+  })),
+} : null;
+
+// FAQPage-schema (om artikeln har faq i frontmatter)
+const faqSchema = data.faq && data.faq.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: data.faq.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+} : null;
+
+const allSchemas = [articleSchema, breadcrumbSchema, howToSchema, faqSchema].filter(Boolean);
 ---
 
 <BaseLayout
   title={data.title}
   description={data.description}
   image={data.heroImage}
-  schema={[articleSchema, breadcrumbSchema]}
+  schema={allSchemas as object[]}
 >
   <article class="pt-24 lg:pt-32 pb-20">
     <header class="mx-auto max-w-3xl px-6 lg:px-10 mb-10">

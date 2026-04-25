@@ -1,0 +1,229 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../lib/site";
+
+const title = "Skyddsrum — komplett guide för BRF och fastighetsägare 2026";
+const description =
+  "Allt om skyddsrum: lagstiftning, MSB-kontroll, åtgärder, kostnader, ansvar, MSB-ersättning. Pillar-guide som länkar till djupgående artiklar och tjänster.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: title,
+      description,
+      author: { "@type": "Organization", name: SITE.shortName },
+      publisher: { "@id": `${SITE.url}/#organization` },
+      datePublished: "2026-04-25T00:00:00Z",
+      mainEntityOfPage: `${SITE.url}/guider/skyddsrum-komplett-guide`,
+      inLanguage: "sv-SE",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Guider", item: `${SITE.url}/guider` },
+        { "@type": "ListItem", position: 3, name: "Skyddsrum komplett guide", item: `${SITE.url}/guider/skyddsrum-komplett-guide` },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-4xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <span>Skyddsrum komplett guide</span>
+        </nav>
+
+        <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">Komplett guide · 25 min läsning</p>
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1.05] tracking-tight mb-8">
+          Skyddsrum — allt en BRF-styrelse behöver veta
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed mb-10">
+          En komplett guide om skyddsrum för bostadsrättsföreningar och fastighetsägare i Stockholm 2026. Lagstiftning, MSB-kontroller, åtgärdsbehov, kostnader, ansvar och hur ni får ersättning från MSB:s 100 Mkr-anslag. Sammanfattningar med länkar till våra djupgående artiklar och tjänster.
+        </p>
+
+        <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-8 mb-12">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-4">Innehåll</p>
+          <ol class="space-y-2 text-[color:var(--color-ink)]">
+            <li><a href="#vad-ar" class="hover:text-[color:var(--color-brand-red)]">1. Vad är ett skyddsrum?</a></li>
+            <li><a href="#lagstiftning" class="hover:text-[color:var(--color-brand-red)]">2. Lagstiftning och ansvar</a></li>
+            <li><a href="#msb-kontroll" class="hover:text-[color:var(--color-brand-red)]">3. MSB-kontroll och åtgärdsplan</a></li>
+            <li><a href="#besiktning" class="hover:text-[color:var(--color-brand-red)]">4. Skyddsrumsbesiktning — så förbereder ni er</a></li>
+            <li><a href="#sanering" class="hover:text-[color:var(--color-brand-red)]">5. Skyddsrumssanering — åtgärd av brister</a></li>
+            <li><a href="#filterbyte" class="hover:text-[color:var(--color-brand-red)]">6. Filterbyte och MSB-ersättning</a></li>
+            <li><a href="#nyproduktion" class="hover:text-[color:var(--color-brand-red)]">7. Nyproduktion av skyddsrum</a></li>
+            <li><a href="#material" class="hover:text-[color:var(--color-brand-red)]">8. Skyddsrumsmaterial — vad MSB godkänner</a></li>
+            <li><a href="#kostnader" class="hover:text-[color:var(--color-brand-red)]">9. Typkostnader 2026</a></li>
+            <li><a href="#vanliga-fragor" class="hover:text-[color:var(--color-brand-red)]">10. Vanliga frågor</a></li>
+          </ol>
+        </div>
+
+        <h2 id="vad-ar" class="text-[length:var(--text-h2)] font-semibold tracking-tight mt-16 mb-6 scroll-mt-24">1. Vad är ett skyddsrum?</h2>
+        <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-6">
+          Ett skyddsrum är ett särskilt utrymme i en byggnad som ska kunna användas för befolkningsskydd vid kris eller krig. Sverige har cirka <strong>65 000 skyddsrum med plats för ungefär 7 miljoner människor</strong>. Skyddsrum byggdes brett under kalla kriget men förfaller om de inte underhålls. Sedan 2022 har Sveriges skyddsrumsverksamhet återstartats av MSB med systematisk kontroll och åtgärd.
+        </p>
+        <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-10">
+          För en bostadsrättsförening är skyddsrummet typiskt placerat i källaren och kan rymma 50-300 personer. Fastighetsägarens ansvar regleras i lag — och styrelsen kan personligt åläggas att åtgärda brister.
+        </p>
+
+        <h2 id="lagstiftning" class="text-[length:var(--text-h2)] font-semibold tracking-tight mt-16 mb-6 scroll-mt-24">2. Lagstiftning och ansvar</h2>
+        <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-6">
+          Skyddsrum regleras i <strong>Lag (2006:545) om skyddsrum</strong>. Lagen beskriver fastighetsägarens ansvar:
+        </p>
+        <ul class="space-y-3 text-[color:var(--color-ink-60)] leading-relaxed mb-6 list-disc pl-6">
+          <li>Underhålla skyddsrummet så att det är funktionellt vid kris</li>
+          <li>Åtgärda brister som upptäcks vid MSB:s kontroller</li>
+          <li>Vid behov utföra åtgärder beordrade av MSB</li>
+          <li>Hålla dokumentation över skyddsrummet tillgänglig</li>
+        </ul>
+        <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-10">
+          För en BRF betyder det att <strong>styrelsen är ansvarig</strong>. Vid stora brister som inte åtgärdas kan MSB utfärda föreläggande med vite. Ansvaret kan inte avtalas bort till entreprenör eller förvaltare.
+        </p>
+
+        <h2 id="msb-kontroll" class="text-[length:var(--text-h2)] font-semibold tracking-tight mt-16 mb-6 scroll-mt-24">3. MSB-kontroll och åtgärdsplan</h2>
+        <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-6">
+          MSB genomför systematiska kontroller av Sveriges skyddsrum 2025-2030. Fastighetsägaren får varsel via brev när det är dags. Kontrollen är gratis. MSB-kontrollanten besiktigar 30+ punkter och skriver ett protokoll med eventuella åtgärdskrav.
+        </p>
+        <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-8 mb-10">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-3">Djupdykning</p>
+          <p class="font-semibold mb-2">→ <a href="/artiklar/skyddsrumsbesiktning-brf-stockholm/" class="hover:text-[color:var(--color-brand-red)]">Skyddsrumsbesiktning för BRF — krav och kostnader</a></p>
+          <p class="text-sm text-[color:var(--color-ink-60)]">Komplett guide om vad MSB kräver och vilka kostnader som väntar.</p>
+        </div>
+
+        <h2 id="besiktning" class="text-[length:var(--text-h2)] font-semibold tracking-tight mt-16 mb-6 scroll-mt-24">4. Skyddsrumsbesiktning — så förbereder ni er</h2>
+        <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-6">
+          Inför MSB-kontroll lönar det sig att göra en <strong>egen statusbedömning</strong>. En kvalificerad entreprenör går igenom skyddsrummet och dokumenterar nuläget, så ni får möjlighet att åtgärda enklare brister före kontrollen.
+        </p>
+        <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-8 mb-10">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-3">Verktyg</p>
+          <p class="font-semibold mb-2">→ <a href="/artiklar/skyddsrumsbesiktning-checklista/" class="hover:text-[color:var(--color-brand-red)]">Skyddsrumsbesiktning checklista — 30 punkter</a></p>
+          <p class="text-sm text-[color:var(--color-ink-60)] mb-3">Komplett checklista över vad MSB tittar på.</p>
+          <p class="font-semibold mb-2">→ <a href="/tjanster/skyddsrumsbesiktning/" class="hover:text-[color:var(--color-brand-red)]">Tjänst: Skyddsrumsbesiktning</a></p>
+          <p class="text-sm text-[color:var(--color-ink-60)]">Vi gör en oberoende statusbedömning innan MSB-kontrollen.</p>
+        </div>
+
+        <h2 id="sanering" class="text-[length:var(--text-h2)] font-semibold tracking-tight mt-16 mb-6 scroll-mt-24">5. Skyddsrumssanering — åtgärd av brister</h2>
+        <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-6">
+          När MSB-kontrollanten skrivit ett protokoll med åtgärdskrav är det dags för <strong>skyddsrumssanering</strong>. Vanliga åtgärder omfattar sprickåtgärd, tätning av genomföringar, byte av dörrtätningar, byte av filter, byte av backventiler och åtgärd av ventilationssystem.
+        </p>
+        <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-8 mb-10">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-3">Tjänst</p>
+          <p class="font-semibold mb-2">→ <a href="/tjanster/skyddsrumssanering/" class="hover:text-[color:var(--color-brand-red)]">Skyddsrumssanering — åtgärd av MSB-brister</a></p>
+        </div>
+
+        <h2 id="filterbyte" class="text-[length:var(--text-h2)] font-semibold tracking-tight mt-16 mb-6 scroll-mt-24">6. Filterbyte och MSB-ersättning</h2>
+        <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-6">
+          Sedan 2024 har regeringen avsatt <strong>100 miljoner kronor per år</strong> till MSB för att finansiera filterbyten i Sveriges skyddsrum. När MSB-kontrollanten beordrar filterbyte återbetalar MSB hela kostnaden till fastighetsägaren efter åtgärd och dokumentation.
+        </p>
+        <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-8 mb-10">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-3">Komplett guide</p>
+          <p class="font-semibold mb-2">→ <a href="/artiklar/msb-ersattning-skyddsrum-statsbidrag/" class="hover:text-[color:var(--color-brand-red)]">MSB-ersättning för skyddsrumsåtgärd</a></p>
+          <p class="text-sm text-[color:var(--color-ink-60)] mb-3">Steg-för-steg-process för ansökan och utbetalning.</p>
+          <p class="font-semibold mb-2">→ <a href="/tjanster/filterbyte-skyddsrum/" class="hover:text-[color:var(--color-brand-red)]">Tjänst: Filterbyte skyddsrum</a></p>
+        </div>
+
+        <h2 id="nyproduktion" class="text-[length:var(--text-h2)] font-semibold tracking-tight mt-16 mb-6 scroll-mt-24">7. Nyproduktion av skyddsrum</h2>
+        <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-6">
+          När en ny byggnad uppförs av en viss storlek krävs nyproduktion av skyddsrum. Detta gäller framför allt nya bostadshus med fler än 50 lägenheter. Ersättningsskyddsrum för befintliga byggnader är också möjligt om det ursprungliga skyddsrummet inte längre kan godkännas.
+        </p>
+        <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-8 mb-10">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-3">Tjänst</p>
+          <p class="font-semibold mb-2">→ <a href="/tjanster/skyddsrumsnyproduktion/" class="hover:text-[color:var(--color-brand-red)]">Skyddsrumsnyproduktion</a></p>
+        </div>
+
+        <h2 id="material" class="text-[length:var(--text-h2)] font-semibold tracking-tight mt-16 mb-6 scroll-mt-24">8. Skyddsrumsmaterial — vad MSB godkänner</h2>
+        <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-6">
+          MSB ställer specifika krav på material i skyddsrum. Filter, dörrar, slussar, ventilation, tätningar — allt måste vara godkänt och spårbart. Felaktigt material godkänns inte och måste bytas.
+        </p>
+        <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-8 mb-10">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-3">Tjänst</p>
+          <p class="font-semibold mb-2">→ <a href="/tjanster/skyddsrumsmaterial/" class="hover:text-[color:var(--color-brand-red)]">Skyddsrumsmaterial — godkända produkter</a></p>
+        </div>
+
+        <h2 id="kostnader" class="text-[length:var(--text-h2)] font-semibold tracking-tight mt-16 mb-6 scroll-mt-24">9. Typkostnader 2026</h2>
+        <div class="overflow-x-auto mb-10">
+          <table class="w-full text-sm">
+            <thead class="border-b border-[color:var(--color-ink-10)]">
+              <tr>
+                <th class="text-left py-3">Åtgärd</th>
+                <th class="text-right py-3">Riktpris</th>
+                <th class="text-right py-3">MSB-ersättning</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[color:var(--color-ink-10)]">
+              <tr>
+                <td class="py-3">Förberedande inspektion</td>
+                <td class="text-right tabular-nums whitespace-nowrap">15 000–40 000 kr</td>
+                <td class="text-right text-[color:var(--color-ink-40)]">Nej</td>
+              </tr>
+              <tr>
+                <td class="py-3">Filterbyte (litet skyddsrum)</td>
+                <td class="text-right tabular-nums whitespace-nowrap">30 000–45 000 kr</td>
+                <td class="text-right text-[color:var(--color-brand-red)] font-semibold">100 %</td>
+              </tr>
+              <tr>
+                <td class="py-3">Filterbyte (medelstort)</td>
+                <td class="text-right tabular-nums whitespace-nowrap">45 000–80 000 kr</td>
+                <td class="text-right text-[color:var(--color-brand-red)] font-semibold">100 %</td>
+              </tr>
+              <tr>
+                <td class="py-3">Sprickåtgärd betong</td>
+                <td class="text-right tabular-nums whitespace-nowrap">30 000–150 000 kr</td>
+                <td class="text-right text-[color:var(--color-ink-40)]">Nej</td>
+              </tr>
+              <tr>
+                <td class="py-3">Skyddsrumsdörr (byte)</td>
+                <td class="text-right tabular-nums whitespace-nowrap">80 000–300 000 kr</td>
+                <td class="text-right text-[color:var(--color-ink-40)]">Nej</td>
+              </tr>
+              <tr>
+                <td class="py-3">Total sanering (medel)</td>
+                <td class="text-right tabular-nums whitespace-nowrap">200 000–600 000 kr</td>
+                <td class="text-right text-[color:var(--color-ink-40)]">Delvis (filter)</td>
+              </tr>
+              <tr>
+                <td class="py-3">Nyproduktion (per plats)</td>
+                <td class="text-right tabular-nums whitespace-nowrap">25 000–60 000 kr/plats</td>
+                <td class="text-right text-[color:var(--color-ink-40)]">Nej</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="vanliga-fragor" class="text-[length:var(--text-h2)] font-semibold tracking-tight mt-16 mb-6 scroll-mt-24">10. Vanliga frågor</h2>
+        <div class="space-y-6 mb-10">
+          <div class="border-b border-[color:var(--color-ink-10)] pb-6">
+            <h3 class="text-lg font-semibold mb-3">Måste vi ha skyddsrum i vår BRF?</h3>
+            <p class="text-[color:var(--color-ink-60)] leading-relaxed">Inte alltid. Skyddsrum krävs i nya byggnader över viss storlek. Befintliga skyddsrum SKA underhållas — men kan i vissa fall avregistreras om de inte längre uppfyller krav (kräver MSB-godkännande).</p>
+          </div>
+          <div class="border-b border-[color:var(--color-ink-10)] pb-6">
+            <h3 class="text-lg font-semibold mb-3">Får vi använda skyddsrummet som förråd?</h3>
+            <p class="text-[color:var(--color-ink-60)] leading-relaxed">Ja, så länge utrymmet kan göras klart för krig på 8 timmar. Inga fastmonterade installationer (väggar, garderober) som hindrar detta.</p>
+          </div>
+          <div class="border-b border-[color:var(--color-ink-10)] pb-6">
+            <h3 class="text-lg font-semibold mb-3">Vem betalar för åtgärderna?</h3>
+            <p class="text-[color:var(--color-ink-60)] leading-relaxed">Fastighetsägaren — för en BRF betyder det BRF:en. MSB återbetalar filterbyten enligt 100 Mkr-anslaget. Övriga åtgärder bekostas av föreningen.</p>
+          </div>
+          <div class="border-b border-[color:var(--color-ink-10)] pb-6">
+            <h3 class="text-lg font-semibold mb-3">Hur ofta görs MSB-kontroll?</h3>
+            <p class="text-[color:var(--color-ink-60)] leading-relaxed">Vanligen var 10:e år. Aktuell kontrollomgång (2025-2030) går igenom landets skyddsrum systematiskt.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-3">Vad händer om vi inte åtgärdar brister?</h3>
+            <p class="text-[color:var(--color-ink-60)] leading-relaxed">MSB utfärdar föreläggande med tidsfrist. Vid fortsatt försummelse kan vite utdömas. Ansvar ligger hos styrelsen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>

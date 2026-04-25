@@ -226,4 +226,89 @@ export const LOCATIONS: Location[] = [
     ],
     tjansteLank: "/tjanster/bygg",
   },
+
+  // NYA GEO-SIDOR (2026-04-25) — bygger ut SEO-täckning för kommuner och stadsdelar
+  {
+    slug: "skyddsrum-norrtalje",
+    service: "skyddsrum",
+    serviceLabel: "Skyddsrum",
+    ort: "Norrtälje",
+    title: "Skyddsrum Norrtälje — sanering och MSB-besiktning",
+    description:
+      "Skyddsrumssanering och MSB-besiktning i Norrtälje. Bostadsrättsföreningar, fastighetsägare och kommunal sektor. Referens: Norrtälje sjukhus.",
+    intro:
+      "Vi arbetar regelbundet i Norrtälje med både skyddsrum och totalentreprenader. Vårt projektledningskontor i Stockholm är 60 minuters resa, vilket gör logistiken praktisk för Norrtälje-projekt.",
+    localContext:
+      "Norrtäljes bestånd består till stor del av bostadsrätter från 60–80-talet samt kommunala fastigheter. Skyddsrumsbeståndet är typiskt och behöver systematiskt åtgärdas inför MSB:s kontrollomgång 2025–2030. Vi har nyligen levererat sprinklercentral åt Norrtälje sjukhus.",
+    referenser: [
+      { slug: "norrtalje-sjukhus", titel: "Norrtälje sjukhus", client: "Norrtälje sjukhus" },
+    ],
+    tjansteLank: "/tjanster/skyddsrum",
+  },
+  {
+    slug: "skyddsrum-knivsta",
+    service: "skyddsrum",
+    serviceLabel: "Skyddsrum",
+    ort: "Knivsta",
+    title: "Skyddsrum Knivsta — sanering och MSB-besiktning",
+    description:
+      "Skyddsrumsspecialist i Knivsta. Sanering, besiktning, MSB-åtgärder och nyproduktion. Erfarenhet från kommunal infrastruktur.",
+    intro:
+      "Vi har arbetat med Knivsta kommun på ledningsomläggningar och kommunal infrastruktur. Skyddsrumsåtgärder för BRF och kommunala fastigheter ingår naturligt i vårt utbud.",
+    localContext:
+      "Knivstas bestånd är blandat — äldre kommuncentrum samt nya bostadsområden från 90-tal och framåt. Skyddsrum från olika eror kräver olika åtgärder. Vårt team kommer från Stockholm med 45 minuters bilresa, vilket ger praktisk tillgänglighet.",
+    referenser: [
+      { slug: "ledningsomlaggning-knivsta", titel: "Ledningsomläggning Knivsta", client: "Knivsta kommun" },
+    ],
+    tjansteLank: "/tjanster/skyddsrum",
+  },
+  {
+    slug: "skyddsrum-sigtuna",
+    service: "skyddsrum",
+    serviceLabel: "Skyddsrum",
+    ort: "Sigtuna",
+    title: "Skyddsrum Sigtuna — sanering och MSB-besiktning",
+    description:
+      "Skyddsrumsspecialist i Sigtuna kommun. Sanering, besiktning, MSB-åtgärder. Referens: Engelska skolan Sigtuna.",
+    intro:
+      "Vi har en etablerad relation med Sigtuna kommun via Engelska skolan-projektet. Skyddsrum för BRF och kommunala fastigheter är en naturlig del av vårt utbud.",
+    localContext:
+      "Sigtuna kommun innefattar både Sigtuna stad och Märsta. Skyddsrumsbeståndet är blandat — äldre i stadskärnorna och nyare i kommunalt nybyggda bostadsområden. Geografisk närhet till Arlanda gör Sigtuna till en växande kommun med behov av infrastrukturentreprenörer.",
+    referenser: [
+      { slug: "engelska-skolan-sigtuna", titel: "Engelska skolan Sigtuna", client: "Internationella Engelska skolan" },
+    ],
+    tjansteLank: "/tjanster/skyddsrum",
+  },
+  {
+    slug: "fasadrenovering-sundbyberg",
+    service: "fasadrenovering",
+    serviceLabel: "Fasadrenovering",
+    ort: "Sundbyberg",
+    title: "Fasadrenovering Sundbyberg — BRF och fastighetsägare",
+    description:
+      "Fasadrenovering i Sundbyberg för bostadsrättsföreningar och fastighetsägare. Putsrenovering, tilläggsisolering, balkonger.",
+    intro:
+      "Sundbybergs blandning av äldre stenstadskvarter och 70-talets miljonprogram ger två olika typer av fasadprojekt. Vi har erfarenhet från båda — antikvariska restaureringar och storskalig putsrenovering.",
+    localContext:
+      "Sundbyberg är Sveriges minsta kommun till ytan men en av de tätaste. Bostadsrättsbeståndet är stort och 70-talets fasader når nu sin underhållscykel. Vårt Stockholmskontor är 15 minuter med tunnelbana.",
+    tjansteLank: "/tjanster/fasad",
+  },
+  {
+    slug: "totalentreprenad-bagartorp",
+    service: "totalentreprenad",
+    serviceLabel: "Totalentreprenad",
+    ort: "Bagartorp",
+    region: "Solna",
+    title: "Totalentreprenad Bagartorp Solna — skola och bostadsmiljö",
+    description:
+      "Totalentreprenad i Bagartorp och Solna. Skolprojekt, bostadsmiljö och kommunal infrastruktur. Referens: Raul Wallenbergskolan.",
+    intro:
+      "Bagartorp i Solna är en växande stadsdel med pågående utveckling av skol- och bostadsmiljö. Vi har genomfört Raul Wallenbergskolan och flera markanläggningsprojekt i området.",
+    localContext:
+      "Solnas Bagartorp och Hagalund är typiska för Stockholmsregionens 60–70-tal med stora behov av modernisering. Skol- och institutionsprojekt har särskilda krav på tidplan (skolstart) och driftkänsliga miljöer (förskolor parallellt).",
+    referenser: [
+      { slug: "raul-wallenberg-bagartorp", titel: "Raul Wallenbergskolan Bagartorp", client: "Raul Wallenberg Academy" },
+    ],
+    tjansteLank: "/tjanster/bygg",
+  },
 ];

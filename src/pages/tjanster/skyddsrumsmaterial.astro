@@ -1,0 +1,187 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../lib/site";
+
+const title = "Skyddsrumsmaterial — godkända produkter och leverantörer";
+const description =
+  "MSB-godkänt skyddsrumsmaterial: filter, dörrar, slussar, tätningar, ventilation. Vad vi använder och varför. Stockholm och Mälardalen.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      serviceType: "Skyddsrumsmaterial",
+      provider: { "@id": `${SITE.url}/#organization` },
+      areaServed: ["Stockholm", "Stockholms län", "Mälardalen"],
+      description:
+        "Försäljning, installation och dokumentation av MSB-godkänt skyddsrumsmaterial. Filter, dörrar, slussar, tätningar och ventilation.",
+      url: `${SITE.url}/tjanster/skyddsrumsmaterial`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Tjänster", item: `${SITE.url}/tjanster` },
+        { "@type": "ListItem", position: 3, name: "Skyddsrum", item: `${SITE.url}/tjanster/skyddsrum` },
+        { "@type": "ListItem", position: 4, name: "Skyddsrumsmaterial", item: `${SITE.url}/tjanster/skyddsrumsmaterial` },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster" class="hover:text-[color:var(--color-brand-red)]">Tjänster</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster/skyddsrum" class="hover:text-[color:var(--color-brand-red)]">Skyddsrum</a>
+          <span class="mx-2">/</span>
+          <span>Material</span>
+        </nav>
+
+        <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">Skyddsrum · MSB-godkänt material</p>
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          Skyddsrumsmaterial — bara godkända produkter
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          MSB ställer specifika krav på material i skyddsrum. Felaktigt material kan inte godkännas vid kontroll och måste bytas ut. Vi använder enbart MSB-godkänd utrustning från etablerade svenska och nordiska leverantörer — och dokumenterar varje produkt med leverantörsintyg.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Materialkategorier vi levererar</h2>
+
+        <div class="grid lg:grid-cols-2 gap-6">
+          <div class="bg-white rounded-2xl p-8">
+            <h3 class="text-xl font-semibold mb-4">Filter</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] mb-4 leading-relaxed">Luftfilter och gasfilter med MSB-godkänd specifikation. Filtren har bäst-före-datum och måste bytas regelbundet.</p>
+            <ul class="space-y-2 text-sm text-[color:var(--color-ink-60)]">
+              <li>· Luftfilter (huvudfilter) i olika storlekar</li>
+              <li>· Gasfilter (NBC-filter) med 10 års hållbarhet</li>
+              <li>· Förfilter och dammfilter</li>
+              <li>· Filterpackningar och tätningar</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8">
+            <h3 class="text-xl font-semibold mb-4">Dörrar och slussar</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] mb-4 leading-relaxed">Skyddsrumsdörrar i olika klasser. Slussdörrar för luftslussar. Tätningar och gångjärn enligt MSB-krav.</p>
+            <ul class="space-y-2 text-sm text-[color:var(--color-ink-60)]">
+              <li>· Skyddsrumsdörrar (klass A och B)</li>
+              <li>· Nödutgångsluckor</li>
+              <li>· Slussdörrar för luftsluss</li>
+              <li>· Reservdelar (tätningar, gångjärn, lås)</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8">
+            <h3 class="text-xl font-semibold mb-4">Ventilation</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] mb-4 leading-relaxed">Komplett ventilationssystem med fläktar, kanaler, spjäll och övertrycksventiler.</p>
+            <ul class="space-y-2 text-sm text-[color:var(--color-ink-60)]">
+              <li>· Fläktar med el- och manuell drift</li>
+              <li>· Vevhandtag för manuell drift vid strömavbrott</li>
+              <li>· Avstängningsspjäll (manuella och motoriserade)</li>
+              <li>· Övertrycksventiler</li>
+              <li>· Tryckmätare och instrument</li>
+              <li>· Ventilationskanaler och fläktar</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8">
+            <h3 class="text-xl font-semibold mb-4">Konstruktion och tätning</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] mb-4 leading-relaxed">Material för betongåtgärd, sprickåtgärd och genomföringar. Allt MSB-godkänt.</p>
+            <ul class="space-y-2 text-sm text-[color:var(--color-ink-60)]">
+              <li>· Polymercement för spricinjektering</li>
+              <li>· Tätningsmassor för genomföringar</li>
+              <li>· Backventiler för avlopp</li>
+              <li>· Tätskikt för betong</li>
+              <li>· Armerings­passiveringsmedel</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8">
+            <h3 class="text-xl font-semibold mb-4">Inredning</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] mb-4 leading-relaxed">Bänkar, liggplatser och inredning enligt MSB:s standardplaner.</p>
+            <ul class="space-y-2 text-sm text-[color:var(--color-ink-60)]">
+              <li>· Bänkar och liggplatser</li>
+              <li>· Förvaringssystem</li>
+              <li>· Toalettlösningar</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8">
+            <h3 class="text-xl font-semibold mb-4">Belysning och el</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] mb-4 leading-relaxed">Primärbelysning, nödbelysning och eluttag enligt MSB-krav.</p>
+            <ul class="space-y-2 text-sm text-[color:var(--color-ink-60)]">
+              <li>· LED-belysning för primärdrift</li>
+              <li>· Nödbelysning med batteribackup (5-årigt batteri)</li>
+              <li>· Säkerhetsbrytare</li>
+              <li>· Eluttag enligt elsäkerhetskrav</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Vad vi INTE använder</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-6">
+              Felaktigt material är vanligt i äldre skyddsrum. Tidigare ägare eller okvalificerade entreprenörer har installerat utrustning som <strong>inte godkänns vid MSB-kontroll</strong>:
+            </p>
+            <ul class="space-y-3 text-[color:var(--color-ink-60)]">
+              <li>· Vanliga säkerhetsdörrar i stället för skyddsrumsdörrar</li>
+              <li>· Ventilation utan godkänt filter</li>
+              <li>· Avloppsbrunnar utan backventil</li>
+              <li>· Provisoriska tätningar (silikon, skum)</li>
+              <li>· Filter utan datum eller spårbarhet</li>
+              <li>· Genomföringar utan godkänd tätning</li>
+            </ul>
+          </div>
+          <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-8">
+            <h3 class="text-xl font-semibold mb-4">Vid kontroll: byts ut</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">
+              MSB-kontrollanten noterar felaktigt material som anmärkning. Att åtgärda i efterhand är dyrare än att göra rätt från början. Vi tar fram materialspecifikation med leverantörsintyg innan installation — så ni vet att kontrollen kommer godkännas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Så här arbetar vi</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-2xl p-8">
+            <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] block mb-4">01</span>
+            <h3 class="text-lg font-semibold mb-3">Materialspecifikation</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Vi tar fram lista med MSB-godkänd utrustning baserat på era specifika behov.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-8">
+            <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] block mb-4">02</span>
+            <h3 class="text-lg font-semibold mb-3">Leverantörsintyg</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Varje produkt levereras med spårbart intyg som visar MSB-godkännande.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-8">
+            <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] block mb-4">03</span>
+            <h3 class="text-lg font-semibold mb-3">Installation och dokumentation</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Vi installerar, fotodokumenterar och samlar all dokumentation för fastighetsarkivet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>

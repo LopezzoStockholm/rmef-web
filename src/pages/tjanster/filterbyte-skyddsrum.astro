@@ -1,0 +1,187 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE } from "../../lib/site";
+
+const title = "Filterbyte skyddsrum — MSB betalar via 100 Mkr-anslag";
+const description =
+  "Filterbyte i skyddsrum efter MSB-kontroll. Vi utför, dokumenterar och hjälper er ansöka om MSB-ersättning. Stockholm, Mälardalen.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      serviceType: "Filterbyte skyddsrum",
+      provider: { "@id": `${SITE.url}/#organization` },
+      areaServed: ["Stockholm", "Stockholms län", "Mälardalen"],
+      description:
+        "Filterbyte i skyddsrum efter MSB-kontroll. Vi utför åtgärden, dokumenterar och hjälper fastighetsägaren att ansöka om ersättning från MSB:s 100 Mkr/år-anslag.",
+      url: `${SITE.url}/tjanster/filterbyte-skyddsrum`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Tjänster", item: `${SITE.url}/tjanster` },
+        { "@type": "ListItem", position: 3, name: "Skyddsrum", item: `${SITE.url}/tjanster/skyddsrum` },
+        { "@type": "ListItem", position: 4, name: "Filterbyte", item: `${SITE.url}/tjanster/filterbyte-skyddsrum` },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Vad kostar ett filterbyte i skyddsrum?",
+          acceptedAnswer: { "@type": "Answer", text: "Typiskt 30 000–80 000 kr beroende på skyddsrummets storlek och antal filter. Inkluderar luftfilter, gasfilter, packningar och installation. MSB återbetalar kostnaden enligt 100 Mkr-anslaget vid filterbyte beordrat av kontrollant." }
+        },
+        {
+          "@type": "Question",
+          name: "Hur lång tid tar ett filterbyte?",
+          acceptedAnswer: { "@type": "Answer", text: "Själva bytet utförs på 4-8 timmar. Hela processen från beställning av material till färdig dokumentation och fakturering tar typiskt 2-4 veckor." }
+        },
+        {
+          "@type": "Question",
+          name: "Måste man byta filter trots att de ser bra ut?",
+          acceptedAnswer: { "@type": "Answer", text: "Ja om MSB-kontrollanten anmärkt på filtren. Filter har bäst-före-datum (gasfilter typiskt 10 år) och tappar funktion även utan synlig förändring. MSB:s krav baseras på datum och funktion, inte utseende." }
+        },
+        {
+          "@type": "Question",
+          name: "Kan vi sköta MSB-ansökan själva?",
+          acceptedAnswer: { "@type": "Answer", text: "Ja, men vi rekommenderar att vi tar fram dokumentationen åt er. Felaktig eller ofullständig ansökan riskerar avslag. Vi gör det utan extra kostnad som del av filterbytet." }
+        }
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster" class="hover:text-[color:var(--color-brand-red)]">Tjänster</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster/skyddsrum" class="hover:text-[color:var(--color-brand-red)]">Skyddsrum</a>
+          <span class="mx-2">/</span>
+          <span>Filterbyte</span>
+        </nav>
+
+        <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">Skyddsrum · MSB-ersättning</p>
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          Filterbyte skyddsrum — MSB betalar
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          Filter har bäst-före-datum och behöver bytas regelbundet. Sedan 2024 har regeringen avsatt <strong>100 miljoner kronor per år</strong> till MSB för att finansiera filterbyten i Sveriges skyddsrum. Vi utför bytet, dokumenterar och hjälper er ansöka om ersättningen.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Process från start till MSB-ersättning</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-2xl p-8">
+            <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] block mb-4">01</span>
+            <h3 class="text-lg font-semibold mb-3">Anmärkning från MSB</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">MSB-kontrollanten noterar behov av filterbyte i kontrollprotokollet.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-8">
+            <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] block mb-4">02</span>
+            <h3 class="text-lg font-semibold mb-3">Beställning hos oss</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Skicka kontrollprotokollet till oss. Vi tar fram fast pris och tidsplan.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-8">
+            <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] block mb-4">03</span>
+            <h3 class="text-lg font-semibold mb-3">Filterbyte och dokumentation</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Vi byter filter, dokumenterar med foton och leverantörsintyg.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-8">
+            <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] block mb-4">04</span>
+            <h3 class="text-lg font-semibold mb-3">Ansökan till MSB</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Vi tar fram all dokumentation. Ni signerar och skickar in. MSB återbetalar inom 4-8 veckor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Vad ingår i filterbytet</h2>
+            <ul class="space-y-4 text-lg">
+              {[
+                "Demontering av befintliga filter",
+                "Inspektion av filterhållare och tätningsytor",
+                "Nya luftfilter (huvudfilter)",
+                "Nya gasfilter där sådana finns",
+                "Nya packningar och tätningar",
+                "Installation och funktionstest",
+                "Bilddokumentation före, under, efter",
+                "Leverantörsintyg och certifikat",
+                "MSB-ansökan med komplett dokumentation",
+              ].map((b) => (
+                <li class="flex items-start gap-3">
+                  <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="mt-1 flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
+                    <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.25"/>
+                    <path d="M6 10.5l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="leading-relaxed">{b}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-[color:var(--color-paper-2)] rounded-3xl p-10">
+            <h3 class="text-2xl font-semibold mb-6">Typkostnader 2026</h3>
+            <dl class="space-y-5">
+              <div class="flex justify-between border-b border-[color:var(--color-ink-10)] pb-3">
+                <dt>Litet skyddsrum (under 50 platser)</dt>
+                <dd class="font-semibold tabular-nums whitespace-nowrap">30 000–45 000 kr</dd>
+              </div>
+              <div class="flex justify-between border-b border-[color:var(--color-ink-10)] pb-3">
+                <dt>Medelstort (50–150 platser)</dt>
+                <dd class="font-semibold tabular-nums whitespace-nowrap">45 000–65 000 kr</dd>
+              </div>
+              <div class="flex justify-between border-b border-[color:var(--color-ink-10)] pb-3">
+                <dt>Stort (150+ platser)</dt>
+                <dd class="font-semibold tabular-nums whitespace-nowrap">65 000–120 000 kr</dd>
+              </div>
+              <div class="flex justify-between pt-2 text-[color:var(--color-brand-red)] font-semibold">
+                <dt>MSB-ersättning</dt>
+                <dd class="tabular-nums">100 % av godkänd kostnad</dd>
+              </div>
+            </dl>
+            <p class="text-sm text-[color:var(--color-ink-60)] mt-6 leading-relaxed">Pris styrs av filterstorlek, antal filter, tillgänglighet och kompletterande tätningar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Relaterade tjänster och guider</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <a href="/tjanster/skyddsrumsbesiktning/" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumsbesiktning</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Statusbedömning innan MSB-kontroll. Åtgärdsplan med kostnadsbedömning.</p>
+          </a>
+          <a href="/tjanster/skyddsrumssanering/" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumssanering</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Åtgärd av MSB-brister utöver filterbyte. Sprickor, tätningar, ventilation.</p>
+          </a>
+          <a href="/artiklar/msb-ersattning-skyddsrum-statsbidrag/" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Guide: MSB-ersättning</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Komplett guide till MSB:s 100 Mkr-anslag och hur ansökan går till.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>

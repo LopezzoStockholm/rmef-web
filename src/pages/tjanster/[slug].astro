@@ -16,6 +16,29 @@ const relatedProjects = PROJECTS.filter((p) =>
   p.category.toLowerCase().includes(service.title.split(" ")[0].toLowerCase())
 ).slice(0, 3);
 
+// SEO-optimerade titlar/descriptions per service-slug. Faller tillbaka till service.title.
+const seoOverrides: Record<string, { title?: string; desc?: string }> = {
+  fasad: {
+    title: "Fasadrenovering Stockholm — puts, isolering, BRF",
+    desc: "Fasadrenovering i Stockholm för bostadsrättsföreningar och fastighetsägare. Omputsning, tilläggsisolering, antikvariska restaureringar.",
+  },
+  bygg: {
+    title: "Totalentreprenad Stockholm — ABT 06, AB 04",
+    desc: "Totalentreprenader och utförandeentreprenader i Stockholm. Kontorsanpassning, nyproduktion, K-märkt restaurering. Egen projektledning.",
+  },
+  el: {
+    title: "Elinstallation Stockholm — totalentreprenad och styr",
+    desc: "Elinstallationer i totalentreprenad eller separata projekt. Driftsmiljöer för sjukhus och datahallar. Stockholm och Mälardalen.",
+  },
+  "mark-och-anlaggning": {
+    title: "Markarbeten & grundläggning Stockholm — schakt, sponty",
+    desc: "Markentreprenör i Stockholm. Schakt, grundläggning, spontning, skyddsrum, ledningsarbeten. Referens: 75 Mkr Stockholmshem.",
+  },
+};
+const seo = seoOverrides[service.slug] ?? {};
+const pageTitle = seo.title ?? service.title;
+const pageDesc = seo.desc ?? service.long.slice(0, 155);
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -28,8 +51,8 @@ const serviceSchema = {
 ---
 
 <BaseLayout
-  title={service.title}
-  description={service.long.slice(0, 155)}
+  title={pageTitle}
+  description={pageDesc}
   schema={serviceSchema}
 >
   <article>

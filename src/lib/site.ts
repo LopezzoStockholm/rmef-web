@@ -3,9 +3,9 @@ export const SITE = {
   shortName: "RM Entreprenad & Fasad",
   domain: "rmef.se",
   url: "https://rmef.se",
-  defaultTitle: "RM Entreprenad & Fasad AB – Skyddsrum och komplex entreprenad i Stockholm",
+  defaultTitle: "Skyddsrum & komplex entreprenad Stockholm — RM Entreprenad",
   defaultDescription:
-    "Specialister på skyddsrumssanering, skyddsrumsbesiktning och komplexa byggprojekt i Stockholm och Mälardalen. Över 100 års samlad branscherfarenhet i kärnteamet. Referens: 75 Mkr grundläggning åt Stockholmshem, K-märkta restaureringar åt Lidingö Stad.",
+    "Skyddsrumssanering, MSB-besiktning och komplex entreprenad i Stockholm. 100+ års branscherfarenhet, 75 Mkr-projekt. Begär offert idag.",
   orgNumber: "559251-1462",
   phone: "+468128757 00",
   phoneDisplay: "08-12 87 57 00",
