@@ -113,8 +113,8 @@ const year = new Date().getFullYear();
             </a>
           </li>
           <li>
-            <a href={`mailto:${SITE.email}`} class="text-white/80 hover:text-[color:var(--color-brand-red)] transition-colors block break-all">
-              {SITE.email}
+            <a href="#" data-mail-user={SITE.email.split("@")[0]} data-mail-domain={SITE.email.split("@")[1]} class="email-link text-white/80 hover:text-[color:var(--color-brand-red)] transition-colors block break-all">
+              {SITE.email.split("@")[0]}<span aria-hidden="true">[at]</span>{SITE.email.split("@")[1]}
             </a>
           </li>
           <li class="text-white/60 pt-1">
@@ -133,6 +133,21 @@ const year = new Date().getFullYear();
     </div>
 
     <!-- Bottom: legal -->
+
+    <script>
+      // Konstruerar mailto: efter page load så CF inte injectar email-decode script
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll<HTMLAnchorElement>("a.email-link").forEach((a) => {
+          const u = a.dataset.mailUser;
+          const d = a.dataset.mailDomain;
+          if (u && d) {
+            a.href = `mailto:${u}@${d}`;
+            a.textContent = `${u}@${d}`;
+          }
+        });
+      });
+    </script>
+    <!-- /script -->
     <div class="border-t border-white/10 py-8 grid lg:grid-cols-3 gap-4 text-xs text-white/50">
       <div>
         <p class="text-white/70 font-semibold mb-1">{SITE.name}</p>
