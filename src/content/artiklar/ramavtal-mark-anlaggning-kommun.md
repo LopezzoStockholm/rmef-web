@@ -5,8 +5,8 @@ published: 2026-04-25
 category: "Upphandling"
 tags: ["ramavtal", "mark", "anläggning", "LOU", "kommun", "allmännytta"]
 readingTime: 7
-heroImage: "/projekt/mark_image3.webp"
-heroImageAlt: "Ramavtal mark och anläggning, grävmaskin på Solnaprojekt"
+heroImage: "/projekt/bygg_image2.webp"
+heroImageAlt: "Markarbeten med ledningar och rörsystem från ovan"
 faq:
   - q: "Vad är skillnaden mellan ramavtal och engångsavtal?"
     a: "Ramavtal gäller för flera projekt under en avtalstid (typiskt 2-4 år). Beställaren avropar enskilda uppdrag inom ramavtalet utan ny upphandling. Engångsavtal gäller ett specifikt projekt och kräver separat upphandling per projekt."

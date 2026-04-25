@@ -5,8 +5,8 @@ published: 2026-04-25
 category: "Kostnad"
 tags: ["balkong", "balkongrenovering", "BRF", "Stockholm", "betong", "tätskikt"]
 readingTime: 7
-heroImage: "/projekt/foretag_15.webp"
-heroImageAlt: "Balkongrenovering med formsättning och armering"
+heroImage: "/projekt/portfolj_image29.webp"
+heroImageAlt: "Flerbostadshus med balkonger i trä och glas"
 faq:
   - q: "Vad kostar det att renovera en balkong?"
     a: "I Stockholm 2026: typiskt 25 000–80 000 kr per balkong. Enklare renovering med tätskikt och ytbehandling: 15 000–35 000 kr. Total renovering med betongersättning, ny armering och räcken: 60 000–120 000 kr. Pris styrs av skick, åtkomst och totalvolym."

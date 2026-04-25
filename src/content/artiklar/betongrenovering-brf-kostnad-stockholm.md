@@ -5,8 +5,8 @@ published: 2026-04-25
 category: "Kostnad"
 tags: ["betongrenovering", "BRF", "Stockholm", "karbonatisering", "armeringskorrosion", "kostnad"]
 readingTime: 8
-heroImage: "/projekt/foretag_15.webp"
-heroImageAlt: "Betongrenovering med armering och formsättning"
+heroImage: "/projekt/foretag_26.webp"
+heroImageAlt: "Modernt kontor med betongkonstruktion och glaspartier"
 faq:
   - q: "Vad kostar betongrenovering per kvadratmeter?"
     a: "För enklare karbonatiseringsåtgärder ligger kostnaden typiskt på 1 200–2 800 kr/kvm. För omfattande betongrenovering med utbyte av armering, formsättning och nygjutning ligger kostnaden på 3 500–7 500 kr/kvm. Pris styrs av åtkomst, omfattning och konstruktionstyp."

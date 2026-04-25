@@ -5,8 +5,8 @@ published: 2026-04-25
 category: "Upphandling"
 tags: ["ÄTA", "AB 04", "ABT 06", "entreprenadkontrakt", "ändringsarbete", "tilläggsarbete"]
 readingTime: 7
-heroImage: "/projekt/foretag_8.webp"
-heroImageAlt: "Projektgenomgång och ÄTA-hantering vid whiteboard"
+heroImage: "/projekt/foretag_11.webp"
+heroImageAlt: "Modern reception med trapphus, plats för projektmöten"
 faq:
   - q: "Vad är ÄTA-arbete?"
     a: "ÄTA står för Ändring, Tillägg, Avgår. Det är arbeten som inte ingår i ursprungskontraktet men som beställaren beordrar under utförandet. ÄTA hanteras enligt AB 04/ABT 06 kapitel 2 och kräver dokumentation, prissättning och formellt godkännande."

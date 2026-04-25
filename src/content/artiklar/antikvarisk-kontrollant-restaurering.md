@@ -5,8 +5,8 @@ published: 2026-04-25
 category: "Branschinsikt"
 tags: ["antikvarisk", "kontrollant", "K-märkt", "restaurering", "kulturminneslagen", "PBL"]
 readingTime: 7
-heroImage: "/projekt/bygg_image4.webp"
-heroImageAlt: "K-märkt byggnad lyfts med mobilkran, antikvarisk restaurering"
+heroImage: "/projekt/foretag_4.webp"
+heroImageAlt: "Renoverad lobby med träfasad och glaspartier — premium restaurering"
 faq:
   - q: "Vad gör en antikvarisk kontrollant?"
     a: "En antikvarisk kontrollant kvalitetssäkrar att restaureringen följer antikvariska principer, lagstiftning (KML, PBL) och de specifika villkor som länsstyrelsen eller kommunen ställt. Kontrollanten besöker arbetet, granskar materialval och utförande, och dokumenterar."

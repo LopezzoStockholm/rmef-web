@@ -5,8 +5,8 @@ published: 2026-04-25
 category: "Upphandling"
 tags: ["KMA-plan", "kvalitet", "miljö", "arbetsmiljö", "AB 04", "ABT 06", "upphandling"]
 readingTime: 8
-heroImage: "/projekt/foretag_8.webp"
-heroImageAlt: "Projektgenomgång med KMA-plan vid whiteboard"
+heroImage: "/projekt/foretag_10.webp"
+heroImageAlt: "Modernt kontor med arbetsmiljö och dokumentation"
 faq:
   - q: "Vad betyder KMA?"
     a: "KMA står för Kvalitet, Miljö och Arbetsmiljö. En KMA-plan är ett dokument som beskriver hur entreprenören säkerställer dessa tre områden under entreprenaden. Krävs av de flesta professionella beställare och är obligatorisk vid offentlig upphandling."

@@ -5,8 +5,8 @@ published: 2026-04-25
 category: "Teknik"
 tags: ["skyddsrumsbesiktning", "MSB", "checklista", "BRF", "kontroll"]
 readingTime: 9
-heroImage: "/projekt/mark_image10.webp"
-heroImageAlt: "Skyddsrumsutförande, betongväggar och armering"
+heroImage: "/projekt/bygg_image3.webp"
+heroImageAlt: "Markarbeten med grävmaskin och rör i Solnaprojekt"
 faq:
   - q: "Vad kostar det att förbereda skyddsrummet inför MSB-kontroll?"
     a: "Förberedande städning och sortering kostar typiskt 5 000–25 000 kr för en BRF. Större förberedande åtgärder (typ borttagning av installationer som inte hör hemma, demontering av tillfälliga väggar): 30 000–100 000 kr. Mycket billigare än att få omfattande anmärkningar."
