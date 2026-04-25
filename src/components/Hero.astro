@@ -1,7 +1,11 @@
 ---
 import { PROJECTS } from "../lib/site";
-const heroImage = PROJECTS[0]?.image ?? "/projekt/foretag_2.webp";
-const heroProject = PROJECTS[0];
+
+// Hero rotation: välj 4 representativa projekt från olika kategorier
+const heroSlugs = ["rocmore-signalisten", "kvarteret-persikan", "vindarnas-tempel", "axfood-huvudkontor"];
+const heroProjects = heroSlugs
+  .map((slug) => PROJECTS.find((p) => p.slug === slug))
+  .filter((p): p is NonNullable<typeof p> => Boolean(p));
 ---
 
 <section class="relative overflow-hidden bg-[color:var(--color-paper)]">
@@ -45,20 +49,47 @@ const heroProject = PROJECTS[0];
       </div>
 
       <div class="lg:col-span-5 fade-in" style="animation-delay: 320ms">
-        <div class="relative aspect-[4/5] rounded-3xl overflow-hidden bg-[color:var(--color-steel)] shadow-2xl shadow-black/10">
-          <img
-            src={heroImage}
-            alt={heroProject?.imageAlt ?? "Pågående projekt, RM Entreprenad & Fasad"}
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent"></div>
-          <div class="absolute bottom-6 left-6 right-6 text-white">
-            <p class="text-[10px] uppercase tracking-[0.22em] text-white/60 mb-2 font-semibold">Pågående projekt</p>
-            <p class="text-lg font-semibold mb-1">{heroProject?.title}</p>
-            <p class="text-sm text-white/70">{heroProject?.client} · {heroProject?.volume}</p>
+        <div
+          id="hero-gallery"
+          class="relative aspect-[4/5] rounded-3xl overflow-hidden bg-[color:var(--color-steel)] shadow-2xl shadow-black/10"
+          aria-roledescription="bildkarusell"
+          aria-label="Referensprojekt"
+        >
+          {heroProjects.map((p, i) => (
+            <div
+              class={`hero-slide absolute inset-0 transition-opacity duration-1000 ease-out ${i === 0 ? "opacity-100" : "opacity-0"}`}
+              data-slide={i}
+              aria-hidden={i === 0 ? "false" : "true"}
+            >
+              <img
+                src={p.image}
+                alt={p.imageAlt ?? p.title}
+                loading={i === 0 ? "eager" : "lazy"}
+                fetchpriority={i === 0 ? "high" : "auto"}
+                decoding="async"
+                class="hero-slide-img absolute inset-0 w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"></div>
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <p class="text-[10px] uppercase tracking-[0.22em] text-white/60 mb-2 font-semibold">{i === 0 ? "Pågående projekt" : "Referensprojekt"}</p>
+                <p class="text-lg font-semibold mb-1 leading-tight">{p.title}</p>
+                <p class="text-sm text-white/70">{p.client}{p.volume ? ` · ${p.volume}` : ""}</p>
+              </div>
+            </div>
+          ))}
+
+          <!-- Indikator-prickar -->
+          <div class="absolute top-5 right-5 flex gap-1.5" role="tablist" aria-label="Välj bild">
+            {heroProjects.map((_, i) => (
+              <button
+                type="button"
+                class={`hero-dot w-1.5 h-1.5 rounded-full transition-all ${i === 0 ? "bg-white w-6" : "bg-white/40 hover:bg-white/70"}`}
+                data-dot={i}
+                role="tab"
+                aria-selected={i === 0 ? "true" : "false"}
+                aria-label={`Bild ${i + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>
@@ -99,3 +130,80 @@ const heroProject = PROJECTS[0];
     </dl>
   </div>
 </section>
+
+<style>
+  .hero-slide-img {
+    animation: kenBurns 14s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+  @keyframes kenBurns {
+    0%   { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.08) translate(-1%, 1%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-slide-img { animation: none !important; }
+    .hero-slide { transition: none !important; }
+  }
+</style>
+
+<script>
+  (() => {
+    const gallery = document.getElementById("hero-gallery");
+    if (!gallery) return;
+    const slides = Array.from(gallery.querySelectorAll<HTMLElement>(".hero-slide"));
+    const dots = Array.from(gallery.querySelectorAll<HTMLElement>(".hero-dot"));
+    if (slides.length < 2) return;
+
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) return;
+
+    let current = 0;
+    let timer: ReturnType<typeof setInterval> | null = null;
+
+    function show(next: number) {
+      if (next === current) return;
+      slides[current].classList.remove("opacity-100");
+      slides[current].classList.add("opacity-0");
+      slides[current].setAttribute("aria-hidden", "true");
+      dots[current]?.classList.replace("bg-white", "bg-white/40");
+      dots[current]?.classList.remove("w-6");
+      dots[current]?.classList.add("w-1.5");
+      dots[current]?.setAttribute("aria-selected", "false");
+
+      slides[next].classList.remove("opacity-0");
+      slides[next].classList.add("opacity-100");
+      slides[next].setAttribute("aria-hidden", "false");
+      dots[next]?.classList.replace("bg-white/40", "bg-white");
+      dots[next]?.classList.remove("w-1.5");
+      dots[next]?.classList.add("w-6");
+      dots[next]?.setAttribute("aria-selected", "true");
+
+      current = next;
+    }
+
+    function start() {
+      stop();
+      timer = setInterval(() => show((current + 1) % slides.length), 7000);
+    }
+    function stop() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    dots.forEach((d, i) => {
+      d.addEventListener("click", () => {
+        show(i);
+        start();
+      });
+    });
+
+    gallery.addEventListener("mouseenter", stop);
+    gallery.addEventListener("mouseleave", start);
+    gallery.addEventListener("focusin", stop);
+    gallery.addEventListener("focusout", start);
+
+    start();
+  })();
+</script>
