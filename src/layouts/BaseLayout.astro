@@ -161,8 +161,11 @@ const allSchemas = [organizationSchema, websiteSchema, ...(schema ? (Array.isArr
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap"
     />
 
-    <!-- Preload hero image om angiven -->
-    {image && image !== "/og-default.jpg" && (
+    <!-- Preload hero image för LCP. På startsidan: första hero-rotation-bilden. -->
+    {Astro.url.pathname === "/" && (
+      <link rel="preload" as="image" href="/projekt/foretag_2.webp" fetchpriority="high" />
+    )}
+    {image && image !== "/og-default.jpg" && Astro.url.pathname !== "/" && (
       <link rel="preload" as="image" href={image} fetchpriority="high" />
     )}
 
