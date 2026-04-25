@@ -63,13 +63,15 @@ const heroProjects = heroSlugs
               aria-hidden={i === 0 ? "false" : "true"}
             >
               <img
-                src={p.image}
-                srcset={`${p.image?.replace(".webp", "-400.webp")} 400w, ${p.image?.replace(".webp", "-800.webp")} 800w, ${p.image?.replace(".webp", "-1200.webp")} 1200w, ${p.image} 1600w`}
+                src={i === 0 ? p.image : undefined}
+                data-src={i === 0 ? undefined : p.image}
+                srcset={i === 0 ? `${p.image?.replace(".webp", "-400.webp")} 400w, ${p.image?.replace(".webp", "-800.webp")} 800w, ${p.image?.replace(".webp", "-1200.webp")} 1200w, ${p.image} 1600w` : undefined}
+                data-srcset={i === 0 ? undefined : `${p.image?.replace(".webp", "-400.webp")} 400w, ${p.image?.replace(".webp", "-800.webp")} 800w, ${p.image?.replace(".webp", "-1200.webp")} 1200w, ${p.image} 1600w`}
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                 alt={p.imageAlt ?? p.title}
                 width="1600"
-                height={i === 0 ? "1200" : "1200"}
-                loading={i === 0 ? "eager" : "auto"}
+                height="1200"
+                loading={i === 0 ? "eager" : "lazy"}
                 fetchpriority={i === 0 ? "high" : "low"}
                 decoding="async"
                 class="hero-slide-img absolute inset-0 w-full h-full object-cover"
@@ -212,32 +214,35 @@ const heroProjects = heroSlugs
 
     start();
 
-    // Preload övriga hero-bilder efter first paint så de inte blockerar LCP
+    // Aktivera lazy hero-bilder efter LCP (data-src/data-srcset → src/srcset)
     if (document.readyState === "complete") {
-      preloadOthers();
+      activateLazySlides();
     } else {
-      window.addEventListener("load", preloadOthers);
+      window.addEventListener("load", activateLazySlides);
     }
-    function preloadOthers() {
-      window.requestIdleCallback?.(() => {
+    function activateLazySlides() {
+      const fn = () => {
         slides.forEach((s, i) => {
           if (i === 0) return;
           const img = s.querySelector<HTMLImageElement>("img");
-          if (img && !img.complete) {
-            // Triggra ladning genom att forcera src reload
-            const url = img.src;
-            const preloader = new Image();
-            preloader.src = url;
+          if (!img) return;
+          const dataSrc = img.getAttribute("data-src");
+          const dataSrcset = img.getAttribute("data-srcset");
+          if (dataSrcset) {
+            img.setAttribute("srcset", dataSrcset);
+            img.removeAttribute("data-srcset");
+          }
+          if (dataSrc) {
+            img.setAttribute("src", dataSrc);
+            img.removeAttribute("data-src");
           }
         });
-      }) ?? slides.forEach((s, i) => {
-        if (i === 0) return;
-        const img = s.querySelector<HTMLImageElement>("img");
-        if (img && !img.complete) {
-          const preloader = new Image();
-          preloader.src = img.src;
-        }
-      });
+      };
+      if (window.requestIdleCallback) {
+        window.requestIdleCallback(fn, { timeout: 2000 });
+      } else {
+        window.setTimeout(fn, 1500);
+      }
     }
   })();
 </script>
