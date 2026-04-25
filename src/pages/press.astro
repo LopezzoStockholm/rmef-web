@@ -1,0 +1,172 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import { SITE } from "../lib/site";
+
+const title = "Press och media — RM Entreprenad & Fasad AB";
+const description =
+  "Press- och mediakit från RM Entreprenad & Fasad. Kontaktuppgifter, företagsfakta, högupplösta bilder och pressmeddelanden för journalister och branschmedia.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: title,
+  description,
+  url: `${SITE.url}/press`,
+  isPartOf: { "@id": `${SITE.url}/#website` },
+  about: { "@id": `${SITE.url}/#organization` },
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-6">Press och media</p>
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          För journalister och branschmedia
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          Material för media som rapporterar om bygg- och fastighetsbranschen, skyddsrum, MSB-frågor eller komplex entreprenad i Stockholm. Kontaktuppgifter, fakta och citerbart material.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Kontakt för media</h2>
+            <dl class="space-y-5 text-lg">
+              <div>
+                <dt class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] font-semibold mb-1">VD och ägare</dt>
+                <dd>{SITE.vd}</dd>
+              </div>
+              <div>
+                <dt class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] font-semibold mb-1">Telefon</dt>
+                <dd><a href={`tel:${SITE.phoneDisplay.replace(/\s/g, "")}`} class="hover:text-[color:var(--color-brand-red)]">{SITE.phoneDisplay}</a></dd>
+              </div>
+              <div>
+                <dt class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] font-semibold mb-1">E-post</dt>
+                <dd>
+                  <a href="#" data-mail-user={SITE.email.split("@")[0]} data-mail-domain={SITE.email.split("@")[1]} class="email-link hover:text-[color:var(--color-brand-red)]">
+                    {SITE.email.split("@")[0]}<span aria-hidden="true">[at]</span>{SITE.email.split("@")[1]}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] font-semibold mb-1">LinkedIn</dt>
+                <dd><a href={SITE.socials.linkedin} target="_blank" rel="noopener" class="hover:text-[color:var(--color-brand-red)]">linkedin.com/company/rm-entreprenad-fasad</a></dd>
+              </div>
+            </dl>
+          </div>
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Företagsfakta</h2>
+            <dl class="space-y-5 text-lg">
+              <div>
+                <dt class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] font-semibold mb-1">Org.nr</dt>
+                <dd>{SITE.orgNumber}</dd>
+              </div>
+              <div>
+                <dt class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] font-semibold mb-1">Säte</dt>
+                <dd>{SITE.address.city}, {SITE.address.country === "SE" ? "Sverige" : SITE.address.country}</dd>
+              </div>
+              <div>
+                <dt class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] font-semibold mb-1">Grundat</dt>
+                <dd>{SITE.founded}</dd>
+              </div>
+              <div>
+                <dt class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] font-semibold mb-1">Branscherfarenhet</dt>
+                <dd>100+ år samlat i kärnteamet</dd>
+              </div>
+              <div>
+                <dt class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] font-semibold mb-1">Soliditet</dt>
+                <dd>96 %</dd>
+              </div>
+              <div>
+                <dt class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] font-semibold mb-1">Största projekt</dt>
+                <dd>75 Mkr (Kvarteret Persikan, Stockholmshem AB)</dd>
+              </div>
+              <div>
+                <dt class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-ink-40)] font-semibold mb-1">Försäkring</dt>
+                <dd>{SITE.insurance}</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Aktuella ämnen vi kan kommentera</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-8 bg-[color:var(--color-paper-2)] rounded-2xl">
+            <p class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-brand-red)] font-semibold mb-3">Aktuellt 2026</p>
+            <h3 class="text-xl font-semibold mb-3">MSB:s 100 Mkr-anslag för skyddsrum</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Regeringens årliga anslag till skyddsrumsåtgärder, vad som täcks och hur fastighetsägare ansöker.</p>
+            <a href="/artiklar/msb-ersattning-skyddsrum-statsbidrag/" class="text-sm text-[color:var(--color-brand-red)] font-semibold mt-4 inline-block">Läs vår guide →</a>
+          </div>
+          <div class="p-8 bg-[color:var(--color-paper-2)] rounded-2xl">
+            <p class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-brand-red)] font-semibold mb-3">Aktuellt 2025–2030</p>
+            <h3 class="text-xl font-semibold mb-3">Skyddsrumskontroller över hela Sverige</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">MSB:s systematiska kontroll av Sveriges 65 000 skyddsrum. Vad fastighetsägare och BRF-styrelser bör veta.</p>
+            <a href="/guider/skyddsrum-komplett-guide/" class="text-sm text-[color:var(--color-brand-red)] font-semibold mt-4 inline-block">Läs komplett guide →</a>
+          </div>
+          <div class="p-8 bg-[color:var(--color-paper-2)] rounded-2xl">
+            <p class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-brand-red)] font-semibold mb-3">Trend</p>
+            <h3 class="text-xl font-semibold mb-3">Karbonatisering i 60–80-talsbestånd</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Stockholms äldre flerbostadshus har nu nått ålder då betongkonstruktioner kräver omfattande renovering. Kostnader och process.</p>
+            <a href="/artiklar/betongrenovering-brf-kostnad-stockholm/" class="text-sm text-[color:var(--color-brand-red)] font-semibold mt-4 inline-block">Läs guide →</a>
+          </div>
+          <div class="p-8 bg-[color:var(--color-paper-2)] rounded-2xl">
+            <p class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-brand-red)] font-semibold mb-3">Branschinsikt</p>
+            <h3 class="text-xl font-semibold mb-3">Antikvarisk restaurering i Stockholm</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">K-märkta byggnader, antikvariska kontrollanter och kulturminneslagen. Erfarenheter från Lidingö Stad-projekt.</p>
+            <a href="/artiklar/antikvarisk-kontrollant-restaurering/" class="text-sm text-[color:var(--color-brand-red)] font-semibold mt-4 inline-block">Läs guide →</a>
+          </div>
+          <div class="p-8 bg-[color:var(--color-paper-2)] rounded-2xl">
+            <p class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-brand-red)] font-semibold mb-3">Branschinsikt</p>
+            <h3 class="text-xl font-semibold mb-3">Komplex driftkänslig entreprenad</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Bygg- och anläggningsarbete i sjukhus (Locum), läkemedelsproduktion (Octapharma) och kontor med pågående verksamhet (Axfood).</p>
+            <a href="/projekt" class="text-sm text-[color:var(--color-brand-red)] font-semibold mt-4 inline-block">Se referensprojekt →</a>
+          </div>
+          <div class="p-8 bg-[color:var(--color-paper-2)] rounded-2xl">
+            <p class="text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-brand-red)] font-semibold mb-3">Branschinsikt</p>
+            <h3 class="text-xl font-semibold mb-3">Upphandling enligt LOU</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Hur kommunala upphandlingar fungerar, ramavtalsprocesser och vanliga fällor. Erfarenhet från Lidingö, Sigtuna, Solna, Knivsta.</p>
+            <a href="/artiklar/ramavtal-mark-anlaggning-kommun/" class="text-sm text-[color:var(--color-brand-red)] font-semibold mt-4 inline-block">Läs guide →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Bilder och logotyp</h2>
+        <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-8 max-w-3xl">
+          Press får använda våra projektbilder och företagslogotyp i redaktionellt sammanhang under förutsättning att RM Entreprenad & Fasad AB anges som källa. För kommersiellt material kontakta oss för tillstånd.
+        </p>
+        <ul class="space-y-3 text-base">
+          <li><a href="/logo.svg" download class="text-[color:var(--color-brand-red)] font-semibold hover:underline">→ Ladda ner logotyp (SVG)</a></li>
+          <li><a href="/projekt" class="text-[color:var(--color-brand-red)] font-semibold hover:underline">→ Galleri av referensprojekt med bilder</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll<HTMLAnchorElement>("a.email-link").forEach((a) => {
+      const u = a.dataset.mailUser;
+      const d = a.dataset.mailDomain;
+      if (u && d) {
+        a.href = `mailto:${u}@${d}`;
+        a.textContent = `${u}@${d}`;
+      }
+    });
+  });
+</script>
