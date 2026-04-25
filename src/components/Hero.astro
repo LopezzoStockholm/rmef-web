@@ -57,7 +57,8 @@ const heroProjects = heroSlugs
         >
           {heroProjects.map((p, i) => (
             <div
-              class={`hero-slide absolute inset-0 transition-opacity duration-1000 ease-out ${i === 0 ? "opacity-100" : "opacity-0"}`}
+              class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-out"
+              style={`opacity: ${i === 0 ? 1 : 0}`}
               data-slide={i}
               aria-hidden={i === 0 ? "false" : "true"}
             >
@@ -83,7 +84,8 @@ const heroProjects = heroSlugs
             {heroProjects.map((_, i) => (
               <button
                 type="button"
-                class={`hero-dot w-1.5 h-1.5 rounded-full transition-all ${i === 0 ? "bg-white w-6" : "bg-white/40 hover:bg-white/70"}`}
+                class="hero-dot h-1.5 rounded-full transition-all duration-300 hover:!bg-white/70"
+                style={`width: ${i === 0 ? 24 : 6}px; background: ${i === 0 ? "rgb(255,255,255)" : "rgba(255,255,255,0.4)"};`}
                 data-dot={i}
                 role="tab"
                 aria-selected={i === 0 ? "true" : "false"}
@@ -162,21 +164,21 @@ const heroProjects = heroSlugs
 
     function show(next: number) {
       if (next === current) return;
-      slides[current].classList.remove("opacity-100");
-      slides[current].classList.add("opacity-0");
+      slides[current].style.opacity = "0";
       slides[current].setAttribute("aria-hidden", "true");
-      dots[current]?.classList.replace("bg-white", "bg-white/40");
-      dots[current]?.classList.remove("w-6");
-      dots[current]?.classList.add("w-1.5");
-      dots[current]?.setAttribute("aria-selected", "false");
+      if (dots[current]) {
+        dots[current].style.background = "rgba(255,255,255,0.4)";
+        dots[current].style.width = "6px";
+        dots[current].setAttribute("aria-selected", "false");
+      }
 
-      slides[next].classList.remove("opacity-0");
-      slides[next].classList.add("opacity-100");
+      slides[next].style.opacity = "1";
       slides[next].setAttribute("aria-hidden", "false");
-      dots[next]?.classList.replace("bg-white/40", "bg-white");
-      dots[next]?.classList.remove("w-1.5");
-      dots[next]?.classList.add("w-6");
-      dots[next]?.setAttribute("aria-selected", "true");
+      if (dots[next]) {
+        dots[next].style.background = "rgb(255,255,255)";
+        dots[next].style.width = "24px";
+        dots[next].setAttribute("aria-selected", "true");
+      }
 
       current = next;
     }
