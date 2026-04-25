@@ -57,8 +57,8 @@ const heroProjects = heroSlugs
         >
           {heroProjects.map((p, i) => (
             <div
-              class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-out"
-              style={`opacity: ${i === 0 ? 1 : 0}`}
+              class="hero-slide absolute inset-0"
+              style={`opacity: ${i === 0 ? 1 : 0}; z-index: ${i === 0 ? 2 : 1}; transition: opacity 600ms ease-out;`}
               data-slide={i}
               aria-hidden={i === 0 ? "false" : "true"}
             >
@@ -164,16 +164,25 @@ const heroProjects = heroSlugs
 
     function show(next: number) {
       if (next === current) return;
-      slides[current].style.opacity = "0";
-      slides[current].setAttribute("aria-hidden", "true");
+      // Lägg new slide ovanpå (z-index 2) och fade in den.
+      // Outgoing stannar kvar synlig (opacity 1, z-index 1) tills new helt täcker.
+      slides[next].style.zIndex = "2";
+      slides[next].style.opacity = "1";
+      slides[next].setAttribute("aria-hidden", "false");
+
+      // Efter transition: outgoing flyttas till z-index 1 och döljs
+      const outgoing = slides[current];
+      window.setTimeout(() => {
+        outgoing.style.opacity = "0";
+        outgoing.style.zIndex = "1";
+        outgoing.setAttribute("aria-hidden", "true");
+      }, 650);
+
       if (dots[current]) {
         dots[current].style.background = "rgba(255,255,255,0.4)";
         dots[current].style.width = "6px";
         dots[current].setAttribute("aria-selected", "false");
       }
-
-      slides[next].style.opacity = "1";
-      slides[next].setAttribute("aria-hidden", "false");
       if (dots[next]) {
         dots[next].style.background = "rgb(255,255,255)";
         dots[next].style.width = "24px";
