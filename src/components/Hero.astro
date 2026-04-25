@@ -65,8 +65,8 @@ const heroProjects = heroSlugs
               <img
                 src={p.image}
                 alt={p.imageAlt ?? p.title}
-                loading="eager"
-                fetchpriority={i === 0 ? "high" : "auto"}
+                loading={i === 0 ? "eager" : "auto"}
+                fetchpriority={i === 0 ? "high" : "low"}
                 decoding="async"
                 class="hero-slide-img absolute inset-0 w-full h-full object-cover"
               />
@@ -207,5 +207,33 @@ const heroProjects = heroSlugs
     gallery.addEventListener("focusout", start);
 
     start();
+
+    // Preload övriga hero-bilder efter first paint så de inte blockerar LCP
+    if (document.readyState === "complete") {
+      preloadOthers();
+    } else {
+      window.addEventListener("load", preloadOthers);
+    }
+    function preloadOthers() {
+      window.requestIdleCallback?.(() => {
+        slides.forEach((s, i) => {
+          if (i === 0) return;
+          const img = s.querySelector<HTMLImageElement>("img");
+          if (img && !img.complete) {
+            // Triggra ladning genom att forcera src reload
+            const url = img.src;
+            const preloader = new Image();
+            preloader.src = url;
+          }
+        });
+      }) ?? slides.forEach((s, i) => {
+        if (i === 0) return;
+        const img = s.querySelector<HTMLImageElement>("img");
+        if (img && !img.complete) {
+          const preloader = new Image();
+          preloader.src = img.src;
+        }
+      });
+    }
   })();
 </script>
