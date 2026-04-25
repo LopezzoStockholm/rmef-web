@@ -24,7 +24,7 @@ const serviceImages: Record<string, { src: string; alt: string }> = {
 
 <section class="py-20 lg:py-32 bg-[color:var(--color-paper)]">
   <div class="mx-auto max-w-7xl px-6 lg:px-10">
-    <div class="max-w-3xl mb-16 lg:mb-20">
+    <div class="max-w-3xl mb-16 lg:mb-20" data-reveal>
       <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">Tjänster</p>
       <h2 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight mb-6">
         Fyra discipliner. Ett ansvar.
@@ -41,6 +41,8 @@ const serviceImages: Record<string, { src: string; alt: string }> = {
           <a
             href={`/tjanster/${service.slug}`}
             class="group relative overflow-hidden bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500"
+            data-reveal
+            style={`transition-delay: ${idx * 100}ms`}
           >
             <div class="relative aspect-[16/9] overflow-hidden bg-[color:var(--color-steel)]">
               <img

@@ -26,7 +26,7 @@ const steps = [
 <section class="py-20 lg:py-32 bg-[color:var(--color-paper)]">
   <div class="mx-auto max-w-7xl px-6 lg:px-10">
     <div class="grid lg:grid-cols-3 gap-12 lg:gap-20">
-      <div class="lg:sticky lg:top-32 lg:self-start">
+      <div class="lg:sticky lg:top-32 lg:self-start" data-reveal>
         <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">Så jobbar vi</p>
         <h2 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight mb-6">
           En ingång. En projektledare.
@@ -39,8 +39,12 @@ const steps = [
 
       <div class="lg:col-span-2 space-y-4">
         {
-          steps.map((step) => (
-            <div class="group p-8 lg:p-10 bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-paper-2)]/70 transition-colors">
+          steps.map((step, idx) => (
+            <div
+              class="group p-8 lg:p-10 bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-paper-2)]/70 transition-colors"
+              data-reveal
+              style={`transition-delay: ${idx * 80}ms`}
+            >
               <div class="flex items-start gap-6">
                 <span class="text-4xl lg:text-5xl font-semibold text-[color:var(--color-brand-red)] tracking-tighter leading-none min-w-[80px]">
                   {step.number}

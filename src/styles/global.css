@@ -92,6 +92,18 @@
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
   }
+
+  /* Scroll-triggered reveal */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 700ms var(--ease-smooth), transform 700ms var(--ease-smooth);
+    will-change: opacity, transform;
+  }
+  [data-reveal][data-revealed="true"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -100,5 +112,9 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

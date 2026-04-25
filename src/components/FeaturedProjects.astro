@@ -5,7 +5,7 @@ const featured = PROJECTS.filter((p) => p.featured);
 
 <section class="py-20 lg:py-32 bg-[color:var(--color-asphalt)] text-white overflow-hidden">
   <div class="mx-auto max-w-7xl px-6 lg:px-10">
-    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 lg:mb-20 gap-6">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 lg:mb-20 gap-6" data-reveal>
       <div class="max-w-2xl">
         <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Utvalda referensprojekt</p>
         <h2 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight">
@@ -25,8 +25,8 @@ const featured = PROJECTS.filter((p) => p.featured);
 
     <div class="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-6">
       {
-        featured.map((p) => (
-          <a href={`/projekt/${p.slug}`} class="group block">
+        featured.map((p, idx) => (
+          <a href={`/projekt/${p.slug}`} class="group block" data-reveal style={`transition-delay: ${idx * 80}ms`}>
             <div class="aspect-[4/5] rounded-2xl overflow-hidden relative mb-5 bg-gradient-to-br from-[color:var(--color-steel)] to-[#0a0a0a]">
               {p.image ? (
                 <>

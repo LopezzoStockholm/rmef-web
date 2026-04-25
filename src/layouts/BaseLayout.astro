@@ -201,5 +201,33 @@ const allSchemas = [organizationSchema, websiteSchema, ...(schema ? (Array.isArr
     </main>
     <Footer />
     <WhatsAppButton />
+
+    <!-- Scroll-reveal: fade-in on intersection -->
+    <script>
+      (() => {
+        const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduced) {
+          document.querySelectorAll<HTMLElement>("[data-reveal]").forEach((el) => {
+            el.dataset.revealed = "true";
+          });
+          return;
+        }
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const el = entry.target as HTMLElement;
+                el.dataset.revealed = "true";
+                observer.unobserve(el);
+              }
+            });
+          },
+          { rootMargin: "0px 0px -10% 0px", threshold: 0.15 }
+        );
+        document.querySelectorAll<HTMLElement>("[data-reveal]").forEach((el) => {
+          observer.observe(el);
+        });
+      })();
+    </script>
   </body>
 </html>
