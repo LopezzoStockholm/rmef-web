@@ -23,28 +23,28 @@ const categories: Category[] = [
   {
     label: "Kommun & offentlig sektor",
     clients: [
-      { name: "Locum AB", slug: "locum", style: "sans", note: "Region Stockholms fastighetsbolag" },
-      { name: "Lidingö Stad", slug: "lidingo-stad", style: "serif", note: "Antikvariska restaureringar" },
-      { name: "Solna Stad", slug: "solna-stad", style: "sans", note: "Skol- och institutionsbygg" },
-      { name: "Sigtuna kommun", slug: "sigtuna", style: "sans", note: "Engelska skolan Sigtuna" },
+      { name: "Locum AB", slug: "locum", style: "sans", note: "Region Stockholms fastighetsbolag", useImage: true },
+      { name: "Lidingö Stad", slug: "lidingo-stad", style: "serif", note: "Antikvariska restaureringar", useImage: true },
+      { name: "Solna Stad", slug: "solna-stad", style: "sans", note: "Skol- och institutionsbygg", useImage: true },
+      { name: "Sigtuna kommun", slug: "sigtuna", style: "sans", note: "Engelska skolan Sigtuna", useImage: true },
     ],
   },
   {
     label: "Allmännytta & bostadsbolag",
     clients: [
-      { name: "Stockholmshem", slug: "stockholmshem", style: "serif", note: "75 Mkr grundläggning Persikan" },
-      { name: "Signalisten", slug: "signalisten", style: "sans", note: "Ramavtal Solna" },
-      { name: "Atrium Ljungberg", slug: "atrium", style: "sans", note: "Kontorsfastigheter" },
+      { name: "Stockholmshem", slug: "stockholmshem", style: "serif", note: "75 Mkr grundläggning Persikan", useImage: true },
+      { name: "Signalisten", slug: "signalisten", style: "sans", note: "Ramavtal Solna", useImage: true },
+      { name: "Atrium Ljungberg", slug: "atrium", style: "sans", note: "Kontorsfastigheter", useImage: true },
     ],
   },
   {
     label: "Privata fastighetsbolag & industri",
     clients: [
-      { name: "Octapharma", slug: "octapharma", style: "sans", note: "Läkemedelsproduktion" },
-      { name: "Axfood", slug: "axfood", style: "bold", note: "Huvudkontor 3 000 kvm" },
-      { name: "Patriam", slug: "patriam", style: "italic", note: "Stocksund nyproduktion" },
-      { name: "Skanska", slug: "skanska", style: "bold", note: "Underentreprenad" },
-      { name: "Habitek", slug: "habitek", style: "bold", note: "Totalentreprenad" },
+      { name: "Octapharma", slug: "octapharma", style: "sans", note: "Läkemedelsproduktion", useImage: true },
+      { name: "Axfood", slug: "axfood", style: "bold", note: "Huvudkontor 3 000 kvm", useImage: true },
+      { name: "Patriam", slug: "patriam", style: "italic", note: "Stocksund nyproduktion", useImage: true },
+      { name: "Skanska", slug: "skanska", style: "bold", note: "Underentreprenad", useImage: true },
+      { name: "Habitek", slug: "habitek", style: "bold", note: "Totalentreprenad", useImage: true },
       { name: "Rocmore", slug: "rocmore", style: "italic", note: "Strategisk partner" },
     ],
   },
@@ -89,19 +89,21 @@ const styleClass: Record<Client["style"], string> = {
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-8">
             {category.clients.map((c) => (
               <div class="group relative pb-4 border-b border-[color:var(--color-ink-10)] hover:border-[color:var(--color-brand-red)] transition-colors">
-                {c.useImage ? (
-                  <img
-                    src={`/clients/${c.slug}.svg`}
-                    alt={c.name}
-                    class="h-7 lg:h-8 w-auto opacity-70 group-hover:opacity-100 transition-opacity"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                ) : (
-                  <span class={`block text-lg lg:text-xl ${styleClass[c.style]} opacity-70 group-hover:opacity-100 transition-opacity`}>
-                    {c.name}
-                  </span>
-                )}
+                <div class="h-10 lg:h-11 flex items-center">
+                  {c.useImage ? (
+                    <img
+                      src={`/clients/${c.slug}.svg`}
+                      alt={c.name}
+                      class="max-h-9 lg:max-h-10 w-auto object-contain object-left [filter:brightness(0)] opacity-55 group-hover:opacity-100 group-hover:[filter:none] transition-all duration-300"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <span class={`block text-lg lg:text-xl ${styleClass[c.style]} opacity-70 group-hover:opacity-100 transition-opacity`}>
+                      {c.name}
+                    </span>
+                  )}
+                </div>
                 {c.note && (
                   <span class="block text-xs text-[color:var(--color-ink-40)] mt-2 group-hover:text-[color:var(--color-brand-red)] transition-colors">
                     {c.note}
