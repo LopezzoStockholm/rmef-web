@@ -65,7 +65,7 @@ const heroProjects = heroSlugs
               <img
                 src={p.image}
                 alt={p.imageAlt ?? p.title}
-                loading={i === 0 ? "eager" : "lazy"}
+                loading="eager"
                 fetchpriority={i === 0 ? "high" : "auto"}
                 decoding="async"
                 class="hero-slide-img absolute inset-0 w-full h-full object-cover"
