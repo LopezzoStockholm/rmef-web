@@ -138,8 +138,8 @@ export const PROJECTS: Project[] = [
       "Långsiktigt ramavtal inom mark och anläggning i Solna. Vi är strategisk samarbetspartner till Rocmore och arbetar direkt mot Signalisten, Solna Stads allmännyttiga bostadsbolag. Uppdrag omfattar grundläggning, schakt, ledningsarbeten, finplanering och markanläggning kring nyproduktion och förvaltning av befintligt bestånd. Årlig projektvolym cirka 40 Mkr.",
     challenges:
       "Återkommande arbete i bebodd stadsmiljö med höga krav på samordning mot hyresgäster, trafik och logistik. Långsiktig relation kräver förutsägbar leverans, konsekvent KMA-arbete och dokumentation över tid.",
-    image: "/projekt/mark_image6.webp",
-    imageAlt: "Pågående markarbete i Solna med betongpump, betongbil och flerbostadshus i bakgrunden",
+    image: "/projekt/mark_image3.webp",
+    imageAlt: "Pågående markarbete i Solna med orange grävmaskin och flerbostadshus i bakgrunden",
     featured: true,
   },
   {
@@ -170,8 +170,8 @@ export const PROJECTS: Project[] = [
       "Total­ombyggnad av flera våningsplan omfattande 3 000 kvm kontorsanpassningar, nya personalkök, wc-grupper och omklädningsrum. Samtliga discipliner levererade i egen regi: bygg, VS, ventilation och styr, el samt målning.",
     challenges:
       "Samtliga arbeten utfördes med kvarvarande hyresgäster i direkt anslutning till arbetsområdet. Krävde minutiös logistik kring nytt material och avfall, inga driftstörningar accepterades.",
-    image: "/projekt/foretag_4.webp",
-    imageAlt: "Axfoods huvudkontor, nyinredda kontorsmoduler med glaspartitioner",
+    image: "/projekt/foretag_24.webp",
+    imageAlt: "Axfoods huvudkontor, modern lobby med trapp och kontorslandskap",
     featured: true,
   },
   {
@@ -201,8 +201,8 @@ export const PROJECTS: Project[] = [
     summary:
       "Grundförstärkning, sprängning, pålning, betongarbeten och ledningsarbeten i central stadsmiljö med högt kulturhistoriskt värde.",
     challenges: "Arbete i kulturhistoriskt känslig miljö vid Slussen med stor publik gångtrafik direkt intill arbetsområdet.",
-    image: "/projekt/foretag_15.webp",
-    imageAlt: "T11 Katarinahuset, betong- och armeringsarbeten",
+    image: "/projekt/foretag_16.webp",
+    imageAlt: "T11 Katarinahuset, byggnadsarbete med materialhantering",
     featured: true,
   },
   {

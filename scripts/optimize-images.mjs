@@ -15,17 +15,19 @@ let processed = 0;
 for (const f of files) {
   const src = join(SRC, f);
   const base = basename(f, extname(f));
-  const sz = statSync(src).size;
-  if (sz < 20000) continue; // skippa små ikoner
   const outName = base.replace(/\s+/g, '_').toLowerCase();
   try {
+    // Large: 1600px max width, preserve aspect ratio, EXIF auto-rotate
     await sharp(src)
-      .resize(1600, 1200, { fit: 'inside', withoutEnlargement: true })
-      .webp({ quality: 82 })
+      .rotate() // auto EXIF
+      .resize({ width: 1600, withoutEnlargement: true })
+      .webp({ quality: 85, effort: 5 })
       .toFile(join(OUT_LARGE, `${outName}.webp`));
+    // Thumb: 800px max width, smart crop for cards
     await sharp(src)
-      .resize(800, 600, { fit: 'cover', position: 'attention' })
-      .webp({ quality: 80 })
+      .rotate()
+      .resize({ width: 800, withoutEnlargement: true })
+      .webp({ quality: 82, effort: 5 })
       .toFile(join(OUT_THUMB, `${outName}.webp`));
     processed++;
   } catch (e) {

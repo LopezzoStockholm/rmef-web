@@ -1,8 +1,8 @@
 ---
 import { PROJECTS } from "../lib/site";
 
-// Hero rotation: välj 4 representativa projekt från olika kategorier
-const heroSlugs = ["rocmore-signalisten", "kvarteret-persikan", "vindarnas-tempel", "axfood-huvudkontor"];
+// Hero rotation: välj 4 representativa projekt med högkvalitativa bilder
+const heroSlugs = ["kvarteret-persikan", "rocmore-signalisten", "axfood-huvudkontor", "t11-katarinahuset"];
 const heroProjects = heroSlugs
   .map((slug) => PROJECTS.find((p) => p.slug === slug))
   .filter((p): p is NonNullable<typeof p> => Boolean(p));
