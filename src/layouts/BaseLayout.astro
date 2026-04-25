@@ -212,8 +212,10 @@ const allSchemas = [organizationSchema, websiteSchema, ...(schema ? (Array.isArr
     <meta name="format-detection" content="telephone=yes" />
     <meta name="author" content={SITE.name} />
 
-    <!-- Cloudflare Web Analytics (cookieless, GDPR-vänlig) -->
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={`{"token": "${import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN || ''}"}`}></script>
+    <!-- Cloudflare Web Analytics (cookieless, GDPR-vänlig). Laddas efter window.load för att ej blockera LCP. -->
+    {import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN && (
+      <script set:html={`window.addEventListener('load',function(){var s=document.createElement('script');s.defer=true;s.src='https://static.cloudflareinsights.com/beacon.min.js';s.setAttribute('data-cf-beacon','{"token":"${import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN}"}');document.head.appendChild(s);});`}></script>
+    )}
 
     <!-- Google Tag Manager (behållare för GA4 + Meta Pixel + Google Ads) -->
     {import.meta.env.PUBLIC_GTM_ID && (
