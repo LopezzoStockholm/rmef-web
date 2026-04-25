@@ -1,50 +1,133 @@
 ---
-// Kundlogotyper som SVG-wordmarks. Generisk design eftersom vi inte har officiella logofiler,
-// men typografiskt neutralt och professionellt, inte bara text-marquee.
-const clients = [
-  { name: "Signalisten", font: "sans" },
-  { name: "Rocmore", font: "serif" },
-  { name: "Stockholmshem", font: "serif" },
-  { name: "Atrium Ljungberg", font: "sans" },
-  { name: "Skanska", font: "bold" },
-  { name: "Axfood", font: "sans" },
-  { name: "Locum", font: "serif" },
-  { name: "Solna Stad", font: "sans" },
-  { name: "Lidingö Stad", font: "sans" },
-  { name: "Habitek", font: "bold" },
-  { name: "Patriam", font: "serif" },
-  { name: "Octapharma", font: "sans" },
+// Kundlogotyper grupperade per sektor.
+// Varje kund kan ha en /clients/{slug}.svg-fil i public/. Om filen saknas
+// renderas en designad textmark istället. När du har officiella SVG-logos:
+// 1. Lägg dem i public/clients/{slug}.svg (200x48 viewBox, currentColor fyllning)
+// 2. Sätt useImage: true på objektet nedan
+
+type Client = {
+  name: string;
+  slug: string;
+  href?: string;
+  note?: string;
+  style: "sans" | "serif" | "bold" | "italic";
+  useImage?: boolean;
+};
+
+type Category = {
+  label: string;
+  clients: Client[];
+};
+
+const categories: Category[] = [
+  {
+    label: "Kommun & offentlig sektor",
+    clients: [
+      { name: "Locum AB", slug: "locum", style: "sans", note: "Region Stockholms fastighetsbolag" },
+      { name: "Lidingö Stad", slug: "lidingo-stad", style: "serif", note: "Antikvariska restaureringar" },
+      { name: "Solna Stad", slug: "solna-stad", style: "sans", note: "Skol- och institutionsbygg" },
+      { name: "Sigtuna kommun", slug: "sigtuna", style: "sans", note: "Engelska skolan Sigtuna" },
+    ],
+  },
+  {
+    label: "Allmännytta & bostadsbolag",
+    clients: [
+      { name: "Stockholmshem", slug: "stockholmshem", style: "serif", note: "75 Mkr grundläggning Persikan" },
+      { name: "Signalisten", slug: "signalisten", style: "sans", note: "Ramavtal Solna" },
+      { name: "Atrium Ljungberg", slug: "atrium", style: "sans", note: "Kontorsfastigheter" },
+    ],
+  },
+  {
+    label: "Privata fastighetsbolag & industri",
+    clients: [
+      { name: "Octapharma", slug: "octapharma", style: "sans", note: "Läkemedelsproduktion" },
+      { name: "Axfood", slug: "axfood", style: "bold", note: "Huvudkontor 3 000 kvm" },
+      { name: "Patriam", slug: "patriam", style: "italic", note: "Stocksund nyproduktion" },
+      { name: "Skanska", slug: "skanska", style: "bold", note: "Underentreprenad" },
+      { name: "Habitek", slug: "habitek", style: "bold", note: "Totalentreprenad" },
+      { name: "Rocmore", slug: "rocmore", style: "italic", note: "Strategisk partner" },
+    ],
+  },
 ];
 
-const fontClass: Record<string, string> = {
-  serif: "font-serif italic tracking-tight",
-  sans: "font-medium tracking-tight",
-  bold: "font-bold tracking-[-0.02em]",
+const styleClass: Record<Client["style"], string> = {
+  serif: "font-serif italic tracking-tight text-[color:var(--color-ink)]",
+  sans: "font-medium tracking-tight text-[color:var(--color-ink)]",
+  bold: "font-bold tracking-[-0.025em] text-[color:var(--color-ink)]",
+  italic: "font-serif italic tracking-tight text-[color:var(--color-ink)]",
 };
 ---
 
-<section class="py-16 lg:py-20 border-y border-[color:var(--color-ink-10)] bg-[color:var(--color-paper-2)]/40">
+<section class="py-20 lg:py-28 border-y border-[color:var(--color-ink-10)] bg-white">
   <div class="mx-auto max-w-7xl px-6 lg:px-10">
-    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-10">
-      <div>
-        <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-2">Utvalda beställare</p>
-        <h2 class="text-2xl lg:text-3xl font-semibold tracking-tight max-w-xl">
-          Vi levererar till några av Sveriges mest krävande beställare.
+    <!-- Header -->
+    <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 mb-16 lg:mb-20">
+      <div class="lg:col-span-7">
+        <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Utvalda beställare</p>
+        <h2 class="text-3xl lg:text-5xl font-semibold tracking-tight leading-[1.05] max-w-3xl">
+          Vi är leverantör åt några av Sveriges mest krävande beställare.
         </h2>
       </div>
-      <p class="text-sm text-[color:var(--color-ink-60)] max-w-sm">
-        Gemensamt för våra kunder: de ställer höga krav på precision, säkerhet och förutsägbarhet.
-      </p>
+      <div class="lg:col-span-5 lg:pt-4 flex items-end">
+        <p class="text-base lg:text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+          Region Stockholms sjukhus, kommunala bolag, börsnoterade fastighetsägare och läkemedelsproduktion. Gemensamt: höga krav på precision, säkerhet och förutsägbarhet.
+        </p>
+      </div>
     </div>
 
-    <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-x-8 gap-y-10 items-center">
-      {
-        clients.map((c) => (
-          <div class={`text-center text-[color:var(--color-ink)] opacity-60 hover:opacity-100 transition-opacity ${fontClass[c.font]}`}>
-            <span class="text-base sm:text-lg lg:text-xl">{c.name}</span>
+    <!-- Categories with logos -->
+    <div class="space-y-14 lg:space-y-16">
+      {categories.map((category) => (
+        <div>
+          <div class="flex items-center gap-3 mb-8">
+            <span class="w-1.5 h-1.5 rounded-full bg-[color:var(--color-brand-red)]" aria-hidden="true"></span>
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-60)] font-semibold">
+              {category.label}
+            </p>
+            <span class="flex-1 h-px bg-[color:var(--color-ink-10)]" aria-hidden="true"></span>
           </div>
-        ))
-      }
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-8">
+            {category.clients.map((c) => (
+              <div class="group relative pb-4 border-b border-[color:var(--color-ink-10)] hover:border-[color:var(--color-brand-red)] transition-colors">
+                {c.useImage ? (
+                  <img
+                    src={`/clients/${c.slug}.svg`}
+                    alt={c.name}
+                    class="h-7 lg:h-8 w-auto opacity-70 group-hover:opacity-100 transition-opacity"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : (
+                  <span class={`block text-lg lg:text-xl ${styleClass[c.style]} opacity-70 group-hover:opacity-100 transition-opacity`}>
+                    {c.name}
+                  </span>
+                )}
+                {c.note && (
+                  <span class="block text-xs text-[color:var(--color-ink-40)] mt-2 group-hover:text-[color:var(--color-brand-red)] transition-colors">
+                    {c.note}
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Footer CTA -->
+    <div class="mt-16 lg:mt-20 pt-10 border-t border-[color:var(--color-ink-10)] flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <p class="text-base text-[color:var(--color-ink-60)] max-w-xl leading-relaxed">
+        Tio av tretton listade kunder är återkommande beställare med ramavtal eller flera levererade projekt. Förtroendet växer projekt för projekt.
+      </p>
+      <a
+        href="/projekt"
+        class="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--color-ink)] hover:text-[color:var(--color-brand-red)] transition-colors whitespace-nowrap"
+      >
+        Se samtliga referensprojekt
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
     </div>
   </div>
 </section>
