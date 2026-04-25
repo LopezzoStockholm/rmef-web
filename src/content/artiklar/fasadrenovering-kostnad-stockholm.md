@@ -5,8 +5,8 @@ published: 2026-04-22
 category: "Kostnad"
 tags: ["fasad", "fasadrenovering", "Stockholm", "kostnad", "bostadsrättsförening"]
 readingTime: 9
-heroImage: "/projekt/bygg_image7.webp"
-heroImageAlt: "Fasad på renoverad byggnad i Stockholm"
+heroImage: "/projekt/foretag_3.webp"
+heroImageAlt: "Innergård med renoverade fasader och balkonger, Stockholm"
 ---
 
 ## Kort svar

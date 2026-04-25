@@ -6,7 +6,7 @@ category: "Branschinsikt"
 tags: ["restaurering", "K-märkt", "kulturbyggnad", "antikvarisk", "Lidingö", "Stockholm"]
 readingTime: 8
 heroImage: "/projekt/bygg_image4.webp"
-heroImageAlt: "Restaurering av K-märkt byggnad"
+heroImageAlt: "Vindarnas tempel — K-märkt paviljong lyfts med mobilkran från Lidingöbron"
 ---
 
 ## Kort svar

@@ -5,8 +5,8 @@ published: 2026-04-22
 category: "Upphandling"
 tags: ["grundläggning", "upphandling", "entreprenör", "markarbeten"]
 readingTime: 7
-heroImage: "/projekt/mark_image22.webp"
-heroImageAlt: "Grundläggning med spontväggar och armering"
+heroImage: "/projekt/mark_image3.webp"
+heroImageAlt: "Grävmaskin på grundläggningsplats i Solna med flerbostadshus i bakgrunden"
 ---
 
 ## Varför valet av grundläggningsentreprenör är viktigare än du tror

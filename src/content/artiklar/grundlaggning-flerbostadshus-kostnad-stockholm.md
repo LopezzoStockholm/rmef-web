@@ -5,8 +5,8 @@ published: 2026-04-24
 category: "Kostnad"
 tags: ["grundläggning", "flerbostadshus", "Stockholm", "schakt", "spontning", "kostnad"]
 readingTime: 9
-heroImage: "/projekt/mark_image6.webp"
-heroImageAlt: "Pågående grundläggning i Stockholm med betongpump"
+heroImage: "/projekt/foretag_2.webp"
+heroImageAlt: "Grundläggning Persikan, betongpump och betongbil i Stockholm"
 ---
 
 ## Kort svar

@@ -5,8 +5,8 @@ published: 2026-04-22
 category: "Upphandling"
 tags: ["entreprenadform", "ABT 06", "AB 04", "upphandling", "beställare"]
 readingTime: 8
-heroImage: "/projekt/foretag_2.webp"
-heroImageAlt: "Byggprojekt i Stockholm under produktion"
+heroImage: "/projekt/foretag_8.webp"
+heroImageAlt: "Projektgenomgång med entreprenör och beställare vid whiteboard"
 ---
 
 ## Kort svar

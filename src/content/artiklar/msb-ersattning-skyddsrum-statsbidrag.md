@@ -5,8 +5,8 @@ published: 2026-04-24
 category: "Upphandling"
 tags: ["skyddsrum", "MSB", "statsbidrag", "BRF", "fastighetsägare"]
 readingTime: 7
-heroImage: "/projekt/foretag_2.webp"
-heroImageAlt: "Skyddsrum i källarplan efter åtgärd"
+heroImage: "/projekt/mark_image10.webp"
+heroImageAlt: "Skyddsrumsutförande, platsgjutna betongväggar och armering"
 ---
 
 ## Kort svar

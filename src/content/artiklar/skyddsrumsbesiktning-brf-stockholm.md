@@ -5,8 +5,8 @@ published: 2026-04-24
 category: "Teknik"
 tags: ["skyddsrum", "MSB", "bostadsrättsförening", "besiktning", "Stockholm"]
 readingTime: 8
-heroImage: "/projekt/foretag_2.webp"
-heroImageAlt: "Platsgjutna källarväggar och skyddsrumsutförande"
+heroImage: "/projekt/mark_image11.webp"
+heroImageAlt: "Skyddsrumsbesiktning, schaktning och betongarbeten i innergård"
 ---
 
 ## Kort svar
