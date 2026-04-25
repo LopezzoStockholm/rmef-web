@@ -231,13 +231,30 @@ const allSchemas = [organizationSchema, websiteSchema, ...(schema ? (Array.isArr
         elements.forEach((el) => {
           const rect = el.getBoundingClientRect();
           // Reveal omedelbart om element redan är i, eller passerat, viewport
-          // (täcker fall där användaren landat mitt i sidan eller scrollat innan JS hann köra)
           if (rect.top < viewportHeight * 0.9) {
             reveal(el);
             return;
           }
           observer.observe(el);
         });
+
+        // Säkerhetsfallback: efter 200ms efter scroll, kontrollera alla observerade
+        // element manuellt och reveal de som är i viewport. IntersectionObserver
+        // kan ibland missa snabba scrolls.
+        let scrollTimer: ReturnType<typeof setTimeout> | null = null;
+        function checkVisible() {
+          document.querySelectorAll<HTMLElement>("[data-reveal]:not([data-revealed])").forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              reveal(el);
+              observer.unobserve(el);
+            }
+          });
+        }
+        window.addEventListener("scroll", () => {
+          if (scrollTimer) clearTimeout(scrollTimer);
+          scrollTimer = setTimeout(checkVisible, 200);
+        }, { passive: true });
       })();
     </script>
   </body>
