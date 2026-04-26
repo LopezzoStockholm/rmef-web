@@ -6,6 +6,25 @@ const heroSlugs = ["kvarteret-persikan", "rocmore-signalisten", "axfood-huvudkon
 const heroProjects = heroSlugs
   .map((slug) => PROJECTS.find((p) => p.slug === slug))
   .filter((p): p is NonNullable<typeof p> => Boolean(p));
+
+// Trust-row: 7 tier-1 kunder. mode "color" bevarar originalfärger för
+// heraldiska kommunvapen (Lidingö); "mono" ger silhuett-behandling som
+// passar wordmarks. heightClass balanserar visuell vikt över olika aspect-ratios.
+type TrustLogo = {
+  slug: string;
+  alt: string;
+  mode: "mono" | "color";
+  heightClass: string;
+};
+const trustLogos: TrustLogo[] = [
+  { slug: "locum",         alt: "Locum AB",        mode: "mono",  heightClass: "max-h-7 lg:max-h-8" },
+  { slug: "stockholmshem", alt: "Stockholmshem",   mode: "mono",  heightClass: "max-h-6 lg:max-h-7" },
+  { slug: "octapharma",    alt: "Octapharma",      mode: "mono",  heightClass: "max-h-6 lg:max-h-7" },
+  { slug: "lidingo-stad",  alt: "Lidingö Stad",    mode: "color", heightClass: "max-h-9 lg:max-h-11" },
+  { slug: "axfood",        alt: "Axfood",          mode: "mono",  heightClass: "max-h-6 lg:max-h-7" },
+  { slug: "skanska",       alt: "Skanska",         mode: "mono",  heightClass: "max-h-5 lg:max-h-6" },
+  { slug: "atrium",        alt: "Atrium Ljungberg",mode: "mono",  heightClass: "max-h-6 lg:max-h-7" },
+];
 ---
 
 <section class="relative overflow-hidden bg-[color:var(--color-paper)]">
@@ -107,13 +126,21 @@ const heroProjects = heroSlugs
     <div class="mt-16 lg:mt-20 pt-8 border-t border-[color:var(--color-ink-10)] fade-in" style="animation-delay: 360ms">
       <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-6">Förtroende från krävande beställare</p>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-x-8 gap-y-6 items-center">
-        <img src="/clients/locum.svg" alt="Locum AB" width="120" height="28" loading="eager" decoding="async" class="max-h-6 lg:max-h-7 w-auto object-contain object-left [filter:brightness(0)] opacity-50 hover:opacity-100 hover:[filter:none] transition-all duration-300" />
-        <img src="/clients/stockholmshem.svg" alt="Stockholmshem" width="120" height="28" loading="eager" decoding="async" class="max-h-6 lg:max-h-7 w-auto object-contain object-left [filter:brightness(0)] opacity-50 hover:opacity-100 hover:[filter:none] transition-all duration-300" />
-        <img src="/clients/octapharma.svg" alt="Octapharma" width="120" height="28" loading="eager" decoding="async" class="max-h-6 lg:max-h-7 w-auto object-contain object-left [filter:brightness(0)] opacity-50 hover:opacity-100 hover:[filter:none] transition-all duration-300" />
-        <img src="/clients/lidingo-stad.svg" alt="Lidingö Stad" width="120" height="28" loading="eager" decoding="async" class="max-h-7 lg:max-h-9 w-auto object-contain object-left [filter:brightness(0)] opacity-50 hover:opacity-100 hover:[filter:none] transition-all duration-300" />
-        <img src="/clients/axfood.svg" alt="Axfood" width="120" height="28" loading="eager" decoding="async" class="max-h-5 lg:max-h-6 w-auto object-contain object-left [filter:brightness(0)] opacity-50 hover:opacity-100 hover:[filter:none] transition-all duration-300" />
-        <img src="/clients/skanska.svg" alt="Skanska" width="120" height="28" loading="eager" decoding="async" class="max-h-5 lg:max-h-6 w-auto object-contain object-left [filter:brightness(0)] opacity-50 hover:opacity-100 hover:[filter:none] transition-all duration-300" />
-        <img src="/clients/atrium.svg" alt="Atrium Ljungberg" width="120" height="28" loading="eager" decoding="async" class="max-h-5 lg:max-h-6 w-auto object-contain object-left [filter:brightness(0)] opacity-50 hover:opacity-100 hover:[filter:none] transition-all duration-300" />
+        {trustLogos.map((l) => (
+          <img
+            src={`/clients/${l.slug}.svg`}
+            alt={l.alt}
+            width="120"
+            height="32"
+            loading="eager"
+            decoding="async"
+            class={`${l.heightClass} w-auto object-contain object-left ${
+              l.mode === "color"
+                ? "opacity-90 hover:opacity-100"
+                : "[filter:brightness(0)] opacity-50 hover:opacity-100 hover:[filter:none]"
+            } transition-all duration-300`}
+          />
+        ))}
       </div>
     </div>
 

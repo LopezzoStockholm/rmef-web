@@ -1,9 +1,12 @@
 ---
 // Kundlogotyper grupperade per sektor.
-// Varje kund kan ha en /clients/{slug}.svg-fil i public/. Om filen saknas
-// renderas en designad textmark istället. När du har officiella SVG-logos:
-// 1. Lägg dem i public/clients/{slug}.svg (200x48 viewBox, currentColor fyllning)
-// 2. Sätt useImage: true på objektet nedan
+// Per-logo:
+//   mode: "mono"  — silhuett via brightness(0), passar wordmarks och redan
+//                   enfärgade logotyper. Färg vid hover.
+//   mode: "color" — bevarar originalfärger. Används för heraldiska kommunvapen
+//                   (Lidingö, Sigtuna) där brightness(0) förstör skölden.
+//   heightClass   — overrides default-höjden för att balansera visuell vikt
+//                   mellan smala wordmarks (8:1) och kvadratiska sköldar (1:1).
 
 type Client = {
   name: string;
@@ -12,6 +15,8 @@ type Client = {
   note?: string;
   style: "sans" | "serif" | "bold" | "italic";
   useImage?: boolean;
+  mode?: "mono" | "color";
+  heightClass?: string;
 };
 
 type Category = {
@@ -23,28 +28,28 @@ const categories: Category[] = [
   {
     label: "Kommun & offentlig sektor",
     clients: [
-      { name: "Locum AB", slug: "locum", style: "sans", note: "Region Stockholms fastighetsbolag", useImage: true },
-      { name: "Lidingö Stad", slug: "lidingo-stad", style: "serif", note: "Antikvariska restaureringar", useImage: true },
-      { name: "Solna Stad", slug: "solna-stad", style: "sans", note: "Skol- och institutionsbygg", useImage: true },
-      { name: "Sigtuna kommun", slug: "sigtuna", style: "sans", note: "Engelska skolan Sigtuna", useImage: true },
+      { name: "Locum AB", slug: "locum", style: "sans", note: "Region Stockholms fastighetsbolag", useImage: true, mode: "mono", heightClass: "max-h-11 lg:max-h-12" },
+      { name: "Lidingö Stad", slug: "lidingo-stad", style: "serif", note: "Antikvariska restaureringar", useImage: true, mode: "color", heightClass: "max-h-11 lg:max-h-12" },
+      { name: "Solna Stad", slug: "solna-stad", style: "sans", note: "Skol- och institutionsbygg", useImage: true, mode: "mono", heightClass: "max-h-10 lg:max-h-11" },
+      { name: "Sigtuna kommun", slug: "sigtuna", style: "sans", note: "Engelska skolan Sigtuna", useImage: true, mode: "color", heightClass: "max-h-12 lg:max-h-14" },
     ],
   },
   {
     label: "Allmännytta & bostadsbolag",
     clients: [
-      { name: "Stockholmshem", slug: "stockholmshem", style: "serif", note: "75 Mkr grundläggning Persikan", useImage: true },
-      { name: "Signalisten", slug: "signalisten", style: "sans", note: "Ramavtal Solna", useImage: true },
-      { name: "Atrium Ljungberg", slug: "atrium", style: "sans", note: "Kontorsfastigheter", useImage: true },
+      { name: "Stockholmshem", slug: "stockholmshem", style: "serif", note: "75 Mkr grundläggning Persikan", useImage: true, mode: "mono" },
+      { name: "Signalisten", slug: "signalisten", style: "sans", note: "Ramavtal Solna", useImage: true, mode: "mono", heightClass: "max-h-10 lg:max-h-11" },
+      { name: "Atrium Ljungberg", slug: "atrium", style: "sans", note: "Kontorsfastigheter", useImage: true, mode: "mono" },
     ],
   },
   {
     label: "Privata fastighetsbolag & industri",
     clients: [
-      { name: "Octapharma", slug: "octapharma", style: "sans", note: "Läkemedelsproduktion", useImage: true },
-      { name: "Axfood", slug: "axfood", style: "bold", note: "Huvudkontor 3 000 kvm", useImage: true },
-      { name: "Patriam", slug: "patriam", style: "italic", note: "Stocksund nyproduktion", useImage: true },
-      { name: "Skanska", slug: "skanska", style: "bold", note: "Underentreprenad", useImage: true },
-      { name: "Habitek", slug: "habitek", style: "bold", note: "Totalentreprenad", useImage: true },
+      { name: "Octapharma", slug: "octapharma", style: "sans", note: "Läkemedelsproduktion", useImage: true, mode: "mono" },
+      { name: "Axfood", slug: "axfood", style: "bold", note: "Huvudkontor 3 000 kvm", useImage: true, mode: "mono" },
+      { name: "Patriam", slug: "patriam", style: "italic", note: "Stocksund nyproduktion", useImage: true, mode: "mono" },
+      { name: "Skanska", slug: "skanska", style: "bold", note: "Underentreprenad", useImage: true, mode: "mono" },
+      { name: "Habitek", slug: "habitek", style: "bold", note: "Totalentreprenad", useImage: true, mode: "mono" },
       { name: "Rocmore", slug: "rocmore", style: "italic", note: "Strategisk partner" },
     ],
   },
@@ -56,6 +61,10 @@ const styleClass: Record<Client["style"], string> = {
   bold: "font-bold tracking-[-0.025em] text-[color:var(--color-ink)]",
   italic: "font-serif italic tracking-tight text-[color:var(--color-ink)]",
 };
+
+const DEFAULT_HEIGHT = "max-h-9 lg:max-h-10";
+const MONO_TREATMENT = "[filter:brightness(0)] opacity-55 group-hover:opacity-100 group-hover:[filter:none]";
+const COLOR_TREATMENT = "opacity-90 group-hover:opacity-100";
 ---
 
 <section class="py-20 lg:py-28 border-y border-[color:var(--color-ink-10)] bg-white">
@@ -86,17 +95,17 @@ const styleClass: Record<Client["style"], string> = {
             </p>
             <span class="flex-1 h-px bg-[color:var(--color-ink-10)]" aria-hidden="true"></span>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-8">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-8 items-end">
             {category.clients.map((c) => (
               <div class="group relative pb-4 border-b border-[color:var(--color-ink-10)] hover:border-[color:var(--color-brand-red)] transition-colors">
-                <div class="h-10 lg:h-11 flex items-center">
+                <div class="h-14 lg:h-16 flex items-center">
                   {c.useImage ? (
                     <img
                       src={`/clients/${c.slug}.svg`}
                       alt={c.name}
                       width="160"
-                      height="40"
-                      class="max-h-9 lg:max-h-10 w-auto object-contain object-left [filter:brightness(0)] opacity-55 group-hover:opacity-100 group-hover:[filter:none] transition-all duration-300"
+                      height="48"
+                      class={`${c.heightClass ?? DEFAULT_HEIGHT} w-auto object-contain object-left ${c.mode === "color" ? COLOR_TREATMENT : MONO_TREATMENT} transition-all duration-300`}
                       loading="lazy"
                       decoding="async"
                     />
