@@ -1,5 +1,5 @@
 ---
-title: "ÄTA-arbete i byggentreprenad — vad det är och hur det hanteras"
+title: "ÄTA-arbete i byggentreprenad, vad det är och hur det hanteras"
 description: "Allt om ÄTA-arbete: ändringar, tillägg, avgår. Hur ÄTA hanteras enligt AB 04 och ABT 06, prissättning, dokumentation och vanliga tvister."
 published: 2026-04-25
 category: "Upphandling"
@@ -24,7 +24,7 @@ faq:
 
 ## När uppstår ÄTA?
 
-ÄTA är vanligt — i de flesta entreprenader är ÄTA 5–20 % av kontraktssumman. Vanliga orsaker:
+ÄTA är vanligt, i de flesta entreprenader är ÄTA 5–20 % av kontraktssumman. Vanliga orsaker:
 
 ### Ändring (Ä)
 Beställaren ändrar specifikationen under utförandet:
@@ -69,10 +69,10 @@ Material och tid debiteras enligt verifierade kostnader plus avtalat påslag (va
 ## ÄTA-process steg för steg
 
 ### 1. Identifiering
-Behov uppstår — av beställaren, entreprenören, eller en oförutsedd omständighet (markförhållanden, dolda fel, etc.).
+Behov uppstår, av beställaren, entreprenören, eller en oförutsedd omständighet (markförhållanden, dolda fel, etc.).
 
 ### 2. Beställning
-Beställaren beordrar ÄTA skriftligt. **Muntliga beställningar undvik** — risk för tvist.
+Beställaren beordrar ÄTA skriftligt. **Muntliga beställningar undvik**, risk för tvist.
 
 ### 3. Prissättning
 Entreprenören tar fram pris enligt avtalad metod. Inkluderar:
@@ -122,12 +122,12 @@ För **fastpriskontrakt** definierar vi tydligt vad som ingår och vad som blir 
 
 ## Hur minimera ÄTA i ert nästa projekt
 
-1. **Tydliga kontraktshandlingar** — bra ritningar och specifikationer i upphandlingen
-2. **Klara avgränsningar** — vad ingår, vad gör underentreprenörer
-3. **Markundersökning** innan projektering — geoteknik, tidigare ledningar, dolda installationer
+1. **Tydliga kontraktshandlingar**, bra ritningar och specifikationer i upphandlingen
+2. **Klara avgränsningar**, vad ingår, vad gör underentreprenörer
+3. **Markundersökning** innan projektering, geoteknik, tidigare ledningar, dolda installationer
 4. **Tidig dialog** med entreprenör om materialval och utförande
 5. **Beslut innan start**, inte under utförandet
-6. **Realistisk tidplan** — pressade tidplaner ger fler ÄTA
+6. **Realistisk tidplan**, pressade tidplaner ger fler ÄTA
 
 ## Begär offert
 

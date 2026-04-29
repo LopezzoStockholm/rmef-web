@@ -1,17 +1,17 @@
 ---
-title: "Restaurering av K-märkta byggnader – antikvariska krav och vad en entreprenör måste kunna"
+title: "Restaurering av K-märkta byggnader, antikvariska krav och vad en entreprenör måste kunna"
 description: "Så ser processen ut vid restaurering av K-märkta byggnader i Stockholm. Antikvariska krav, myndighetsprocesser och vad som skiljer kulturbyggnadsentreprenör från vanlig byggfirma."
 published: 2026-04-24
 category: "Branschinsikt"
 tags: ["restaurering", "K-märkt", "kulturbyggnad", "antikvarisk", "Lidingö", "Stockholm"]
 readingTime: 8
 heroImage: "/projekt/bygg_image4.webp"
-heroImageAlt: "Vindarnas tempel — K-märkt paviljong lyfts med mobilkran från Lidingöbron"
+heroImageAlt: "Vindarnas tempel, K-märkt paviljong lyfts med mobilkran från Lidingöbron"
 ---
 
 ## Kort svar
 
-Restaurering av K-märkta byggnader kräver kompetens i antikvariska material och metoder, dokumenterad dialog med länsstyrelse och kommunens stadsantikvarie, samt en arbetsmodell som hanterar oförutsedda fynd. Kostnaden ligger typiskt **30–60 % över motsvarande byggprojekt utan antikvariska krav** – men högre än så vid komplicerade objekt. En komplett restaurering av en mindre kulturbyggnad (100–200 kvm) i Stockholms län kostar **3–15 Mkr** beroende på skadebild och skyddsvärde.
+Restaurering av K-märkta byggnader kräver kompetens i antikvariska material och metoder, dokumenterad dialog med länsstyrelse och kommunens stadsantikvarie, samt en arbetsmodell som hanterar oförutsedda fynd. Kostnaden ligger typiskt **30–60 % över motsvarande byggprojekt utan antikvariska krav**, men högre än så vid komplicerade objekt. En komplett restaurering av en mindre kulturbyggnad (100–200 kvm) i Stockholms län kostar **3–15 Mkr** beroende på skadebild och skyddsvärde.
 
 ## Skyddsnivåer att känna till
 
@@ -19,7 +19,7 @@ Begreppet "K-märkt" är inofficiellt. I praktiken finns flera skyddsnivåer som
 
 ### Byggnadsminne (Q)
 
-Reglerat i kulturmiljölagen (1988:950). Avser byggnader av nationellt intresse. Ändringar kräver **länsstyrelsens tillstånd** och utförs enligt beslutade skyddsföreskrifter. Exempel: Vindarnas tempel på Lidingöbron – klassat som byggnadsminne.
+Reglerat i kulturmiljölagen (1988:950). Avser byggnader av nationellt intresse. Ändringar kräver **länsstyrelsens tillstånd** och utförs enligt beslutade skyddsföreskrifter. Exempel: Vindarnas tempel på Lidingöbron, klassat som byggnadsminne.
 
 ### Statligt byggnadsminne (SBM)
 
@@ -27,7 +27,7 @@ Samma skyddsnivå som Q, men ägda av staten. Riksantikvarieämbetet är myndigh
 
 ### Kulturhistoriskt värdefull byggnad i detaljplan
 
-Plan- och bygglagen (2010:900) 8 kap. 13 §. Kommunens byggnadsnämnd hanterar ändringar. Skyddsgrad varierar – från total fasadskydd till bara höjdbegränsning.
+Plan- och bygglagen (2010:900) 8 kap. 13 §. Kommunens byggnadsnämnd hanterar ändringar. Skyddsgrad varierar, från total fasadskydd till bara höjdbegränsning.
 
 ### K-märkning enligt detaljplan
 
@@ -37,7 +37,7 @@ Byggnadsnämnden kan ange specifika byggnader som "k" eller "q" i detaljplanen, 
 
 Stora delar av Gamla Stan, Skeppsholmen, Södermalms äldre delar och Lidingös äldre villakvarter ligger i bevarandeområden. Där gäller särskilda bygglovregler även för yttre underhåll.
 
-## Processen – hur ett K-märkt projekt skiljer sig
+## Processen, hur ett K-märkt projekt skiljer sig
 
 ### 1. Förprojektering med antikvarisk medverkan
 
@@ -64,7 +64,7 @@ Antikvarien är ofta på arbetsplatsen vid kritiska moment: rivning av inre skik
 
 ### 5. Slutbesiktning med antikvarisk signatur
 
-Slutbesiktningen omfattar både traditionell byggtekniskt utförande och antikvarisk efterlevnad. Två protokoll – båda måste godkännas.
+Slutbesiktningen omfattar både traditionell byggtekniskt utförande och antikvarisk efterlevnad. Två protokoll, båda måste godkännas.
 
 ## Vad som skiljer en kulturbyggnadsentreprenör från en vanlig byggfirma
 
@@ -76,13 +76,13 @@ Antikvarisk restaurering använder ofta material som försvunnit från ordinarie
 - **Linoljefärg** istället för alkyd- eller akrylfärg
 - **Handhyvlad panel** som matchar original
 - **Smide** istället för svetsade stålprofiler
-- **Återanvända tegel och natursten** – plockas om försiktigt och återinsätts
+- **Återanvända tegel och natursten**, plockas om försiktigt och återinsätts
 
 Det kräver leverantörsnätverk och tid för materialleverans. Kalkbruk måste ofta blandas lokalt. Linoljefärg har längre torktid.
 
 ### Hantering av originalmaterial
 
-Vid kulturbyggnadsarbete kan originalmaterial vara värdefullt i sig. Vindarnas tempel är ett pedagogiskt exempel – hela byggnaden lyftes bort från Lidingöbron, restaurerades, och återmonterades i ursprungligt läge med så mycket originalmaterial som möjligt. Det kräver arbetsmodeller som inte finns i vanlig entreprenad:
+Vid kulturbyggnadsarbete kan originalmaterial vara värdefullt i sig. Vindarnas tempel är ett pedagogiskt exempel, hela byggnaden lyftes bort från Lidingöbron, restaurerades, och återmonterades i ursprungligt läge med så mycket originalmaterial som möjligt. Det kräver arbetsmodeller som inte finns i vanlig entreprenad:
 
 - Demonterbara monteringar
 - Nummermärkning av varje del
@@ -109,7 +109,7 @@ Murare med erfarenhet av kalkbruk är en krympande grupp. Snickare med koll på 
 | Faktor | Påverkan på pris |
 |---|---|
 | Skyddsnivå (byggnadsminne vs bevarandeområde) | +20 till +100 % |
-| Skadebild – hur mycket originalmaterial är kvar | +10 till +60 % |
+| Skadebild, hur mycket originalmaterial är kvar | +10 till +60 % |
 | Materialval (rent kalkbruk dyrast) | +5 till +25 % |
 | Tillgänglighet (ställning, vinschar, kran) | +10 till +40 % |
 | Väder-känsliga arbeten | +5 till +20 % |
@@ -144,7 +144,7 @@ Inför upphandling av kulturbyggnadsentreprenad:
 
 ### Kan vi använda vår vanliga entreprenör?
 
-Teknisk byggkompetens räcker inte – entreprenören måste kunna dokumentera erfarenhet från antikvariska projekt. Länsstyrelsen kan förkasta ditt tillståndsbeslut om den föreslagna entreprenören saknar relevant kompetens.
+Teknisk byggkompetens räcker inte, entreprenören måste kunna dokumentera erfarenhet från antikvariska projekt. Länsstyrelsen kan förkasta ditt tillståndsbeslut om den föreslagna entreprenören saknar relevant kompetens.
 
 ### Hur hittar vi rätt byggnadsantikvarie?
 
@@ -160,4 +160,4 @@ För bostadshus gäller ROT-avdrag även vid K-märkt underhåll. För kommunala
 
 ## RM Entreprenad & Fasad
 
-Vi restaurerar K-märkta byggnader och kulturhistoriskt värdefulla fastigheter i Stockholm och Mälardalen – åt Lidingö Stad, privata fastighetsägare och kommuner. Referensprojekt: Vindarnas tempel, Kaptensstugan. Läs mer om våra [byggtjänster](/tjanster/bygg/) eller [kontakta oss](/kontakt/) för platsbesök.
+Vi restaurerar K-märkta byggnader och kulturhistoriskt värdefulla fastigheter i Stockholm och Mälardalen, åt Lidingö Stad, privata fastighetsägare och kommuner. Referensprojekt: Vindarnas tempel, Kaptensstugan. Läs mer om våra [byggtjänster](/tjanster/bygg/) eller [kontakta oss](/kontakt/) för platsbesök.

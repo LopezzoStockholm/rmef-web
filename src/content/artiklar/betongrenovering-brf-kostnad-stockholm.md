@@ -1,5 +1,5 @@
 ---
-title: "Betongrenovering BRF Stockholm — kostnad och process 2026"
+title: "Betongrenovering BRF Stockholm, kostnad och process 2026"
 description: "Riktpriser för betongrenovering i bostadsrättsförening. Karbonatisering, armeringskorrosion, balkonger, källare och bjälklag. Process från besiktning till åtgärd."
 published: 2026-04-25
 category: "Kostnad"
@@ -20,7 +20,7 @@ faq:
 
 ## Kort svar
 
-Betongrenovering i en bostadsrättsförening kostar **1 200–7 500 kr per kvadratmeter** beroende på omfattning. För en BRF med 30 lägenheter och kompletta balkongåtgärder hamnar totalkostnaden typiskt på **2–6 Mkr**. Karbonatisering och armeringskorrosion är de vanligaste orsakerna i Stockholmsbestånd från 1950–1980-talet. Åtgärden bör inte skjutas — varje år av väntan ökar kostnaden 10–25 % när skadorna växer.
+Betongrenovering i en bostadsrättsförening kostar **1 200–7 500 kr per kvadratmeter** beroende på omfattning. För en BRF med 30 lägenheter och kompletta balkongåtgärder hamnar totalkostnaden typiskt på **2–6 Mkr**. Karbonatisering och armeringskorrosion är de vanligaste orsakerna i Stockholmsbestånd från 1950–1980-talet. Åtgärden bör inte skjutas, varje år av väntan ökar kostnaden 10–25 % när skadorna växer.
 
 ## När behöver er BRF betongrenovering?
 
@@ -30,11 +30,11 @@ Tecken på att betongkonstruktionen behöver åtgärd:
 - **Sprickor** i betongytor, ofta längs armeringsriktning
 - **Lös puts eller cementhud** som lossnar vid handavtryck
 - **Vatteninträngning** i källare eller garage
-- **Ihåligt ljud** vid knackning på betongytor — tecken på delaminering
+- **Ihåligt ljud** vid knackning på betongytor, tecken på delaminering
 - **Synlig armering** med rost
 - **Förfallsår 2025–2035** är typiskt för betong gjuten 1955–1985
 
-En **statusbedömning från betongtekniker** ger ett objektivt underlag — kostar typiskt 25 000–60 000 kr beroende på fastighetens storlek och provtagningsbehov.
+En **statusbedömning från betongtekniker** ger ett objektivt underlag, kostar typiskt 25 000–60 000 kr beroende på fastighetens storlek och provtagningsbehov.
 
 ## Vanliga betongrenovingsobjekt i BRF
 
@@ -58,7 +58,7 @@ Saltbelastning från bilar + läckande tätskikt orsakar betongskador. Krever of
 **Kostnad:** 1 800–4 500 kr/kvm.
 
 ### Fasad i betong (skivkonstruktioner)
-Brutalismens 70-tal — rena betongfasader. Ofta omfattande karbonatisering. Renovering omfattar passivering, sprickinjektering och ytbehandling.
+Brutalismens 70-tal, rena betongfasader. Ofta omfattande karbonatisering. Renovering omfattar passivering, sprickinjektering och ytbehandling.
 
 **Kostnad:** 800–2 200 kr/kvm.
 
@@ -69,26 +69,26 @@ Strukturella betongskador. Kräver ingenjörsbedömning innan åtgärd. Stundtal
 
 ## Process: från besiktning till åtgärd
 
-1. **Statusbedömning av betongtekniker** — provtagning, omfattningsanalys, rapport
-2. **Underlag för styrelse** — kostnadsalternativ, finansiering, tidplan
-3. **Stämma och beslut** — extrastämma vid större åtgärd
-4. **Upphandling** — anbudsförfrågan till entreprenörer
-5. **Projektering** — detaljerad specifikation, ÄTA-hantering, KMA-plan
-6. **Utförande** — bilning, åtgärd, dokumentation
-7. **Slutbesiktning** — godkännande, garantitider 2 och 5 år
+1. **Statusbedömning av betongtekniker**, provtagning, omfattningsanalys, rapport
+2. **Underlag för styrelse**, kostnadsalternativ, finansiering, tidplan
+3. **Stämma och beslut**, extrastämma vid större åtgärd
+4. **Upphandling**, anbudsförfrågan till entreprenörer
+5. **Projektering**, detaljerad specifikation, ÄTA-hantering, KMA-plan
+6. **Utförande**, bilning, åtgärd, dokumentation
+7. **Slutbesiktning**, godkännande, garantitider 2 och 5 år
 
 ## Vad kostar det att INTE renovera?
 
 Skadorna växer exponentiellt. Riktvärden:
 
-- **År 1**: synliga sprickor, mindre missfärgningar — sanera nu kostar 1×
-- **År 5**: armering exponerad, rostbildning — kostar 1.8×
-- **År 10**: strukturella skador, fallrisk — kostar 3–4× + ev. förbud
+- **År 1**: synliga sprickor, mindre missfärgningar, sanera nu kostar 1×
+- **År 5**: armering exponerad, rostbildning, kostar 1.8×
+- **År 10**: strukturella skador, fallrisk, kostar 3–4× + ev. förbud
 - **Säkerhet**: Bitande betong från balkonger har orsakat dödsolyckor i Sverige. Ansvar ligger hos styrelsen.
 
 ## Hur RM Entreprenad arbetar med BRF
 
-Vi tar helhetsansvar för hela processen — från initial besiktning till garantibesiktning vid 2 och 5 år. Vårt arbetssätt:
+Vi tar helhetsansvar för hela processen, från initial besiktning till garantibesiktning vid 2 och 5 år. Vårt arbetssätt:
 
 - **Statusbedömning** av betongspecialist före offert
 - **Fast pris** med tydligt definierad ÄTA-hantering

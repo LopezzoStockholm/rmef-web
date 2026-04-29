@@ -1,5 +1,5 @@
 ---
-title: "Balkongrenovering Stockholm — kostnad och process 2026"
+title: "Balkongrenovering Stockholm, kostnad och process 2026"
 description: "Balkongrenovering i bostadsrättsförening: kostnad per balkong, vanliga skador, processsteg och tidsplan. Riktpriser och checklista för styrelse."
 published: 2026-04-25
 category: "Kostnad"

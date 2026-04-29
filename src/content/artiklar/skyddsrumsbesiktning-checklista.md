@@ -1,5 +1,5 @@
 ---
-title: "Skyddsrumsbesiktning checklista — 30 punkter att kontrollera"
+title: "Skyddsrumsbesiktning checklista, 30 punkter att kontrollera"
 description: "Komplett checklista för skyddsrumsbesiktning. 30 kontrollpunkter som MSB tittar på, vad åtgärder kostar och hur ni förbereder er BRF inför kontrollen."
 published: 2026-04-25
 category: "Teknik"
@@ -13,17 +13,17 @@ faq:
   - q: "Hur ofta görs skyddsrumsbesiktning?"
     a: "MSB:s kontrollintervall är vanligen 10 år, men kan variera. Aktuell kontrollomgång (2025-2030) går igenom landets skyddsrum systematiskt. Fastighetsägaren får varsel via brev när det är dags."
   - q: "Vad händer om vi inte åtgärdar anmärkningarna?"
-    a: "MSB kan utfärda förelägganden med tidsfrist. Vid fortsatt försummelse kan vite utdömas. Ansvar ligger hos fastighetsägaren — för en BRF innebär det styrelsen. Ta anmärkningar på allvar."
+    a: "MSB kan utfärda förelägganden med tidsfrist. Vid fortsatt försummelse kan vite utdömas. Ansvar ligger hos fastighetsägaren, för en BRF innebär det styrelsen. Ta anmärkningar på allvar."
 ---
 
 ## Kort svar
 
-En **MSB-skyddsrumsbesiktning** kontrollerar 30+ punkter i skyddsrummet — från betongens täthet till luftfilters skick. Förberedelse minskar antalet anmärkningar och sparar pengar. Denna checklista går igenom alla kontrollpunkter MSB tittar på, så ni vet vad ni har att förvänta er.
+En **MSB-skyddsrumsbesiktning** kontrollerar 30+ punkter i skyddsrummet, från betongens täthet till luftfilters skick. Förberedelse minskar antalet anmärkningar och sparar pengar. Denna checklista går igenom alla kontrollpunkter MSB tittar på, så ni vet vad ni har att förvänta er.
 
-## Innan MSB-besiktningen — förbered er BRF
+## Innan MSB-besiktningen, förbered er BRF
 
 ### 1. Hitta rätt utrymme
-Skyddsrummet är ofta i källaren. Identifiera tydligt vilket rum det är — märkning eller skylt på dörren.
+Skyddsrummet är ofta i källaren. Identifiera tydligt vilket rum det är, märkning eller skylt på dörren.
 
 ### 2. Töm utrymmet
 Skyddsrum är ofta använt som förråd. Inför kontrollen ska utrymmet vara TOMT eller ha en tydlig plan för snabbevakuering vid kris. MSB godtar lagring så länge det inte hindrar 8-timmars startupp.
@@ -42,17 +42,17 @@ MSB-kontrollanten ska kunna komma in. Säkerställ nyckel, koder, kontaktpersone
 
 ### Konstruktion (10 punkter)
 
-#### 1. Betongväggar — sprickor
+#### 1. Betongväggar, sprickor
 Sprickor över viss bredd (typiskt 0,5 mm) är anmärkning. Karbonatisering i synlig betong noteras.
 
 **Vanlig åtgärd:** Spricinjektering, ytbehandling. Kostnad: 30 000–150 000 kr.
 
-#### 2. Betongtak — fukt och sprickor
+#### 2. Betongtak, fukt och sprickor
 Fuktinträngning från ovanförliggande utrymme/yta. Sprickor i tak.
 
 **Vanlig åtgärd:** Tätskikt på ovanförliggande golv, sprickåtgärd. Kostnad: 20 000–100 000 kr.
 
-#### 3. Betonggolv — täthet och sprickor
+#### 3. Betonggolv, täthet och sprickor
 Sprickor som kan släppa in vatten eller gas.
 
 **Vanlig åtgärd:** Spricinjektering, ytförsegling. Kostnad: 15 000–60 000 kr.
@@ -80,24 +80,24 @@ Slussdörrar, tätning, gångjärn.
 
 **Vanlig åtgärd:** Byte av tätningar, justering. Kostnad: 20 000–80 000 kr.
 
-#### 9. Skyddsrumsdörr — primär
+#### 9. Skyddsrumsdörr, primär
 Dörrens skick, gångjärn, lås, tätning.
 
 **Vanlig åtgärd:** Tätningar (10 000–25 000 kr) eller dörrbyte (80 000–300 000 kr).
 
-#### 10. Skyddsrumsdörr — nödutgång
+#### 10. Skyddsrumsdörr, nödutgång
 Nödutgångens funktion, blockering, tätning.
 
 **Vanlig åtgärd:** Frigörelse av utrymme, tätning. Kostnad: 5 000–80 000 kr.
 
 ### Ventilation (8 punkter)
 
-#### 11. Filter — luftfilter
+#### 11. Filter, luftfilter
 Filtrets ålder och skick. Ofta primär anmärkning. **MSB betalar filterbyte** enligt 100 Mkr-anslaget.
 
 **Vanlig åtgärd:** Filterbyte. Kostnad: 30 000–80 000 kr (refunderas av MSB).
 
-#### 12. Filter — gasfilter
+#### 12. Filter, gasfilter
 Gasfiltrets skick och giltighet. Har bäst-före-datum.
 
 **Vanlig åtgärd:** Filterbyte. Kostnad: 25 000–70 000 kr (refunderas av MSB).
@@ -139,12 +139,12 @@ Existerar och i brukbart skick.
 
 **Vanlig åtgärd:** Byte vid förstörda. Kostnad: 1 000–3 000 kr per plats.
 
-#### 20. Belysning — primär (220V)
+#### 20. Belysning, primär (220V)
 Fungerande belysning från elnätet.
 
 **Vanlig åtgärd:** Lampbyte, fixturer. Kostnad: 5 000–20 000 kr.
 
-#### 21. Belysning — nödbelysning
+#### 21. Belysning, nödbelysning
 Batteridriven nödbelysning. Batterier byts var 5:e år.
 
 **Vanlig åtgärd:** Batteribyte eller ny enhet. Kostnad: 3 000–15 000 kr.
@@ -186,12 +186,12 @@ Originalhandling med ritningar och beskrivning. Ska finnas tillgänglig.
 
 MSB-kontrollanten skriver ett **kontrollprotokoll** med:
 
-1. **Godkända delar** — utan anmärkning
-2. **Mindre brister** — bör åtgärdas, men ingen tidsfrist
-3. **Större brister** — ska åtgärdas inom angiven tid (vanligen 6-24 månader)
-4. **Allvarliga brister** — kan leda till föreläggande med vite
+1. **Godkända delar**, utan anmärkning
+2. **Mindre brister**, bör åtgärdas, men ingen tidsfrist
+3. **Större brister**, ska åtgärdas inom angiven tid (vanligen 6-24 månader)
+4. **Allvarliga brister**, kan leda till föreläggande med vite
 
-Protokollet skickas till fastighetsägaren. **Spara det** — det är viktig dokumentation och utgångspunkt för åtgärdsplan.
+Protokollet skickas till fastighetsägaren. **Spara det**, det är viktig dokumentation och utgångspunkt för åtgärdsplan.
 
 ## Få MSB-ersättning för filterbyten
 
@@ -201,13 +201,13 @@ Filterbyten omfattas av **100 Mkr/år-anslaget** från regeringen via MSB. Steg-
 
 Vi hjälper BRF:er och fastighetsägare med:
 
-- **Förberedande inspektion** innan MSB-kontrollen — billigare än omfattande anmärkningar
+- **Förberedande inspektion** innan MSB-kontrollen, billigare än omfattande anmärkningar
 - **Åtgärd av MSB-anmärkningar** med rätt material och dokumentation
-- **MSB-ersättningsansökan** — vi tar fram all dokumentation
+- **MSB-ersättningsansökan**, vi tar fram all dokumentation
 - **Slutdokumentation** för fastighetsarkivet
 
 ## Begär offert
 
 [Kontakta oss](/kontakt) för förberedande inspektion eller åtgärd av MSB-anmärkningar i ert skyddsrum.
 
-Läs också: [Skyddsrumsbesiktning för BRF — krav och kostnader](/artiklar/skyddsrumsbesiktning-brf-stockholm/) · [MSB-ersättning för skyddsrumsåtgärd](/artiklar/msb-ersattning-skyddsrum-statsbidrag/)
+Läs också: [Skyddsrumsbesiktning för BRF, krav och kostnader](/artiklar/skyddsrumsbesiktning-brf-stockholm/) · [MSB-ersättning för skyddsrumsåtgärd](/artiklar/msb-ersattning-skyddsrum-statsbidrag/)

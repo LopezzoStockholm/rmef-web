@@ -14,17 +14,17 @@ export interface Location {
 }
 
 export const LOCATIONS: Location[] = [
-  // FASADRENOVERING – geo-sidor för orter där XLent dominerar SERP
+  // FASADRENOVERING, geo-sidor för orter där XLent dominerar SERP
   {
     slug: "fasadrenovering-lidingo",
     service: "fasadrenovering",
     serviceLabel: "Fasadrenovering",
     ort: "Lidingö",
-    title: "Fasadrenovering Lidingö – BRF, villa och kulturfastighet",
+    title: "Fasadrenovering Lidingö, BRF, villa och kulturfastighet",
     description:
       "Fasadrenovering på Lidingö för bostadsrättsföreningar, villor och kulturhistoriska byggnader. Referens: Vindarnas tempel och Kaptensstugan åt Lidingö Stad.",
     intro:
-      "Vi har djup erfarenhet från Lidingö – både modern fasadrenovering på bostadsrätter och antikvarisk restaurering av kulturbyggnader åt Lidingö Stad. Kontor i centrala Stockholm, max 25 minuter från Lidingö.",
+      "Vi har djup erfarenhet från Lidingö, både modern fasadrenovering på bostadsrätter och antikvarisk restaurering av kulturbyggnader åt Lidingö Stad. Kontor i centrala Stockholm, max 25 minuter från Lidingö.",
     localContext:
       "Lidingös äldre villakvarter och Hustegaholm har kulturhistoriskt värdefulla byggnader som kräver antikvariska hänsynstaganden. Samtidigt har 60–70-talens flerbostadshus (Larsberg, Bodal, Gångsätra) typiska behov av putsrenovering och tilläggsisolering. Vi hanterar båda.",
     referenser: [
@@ -38,13 +38,13 @@ export const LOCATIONS: Location[] = [
     service: "fasadrenovering",
     serviceLabel: "Fasadrenovering",
     ort: "Solna",
-    title: "Fasadrenovering Solna – BRF och kommersiell fastighet",
+    title: "Fasadrenovering Solna, BRF och kommersiell fastighet",
     description:
       "Fasadrenovering i Solna för bostadsrättsföreningar, fastighetsägare och kommuner. Strategisk samarbetspartner till Rocmore med löpande uppdrag åt Signalisten, Solnas allmännyttiga bostadsbolag.",
     intro:
-      "Solna är en av våra kärnkommuner. Vi har ramavtal med Rocmore och arbetar löpande mot Signalisten, Solna Stads allmännyttiga bostadsbolag – årlig projektvolym cirka 40 Mkr inom mark, bygg och fasad.",
+      "Solna är en av våra kärnkommuner. Vi har ramavtal med Rocmore och arbetar löpande mot Signalisten, Solna Stads allmännyttiga bostadsbolag, årlig projektvolym cirka 40 Mkr inom mark, bygg och fasad.",
     localContext:
-      "Solna har ett stort bestånd av flerbostadshus från 50–80-talet med typiska behov av fasadrenovering och tilläggsisolering. Miljonprogramshus i Hallonbergen, Råsunda och Huvudsta har ofta kombinerade behov – fasad, balkong och betong samordnat.",
+      "Solna har ett stort bestånd av flerbostadshus från 50–80-talet med typiska behov av fasadrenovering och tilläggsisolering. Miljonprogramshus i Hallonbergen, Råsunda och Huvudsta har ofta kombinerade behov, fasad, balkong och betong samordnat.",
     referenser: [
       { slug: "rocmore-signalisten", titel: "Rocmore / Signalisten", client: "Signalisten" },
       { slug: "raul-wallenberg-bagartorp", titel: "Raul Wallenbergskolan", client: "Raul Wallenberg Academy" },
@@ -56,7 +56,7 @@ export const LOCATIONS: Location[] = [
     service: "fasadrenovering",
     serviceLabel: "Fasadrenovering",
     ort: "Sundbyberg",
-    title: "Fasadrenovering Sundbyberg – BRF och fastighetsägare",
+    title: "Fasadrenovering Sundbyberg, BRF och fastighetsägare",
     description:
       "Fasadrenovering i Sundbyberg för bostadsrättsföreningar och fastighetsägare. Etablerat team i närområdet med egna hantverkare och beprövade underentreprenörer.",
     intro:
@@ -70,13 +70,13 @@ export const LOCATIONS: Location[] = [
     service: "fasadrenovering",
     serviceLabel: "Fasadrenovering",
     ort: "Nacka",
-    title: "Fasadrenovering Nacka – BRF och fastighetsägare",
+    title: "Fasadrenovering Nacka, BRF och fastighetsägare",
     description:
       "Fasadrenovering i Nacka för bostadsrättsföreningar, villor och kommersiella fastigheter. Kort inställelse­tid från kontor i Stockholm.",
     intro:
       "Nacka har ett växande BRF-bestånd med tydliga renoveringsbehov. Vi arbetar löpande med fasadprojekt i kommundelarna Sickla, Saltsjöbaden, Fisksätra, Älta och Orminge.",
     localContext:
-      "Nacka har en unik blandning av arkitekturepoker – från 20-tals patricierhus i Saltsjöbaden till 70-tals miljonprogram i Fisksätra. Varje epok har sina fasadmaterial och renoveringsmetodik.",
+      "Nacka har en unik blandning av arkitekturepoker, från 20-tals patricierhus i Saltsjöbaden till 70-tals miljonprogram i Fisksätra. Varje epok har sina fasadmaterial och renoveringsmetodik.",
     tjansteLank: "/tjanster/fasad",
   },
   {
@@ -84,7 +84,7 @@ export const LOCATIONS: Location[] = [
     service: "fasadrenovering",
     serviceLabel: "Fasadrenovering",
     ort: "Täby",
-    title: "Fasadrenovering Täby – BRF och villa",
+    title: "Fasadrenovering Täby, BRF och villa",
     description:
       "Fasadrenovering i Täby för bostadsrättsföreningar och villaägare. Omputsning, tilläggsisolering och antikvariska restaureringar.",
     intro:
@@ -98,11 +98,11 @@ export const LOCATIONS: Location[] = [
     service: "fasadrenovering",
     serviceLabel: "Fasadrenovering",
     ort: "Danderyd",
-    title: "Fasadrenovering Danderyd – villa, BRF och institution",
+    title: "Fasadrenovering Danderyd, villa, BRF och institution",
     description:
       "Fasadrenovering i Danderyd för villaägare, bostadsrättsföreningar och institutioner. Referens: Danderyds sjukhus åt Locum.",
     intro:
-      "Vi har etablerad närvaro i Danderyd sedan flera år – från mark- och anläggningsarbeten vid Danderyds sjukhus åt Locum till fasadprojekt på BRF och villor i Djursholm och Stocksund.",
+      "Vi har etablerad närvaro i Danderyd sedan flera år, från mark- och anläggningsarbeten vid Danderyds sjukhus åt Locum till fasadprojekt på BRF och villor i Djursholm och Stocksund.",
     localContext:
       "Danderyds Djursholm har en hög andel kulturhistoriskt värdefulla villor där antikvariska hänsyn ofta krävs. Stocksund och Enebyberg har mer modernt bestånd där teknik och isolering står i fokus.",
     referenser: [
@@ -116,7 +116,7 @@ export const LOCATIONS: Location[] = [
     service: "fasadrenovering",
     serviceLabel: "Fasadrenovering",
     ort: "Sollentuna",
-    title: "Fasadrenovering Sollentuna – BRF och fastighetsägare",
+    title: "Fasadrenovering Sollentuna, BRF och fastighetsägare",
     description:
       "Fasadrenovering i Sollentuna för bostadsrättsföreningar och fastighetsägare. Omputsning, tilläggsisolering och samordnad balkongrenovering.",
     intro:
@@ -126,13 +126,13 @@ export const LOCATIONS: Location[] = [
     tjansteLank: "/tjanster/fasad",
   },
 
-  // SKYDDSRUM – geo-sidor för Stockholm-områden
+  // SKYDDSRUM, geo-sidor för Stockholm-områden
   {
     slug: "skyddsrum-stockholm",
     service: "skyddsrum",
     serviceLabel: "Skyddsrumsspecialist",
     ort: "Stockholm",
-    title: "Skyddsrum Stockholm – sanering och besiktning",
+    title: "Skyddsrum Stockholm, sanering och besiktning",
     description:
       "Skyddsrumsspecialist i Stockholm. Skyddsrumssanering, skyddsrumsbesiktning, MSB-åtgärder och nyproduktion för bostadsrättsföreningar, fastighetsägare, kommuner och industri.",
     intro:
@@ -146,13 +146,13 @@ export const LOCATIONS: Location[] = [
     service: "skyddsrum",
     serviceLabel: "Skyddsrumsspecialist",
     ort: "Södermalm",
-    title: "Skyddsrum Södermalm – sanering och besiktning i innerstaden",
+    title: "Skyddsrum Södermalm, sanering och besiktning i innerstaden",
     description:
       "Skyddsrumsspecialist på Södermalm. Sanering, besiktning och åtgärd av MSB-brister i innerstadens äldre skyddsrum. Vana av kulturmiljöer och känsliga fastigheter.",
     intro:
       "Södermalm har ett av Stockholms äldsta skyddsrumsbestånd. Vi har erfarenhet av både klassiska 50-tals anläggningar under stenstadsfastigheter och moderna ersättnings­skyddsrum i nybyggda kvarter.",
     localContext:
-      "Arbetet på Södermalm kräver särskild logistik – smala innergårdar, tunga betongtransporter och arbete i bebodd stadsmiljö ställer krav på stöddämpning, vibrationsmätning och snäv APD-plan.",
+      "Arbetet på Södermalm kräver särskild logistik, smala innergårdar, tunga betongtransporter och arbete i bebodd stadsmiljö ställer krav på stöddämpning, vibrationsmätning och snäv APD-plan.",
     referenser: [
       { slug: "t11-katarinahuset", titel: "T11 Katarinahuset & Mosebackebron", client: "Atrium Ljungberg" },
       { slug: "malongen", titel: "Malongen", client: "Habitek Bygg AB" },
@@ -165,7 +165,7 @@ export const LOCATIONS: Location[] = [
     service: "skyddsrum",
     serviceLabel: "Skyddsrumsspecialist",
     ort: "Vasastan",
-    title: "Skyddsrum Vasastan – sanering och besiktning",
+    title: "Skyddsrum Vasastan, sanering och besiktning",
     description:
       "Skyddsrum-specialist i Vasastan. Skyddsrumssanering, skyddsrumsbesiktning och åtgärd av MSB-brister i stenstadens äldre fastigheter.",
     intro:
@@ -179,11 +179,11 @@ export const LOCATIONS: Location[] = [
     service: "skyddsrum",
     serviceLabel: "Skyddsrumsspecialist",
     ort: "Kungsholmen",
-    title: "Skyddsrum Kungsholmen – sanering och besiktning",
+    title: "Skyddsrum Kungsholmen, sanering och besiktning",
     description:
       "Skyddsrum-entreprenör på Kungsholmen. Sanering, besiktning och åtgärd av MSB-brister. Vana av innerstadslogistik, väggenomföringar och gastäthetskrav.",
     intro:
-      "Kungsholmen har skyddsrum i både äldre stenstadsfastigheter och moderna kontorskvarter. Vi driver hela kedjan från MSB-protokoll till godkänd status – med fast pris och dokumentation.",
+      "Kungsholmen har skyddsrum i både äldre stenstadsfastigheter och moderna kontorskvarter. Vi driver hela kedjan från MSB-protokoll till godkänd status, med fast pris och dokumentation.",
     localContext:
       "Kungsholmens mix av bostad och kontor innebär att skyddsrum ofta används som förråd, cykelrum eller parkering i vardagsläge. Vi säkerställer att 48-timmars-kravet uppfylls utan att påverka den löpande användningen i onödan.",
     tjansteLank: "/tjanster/skyddsrum",
@@ -195,11 +195,11 @@ export const LOCATIONS: Location[] = [
     service: "betongrenovering",
     serviceLabel: "Betongrenovering",
     ort: "Stockholm",
-    title: "Betongrenovering Stockholm – balkong, bjälklag och fasad",
+    title: "Betongrenovering Stockholm, balkong, bjälklag och fasad",
     description:
-      "Betongrenovering i Stockholm – karbonatisering, armeringskorrosion och sprickor i balkonger, bjälklag och fasader. För BRF, fastighetsägare och kommuner.",
+      "Betongrenovering i Stockholm, karbonatisering, armeringskorrosion och sprickor i balkonger, bjälklag och fasader. För BRF, fastighetsägare och kommuner.",
     intro:
-      "Stockholms flerbostadshus från 60–80-talet har nu nått den ålder då betongkonstruktioner – balkonger, bjälklag och fasader – kräver omfattande renovering.",
+      "Stockholms flerbostadshus från 60–80-talet har nu nått den ålder då betongkonstruktioner, balkonger, bjälklag och fasader, kräver omfattande renovering.",
     localContext:
       "Vårt team täcker hela Stockholms län. Vi har genomfört betongprojekt åt Atrium Ljungberg (T11 Katarinahuset), Stockholmshem (Kvarteret Persikan) och flera bostadsrättsföreningar i innerstaden.",
     tjansteLank: "/tjanster/betongrenovering",
@@ -212,13 +212,13 @@ export const LOCATIONS: Location[] = [
     serviceLabel: "Totalentreprenad",
     ort: "Mälardalen",
     region: "Sigtuna, Knivsta, Uppsala, Norrtälje",
-    title: "Totalentreprenad Mälardalen – Sigtuna, Knivsta, Uppsala, Norrtälje",
+    title: "Totalentreprenad Mälardalen, Sigtuna, Knivsta, Uppsala, Norrtälje",
     description:
       "Totalentreprenad i Mälardalen för kommuner, fastighetsägare och byggherrar. Referens: Engelska skolan Sigtuna, Ledningsomläggning Knivsta, Norrtälje sjukhus.",
     intro:
       "Vi driver totalentreprenader och utförandeentreprenader i Mälardalen utanför Stockholm. Kommunkunder och byggherrar i Sigtuna, Knivsta, Uppsala, Norrtälje och Västerås-området är en växande del av vår verksamhet.",
     localContext:
-      "Mälardalens projektmarknad har andra logistikförutsättningar än innerstaden – ofta större ytor, lättare tillgänglighet och mer plats för etablering. Vår kompetens i komplex innerstadsentreprenad ger hög leverans även i traditionella Mälardals-projekt.",
+      "Mälardalens projektmarknad har andra logistikförutsättningar än innerstaden, ofta större ytor, lättare tillgänglighet och mer plats för etablering. Vår kompetens i komplex innerstadsentreprenad ger hög leverans även i traditionella Mälardals-projekt.",
     referenser: [
       { slug: "engelska-skolan-sigtuna", titel: "Engelska skolan Sigtuna", client: "Internationella Engelska skolan" },
       { slug: "ledningsomlaggning-knivsta", titel: "Ledningsomläggning Knivsta", client: "Knivsta kommun" },
@@ -227,13 +227,13 @@ export const LOCATIONS: Location[] = [
     tjansteLank: "/tjanster/bygg",
   },
 
-  // NYA GEO-SIDOR (2026-04-25) — bygger ut SEO-täckning för kommuner och stadsdelar
+  // NYA GEO-SIDOR (2026-04-25), bygger ut SEO-täckning för kommuner och stadsdelar
   {
     slug: "skyddsrum-norrtalje",
     service: "skyddsrum",
     serviceLabel: "Skyddsrum",
     ort: "Norrtälje",
-    title: "Skyddsrum Norrtälje — sanering och MSB-besiktning",
+    title: "Skyddsrum Norrtälje, sanering och MSB-besiktning",
     description:
       "Skyddsrumssanering och MSB-besiktning i Norrtälje. Bostadsrättsföreningar, fastighetsägare och kommunal sektor. Referens: Norrtälje sjukhus.",
     intro:
@@ -250,13 +250,13 @@ export const LOCATIONS: Location[] = [
     service: "skyddsrum",
     serviceLabel: "Skyddsrum",
     ort: "Knivsta",
-    title: "Skyddsrum Knivsta — sanering och MSB-besiktning",
+    title: "Skyddsrum Knivsta, sanering och MSB-besiktning",
     description:
       "Skyddsrumsspecialist i Knivsta. Sanering, besiktning, MSB-åtgärder och nyproduktion. Erfarenhet från kommunal infrastruktur.",
     intro:
       "Vi har arbetat med Knivsta kommun på ledningsomläggningar och kommunal infrastruktur. Skyddsrumsåtgärder för BRF och kommunala fastigheter ingår naturligt i vårt utbud.",
     localContext:
-      "Knivstas bestånd är blandat — äldre kommuncentrum samt nya bostadsområden från 90-tal och framåt. Skyddsrum från olika eror kräver olika åtgärder. Vårt team kommer från Stockholm med 45 minuters bilresa, vilket ger praktisk tillgänglighet.",
+      "Knivstas bestånd är blandat, äldre kommuncentrum samt nya bostadsområden från 90-tal och framåt. Skyddsrum från olika eror kräver olika åtgärder. Vårt team kommer från Stockholm med 45 minuters bilresa, vilket ger praktisk tillgänglighet.",
     referenser: [
       { slug: "ledningsomlaggning-knivsta", titel: "Ledningsomläggning Knivsta", client: "Knivsta kommun" },
     ],
@@ -267,13 +267,13 @@ export const LOCATIONS: Location[] = [
     service: "skyddsrum",
     serviceLabel: "Skyddsrum",
     ort: "Sigtuna",
-    title: "Skyddsrum Sigtuna — sanering och MSB-besiktning",
+    title: "Skyddsrum Sigtuna, sanering och MSB-besiktning",
     description:
       "Skyddsrumsspecialist i Sigtuna kommun. Sanering, besiktning, MSB-åtgärder. Referens: Engelska skolan Sigtuna.",
     intro:
       "Vi har en etablerad relation med Sigtuna kommun via Engelska skolan-projektet. Skyddsrum för BRF och kommunala fastigheter är en naturlig del av vårt utbud.",
     localContext:
-      "Sigtuna kommun innefattar både Sigtuna stad och Märsta. Skyddsrumsbeståndet är blandat — äldre i stadskärnorna och nyare i kommunalt nybyggda bostadsområden. Geografisk närhet till Arlanda gör Sigtuna till en växande kommun med behov av infrastrukturentreprenörer.",
+      "Sigtuna kommun innefattar både Sigtuna stad och Märsta. Skyddsrumsbeståndet är blandat, äldre i stadskärnorna och nyare i kommunalt nybyggda bostadsområden. Geografisk närhet till Arlanda gör Sigtuna till en växande kommun med behov av infrastrukturentreprenörer.",
     referenser: [
       { slug: "engelska-skolan-sigtuna", titel: "Engelska skolan Sigtuna", client: "Internationella Engelska skolan" },
     ],
@@ -284,11 +284,11 @@ export const LOCATIONS: Location[] = [
     service: "fasadrenovering",
     serviceLabel: "Fasadrenovering",
     ort: "Sundbyberg",
-    title: "Fasadrenovering Sundbyberg — BRF och fastighetsägare",
+    title: "Fasadrenovering Sundbyberg, BRF och fastighetsägare",
     description:
       "Fasadrenovering i Sundbyberg för bostadsrättsföreningar och fastighetsägare. Putsrenovering, tilläggsisolering, balkonger.",
     intro:
-      "Sundbybergs blandning av äldre stenstadskvarter och 70-talets miljonprogram ger två olika typer av fasadprojekt. Vi har erfarenhet från båda — antikvariska restaureringar och storskalig putsrenovering.",
+      "Sundbybergs blandning av äldre stenstadskvarter och 70-talets miljonprogram ger två olika typer av fasadprojekt. Vi har erfarenhet från båda, antikvariska restaureringar och storskalig putsrenovering.",
     localContext:
       "Sundbyberg är Sveriges minsta kommun till ytan men en av de tätaste. Bostadsrättsbeståndet är stort och 70-talets fasader når nu sin underhållscykel. Vårt Stockholmskontor är 15 minuter med tunnelbana.",
     tjansteLank: "/tjanster/fasad",
@@ -299,7 +299,7 @@ export const LOCATIONS: Location[] = [
     serviceLabel: "Totalentreprenad",
     ort: "Bagartorp",
     region: "Solna",
-    title: "Totalentreprenad Bagartorp Solna — skola och bostadsmiljö",
+    title: "Totalentreprenad Bagartorp Solna, skola och bostadsmiljö",
     description:
       "Totalentreprenad i Bagartorp och Solna. Skolprojekt, bostadsmiljö och kommunal infrastruktur. Referens: Raul Wallenbergskolan.",
     intro:

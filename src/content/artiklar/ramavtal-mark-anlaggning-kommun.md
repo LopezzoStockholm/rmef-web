@@ -1,5 +1,5 @@
 ---
-title: "Ramavtal för mark och anläggning — så fungerar det"
+title: "Ramavtal för mark och anläggning, så fungerar det"
 description: "Vad ett ramavtal innebär för kommun, allmännytta och fastighetsägare. Avropsförfarande, prismekanismer, fördelar och vanliga fällor."
 published: 2026-04-25
 category: "Upphandling"
@@ -15,7 +15,7 @@ faq:
   - q: "Hur prissätts arbeten i ramavtal?"
     a: "Vanligen á-prislista (mängdförteckning med pris per enhet) som indexeras årligen enligt KPI eller branschindex (PPI bygg, BPI). För särskilda arbeten kan löpande räkning eller separat offert tillämpas."
   - q: "Måste man avropa hos en specifik entreprenör?"
-    a: "Beror på ramavtalet. Vid singlevendor: ja. Vid multiventor: avrop sker enligt ramavtalets fördelningsmodell — ofta via förnyad konkurrensutsättning eller rangordning."
+    a: "Beror på ramavtalet. Vid singlevendor: ja. Vid multiventor: avrop sker enligt ramavtalets fördelningsmodell, ofta via förnyad konkurrensutsättning eller rangordning."
 ---
 
 ## Kort svar
@@ -39,9 +39,9 @@ Vanligen 2-4 år enligt LOU. Förlängningsoptioner kan förekomma.
 ### Avrop
 Beställaren avropar enskilda uppdrag inom ramavtalet. Detta sker genom:
 
-- **Direkt avrop** — vid singlevendor-ramavtal
-- **Förnyad konkurrensutsättning** — vid multiventor med flera leverantörer
-- **Rangordning** — listad ordning av leverantörer
+- **Direkt avrop**, vid singlevendor-ramavtal
+- **Förnyad konkurrensutsättning**, vid multiventor med flera leverantörer
+- **Rangordning**, listad ordning av leverantörer
 
 ### Prissättning av avrop
 - **Á-priser** från ramavtalet × mängd för standardarbeten
@@ -52,17 +52,17 @@ Beställaren avropar enskilda uppdrag inom ramavtalet. Detta sker genom:
 ## Fördelar med ramavtal
 
 ### För beställaren (kommun, allmännytta, fastighetsägare)
-- **Snabb mobilisering** — entreprenören känner organisation och rutiner
-- **Fast pris** — á-priser gäller, inga upphandlingsöverraskningar
-- **Färre upphandlingar** — sparar administrationstid och kostnad
-- **Kvalitetssäkring** — etablerad samarbetspartner med dokumenterad leveranshistorik
-- **Bättre planering** — entreprenören kan reservera resurser
+- **Snabb mobilisering**, entreprenören känner organisation och rutiner
+- **Fast pris**, á-priser gäller, inga upphandlingsöverraskningar
+- **Färre upphandlingar**, sparar administrationstid och kostnad
+- **Kvalitetssäkring**, etablerad samarbetspartner med dokumenterad leveranshistorik
+- **Bättre planering**, entreprenören kan reservera resurser
 
 ### För entreprenören
-- **Förutsägbart kassaflöde** — basvolym över avtalsperioden
-- **Långsiktig kundrelation** — möjlighet att lära känna fastighetsbeståndet
-- **Lägre acquisition cost** — slipper anbudsförfaranden per projekt
-- **Investering i specialkompetens** — ekonomiskt försvarbart med långsiktig volym
+- **Förutsägbart kassaflöde**, basvolym över avtalsperioden
+- **Långsiktig kundrelation**, möjlighet att lära känna fastighetsbeståndet
+- **Lägre acquisition cost**, slipper anbudsförfaranden per projekt
+- **Investering i specialkompetens**, ekonomiskt försvarbart med långsiktig volym
 
 ## Vanliga fällor
 
@@ -76,21 +76,21 @@ Beställaren avropar bara svåra projekt och upphandlar enkla separat. Resultat:
 ÄTA inom avropet hanteras dåligt. **Lösning:** Etablera ÄTA-process (samma som [vid ÄTA i entreprenad](/artiklar/ata-arbete-byggentreprenad/)) i ramavtalet.
 
 ### "Förnyad konkurrensutsättning är pappersarbete"
-Multivendor-ramavtal med tunga avropsförfaranden. **Lösning:** Definiera tydliga gränsvärden — direkt avrop under tröskel, förnyad konkurrens över. Vanlig tröskel: 100 000–500 000 kr.
+Multivendor-ramavtal med tunga avropsförfaranden. **Lösning:** Definiera tydliga gränsvärden, direkt avrop under tröskel, förnyad konkurrens över. Vanlig tröskel: 100 000–500 000 kr.
 
 ## Vad ramavtalet ska reglera
 
 Ett bra ramavtal ska tydligt reglera:
 
-1. **Omfattning** — vilka arbeten som täcks, geografisk avgränsning
+1. **Omfattning**, vilka arbeten som täcks, geografisk avgränsning
 2. **Avtalsperiod** med eventuella optioner
 3. **Á-prislista** med uppdaterings- och indexklausul
-4. **Avropsförfarande** — direkt/förnyad konkurrensutsättning, tröskelvärden
-5. **Tidsåtgång** — ledtid från avrop till mobilisering
-6. **Kvalitet och ansvar** — hänvisning till AB 04/ABT 06, KMA-plan
+4. **Avropsförfarande**, direkt/förnyad konkurrensutsättning, tröskelvärden
+5. **Tidsåtgång**, ledtid från avrop till mobilisering
+6. **Kvalitet och ansvar**, hänvisning till AB 04/ABT 06, KMA-plan
 7. **Försäkring och garantier**
-8. **Avtalsbrott och uppsägning** — konsekvenser, varseltider
-9. **Tvistlösning** — skiljedom eller allmän domstol
+8. **Avtalsbrott och uppsägning**, konsekvenser, varseltider
+9. **Tvistlösning**, skiljedom eller allmän domstol
 
 ## Hur RM Entreprenad arbetar med ramavtal
 

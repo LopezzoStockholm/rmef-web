@@ -1,5 +1,5 @@
 ---
-title: "KMA-plan mall — så skriver ni en hållbar plan 2026"
+title: "KMA-plan mall, så skriver ni en hållbar plan 2026"
 description: "Vad en KMA-plan ska innehålla, exempel på struktur och vanliga misstag. Mall och checklista för byggentreprenad enligt AB 04 och ABT 06."
 published: 2026-04-25
 category: "Upphandling"
@@ -15,12 +15,12 @@ faq:
   - q: "Vem ansvarar för KMA-planen?"
     a: "Entreprenören upprättar och lever efter planen. Beställaren godkänner och kan begära revision. BAS-U (byggarbetsmiljösamordnare för utförande) är formellt ansvarig för arbetsmiljödelen under utförande, vilket oftast ligger hos huvudentreprenören."
   - q: "Hur lång ska en KMA-plan vara?"
-    a: "Praktiskt: 8-25 sidor för medelstora projekt. För riktigt stora projekt eller komplexa entreprenader (t.ex. sjukhus, läkemedelsproduktion): 50+ sidor med bilagor. Kvalitet trumfar kvantitet — en konkret, projekt-specifik plan är värd mer än en generisk mall."
+    a: "Praktiskt: 8-25 sidor för medelstora projekt. För riktigt stora projekt eller komplexa entreprenader (t.ex. sjukhus, läkemedelsproduktion): 50+ sidor med bilagor. Kvalitet trumfar kvantitet, en konkret, projekt-specifik plan är värd mer än en generisk mall."
 ---
 
 ## Kort svar
 
-KMA-plan står för **Kvalitet, Miljö och Arbetsmiljö**-plan. Det är ett projektdokument som professionella beställare nästan alltid kräver i upphandling enligt AB 04 eller ABT 06. Planen ska beskriva HUR entreprenören säkerställer dessa tre områden — inte bara att de gör det. En tunn, generisk KMA-plan diskvalificerar er ofta från seriösa upphandlingar.
+KMA-plan står för **Kvalitet, Miljö och Arbetsmiljö**-plan. Det är ett projektdokument som professionella beställare nästan alltid kräver i upphandling enligt AB 04 eller ABT 06. Planen ska beskriva HUR entreprenören säkerställer dessa tre områden, inte bara att de gör det. En tunn, generisk KMA-plan diskvalificerar er ofta från seriösa upphandlingar.
 
 ## Vad en KMA-plan ska innehålla
 
@@ -94,13 +94,13 @@ KMA-plan står för **Kvalitet, Miljö och Arbetsmiljö**-plan. Det är ett proj
 
 ## Vanliga misstag i KMA-planer
 
-1. **För generisk** — kopierad från tidigare projekt utan anpassning. Beställaren märker direkt.
-2. **Saknar konkreta egenkontroller** — bara "vi kontrollerar kvalitet" utan att specificera vad, hur, av vem.
-3. **Ingen kopplad mätning** — saknar acceptanskriterier eller toleranser.
-4. **Glömd arbetsmiljö** — fokus på kvalitet och miljö, men arbetsmiljö är "förhoppningar".
-5. **Inget om driftkänsliga miljöer** — för sjukhus, läkemedel, datahallar krävs specifika anpassningar.
-6. **Inget om underentreprenörer** — KMA-plan måste täcka även UE:s arbete.
-7. **Inget om avvikelsehantering** — vad som händer när något går fel.
+1. **För generisk**, kopierad från tidigare projekt utan anpassning. Beställaren märker direkt.
+2. **Saknar konkreta egenkontroller**, bara "vi kontrollerar kvalitet" utan att specificera vad, hur, av vem.
+3. **Ingen kopplad mätning**, saknar acceptanskriterier eller toleranser.
+4. **Glömd arbetsmiljö**, fokus på kvalitet och miljö, men arbetsmiljö är "förhoppningar".
+5. **Inget om driftkänsliga miljöer**, för sjukhus, läkemedel, datahallar krävs specifika anpassningar.
+6. **Inget om underentreprenörer**, KMA-plan måste täcka även UE:s arbete.
+7. **Inget om avvikelsehantering**, vad som händer när något går fel.
 
 ## Exempel på struktur
 

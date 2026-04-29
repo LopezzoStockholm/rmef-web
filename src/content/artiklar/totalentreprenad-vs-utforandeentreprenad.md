@@ -11,7 +11,7 @@ heroImageAlt: "Projektgenomgång med entreprenör och beställare vid whiteboard
 
 ## Kort svar
 
-**Totalentreprenad (ABT 06)** innebär att entreprenören ansvarar för både projektering och utförande. **Utförandeentreprenad (AB 04)** innebär att beställaren ansvarar för projektering – entreprenören utför enligt färdiga handlingar.
+**Totalentreprenad (ABT 06)** innebär att entreprenören ansvarar för både projektering och utförande. **Utförandeentreprenad (AB 04)** innebär att beställaren ansvarar för projektering, entreprenören utför enligt färdiga handlingar.
 
 | | Totalentreprenad | Utförandeentreprenad |
 |---|---|---|
@@ -29,12 +29,12 @@ Totalentreprenad är rätt val när någon eller några av följande gäller:
 - **Ni vill ha en kontraktsmotpart** för hela projektet
 - **Projektet är komplext** och kräver tät samverkan mellan discipliner
 - **Ni saknar egen projektörskompetens**
-- **Tiden är kort** – parallell projektering och produktion
+- **Tiden är kort**, parallell projektering och produktion
 - **Funktionskrav** (t.ex. "kontor för 80 personer med 150 lux arbetsyta") snarare än detaljerade ritningar
 
 ### Risker med totalentreprenad
 
-- **Högre riskmarginal i anbudet** – entreprenören prisar in osäkerheter
+- **Högre riskmarginal i anbudet**, entreprenören prisar in osäkerheter
 - **Lägre transparens** i materialval och konstruktionslösningar
 - **Svårare att jämföra anbud** eftersom varje entreprenör föreslår olika lösningar
 
@@ -50,7 +50,7 @@ Utförandeentreprenad är rätt val när:
 
 ### Risker med utförandeentreprenad
 
-- **Beställaren bär konstruktionsrisken** – om ritningarna är fel blir det ÄTA
+- **Beställaren bär konstruktionsrisken**, om ritningarna är fel blir det ÄTA
 - **Fler gränssnitt** att hantera (projektörer, entreprenörer, beställare)
 - **Längre total projektid** eftersom projektering måste vara klar innan upphandling
 
@@ -70,7 +70,7 @@ Entreprenören ansvarar för att en viss funktion uppnås (t.ex. ventilationseff
 
 Beställaren upphandlar flera entreprenörer parallellt (mark, bygg, el, VVS). Kräver stark byggledning hos beställaren. Passar för större projekt där man vill optimera per disciplin.
 
-## Ansvar vid fel – praktiska exempel
+## Ansvar vid fel, praktiska exempel
 
 ### Exempel 1: Fel dimension på pelare
 
@@ -88,7 +88,7 @@ Beställaren upphandlar flera entreprenörer parallellt (mark, bygg, el, VVS). K
 
 ## Slutord
 
-Valet mellan totalentreprenad och utförandeentreprenad handlar om **hur mycket ansvar ni vill flytta över på entreprenören**. Har ni egen kompetens – välj AB 04 och spar kostnad. Vill ni minimera risk och gränssnitt – välj ABT 06 och acceptera riskmarginalen.
+Valet mellan totalentreprenad och utförandeentreprenad handlar om **hur mycket ansvar ni vill flytta över på entreprenören**. Har ni egen kompetens, välj AB 04 och spar kostnad. Vill ni minimera risk och gränssnitt, välj ABT 06 och acceptera riskmarginalen.
 
 ## RM Entreprenad & Fasad
 

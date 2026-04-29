@@ -1,5 +1,5 @@
 ---
-title: "Skyddsrumsbesiktning för BRF – vad MSB kräver och vad det kostar 2026"
+title: "Skyddsrumsbesiktning för BRF, vad MSB kräver och vad det kostar 2026"
 description: "Så fungerar skyddsrumskontrollen enligt MSB för bostadsrättsföreningar och fastighetsägare. Krav, åtgärdsplan, typiska kostnader och vad du som styrelse bör ha koll på."
 published: 2026-04-24
 category: "Teknik"
@@ -15,22 +15,22 @@ Alla skyddsrum i Sverige ska hållas i skick av fastighetsägaren enligt lagen (
 
 ## Vad är ett skyddsrum och vem har ansvar
 
-Ett skyddsrum är en del av en byggnad som i kristid kan användas av civilbefolkningen. Sverige har cirka 64 000 skyddsrum med plats för omkring 7 miljoner personer – de flesta inredda som parkering, förråd eller cykelrum i vardagsläge.
+Ett skyddsrum är en del av en byggnad som i kristid kan användas av civilbefolkningen. Sverige har cirka 64 000 skyddsrum med plats för omkring 7 miljoner personer, de flesta inredda som parkering, förråd eller cykelrum i vardagsläge.
 
 **Fastighetsägaren ansvarar för** att skyddsrummet kan iordningställas inom 48 timmar. Det innebär löpande underhåll, att ingen permanent skada uppstått i bärande konstruktion, ventilationssystem eller slussfunktion, samt att rummet kan tömmas på inredning utan onödigt arbete.
 
 För bostadsrättsföreningar är det styrelsen som företräder fastighetsägaren. Det går inte att delegera bort ansvaret till hyresgäst, förvaltare eller tidigare entreprenör.
 
-## MSB-kontrollen – så går den till
+## MSB-kontrollen, så går den till
 
 MSB genomför kontroll enligt en plan som rullar över cirka 10 år. Kontrollen består vanligtvis av:
 
-1. **Dokumentationsgenomgång** – ritningar, tidigare besiktningsprotokoll, åtgärdshistorik
+1. **Dokumentationsgenomgång**, ritningar, tidigare besiktningsprotokoll, åtgärdshistorik
 2. **Platsbesök** där kontrollanten går igenom konstruktion, slussar, ventilation, vatten-, värme- och avloppssystem
 3. **Kontrollprotokoll** med noteringar om brister
 4. **Eventuellt föreläggande** med åtgärdstid (vanligtvis 12–24 månader)
 
-Vid brist har föreningen en tidsfrist. Missar ni den kan MSB förelägga vite (typiskt 50 000–500 000 kr) som trycker på. Kostnaden för att åtgärda brister ingår inte i något statligt anslag – det är fastighetsägaren som betalar.
+Vid brist har föreningen en tidsfrist. Missar ni den kan MSB förelägga vite (typiskt 50 000–500 000 kr) som trycker på. Kostnaden för att åtgärda brister ingår inte i något statligt anslag, det är fastighetsägaren som betalar.
 
 ## Vanliga brister och åtgärder
 
@@ -40,7 +40,7 @@ Små spjälkningssprickor är ofta kosmetiska. **Strukturella sprickor** genom b
 
 ### Läckage eller fuktskada
 
-Kristallisering, saltutslag och stående vatten pekar på otätheter i tätskiktet eller från intilliggande ledningar. Åtgärden är dränering eller membrankomplettering – typiskt **80 000–400 000 kr**.
+Kristallisering, saltutslag och stående vatten pekar på otätheter i tätskiktet eller från intilliggande ledningar. Åtgärden är dränering eller membrankomplettering, typiskt **80 000–400 000 kr**.
 
 ### Otäta slussdörrar
 
@@ -52,28 +52,28 @@ Filter, fläktar och omkopplare till beredskapsläge ska fungera. Service av äl
 
 ### Felaktig ombyggnad
 
-Det vanligaste fyndet – någon har borrat håltagningar genom skyddsrummets väggar för el eller VS-dragningar, eller satt in dörrar som inte är gastäta. Åtgärden innebär återställning till ursprungligt utförande. **50 000–300 000 kr** per avvikelse.
+Det vanligaste fyndet, någon har borrat håltagningar genom skyddsrummets väggar för el eller VS-dragningar, eller satt in dörrar som inte är gastäta. Åtgärden innebär återställning till ursprungligt utförande. **50 000–300 000 kr** per avvikelse.
 
 ## Skyddsrum i nyproduktion
 
 Vid nyproduktion av flerbostadshus med över 50 boende aktualiseras kravet på skyddsrum enligt plan. I praktiken får kommunen avgöra om det befintliga beståndet räcker eller om nytt ska uppföras. Entreprenörer som bygger skyddsrum i nyproduktion behöver:
 
-- **Betongteknisk kompetens** – skyddsrum har hårdare armeringskrav och kontrollprotokoll än ordinarie husbyggnad
+- **Betongteknisk kompetens**, skyddsrum har hårdare armeringskrav och kontrollprotokoll än ordinarie husbyggnad
 - **Erfarenhet av MSB:s kontrollplan** för att dokumentera rätt från start
-- **Samordning mot VVS och ventilation** – slussar och filtersystem måste hänga ihop med övriga installationer
+- **Samordning mot VVS och ventilation**, slussar och filtersystem måste hänga ihop med övriga installationer
 
-Kostnaden för ett nytt skyddsrum i flerbostadshus ligger typiskt på **8 000–14 000 kr per kvm** – betydligt dyrare än övrig källare. Volymen bakas in i projektets totalentreprenadpris.
+Kostnaden för ett nytt skyddsrum i flerbostadshus ligger typiskt på **8 000–14 000 kr per kvm**, betydligt dyrare än övrig källare. Volymen bakas in i projektets totalentreprenadpris.
 
 ## Checklista för BRF-styrelsen
 
 Innan ni begär offert på åtgärder, samla följande:
 
 - [ ] **Tidigare kontrollprotokoll** från MSB (begär från förvaltare eller via e-post till MSB)
-- [ ] **Ritningar** över skyddsrummet – konstruktion, ventilation, slussar
-- [ ] **Åtgärdshistorik** – vad har gjorts, när, av vem
+- [ ] **Ritningar** över skyddsrummet, konstruktion, ventilation, slussar
+- [ ] **Åtgärdshistorik**, vad har gjorts, när, av vem
 - [ ] **Dokumentation av ombyggnader** som gjorts i rummet efter ursprunglig byggnation
 - [ ] **Eventuellt föreläggande** med datum och åtgärdskrav
-- [ ] **Ansvarsförsäkring** – många försäkringsbolag täcker delar av åtgärden om bristen berodde på löpande förvaltning
+- [ ] **Ansvarsförsäkring**, många försäkringsbolag täcker delar av åtgärden om bristen berodde på löpande förvaltning
 
 ## Vem får utföra skyddsrumsarbeten?
 
@@ -98,7 +98,7 @@ En typisk process för en BRF med åtgärdskrav:
 | Utförande | 2–6 månader |
 | Slutbesiktning och ny MSB-kontroll | 1–2 månader |
 
-Räkna med **8–12 månader** från beslut till godkänd status. Det är kortare än exempelvis fasadrenovering, men längre än vad ett MSB-föreläggande ofta ger – begär därför anstånd tidigt om tidsplanen är pressad.
+Räkna med **8–12 månader** från beslut till godkänd status. Det är kortare än exempelvis fasadrenovering, men längre än vad ett MSB-föreläggande ofta ger, begär därför anstånd tidigt om tidsplanen är pressad.
 
 ## Vanliga frågor
 
@@ -112,7 +112,7 @@ Om förvaltaren har egen byggkompetens kan de göra enklare åtgärder. Vid beto
 
 ### Kan skyddsrumsåtgärden kombineras med annan renovering?
 
-Ja – och ofta blir det billigare. Tätskikt, dränering och ventilationsarbeten som behövs både för skyddsrum och övrig källare samordnas med fördel till en entreprenad.
+Ja, och ofta blir det billigare. Tätskikt, dränering och ventilationsarbeten som behövs både för skyddsrum och övrig källare samordnas med fördel till en entreprenad.
 
 ### Får vi fortsätta använda skyddsrummet som förråd efter åtgärd?
 
