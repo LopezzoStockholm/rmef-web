@@ -3,15 +3,15 @@ import { SERVICES } from "../lib/site";
 
 // Representativa projektbilder per disciplin (1600px high-res källor)
 const serviceImages: Record<string, { src: string; alt: string }> = {
+  projektering: {
+    src: "/projekt/thumb/foretag_24.webp",
+    alt: "Modern lobby med trapp, exempel på inhouse-projekterad miljö",
+  },
   mark: {
     src: "/projekt/thumb/mark_image3.webp",
     alt: "Markarbete med orange grävmaskin på Solnaprojekt",
   },
   bygg: {
-    src: "/projekt/thumb/foretag_24.webp",
-    alt: "Axfoods huvudkontor, modern lobby med trapp",
-  },
-  el: {
     src: "/projekt/thumb/foretag_16.webp",
     alt: "Byggnadsarbete med materialhantering, T11 Katarinahuset",
   },
@@ -27,11 +27,10 @@ const serviceImages: Record<string, { src: string; alt: string }> = {
     <div class="max-w-3xl mb-16 lg:mb-20" data-reveal>
       <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">Tjänster</p>
       <h2 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight mb-6">
-        Fyra discipliner. Ett ansvar.
+        Fyra discipliner. En leverans.
       </h2>
       <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">
-        Vi täcker hela entreprenadkedjan i egen regi, från mark under fasaden till ljuset i taket.
-        Det gör att vi kan styra kvalitet, tid och budget utan mellanhänder.
+        Hela entreprenadkedjan i egen regi, från projektering och mark till färdig fasad. Egna experter ersätter mellanhänder, minimerar friktion och håller kontrollen där den ska vara: hos er.
       </p>
     </div>
 

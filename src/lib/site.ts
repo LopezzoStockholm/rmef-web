@@ -3,9 +3,9 @@ export const SITE = {
   shortName: "RM Entreprenad & Fasad",
   domain: "rmef.se",
   url: "https://rmef.se",
-  defaultTitle: "Skyddsrum & komplex entreprenad Stockholm — RM Entreprenad",
+  defaultTitle: "Skyddsrum och komplex entreprenad Stockholm | RM Entreprenad",
   defaultDescription:
-    "Skyddsrumssanering, MSB-besiktning och komplex entreprenad i Stockholm. 100+ års branscherfarenhet, 75 Mkr-projekt. Begär offert idag.",
+    "Skyddsrumssanering, MSB-besiktning och komplexa byggprojekt i Stockholm. Egen projektering och projektledning, 100+ års kärnerfarenhet, 75 Mkr-projekt levererade i tid. Besked inom 48 timmar.",
   orgNumber: "559251-1462",
   phone: "+468128757 00",
   phoneDisplay: "08-12 87 57 00",
@@ -44,7 +44,7 @@ export const SITE = {
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d130499.6!2d17.9!3d59.33!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d5f9f9f9f9f%3A0x0!2zU3RvY2tob2xt!5e0!3m2!1ssv!2sse!4v1700000000",
 } as const;
 
-export type ServiceKey = "mark" | "bygg" | "el" | "fasad";
+export type ServiceKey = "projektering" | "mark" | "bygg" | "fasad";
 
 export const SERVICES: Record<ServiceKey, {
   slug: string;
@@ -54,6 +54,20 @@ export const SERVICES: Record<ServiceKey, {
   bullets: string[];
   icon: string;
 }> = {
+  projektering: {
+    slug: "projektering",
+    title: "Projektering",
+    short: "Egen mark- och byggprojektering inhouse. Gränssnitten lösta innan vi lyfter spaden.",
+    long: "Egen projekteringskompetens inom mark och bygg. Vi tar fram handlingar eller utgår från era och löser gränssnitten innan utförandet startar. Det ger färre överraskningar i produktion, lägre ÄTA-volym och en kostnadseffektivare totalentreprenad.",
+    bullets: [
+      "Markprojektering: schakt, grundläggning, ledningar, finplanering",
+      "Byggprojektering: bärande konstruktion, planlösning, gränssnitt",
+      "Granskning av era underlag före anbud",
+      "KMA-plan kopplad till projekteringen",
+      "Reducerad ÄTA-volym genom genomarbetade handlingar",
+    ],
+    icon: "projektering",
+  },
   mark: {
     slug: "mark-och-anlaggning",
     title: "Mark & anläggning",
@@ -82,19 +96,6 @@ export const SERVICES: Record<ServiceKey, {
     ],
     icon: "bygg",
   },
-  el: {
-    slug: "el",
-    title: "El",
-    short: "Elinstallationer i totalentreprenad eller som separata elprojekt.",
-    long: "Elinstallationer som en integrerad del av våra entreprenader, eller som separata elprojekt. Erfarenhet från kontor, vård, industri och datahallar med höga krav på drift och redundans.",
-    bullets: [
-      "Elinstallation i totalentreprenad",
-      "Separata elprojekt",
-      "Styr- och reglersystem",
-      "Installationer i drift­miljöer (sjukhus, datahallar)",
-    ],
-    icon: "el",
-  },
   fasad: {
     slug: "fasad",
     title: "Fasad",
@@ -116,7 +117,7 @@ export interface Project {
   client: string;
   volume?: string;
   period: string;
-  category: "Mark & anläggning" | "Bygg" | "El" | "Fasad";
+  category: "Projektering" | "Mark & anläggning" | "Bygg" | "Fasad";
   type: string;
   summary: string;
   challenges?: string;
@@ -128,7 +129,7 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     slug: "rocmore-signalisten",
-    title: "Rocmore / Signalisten – Solna",
+    title: "Rocmore / Signalisten, Solna",
     client: "Rocmore (strategisk partner) · Signalisten (Solna Stad)",
     volume: "40 Mkr/år",
     period: "Löpande avtal",
@@ -324,7 +325,7 @@ export const PROJECTS: Project[] = [
     type: "Utförandeentreprenad",
     summary: "Markanläggning, asfaltering och finplanering i anslutning till tennisakademin.",
     image: "/projekt/mark_image17.webp",
-    imageAlt: "Tennisakademien – asfalterad yta och entré efter finplanering",
+    imageAlt: "Tennisakademien, asfalterad yta och entré efter finplanering",
     featured: false,
   },
   {

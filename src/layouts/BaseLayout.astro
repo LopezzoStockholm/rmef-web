@@ -84,7 +84,7 @@ const organizationSchema = {
     "Tilläggsisolering",
     "Nyproduktion flerbostadshus",
     "Kontorsanpassning",
-    "Elinstallation",
+    "Egen projektering",
     "Restaurering av kulturbyggnader",
     "K-märkta byggnader",
     "KMA-plan",
@@ -93,14 +93,14 @@ const organizationSchema = {
     "@type": "OfferCatalog",
     name: "Entreprenadtjänster",
     itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Projektering" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mark och anläggning" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Bygg och totalentreprenad" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "El" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Fasad" } },
     ],
   },
   award: "Över 100 års samlad branscherfarenhet i kärnteamet",
-  slogan: "Mark, bygg och fasad levererat med precision.",
+  slogan: "Komplexa projekt utan friktion. Beställaren behåller kontrollen.",
 };
 
 const websiteSchema = {
@@ -148,7 +148,7 @@ const allSchemas = [organizationSchema, websiteSchema, ...(schema ? (Array.isArr
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
-    <!-- Self-hosted fonts (Inter + Manrope) — eliminerar extern Google Fonts CDN-roundtrip -->
+    <!-- Self-hosted fonts (Inter + Manrope), eliminerar extern Google Fonts CDN-roundtrip -->
     <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
     <style is:inline>

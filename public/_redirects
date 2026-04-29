@@ -1,0 +1,7 @@
+# Cloudflare Pages redirects
+# Format: from   to   status
+
+# El-disciplinen avvecklad 2026-04-26 till förmån för egen Projektering.
+# 301 så befintliga inlänkar bevarar SEO-värde och pekar mot tjänsteöversikten.
+/tjanster/el  /tjanster  301
+/tjanster/el/ /tjanster/ 301
