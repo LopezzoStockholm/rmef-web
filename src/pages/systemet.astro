@@ -1,0 +1,421 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../lib/site";
+
+const title = "Systemet, RM:s interna styrsystem för komplexa byggprojekt";
+const description =
+  "Vårt interna styrsystem bygger på 100 års paketerad erfarenhet. Inköp, projektering, KMA, kassaflöde, kvalitetskontroll och slutbesiktning, paketerat så att vi levererar kvalitet inom bestämd budget och i tid, varje projekt.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: title,
+      description,
+      author: { "@type": "Organization", name: SITE.shortName },
+      publisher: { "@id": `${SITE.url}/#organization` },
+      datePublished: "2026-04-30T00:00:00Z",
+      mainEntityOfPage: `${SITE.url}/systemet`,
+      inLanguage: "sv-SE",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Systemet", item: `${SITE.url}/systemet` },
+      ],
+    },
+  ],
+};
+
+const promises = [
+  {
+    title: "Beställaren behåller kontrollen på kassaflödet",
+    body: "Ingen underentreprenör får betalt innan ni godkänt leveransen enligt avtal. Det betyder att kassaflödet inte hänger på vår förmåga att jaga betalningar, det hänger på er bekräftelse av faktiskt levererat arbete.",
+  },
+  {
+    title: "UE-byten påverkar inte er leverans",
+    body: "Skulle vi behöva byta underentreprenör fortsätter projektet utan rubbning. Specifikationen, KMA-kraven och kvalitetsrutinerna sitter i systemet, inte i en enskild leverantör.",
+  },
+  {
+    title: "KMA är inbyggt, inte ett efterhandsdokument",
+    body: "Många entreprenörer skriver KMA-planen i efterhand som ett pliktdokument. Vi tänker den från start och låter den styra inköp, produktion och dokumentation under hela projektet.",
+  },
+  {
+    title: "Kvalitet inom bestämd budget och i tid",
+    body: "Det är resultatet av allt ovan. När friktionen mellan led är borttagen, blir leveransen förutsägbar. Vi står för det vi lovar i kontraktet, varje projekt.",
+  },
+];
+
+const pillars = [
+  {
+    number: "01",
+    title: "Inköp & UE-selektion",
+    body: "Ramavtal och kvalificerade underentreprenörer per disciplin. Vi väljer aldrig på enbart pris, vi väljer på leveranssäkerhet, dokumentationsförmåga och referensprojekt. Det betyder att vi har redundans när någon UE inte kan leverera, vilket händer i alla större projekt.",
+  },
+  {
+    number: "02",
+    title: "Projektering inhouse",
+    body: "Egen mark- och byggprojektering. Gränssnitten löses innan utförandet startar, inte under produktion. Det reducerar ÄTA-volymen drastiskt och låter oss ge en realistisk kostnadsram redan tidigt.",
+  },
+  {
+    number: "03",
+    title: "KMA-styrning",
+    body: "KMA-planen byggs in i upphandlingsfasen, inte produceras efter slutbesiktningen. Kvalitetsplanen, miljöplanen och arbetsmiljöplanen integreras i samma metod oavsett om det är en BRF, en kommun eller ett industriellt projekt.",
+  },
+  {
+    number: "04",
+    title: "Kassaflödeskontroll",
+    body: "Underentreprenörer får inte betalt innan beställaren godkänt leveransen enligt avtalet. Det skyddar er mot UE-konkurser, mot förskottsbedrägerier och mot att betala för arbete som inte är levererat enligt specifikation.",
+  },
+  {
+    number: "05",
+    title: "Egenkontroller & dokumentation",
+    body: "Veckovisa avstämningar med dokumenterade egenkontroller. Vi rapporterar avvikelser tidigt, inte vid slutbesiktningen. Hela dokumentationsstrukturen följer samma mall projekt efter projekt, vilket gör att ni kan jämföra två RM-projekt på samma villkor.",
+  },
+  {
+    number: "06",
+    title: "Slutbesiktning & överlämning",
+    body: "En driftklar anläggning med kompletta egenkontroller, relationsritningar och driftinstruktioner. Garantibesiktning vid 2 och 5 år enligt AB 04 / ABT 06. Inget hänger löst, inget överraskar i förvaltningsskedet.",
+  },
+];
+
+const failureModes = [
+  {
+    when: "Underentreprenör går i konkurs",
+    response: "Vi har redundans i ramavtalsleden. Nästa kvalificerade UE flyttas fram, projektet fortsätter utan kontraktsförändring för er.",
+  },
+  {
+    when: "Beställarens önskemål ändras under projektet",
+    response: "ÄTA-flödet är inbyggt i systemet, inte en konflikt. Vi prissätter, dokumenterar och godkänner ändringar löpande, inte vid slutfakturering.",
+  },
+  {
+    when: "Tidsplanen riskerar att glida",
+    response: "Vi rapporterar tidigt, inte vid slutbesiktningen. När en risk identifieras, eskaleras den till er inom samma vecka, så att vi tillsammans kan välja åtgärd innan den blir akut.",
+  },
+];
+
+const comparison = {
+  storbolag: [
+    "Avdelningar med interna överlämningar mellan upphandling, projektering och produktion",
+    "Beställaren får olika kontaktpersoner i olika skeden",
+    "Projektets KMA-plan ofta producerad av separat hållbarhetsavdelning",
+    "Standardiserade processer som inte alltid passar specifika beställare",
+  ],
+  smabolag: [
+    "Personberoende leveranser, hela ansvaret hänger på en projektledare",
+    "Saknar ofta egen projektering, måste köpa in konsultprojektering",
+    "Sällan strukturerad kassaflödeskontroll mot UE",
+    "Mindre kapacitet att bära komplexa projekt över 50 Mkr",
+  ],
+  rm: [
+    "Egen mark- och byggprojektering inhouse, gränssnitten löses innan spaden lyfts",
+    "Samma styrsystem oavsett vem som bär projektet hos oss",
+    "KMA inbyggt från upphandling till slutbesiktning",
+    "Kassaflödesskydd: ingen UE får betalt innan ni godkänt enligt avtal",
+    "Skala för 75 Mkr-projekt med 96 % soliditet i botten",
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <article>
+    <!-- Hero -->
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20 bg-[color:var(--color-paper)]">
+      <div class="mx-auto max-w-4xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <span>Systemet</span>
+        </nav>
+
+        <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-6">100 års paketerad erfarenhet i vårt interna styrsystem</p>
+
+        <div class="inline-flex items-center gap-2 bg-[color:var(--color-paper-2)] border border-[color:var(--color-ink-10)] rounded-full px-3.5 py-1.5 text-[11px] font-medium text-[color:var(--color-ink-60)] mb-8 tracking-wide">
+          <span class="w-1.5 h-1.5 rounded-full bg-[color:var(--color-brand-red)]" aria-hidden="true"></span>
+          Vårt arbetssätt
+        </div>
+
+        <h1 class="text-[length:var(--text-hero)] font-semibold leading-[0.95] tracking-tight mb-8">
+          Systemet.
+        </h1>
+
+        <p class="text-2xl lg:text-3xl font-semibold text-[color:var(--color-ink)] leading-tight mb-10 max-w-2xl">
+          Kvalitet inom bestämd budget och i tid. <span class="text-[color:var(--color-brand-red)]">Varje projekt.</span>
+        </p>
+
+        <div class="prose-rmef text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl space-y-6">
+          <p>
+            Byggentreprenad är inte bara ett hantverk. Det är ett system av inköp, projektering, KMA, kassaflöde, kvalitetskontroll och dokumentation som ska hänga ihop genom 18 till 24 månader och fyra entreprenadnivåer. När något i det systemet inte är paketerat, hamnar friktionen alltid hos beställaren.
+          </p>
+          <p>
+            Vi har paketerat hela vägen från inköp till slutbesiktning. <strong class="text-[color:var(--color-ink)] font-semibold">Vårt interna styrsystem bygger på 100 års samlad erfarenhet, paketerad så att samma struktur används projekt efter projekt.</strong> Det gör att leveransen inte hänger på en enskild person hos oss, och att kostnaden inte hänger på er förmåga att jaga ÄTA i efterhand. Det är så vi kan leverera kvalitet inom bestämd budget och i tid, varje gång.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Block 1: Vad det betyder för er -->
+    <section class="py-20 lg:py-28 bg-white">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="max-w-3xl mb-14 lg:mb-16">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Vad det betyder för er</p>
+          <h2 class="text-[length:var(--text-display)] font-semibold leading-[1.05] tracking-tight">
+            Fyra konkreta löften.
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-12 lg:gap-y-16">
+          {promises.map((p, i) => (
+            <div class="border-l-2 border-[color:var(--color-brand-red)] pl-6">
+              <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-3">Löfte 0{i + 1}</p>
+              <h3 class="text-xl lg:text-2xl font-semibold tracking-tight mb-4">{p.title}</h3>
+              <p class="text-base text-[color:var(--color-ink-60)] leading-relaxed">{p.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Block 2: Sex pelare -->
+    <section class="py-20 lg:py-28 bg-[color:var(--color-paper)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="max-w-3xl mb-14 lg:mb-16">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Pelarna i Systemet</p>
+          <h2 class="text-[length:var(--text-display)] font-semibold leading-[1.05] tracking-tight mb-6">
+            Sex pelare. En metod.
+          </h2>
+          <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+            Inköp, projektering, KMA, kassaflöde, egenkontroller och slutbesiktning. Sex moment som följer samma struktur i varje projekt vi tar oss an, från en BRF i Vasastan till en industri på Lidingö.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          {pillars.map((p) => (
+            <div class="bg-white p-8 lg:p-10 rounded-2xl">
+              <div class="flex items-start gap-6 lg:gap-8">
+                <span class="text-4xl lg:text-5xl font-semibold text-[color:var(--color-brand-red)] tracking-tighter leading-none min-w-[64px] lg:min-w-[80px]">
+                  {p.number}
+                </span>
+                <div class="flex-1">
+                  <h3 class="text-xl lg:text-2xl font-semibold tracking-tight mb-3">{p.title}</h3>
+                  <p class="text-base lg:text-lg text-[color:var(--color-ink-60)] leading-relaxed">{p.body}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Block 3: Tidslinje -->
+    <section class="py-20 lg:py-28 bg-white">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="max-w-3xl mb-14 lg:mb-16">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Från första dialog till garantitid</p>
+          <h2 class="text-[length:var(--text-display)] font-semibold leading-[1.05] tracking-tight">
+            Tidslinjen.
+          </h2>
+        </div>
+
+        <ol class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <li class="border-t-2 border-[color:var(--color-brand-red)] pt-6">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-3">Steg 01</p>
+            <h3 class="text-lg font-semibold mb-3">Dialog</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Underlag in. Besked inom 48 timmar om vi är rätt partner. Första kostnadsram om vi är det.</p>
+          </li>
+          <li class="border-t-2 border-[color:var(--color-ink-10)] pt-6">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-3">Steg 02</p>
+            <h3 class="text-lg font-semibold mb-3">Anbud</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Anbud baserat på inhouse-projektering, inte konsultkalkyl. Riskreservation begränsad till verifierade osäkerheter.</p>
+          </li>
+          <li class="border-t-2 border-[color:var(--color-ink-10)] pt-6">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-3">Steg 03</p>
+            <h3 class="text-lg font-semibold mb-3">Projektering</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Mark- och byggprojektering inhouse. Gränssnitten löses innan spaden lyfts. KMA-plan, tidsplan, inköpsplan klart.</p>
+          </li>
+          <li class="border-t-2 border-[color:var(--color-ink-10)] pt-6">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-3">Steg 04</p>
+            <h3 class="text-lg font-semibold mb-3">Inköp</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">UE och material upphandlas mot ramavtal. Kvalitetsstämpling före utförande, inte efter.</p>
+          </li>
+          <li class="border-t-2 border-[color:var(--color-ink-10)] pt-6">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-3">Steg 05</p>
+            <h3 class="text-lg font-semibold mb-3">Produktion</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Veckovisa avstämningar, dokumenterade egenkontroller, ÄTA-flöde löpande. UE-betalning först efter er bekräftelse.</p>
+          </li>
+          <li class="border-t-2 border-[color:var(--color-ink-10)] pt-6">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-3">Steg 06</p>
+            <h3 class="text-lg font-semibold mb-3">Slutbesiktning</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Driftklar anläggning med kompletta egenkontroller, relationsritningar, driftinstruktioner.</p>
+          </li>
+          <li class="border-t-2 border-[color:var(--color-ink-10)] pt-6">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-3">Steg 07</p>
+            <h3 class="text-lg font-semibold mb-3">Överlämning</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Strukturerad överföring till förvaltning. Era driftansvariga får all dokumentation i samma format som under projektet.</p>
+          </li>
+          <li class="border-t-2 border-[color:var(--color-ink-10)] pt-6">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-3">Steg 08</p>
+            <h3 class="text-lg font-semibold mb-3">Garantitid</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Garantibesiktning vid 2 och 5 år enligt AB 04 / ABT 06. Vi finns kvar långt efter slutfakturering.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Block 4: Vad som händer när något går fel -->
+    <section class="py-20 lg:py-28 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+          <div class="lg:col-span-5">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Realitet, inte marknadsföring</p>
+            <h2 class="text-[length:var(--text-display)] font-semibold leading-[1.05] tracking-tight mb-6">
+              När något går fel.
+            </h2>
+            <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+              Inget byggprojekt går exakt enligt plan. Frågan är inte om något går fel, utan vad som händer när det gör det. Här är de tre vanligaste situationerna och hur Systemet hanterar dem.
+            </p>
+          </div>
+
+          <div class="lg:col-span-7 space-y-8">
+            {failureModes.map((f) => (
+              <div class="bg-white p-8 lg:p-10 rounded-2xl">
+                <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-3">Situation</p>
+                <h3 class="text-lg lg:text-xl font-semibold tracking-tight mb-4">{f.when}</h3>
+                <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-3">Så hanterar Systemet det</p>
+                <p class="text-base text-[color:var(--color-ink-60)] leading-relaxed">{f.response}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Block 5: Jämförelse -->
+    <section class="py-20 lg:py-28 bg-white">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="max-w-3xl mb-14 lg:mb-16">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Var Systemet skiljer sig</p>
+          <h2 class="text-[length:var(--text-display)] font-semibold leading-[1.05] tracking-tight mb-6">
+            Storbolag, småbolag, RM.
+          </h2>
+          <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+            Tre kategorier av entreprenörer på den svenska marknaden. Här är var de skiljer sig från oss, och varför.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div class="bg-[color:var(--color-paper-2)] p-8 rounded-2xl">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-4">Storbolag</p>
+            <h3 class="text-lg font-semibold mb-6">Skala, men interna överlämningar</h3>
+            <ul class="space-y-3 text-sm text-[color:var(--color-ink-60)] leading-relaxed">
+              {comparison.storbolag.map((line) => (
+                <li class="flex gap-3">
+                  <span class="text-[color:var(--color-ink-40)] mt-0.5" aria-hidden="true">·</span>
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="bg-[color:var(--color-paper-2)] p-8 rounded-2xl">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-4">Småbolag</p>
+            <h3 class="text-lg font-semibold mb-6">Hands-on, men personberoende</h3>
+            <ul class="space-y-3 text-sm text-[color:var(--color-ink-60)] leading-relaxed">
+              {comparison.smabolag.map((line) => (
+                <li class="flex gap-3">
+                  <span class="text-[color:var(--color-ink-40)] mt-0.5" aria-hidden="true">·</span>
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="bg-[color:var(--color-ink)] text-white p-8 rounded-2xl">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">RM Entreprenad & Fasad</p>
+            <h3 class="text-lg font-semibold mb-6">Skala plus paketerat system</h3>
+            <ul class="space-y-3 text-sm text-white/80 leading-relaxed">
+              {comparison.rm.map((line) => (
+                <li class="flex gap-3">
+                  <span class="text-[color:var(--color-brand-red)] mt-0.5" aria-hidden="true">·</span>
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Block 6: Trust-stack -->
+    <section class="py-20 lg:py-28 bg-[color:var(--color-paper)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="max-w-3xl mb-12">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Bevis</p>
+          <h2 class="text-[length:var(--text-display)] font-semibold leading-[1.05] tracking-tight">
+            Tunga beställare, tunga siffror.
+          </h2>
+        </div>
+
+        <dl class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          <div>
+            <dt class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Paketerad erfarenhet i kärnteamet</dt>
+            <dd class="text-4xl lg:text-5xl font-semibold tabular-nums leading-[1] tracking-tight">100<span class="text-[color:var(--color-brand-red)]">+</span> år</dd>
+          </div>
+          <div>
+            <dt class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Soliditet</dt>
+            <dd class="text-4xl lg:text-5xl font-semibold tabular-nums leading-[1] tracking-tight">96 <span class="text-[color:var(--color-brand-red)]">%</span></dd>
+          </div>
+          <div>
+            <dt class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Största projekt</dt>
+            <dd class="text-4xl lg:text-5xl font-semibold tabular-nums leading-[1] tracking-tight">75 <span class="text-[color:var(--color-brand-red)]">Mkr</span></dd>
+          </div>
+          <div>
+            <dt class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-ink-40)] mb-2 font-semibold">Projekt sedan 2018</dt>
+            <dd class="text-4xl lg:text-5xl font-semibold tabular-nums leading-[1] tracking-tight">40<span class="text-[color:var(--color-brand-red)]">+</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 lg:py-28 bg-[color:var(--color-paper)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="relative overflow-hidden rounded-3xl bg-[color:var(--color-ink)] text-white p-10 lg:p-16 xl:p-20">
+          <div class="grid lg:grid-cols-12 gap-10">
+            <div class="lg:col-span-7">
+              <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-5">Nästa steg</p>
+              <h2 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight mb-6">
+                Skicka underlag. Besked inom 48 timmar.
+              </h2>
+              <p class="text-lg lg:text-xl text-white/70 leading-relaxed max-w-xl">
+                Vi återkommer samma dag. Inom 48 timmar får ni besked om vi är rätt partner, plus en första budget och tidsplan vi står för. Och en sak till: ingen underentreprenör får betalt innan ni godkänt leveransen enligt avtal.
+              </p>
+            </div>
+            <div class="lg:col-span-5 flex flex-col gap-3 lg:items-end lg:justify-center">
+              <a
+                href="/kontakt"
+                class="inline-flex items-center justify-between gap-3 bg-white text-[color:var(--color-ink)] px-6 py-4 rounded-full text-sm font-semibold hover:bg-[color:var(--color-brand-red)] hover:text-white transition-colors w-full lg:w-auto lg:min-w-[280px]"
+              >
+                Begär offert
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a
+                href="/projekt"
+                class="inline-flex items-center justify-between gap-3 bg-transparent border border-white/20 text-white px-6 py-4 rounded-full text-sm font-semibold hover:bg-white/5 hover:border-white/40 transition-colors w-full lg:w-auto lg:min-w-[280px]"
+              >
+                Se referensprojekt
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

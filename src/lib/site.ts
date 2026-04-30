@@ -53,6 +53,7 @@ export const SERVICES: Record<ServiceKey, {
   long: string;
   bullets: string[];
   icon: string;
+  fromPrice?: string;
 }> = {
   projektering: {
     slug: "projektering",
@@ -108,6 +109,7 @@ export const SERVICES: Record<ServiceKey, {
       "Besiktning och statusbedömning",
     ],
     icon: "fasad",
+    fromPrice: "Riktpris från 1 500 kr/kvm",
   },
 };
 

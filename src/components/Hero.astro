@@ -42,9 +42,10 @@ const trustLogos: TrustLogo[] = [
         </h1>
 
         <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-xl mb-10 fade-in" style="animation-delay: 160ms">
-          Vi styr skyddsrum, MSB-besiktning och komplexa totalentreprenader i Stockholm och Mälardalen. Egen mark- och byggprojektering, egen projektledning och hantverkare som klarar våra krav på kvalitet, tid och dokumentation. Kärnteamet bär
-          <strong class="text-[color:var(--color-ink)] font-semibold">över 100 års samlad branscherfarenhet</strong>,
-          och vi kör en egenutvecklad metod byggd på KMA-kraven som ger kontroll på kvalitet, kassaflöde och komplexitet i varje skede.
+          Vi styr skyddsrum, MSB-besiktning och komplexa totalentreprenader i Stockholm och Mälardalen. Egen mark- och byggprojektering, egen projektledning och hantverkare som klarar våra krav på kvalitet, tid och dokumentation.
+          <strong class="text-[color:var(--color-ink)] font-semibold">Vårt interna styrsystem bygger på 100 års paketerad erfarenhet</strong>
+          och säkerställer att vi levererar kvalitet inom bestämd budget och i tid, varje projekt.
+          <a href="/systemet" class="text-[color:var(--color-brand-red)] hover:underline font-medium">Läs om Systemet →</a>
         </p>
 
         <div class="flex flex-wrap items-center gap-4 fade-in" style="animation-delay: 240ms">
@@ -121,10 +122,10 @@ const trustLogos: TrustLogo[] = [
       </div>
     </div>
 
-    <!-- Trust-row: visar kundlogos ovanför fold -->
-    <div class="mt-16 lg:mt-20 pt-8 border-t border-[color:var(--color-ink-10)] fade-in" style="animation-delay: 360ms">
+    <!-- Trust-row: kundlogos ovanför fold, tightare och mer synliga än default -->
+    <div class="mt-12 lg:mt-14 pt-8 border-t border-[color:var(--color-ink-10)] fade-in" style="animation-delay: 360ms">
       <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-6">Förtroende från krävande beställare</p>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-x-8 gap-y-6 items-center">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-x-6 lg:gap-x-10 gap-y-7 items-center">
         {trustLogos.map((l) => (
           <img
             src={`/clients/${l.slug}.svg`}
@@ -135,8 +136,8 @@ const trustLogos: TrustLogo[] = [
             decoding="async"
             class={`${l.heightClass} w-auto object-contain object-left ${
               l.mode === "color"
-                ? "opacity-90 hover:opacity-100"
-                : "[filter:brightness(0)] opacity-50 hover:opacity-100 hover:[filter:none]"
+                ? "opacity-100 hover:opacity-100"
+                : "[filter:brightness(0)] opacity-65 hover:opacity-100 hover:[filter:none]"
             } transition-all duration-300`}
           />
         ))}
