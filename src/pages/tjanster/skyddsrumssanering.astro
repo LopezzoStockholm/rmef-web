@@ -3,9 +3,40 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { SITE } from "../../lib/site";
 
-const title = "Skyddsrumssanering Stockholm, MSB-åtgärd";
+const title = "Skyddsrumssanering Stockholm, MSB-åtgärd och godkännande";
 const description =
-  "Skyddsrumssanering efter MSB-kontroll. Sprickor, fuktskador, otäta slussar, ventilation. Stockholm och Mälardalen. Begär offert.";
+  "Skyddsrumssanering efter MSB-kontroll i Stockholm och Mälardalen. Sprickor, fuktskador, otäta slussar, ventilation, filterbyte. Riktpriser, tidsplan och MSB-ersättning. Besked inom 48 timmar.";
+
+const faqs = [
+  {
+    q: "Vad är skyddsrumssanering?",
+    a: "Skyddsrumssanering är åtgärdsarbetet som krävs efter en MSB-kontroll där brister identifierats. Det kan röra sig om betongreparationer, fuktåtgärder, byte av slussdörrar, ventilationsservice eller återställning av otillåtna ombyggnationer. Målet är att rummet ska klara MSB:s ombesiktning och få godkänd status.",
+  },
+  {
+    q: "Vad kostar en skyddsrumssanering i Stockholm?",
+    a: "Mindre saneringsåtgärder (sluss-justering, packningsbyte, ytreparationer) ligger på 10 000 till 50 000 kr. Medelomfattande sanering (betongåtgärder, fuktreparation, ventilationsservice) ligger på 50 000 till 150 000 kr. Större sanering med flera moment och omfattande betongarbeten ligger på 150 000 till 400 000 kr. Slutpriset styrs av antal brister, åtkomst och om filterbyte ingår.",
+  },
+  {
+    q: "Hur lång tid tar en skyddsrumssanering?",
+    a: "Ett typiskt saneringsprojekt för en BRF i Stockholm tar 6 till 14 månader från MSB-beslut till godkänd status. Av detta är själva utförandet 2 till 6 månader. Resten är styrelsebeslut, upphandling, projektering och MSB:s ombesiktning. MSB:s åtgärdsfrist är normalt 12 till 24 månader, så tidsplanen är genomförbar om beslut fattas tidigt.",
+  },
+  {
+    q: "Får BRF ersättning från MSB för saneringskostnader?",
+    a: "Filterbyte kan ersättas av MSB enligt det 100 miljoners-anslag som regeringen avsatt. Andra saneringsåtgärder (betong, fukt, sluss) bekostas normalt av fastighetsägaren själv. Vi hjälper er ansöka om filterersättning som en del av saneringsuppdraget.",
+  },
+  {
+    q: "Vad händer om vi inte sanerar inom MSB:s frist?",
+    a: "MSB kan utdöma vite eller besluta att skyddsrummet inte längre uppfyller kraven, vilket innebär att fastighetsägaren förlorar avdragsrätten för uppvärmning av utrymmet. I praktiken är det dock så att MSB hellre förlänger fristen än utdömer vite om åtgärdsarbetet är påbörjat och dokumenterat.",
+  },
+  {
+    q: "Vem är ansvarig för saneringen, BRF eller den enskilda lägenhetsinnehavaren?",
+    a: "Ansvaret ligger hos fastighetsägaren, som i en bostadsrättsförening är BRF:en (juridiskt sett föreningen, inte enskilda medlemmar). Beslutet om att sanera tas av styrelsen. Vid större kostnader kan extrastämma krävas enligt stadgarna.",
+  },
+  {
+    q: "Måste vi använda en MSB-certifierad entreprenör?",
+    a: "MSB-certifiering krävs för skyddsrumsbesiktning, men inte för själva saneringsarbetet. Däremot ska entreprenören ha dokumenterad kunskap om MSB:s ritningsanvisningar, hållfasthetsklasser och täthetstest. RM:s kärnteam har MSB-utbildad personal och egna projektledare för skyddsrumsuppdrag.",
+  },
+];
 
 const schema = {
   "@context": "https://schema.org",
@@ -16,8 +47,15 @@ const schema = {
       provider: { "@id": `${SITE.url}/#organization` },
       areaServed: ["Stockholm", "Stockholms län", "Mälardalen"],
       description:
-        "Åtgärd av MSB-brister i skyddsrum: sprickor, fuktskador, otäta slussar, ventilationssystem, återställning av felaktiga ombyggnationer och ersättning av filter.",
+        "Åtgärd av MSB-brister i skyddsrum: sprickor, fuktskador, otäta slussar, ventilationssystem, återställning av felaktiga ombyggnationer och filterbyte. Komplett dokumentation och MSB-ombesiktning ingår.",
       url: `${SITE.url}/tjanster/skyddsrumssanering`,
+      offers: {
+        "@type": "AggregateOffer",
+        priceCurrency: "SEK",
+        lowPrice: "10000",
+        highPrice: "400000",
+        availability: "https://schema.org/InStock",
+      },
     },
     {
       "@type": "BreadcrumbList",
@@ -28,12 +66,54 @@ const schema = {
         { "@type": "ListItem", position: 4, name: "Skyddsrumssanering", item: `${SITE.url}/tjanster/skyddsrumssanering` },
       ],
     },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
   ],
 };
+
+const fixes = [
+  {
+    name: "Betongreparation",
+    desc: "Strukturella sprickor i bärande väggar och tak armeras om och kompletteras med ny betong enligt ritningsanvisningarna. Spjälkningssprickor och ytskador åtgärdas samordnat. Hållfasthetsklassen verifieras med protokoll.",
+    price: "20 000–120 000 kr",
+  },
+  {
+    name: "Fuktskador och tätskikt",
+    desc: "Kristallisering och stående vatten pekar på tätskiktsbrister. Vi renoverar dränering, kompletterar membran och åtgärdar intilliggande ledningar som orsakat läckaget. Provtäthetstest efter avslutat arbete.",
+    price: "30 000–150 000 kr",
+  },
+  {
+    name: "Slussdörrar och packningar",
+    desc: "Packningar, gångjärn och stängningsmekanik kontrolleras och byts. Vi säkerställer att rummet blir gastätt inom föreskriven tid och att dörrmekaniken klarar 48-timmars-kravet. Gastäthetsmätning protokollförs.",
+    price: "10 000–60 000 kr",
+  },
+  {
+    name: "Ventilationssystem",
+    desc: "Service av filter, fläktar och omkopplare till beredskapsläge. Vid behov byter vi hela anläggningen, från filter-hus till koppling mot skalskyddet. Funktionstest av båda driftlägena (fred och beredskap).",
+    price: "40 000–200 000 kr",
+  },
+  {
+    name: "Återställning av otillåtna ombyggnader",
+    desc: "Otillåtna håltagningar för el- eller VS-dragningar tätas. Felaktiga dörrar byts ut mot gastäta varianter. Original-utförandet dokumenteras i MSB-ritningarna och förvaltningens register.",
+    price: "15 000–100 000 kr",
+  },
+  {
+    name: "Filterbyte (med MSB-ersättning)",
+    desc: "När MSB i sin kontroll noterar filterbyte bekostar de åtgärden via 100 Mkr-anslaget. Vi hanterar filterbytet och hjälper er ansöka om ersättning. För BRF blir detta nästan kostnadsneutralt.",
+    price: "30 000–80 000 kr (kan ersättas av MSB)",
+  },
+];
 ---
 
 <BaseLayout title={title} description={description} schema={schema}>
   <article>
+    <!-- Hero -->
     <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
       <div class="mx-auto max-w-7xl px-6 lg:px-10">
         <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
@@ -46,54 +126,150 @@ const schema = {
           <span>Skyddsrumssanering</span>
         </nav>
 
+        <div class="inline-flex items-center gap-2 bg-[color:var(--color-brand-red)]/10 border border-[color:var(--color-brand-red)]/20 rounded-full px-4 py-1.5 text-xs font-semibold text-[color:var(--color-brand-red)] mb-6 tracking-wide">
+          <span>Riktpris från 10 000 kr per åtgärd</span>
+        </div>
+
         <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
           Skyddsrumssanering i Stockholm
         </h1>
-        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
-          När MSB har identifierat brister i ert skyddsrum tar vi hela åtgärdsarbetet från analys till godkänd status. Vi arbetar åt bostadsrättsföreningar, fastighetsägare, kommuner och industri i Stockholm och Mälardalen.
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl mb-10">
+          När MSB har identifierat brister i ert skyddsrum tar vi hela åtgärdsarbetet från analys till godkänd status. Egen projektering, egen projektledning, MSB-utbildad personal. Vi arbetar åt bostadsrättsföreningar, fastighetsägare, kommuner och industri i Stockholm och Mälardalen.
         </p>
+
+        <!-- Innehållsförteckning -->
+        <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-6 max-w-3xl">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-3">På den här sidan</p>
+          <ol class="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
+            <li><a href="#nar" class="hover:text-[color:var(--color-brand-red)]">När behöver ni sanering</a></li>
+            <li><a href="#brister" class="hover:text-[color:var(--color-brand-red)]">Vanliga brister och åtgärder</a></li>
+            <li><a href="#kostnader" class="hover:text-[color:var(--color-brand-red)]">Kostnader och riktpriser</a></li>
+            <li><a href="#process" class="hover:text-[color:var(--color-brand-red)]">Process och tidsplan</a></li>
+            <li><a href="#msb" class="hover:text-[color:var(--color-brand-red)]">MSB-ersättning</a></li>
+            <li><a href="#faq" class="hover:text-[color:var(--color-brand-red)]">Vanliga frågor</a></li>
+          </ol>
+        </div>
       </div>
     </section>
 
-    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+    <!-- När behöver ni sanering -->
+    <section id="nar" class="py-16 lg:py-20 bg-[color:var(--color-paper-2)]">
       <div class="mx-auto max-w-7xl px-6 lg:px-10">
-        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Vanliga saneringsmoment</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="p-8 bg-white rounded-2xl">
-            <h3 class="text-xl font-semibold mb-3">Betong­reparation</h3>
-            <p class="text-[color:var(--color-ink-60)] leading-relaxed">Strukturella sprickor i bärande väggar och tak armeras om och kompletteras med ny betong enligt ritningsanvisningarna. Spjälkningssprickor och ytskador åtgärdas samordnat.</p>
+        <div class="grid lg:grid-cols-12 gap-12">
+          <div class="lg:col-span-5">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">När behöver ni sanering</p>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight">
+              MSB har identifierat brister.
+            </h2>
           </div>
-          <div class="p-8 bg-white rounded-2xl">
-            <h3 class="text-xl font-semibold mb-3">Fukt­skador</h3>
-            <p class="text-[color:var(--color-ink-60)] leading-relaxed">Kristallisering och stående vatten pekar på tätskiktsbrister. Vi renoverar dränering, membrankomplettering och åtgärdar intilliggande ledningar som orsakat läckaget.</p>
-          </div>
-          <div class="p-8 bg-white rounded-2xl">
-            <h3 class="text-xl font-semibold mb-3">Sluss­dörrar</h3>
-            <p class="text-[color:var(--color-ink-60)] leading-relaxed">Packningar, gångjärn och stängningsmekanik kontrolleras och byts. Vi säkerställer att rummet blir gastätt inom föreskriven tid och att dörrmekaniken håller för 48-timmarskravet.</p>
-          </div>
-          <div class="p-8 bg-white rounded-2xl">
-            <h3 class="text-xl font-semibold mb-3">Ventilations­system</h3>
-            <p class="text-[color:var(--color-ink-60)] leading-relaxed">Service av filter, fläktar och omkopplare till beredskapsläge. Vid behov byter vi hela anläggningen, från filter-hus till koppling mot skalskyddet.</p>
-          </div>
-          <div class="p-8 bg-white rounded-2xl">
-            <h3 class="text-xl font-semibold mb-3">Återställning av ombyggnader</h3>
-            <p class="text-[color:var(--color-ink-60)] leading-relaxed">Otillåtna håltagningar för el- eller VS-dragningar täts. Felaktiga dörrar byts ut mot gastäta varianter. Original-utförandet dokumenteras i MSB-ritningarna.</p>
-          </div>
-          <div class="p-8 bg-white rounded-2xl">
-            <h3 class="text-xl font-semibold mb-3">Filter­byte med MSB-ersättning</h3>
-            <p class="text-[color:var(--color-ink-60)] leading-relaxed">När MSB i sin kontroll noterar filterbyte bekostar de åtgärden. Vi hanterar filterbytet och hjälper er att ansöka om ersättning från MSB enligt 100-miljoners-anslaget.</p>
+          <div class="lg:col-span-7 prose prose-lg max-w-none text-[color:var(--color-ink-60)] leading-relaxed">
+            <p>
+              Skyddsrumssanering blir aktuell när MSB i sin kontroll har noterat brister som måste åtgärdas inom en viss frist. Kontrollen sker normalt vart femte år, eller på initiativ av fastighetsägaren själv. Brister kan vara tekniska (sprickor, fukt, otät sluss) eller administrativa (felaktig dokumentation, otillåtna ombyggnationer som inte återställts).
+            </p>
+            <p>
+              Som fastighetsägare har ni en åtgärdsfrist, oftast 12 till 24 månader, att rätta till bristerna. När arbetet är klart bokar MSB en ombesiktning, och först då anses skyddsrummet ha godkänd status igen. Tar ni inte tag i åtgärderna inom fristen kan MSB utdöma vite eller dra in den avdragsrätt fastighetsägaren har för uppvärmning av utrymmet.
+            </p>
+            <p>
+              Vårt jobb är att gå från MSB-protokollet till godkänd status med så liten friktion för er styrelse som möjligt. Vi tar hela kedjan, från statusbedömning på plats till MSB:s ombesiktning, och dokumenterar varje moment så att ni kan stå inför nästa kontroll om fem år utan att börja om från noll.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-20 lg:py-32">
+    <!-- Vanliga brister och åtgärder -->
+    <section id="brister" class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="max-w-3xl mb-14">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Vanliga brister</p>
+          <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-6">
+            Sex moment vi åtgärdar.
+          </h2>
+          <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+            De flesta MSB-protokoll vi ser handlar om en kombination av betongproblem, fuktskador, packnings­utbyten, ventilationsservice och otillåtna ombyggnationer. Vi tar varje moment med samma struktur och dokumentation.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          {fixes.map((fix) => (
+            <div class="p-8 bg-[color:var(--color-paper-2)] rounded-2xl">
+              <h3 class="text-xl font-semibold mb-3">{fix.name}</h3>
+              <p class="text-[color:var(--color-ink-60)] leading-relaxed mb-4">{fix.desc}</p>
+              <p class="text-sm font-semibold text-[color:var(--color-brand-red)]">{fix.price}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Kostnader -->
+    <section id="kostnader" class="py-20 lg:py-28 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-12 gap-12">
+          <div class="lg:col-span-5">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Kostnader</p>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight">
+              Riktpriser för Stockholm 2026.
+            </h2>
+          </div>
+          <div class="lg:col-span-7">
+            <div class="bg-white rounded-2xl overflow-hidden">
+              <table class="w-full text-sm">
+                <thead class="bg-[color:var(--color-ink)] text-white">
+                  <tr>
+                    <th class="text-left px-6 py-4 font-semibold">Omfattning</th>
+                    <th class="text-right px-6 py-4 font-semibold">Riktpris</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-[color:var(--color-ink-10)]">
+                  <tr>
+                    <td class="px-6 py-4">
+                      <strong>Mindre åtgärd</strong><br/>
+                      <span class="text-[color:var(--color-ink-60)]">Sluss, packningar, ytreparationer</span>
+                    </td>
+                    <td class="px-6 py-4 text-right font-semibold">10 000–50 000 kr</td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4">
+                      <strong>Medelomfattande sanering</strong><br/>
+                      <span class="text-[color:var(--color-ink-60)]">Betong, fukt, ventilationsservice</span>
+                    </td>
+                    <td class="px-6 py-4 text-right font-semibold">50 000–150 000 kr</td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4">
+                      <strong>Större sanering</strong><br/>
+                      <span class="text-[color:var(--color-ink-60)]">Flera moment + omfattande betong/ventilation</span>
+                    </td>
+                    <td class="px-6 py-4 text-right font-semibold">150 000–400 000 kr</td>
+                  </tr>
+                  <tr class="bg-[color:var(--color-paper-2)]/50">
+                    <td class="px-6 py-4">
+                      <strong>Filterbyte (separat)</strong><br/>
+                      <span class="text-[color:var(--color-ink-60)]">Kan ersättas av MSB</span>
+                    </td>
+                    <td class="px-6 py-4 text-right font-semibold">30 000–80 000 kr</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-xs text-[color:var(--color-ink-60)] mt-4 leading-relaxed">
+              Slutpriset styrs av antal brister, åtkomst, och om filterbyte ingår. Vi ger fast pris per åtgärd eller totalpris efter platsbesök.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process och tidsplan -->
+    <section id="process" class="py-20 lg:py-28">
       <div class="mx-auto max-w-7xl px-6 lg:px-10">
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
-            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Tidsplan vid MSB-föreläggande</h2>
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Tidsplan vid MSB-föreläggande</p>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">6 till 14 månader, tre vägval.</h2>
             <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-6">
-              Ett typiskt saneringsprojekt för en BRF i Stockholm tar mellan 6 och 14 månader från beslut till godkänd status. MSB:s åtgärdsfrist är normalt 12–24 månader, så tidsplanen är genomförbar om beslut fattas tidigt.
+              Ett typiskt saneringsprojekt för en BRF i Stockholm tar mellan 6 och 14 månader från beslut till godkänd status. MSB:s åtgärdsfrist är normalt 12 till 24 månader, så tidsplanen är genomförbar om beslut fattas tidigt.
             </p>
             <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-8 space-y-4">
               <div class="flex justify-between text-sm">
@@ -119,11 +295,12 @@ const schema = {
             </div>
           </div>
           <div>
-            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Det här ingår</h2>
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Det här ingår</p>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">9 punkter, ett kontrakt.</h2>
             <ul class="space-y-4">
               {[
                 "Genomgång av MSB-protokollet och aktuella ritningar",
-                "Platsbesök med åtgärdsbedömning och provpoint",
+                "Platsbesök med åtgärdsbedömning och provpunkter",
                 "Fast pris per åtgärd eller totalpris för hela saneringen",
                 "Utförande enligt MSB:s ritningsanvisningar med hållfasthetsklass",
                 "Fotodokumentation före och efter varje moment",
@@ -146,21 +323,82 @@ const schema = {
       </div>
     </section>
 
-    <section class="py-20 lg:py-32 bg-[color:var(--color-paper-2)]">
+    <!-- MSB-ersättning -->
+    <section id="msb" class="py-20 lg:py-28 bg-[color:var(--color-ink)] text-white">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-12 gap-12">
+          <div class="lg:col-span-5">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">MSB:s 100 Mkr-anslag</p>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight">Filterbyte ersätts av MSB.</h2>
+          </div>
+          <div class="lg:col-span-7 prose prose-lg prose-invert max-w-none text-white/80 leading-relaxed">
+            <p>
+              För filterbyte i skyddsrum har regeringen avsatt 100 Mkr som administreras av MSB. Det innebär att fastighetsägare som tvingats byta filter efter MSB-kontroll kan få sina kostnader ersatta enligt MSB:s riktlinjer.
+            </p>
+            <p>
+              Vi hanterar både filterbytet och ersättningsansökan som en del av saneringsuppdraget. Det betyder att ni inte behöver navigera MSB:s ansökningsprocess själva, vi sköter dialogen och dokumentationen.
+            </p>
+            <p>
+              <a href="/artiklar/msb-ersattning-skyddsrum-statsbidrag" class="text-[color:var(--color-brand-red)] hover:underline font-medium">Läs mer om MSB-ersättning →</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="max-w-3xl mb-14">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Vanliga frågor</p>
+          <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight">7 saker beställare frågar.</h2>
+        </div>
+
+        <div class="space-y-4 max-w-4xl">
+          {faqs.map((faq) => (
+            <details class="group bg-[color:var(--color-paper-2)] rounded-2xl">
+              <summary class="cursor-pointer p-6 lg:p-8 flex items-start justify-between gap-6 list-none">
+                <h3 class="text-lg lg:text-xl font-semibold tracking-tight">{faq.q}</h3>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="mt-1 flex-shrink-0 text-[color:var(--color-brand-red)] transition-transform group-open:rotate-45" aria-hidden="true">
+                  <path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </summary>
+              <div class="px-6 lg:px-8 pb-6 lg:pb-8 -mt-2 text-[color:var(--color-ink-60)] leading-relaxed">
+                {faq.a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Relaterade läs mer -->
+    <section class="py-16 lg:py-20 bg-[color:var(--color-paper-2)]">
       <div class="mx-auto max-w-7xl px-6 lg:px-10">
         <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Läs mer</h2>
         <div class="grid md:grid-cols-3 gap-6">
           <a href="/artiklar/skyddsrumsbesiktning-brf-stockholm" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] group-hover:text-white/40 font-semibold mb-3">Artikel</p>
             <h3 class="text-xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumsbesiktning för BRF</h3>
             <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Vad MSB kräver, typiska brister och kostnadsnivåer.</p>
           </a>
           <a href="/tjanster/skyddsrumsbesiktning" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] group-hover:text-white/40 font-semibold mb-3">Tjänst</p>
             <h3 class="text-xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumsbesiktning</h3>
             <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Statusbedömning och åtgärdsplan före MSB-kontrollen.</p>
           </a>
-          <a href="/tjanster/skyddsrumsnyproduktion" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
-            <h3 class="text-xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Nyproduktion skyddsrum</h3>
-            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Ersättnings­skyddsrum vid nybyggnation.</p>
+          <a href="/tjanster/filterbyte-skyddsrum" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] group-hover:text-white/40 font-semibold mb-3">Tjänst</p>
+            <h3 class="text-xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Filterbyte skyddsrum</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Filterbyte med MSB-ersättning enligt 100 Mkr-anslaget.</p>
+          </a>
+        </div>
+        <div class="mt-8">
+          <a href="/systemet" class="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--color-ink)] hover:text-[color:var(--color-brand-red)] transition-colors">
+            Läs om Systemet, vårt interna styrsystem
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </a>
         </div>
       </div>
