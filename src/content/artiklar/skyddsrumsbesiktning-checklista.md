@@ -210,4 +210,7 @@ Vi hjälper BRF:er och fastighetsägare med:
 
 [Kontakta oss](/kontakt) för förberedande inspektion eller åtgärd av MSB-anmärkningar i ert skyddsrum.
 
+→ Vår tjänst: [Skyddsrumsbesiktning](/tjanster/skyddsrumsbesiktning/)
+→ Hur vi arbetar: [Systemet, vårt arbetssätt](/systemet)
+
 Läs också: [Skyddsrumsbesiktning för BRF, krav och kostnader](/artiklar/skyddsrumsbesiktning-brf-stockholm/) · [MSB-ersättning för skyddsrumsåtgärd](/artiklar/msb-ersattning-skyddsrum-statsbidrag/)

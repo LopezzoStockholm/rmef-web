@@ -24,6 +24,16 @@ const projectSchema = {
 };
 
 const otherProjects = PROJECTS.filter((p) => p.slug !== project.slug && p.category === project.category).slice(0, 3);
+
+// Mappning från projekt-kategori till primär tjänstesida för internlänk.
+// Money-page-länkar: case bör peka tillbaka till tjänsten de exemplifierar.
+const categoryToService: Record<string, { slug: string; name: string }> = {
+  "Projektering": { slug: "projektering", name: "Projektering inhouse" },
+  "Mark & anläggning": { slug: "mark-och-anlaggning", name: "Mark och anläggning" },
+  "Bygg": { slug: "bygg", name: "Bygg och totalentreprenad" },
+  "Fasad": { slug: "fasad", name: "Fasadrenovering" },
+};
+const primaryService = categoryToService[project.category];
 ---
 
 <BaseLayout
@@ -100,10 +110,30 @@ const otherProjects = PROJECTS.filter((p) => p.slug !== project.slug && p.catego
         {project.challenges && (
           <>
             <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-6">Utmaningar</h2>
-            <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+            <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-12">
               {project.challenges}
             </p>
           </>
+        )}
+
+        {primaryService && (
+          <div class="mt-8 pt-8 border-t border-[color:var(--color-ink-10)]">
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] font-semibold mb-4">Tjänst i detta projekt</p>
+            <div class="flex flex-wrap items-center gap-4">
+              <a href={`/tjanster/${primaryService.slug}/`} class="inline-flex items-center gap-2 bg-[color:var(--color-ink)] text-white px-5 py-3 rounded-full text-sm font-semibold hover:bg-[color:var(--color-brand-red)] transition-colors">
+                {primaryService.name}
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="/systemet" class="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--color-ink)] hover:text-[color:var(--color-brand-red)] transition-colors">
+                Hur vi arbetar: Systemet
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
         )}
       </div>
     </section>

@@ -147,3 +147,8 @@ För skyddsrumsarbete i BRF-fastighet utses BAS-P (planeringsskedet) och BAS-U (
 När MSB-föreläggande kommer hanterar vi hela kedjan: läsning av protokollet, offert med specificerade ersättningsgrundande poster, utförande enligt MSB:s standarder, dokumentation och stöd i ansökan. Ni behöver inte bli experter på MSB:s regelverk, det är vår uppgift.
 
 Läs mer om våra [skyddsrumstjänster](/tjanster/skyddsrum/) eller [kontakta oss](/kontakt/) för platsbesök utan kostnad.
+
+→ Vår tjänst: [Filterbyte skyddsrum](/tjanster/filterbyte-skyddsrum/)
+→ Hur vi arbetar: [Systemet, vårt arbetssätt](/systemet)
+
+Läs också: [Skyddsrumsbesiktning för BRF](/artiklar/skyddsrumsbesiktning-brf-stockholm/) · [Skyddsrumsbesiktning checklista](/artiklar/skyddsrumsbesiktning-checklista/)

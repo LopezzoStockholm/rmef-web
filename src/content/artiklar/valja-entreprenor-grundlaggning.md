@@ -106,3 +106,8 @@ Ställ dessa vid slutintervjun med de 2–3 sista anbudsgivarna:
 ## RM Entreprenad & Fasad
 
 Vi har levererat grundläggningar från 7 Mkr (Danderyds sjukhus) till 75 Mkr (Kv Persikan för Stockholmshem). Soliditet 96 %, F-skatt-registrerade, ansvarsförsäkring på plats. Se [referensprojekt](/projekt/) eller [begär offert](/kontakt/).
+
+→ Vår tjänst: [Mark och anläggning](/tjanster/mark-och-anlaggning/)
+→ Hur vi arbetar: [Systemet, vårt arbetssätt](/systemet)
+
+Läs också: [Grundläggning flerbostadshus kostnad](/artiklar/grundlaggning-flerbostadshus-kostnad-stockholm/) · [Ramavtal mark och anläggning kommun](/artiklar/ramavtal-mark-anlaggning-kommun/)

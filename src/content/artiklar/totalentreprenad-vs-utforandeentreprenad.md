@@ -93,3 +93,8 @@ Valet mellan totalentreprenad och utförandeentreprenad handlar om **hur mycket 
 ## RM Entreprenad & Fasad
 
 Vi driver både totalentreprenader enligt ABT 06 och utförandeentreprenader enligt AB 04. Beroende på ert projekts karaktär hjälper vi er välja rätt entreprenadform. Se [tjänster](/tjanster/) och [referensprojekt](/projekt/).
+
+→ Vår tjänst: [Bygg och totalentreprenad](/tjanster/bygg/)
+→ Hur vi arbetar: [Systemet, vårt arbetssätt](/systemet)
+
+Läs också: [ÄTA-arbete i byggentreprenad](/artiklar/ata-arbete-byggentreprenad/) · [KMA-plan mall](/artiklar/kma-plan-mall-byggentreprenad/)

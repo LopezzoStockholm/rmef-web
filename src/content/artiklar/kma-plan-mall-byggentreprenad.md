@@ -171,4 +171,7 @@ För komplex entreprenad i driftkänslig miljö skalas planen upp till 50+ sidor
 
 [Kontakta oss](/kontakt) så skickar vi en redigerad version av en KMA-plan från ett av våra senaste projekt. Användbart underlag för er styrelse eller upphandling.
 
-Läs också: [Totalentreprenad eller utförandeentreprenad](/artiklar/totalentreprenad-vs-utforandeentreprenad/) · [Så väljer ni entreprenör för grundläggning](/artiklar/valja-entreprenor-grundlaggning/)
+→ Vår tjänst: [Bygg och totalentreprenad](/tjanster/bygg/)
+→ Hur vi arbetar: [Systemet, vårt arbetssätt](/systemet)
+
+Läs också: [Totalentreprenad eller utförandeentreprenad](/artiklar/totalentreprenad-vs-utforandeentreprenad/) · [ÄTA-arbete i byggentreprenad](/artiklar/ata-arbete-byggentreprenad/)

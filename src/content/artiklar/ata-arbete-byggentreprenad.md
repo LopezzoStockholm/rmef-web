@@ -133,4 +133,7 @@ För **fastpriskontrakt** definierar vi tydligt vad som ingår och vad som blir 
 
 [Kontakta oss](/kontakt) för entreprenörsuppdrag med tydlig ÄTA-hantering. Vi levererar med fast pris och dokumenterad ÄTA-process.
 
+→ Vår tjänst: [Bygg och totalentreprenad](/tjanster/bygg/)
+→ Hur vi arbetar: [Systemet, vårt arbetssätt](/systemet)
+
 Läs också: [Totalentreprenad eller utförandeentreprenad](/artiklar/totalentreprenad-vs-utforandeentreprenad/) · [KMA-plan mall](/artiklar/kma-plan-mall-byggentreprenad/)

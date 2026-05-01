@@ -124,4 +124,7 @@ Vi har erfarenhet från BRF-projekt i Stockholm med fast pris och tydlig dokumen
 
 [Kontakta oss](/kontakt) för en kostnadsfri statusbedömning. Vi besöker fastigheten inom 2 veckor och tar fram realistiskt åtgärdsförslag.
 
-Läs också: [Betongrenovering BRF kostnad](/artiklar/betongrenovering-brf-kostnad-stockholm/) · [Skyddsrumsbesiktning för BRF](/artiklar/skyddsrumsbesiktning-brf-stockholm/)
+→ Vår tjänst: [Balkongrenovering](/tjanster/balkongrenovering/)
+→ Hur vi arbetar: [Systemet, vårt arbetssätt](/systemet)
+
+Läs också: [Betongrenovering BRF kostnad](/artiklar/betongrenovering-brf-kostnad-stockholm/) · [Fasadrenovering kostnad](/artiklar/fasadrenovering-kostnad-stockholm/)

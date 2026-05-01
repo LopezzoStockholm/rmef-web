@@ -122,4 +122,7 @@ Mindre lämpligt för:
 
 [Kontakta oss](/kontakt) för diskussion om ramavtal. Vi har erfarenhet från upphandling av ramavtal enligt LOU och privatkontrakt.
 
-Läs också: [Så väljer ni entreprenör för grundläggning](/artiklar/valja-entreprenor-grundlaggning/) · [Totalentreprenad eller utförandeentreprenad](/artiklar/totalentreprenad-vs-utforandeentreprenad/) · [KMA-plan mall](/artiklar/kma-plan-mall-byggentreprenad/)
+→ Vår tjänst: [Mark och anläggning](/tjanster/mark-och-anlaggning/)
+→ Hur vi arbetar: [Systemet, vårt arbetssätt](/systemet)
+
+Läs också: [Så väljer ni entreprenör för grundläggning](/artiklar/valja-entreprenor-grundlaggning/) · [Grundläggning flerbostadshus kostnad](/artiklar/grundlaggning-flerbostadshus-kostnad-stockholm/)

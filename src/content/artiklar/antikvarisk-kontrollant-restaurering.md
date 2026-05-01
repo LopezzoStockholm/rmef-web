@@ -139,4 +139,7 @@ Vid båda projekten samarbetade vi nära med kommunens antikvariska kontrollant 
 
 [Kontakta oss](/kontakt) om er BRF eller fastighet behöver restaureras med antikvariska krav. Vi tar fram offert tillsammans med antikvarisk kontrollant.
 
-Läs också: [Restaurering av K-märkta byggnader](/artiklar/restaurering-k-markt-byggnad-entreprenor/) · [Tjänst: Restaurering kulturbyggnad](/tjanster/restaurering-kulturbyggnad/)
+→ Vår tjänst: [Restaurering kulturbyggnad](/tjanster/restaurering-kulturbyggnad/)
+→ Hur vi arbetar: [Systemet, vårt arbetssätt](/systemet)
+
+Läs också: [Restaurering av K-märkta byggnader](/artiklar/restaurering-k-markt-byggnad-entreprenor/) · [Fasadrenovering kostnad](/artiklar/fasadrenovering-kostnad-stockholm/)

@@ -108,3 +108,8 @@ Skicka följande till minst tre entreprenörer för jämförbara anbud:
 ## RM Entreprenad & Fasad
 
 Vi levererar fasadrenoveringar och totalentreprenader i Stockholm och Mälardalen. Läs om våra [fasadtjänster](/tjanster/fasad/) eller [kontakta oss](/kontakt/) för offert.
+
+→ Vår tjänst: [Fasadrenovering](/tjanster/fasad/)
+→ Hur vi arbetar: [Systemet, vårt arbetssätt](/systemet)
+
+Läs också: [Balkongrenovering kostnad](/artiklar/balkongrenovering-kostnad-brf-stockholm/) · [Betongrenovering BRF kostnad](/artiklar/betongrenovering-brf-kostnad-stockholm/)

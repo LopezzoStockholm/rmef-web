@@ -101,3 +101,8 @@ Vi har genomfört betongrenoveringar i flera Stockholms-BRF:er och samarbetar me
 ## Begär offert
 
 [Kontakta oss](/kontakt) för en kostnadsfri statusbedömning. Vi besöker fastigheten, dokumenterar nuläget och tar fram ett realistiskt åtgärdsförslag inom 2 veckor.
+
+→ Vår tjänst: [Betongrenovering](/tjanster/betongrenovering/)
+→ Hur vi arbetar: [Systemet, vårt arbetssätt](/systemet)
+
+Läs också: [Balkongrenovering kostnad](/artiklar/balkongrenovering-kostnad-brf-stockholm/) · [Fasadrenovering kostnad](/artiklar/fasadrenovering-kostnad-stockholm/)

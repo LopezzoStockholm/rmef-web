@@ -154,7 +154,7 @@ export const PROJECTS: Project[] = [
     category: "Mark & anläggning",
     type: "Utförandeentreprenad",
     summary:
-      "Grundläggning för 152 lägenheter, ICA-butik och förskola på Södermalm. Omfattar schakt, bottenplatta, skyddsrum, platsgjutna källarväggar, ledningsarbeten, isodrän och tätskikt.",
+      "Grundläggning för flerbostadshus i Stockholm, 75 Mkr utförandeentreprenad åt Stockholmshem AB. 152 lägenheter, ICA-butik och förskola på Södermalm. Omfattar schakt, bottenplatta, skyddsrum, platsgjutna källarväggar, ledningsarbeten, isodrän och tätskikt.",
     challenges:
       "Pressad tidplan och begränsade APD-ytor i innerstadsmiljö. Gjutplaner hölls trots ovanligt långa kallperioder under två vintersäsonger.",
     image: "/projekt/foretag_2.webp",
@@ -170,7 +170,7 @@ export const PROJECTS: Project[] = [
     category: "Bygg",
     type: "Totalentreprenad",
     summary:
-      "Total­ombyggnad av flera våningsplan omfattande 3 000 kvm kontorsanpassningar, nya personalkök, wc-grupper och omklädningsrum. Samtliga discipliner levererade i egen regi: bygg, VS, ventilation och styr, el samt målning.",
+      "Kontorsanpassning i Stockholm, 3 000 kvm totalentreprenad åt Axfood AB med kvarvarande hyresgäster. Total­ombyggnad av flera våningsplan: nya personalkök, wc-grupper och omklädningsrum. Samtliga discipliner levererade i egen regi: bygg, VS, ventilation och styr, el samt målning.",
     challenges:
       "Samtliga arbeten utfördes med kvarvarande hyresgäster i direkt anslutning till arbetsområdet. Krävde minutiös logistik kring nytt material och avfall, inga driftstörningar accepterades.",
     image: "/projekt/foretag_24.webp",
@@ -186,7 +186,7 @@ export const PROJECTS: Project[] = [
     category: "Bygg",
     type: "Totalentreprenad, restaurering",
     summary:
-      "K-märkt byggnad på Lidingöbron. Byggnaden lyftes bort från ursprungsläget, genomgick komplett restaurering och återmonterades i ursprungligt läge med antikvarisk hänsyn.",
+      "Restaurering av K-märkt byggnad åt Lidingö Stad. Paviljongen på Lidingöbron lyftes bort från ursprungsläget, genomgick komplett antikvarisk restaurering och återmonterades i ursprungligt läge med extern antikvarisk kontroll.",
     challenges:
       "Precision i lyft och återställning. Löpande antikvariska krav och extern kontroll genom hela processen. Originalmaterial återanvändes där det var möjligt.",
     image: "/projekt/bygg_image4.webp",
@@ -202,7 +202,7 @@ export const PROJECTS: Project[] = [
     category: "Mark & anläggning",
     type: "Utförandeentreprenad",
     summary:
-      "Grundförstärkning, sprängning, pålning, betongarbeten och ledningsarbeten i central stadsmiljö med högt kulturhistoriskt värde.",
+      "Markentreprenad i innerstaden Stockholm åt Atrium Ljungberg. Grundförstärkning, sprängning, pålning, betongarbeten och ledningsarbeten i central kulturhistorisk miljö vid Slussen, 25 Mkr utförandeentreprenad.",
     challenges: "Arbete i kulturhistoriskt känslig miljö vid Slussen med stor publik gångtrafik direkt intill arbetsområdet.",
     image: "/projekt/foretag_16.webp",
     imageAlt: "T11 Katarinahuset, byggnadsarbete med materialhantering",
@@ -313,7 +313,7 @@ export const PROJECTS: Project[] = [
     category: "Mark & anläggning",
     type: "Utförandeentreprenad",
     summary:
-      "Markanläggning i anslutning till Octapharmas verksamhet på Lindhagen. Hygieniska krav och stram arbetsordning pga produktionsmiljön.",
+      "Markentreprenad för läkemedelsindustri i Stockholm åt Octapharma AB. Markanläggning på Lindhagen med hygieniska krav och stram arbetsordning från produktionsmiljön.",
     image: "/projekt/mark_image20.webp",
     imageAlt: "Octapharma Lindhagen, betonggjutning och armering",
     featured: false,

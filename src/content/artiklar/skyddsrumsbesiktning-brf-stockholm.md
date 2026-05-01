@@ -121,3 +121,8 @@ Ja. Skyddsrummet får användas i fredstid så länge det kan iordningställas i
 ## RM Entreprenad & Fasad
 
 Vi utför skyddsrumsbesiktningar, åtgärdsplaner och skyddsrumsrenoveringar i Stockholm och Mälardalen åt bostadsrättsföreningar, kommuner och fastighetsägare. Från MSB-protokoll till godkänd status hanterar vi hela kedjan. Läs om våra [byggtjänster](/tjanster/bygg/) eller [kontakta oss](/kontakt/) för platsbesök.
+
+→ Vår tjänst: [Skyddsrumsbesiktning](/tjanster/skyddsrumsbesiktning/)
+→ Hur vi arbetar: [Systemet, vårt arbetssätt](/systemet)
+
+Läs också: [Skyddsrumsbesiktning checklista](/artiklar/skyddsrumsbesiktning-checklista/) · [MSB-ersättning skyddsrum](/artiklar/msb-ersattning-skyddsrum-statsbidrag/)
