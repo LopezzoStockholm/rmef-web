@@ -1,0 +1,197 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE, PROJECTS } from "../../lib/site";
+
+const title = "Betongarbeten Stockholm, platsgjutning, bottenplattor, källarväggar";
+const description =
+  "Betongentreprenör i Stockholm och Mälardalen. Platsgjutna bottenplattor, källarväggar, skyddsrum och grundförstärkning för professionella beställare. Referens: 75 Mkr grundläggning åt Stockholmshem.";
+
+const referensSlugs = ["kvarteret-persikan", "t11-katarinahuset", "malongen"];
+const referenser = referensSlugs
+  .map((slug) => PROJECTS.find((p) => p.slug === slug))
+  .filter((p): p is NonNullable<typeof p> => !!p);
+
+const faq = [
+  {
+    q: "Vad kostar betongarbeten?",
+    a: "Priset styrs av volym, armeringsinnehåll, formkomplexitet och tillgänglighet på arbetsplatsen. En bottenplatta för ett flerbostadshus prissätts alltid per projekt utifrån handlingarna. Skicka underlag så lämnar vi besked inom 48 timmar.",
+  },
+  {
+    q: "Gjuter ni vintertid?",
+    a: "Ja. Med rätt gjutplan, vinteråtgärder och skydd går det att hålla produktionen genom kallperioder. På Kvarteret Persikan höll vi gjutplanerna genom två vintersäsonger med ovanligt långa köldperioder.",
+  },
+  {
+    q: "Utför ni både mark och betong?",
+    a: "Ja, det är vår styrka. Schakt, spontning, grundläggning och platsgjuten betong utförs av samma organisation, vilket tar bort gränssnittet mellan markentreprenör och betongentreprenör och ger en ansvarig part för hela grundläggningen.",
+  },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      serviceType: "Betongarbeten",
+      provider: { "@id": `${SITE.url}/#organization` },
+      areaServed: ["Stockholm", "Stockholms län", "Mälardalen"],
+      description:
+        "Platsgjutna betongkonstruktioner: bottenplattor, platta på mark, källarväggar, skyddsrum, grundbalkar och grundförstärkning. Formsättning, armering och gjutning i egen regi.",
+      url: `${SITE.url}/tjanster/betongarbeten`,
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faq.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Tjänster", item: `${SITE.url}/tjanster` },
+        { "@type": "ListItem", position: 3, name: "Betongarbeten", item: `${SITE.url}/tjanster/betongarbeten` },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster" class="hover:text-[color:var(--color-brand-red)]">Tjänster</a>
+          <span class="mx-2">/</span>
+          <span>Betongarbeten</span>
+        </nav>
+
+        <div class="inline-flex items-center gap-2 bg-[color:var(--color-brand-red)]/10 border border-[color:var(--color-brand-red)]/20 rounded-full px-4 py-1.5 text-xs font-semibold text-[color:var(--color-brand-red)] mb-6 tracking-wide">
+          <span>Referens: 75 Mkr grundläggning åt Stockholmshem</span>
+        </div>
+
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          Betongarbeten i Stockholm
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          Vi gjuter grunderna som flerbostadshus, skolor och samhällsfastigheter står på. Platsgjutna bottenplattor, källarväggar, skyddsrum och grundförstärkning, med formsättning, armering och gjutning i egen regi. Eftersom vi också utför schakt, sprängning och spontning får beställaren en ansvarig part för hela grundläggningen, utan gränssnitt mellan mark- och betongentreprenör.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Det här gjuter vi</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-2xl font-semibold mb-4">Bottenplattor och platta på mark</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Grundplattor för flerbostadshus, skolor, hallar och boenden. Från schaktbotten och isolering till armering och färdig gjuten platta, i ett åtagande.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-2xl font-semibold mb-4">Platsgjutna källarväggar</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Källarväggar och stödmurar gjutna i form, med tätskikt, isodrän och återfyllning som en del av samma entreprenad. Referens: Kvarteret Persikan på Södermalm.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-2xl font-semibold mb-4">Skyddsrum och tunga konstruktioner</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Platsgjutna skyddsrum enligt MSB:s krav och andra tunga betongkonstruktioner med höga täthets- och armeringskrav.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl">
+            <h3 class="text-2xl font-semibold mb-4">Grundförstärkning och pålfundament</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Betongarbeten vid grundförstärkning, pålning och arbeten i känslig innerstadsmiljö. Referens: T11 Katarinahuset och Mosebackebron vid Slussen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Mark och betong i samma hand</h2>
+            <div class="space-y-6 text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+              <p>
+                Den vanligaste källan till tvist i en grundläggning är gränssnittet mellan markentreprenören och betongentreprenören: vem ansvarar för schaktbottens bärighet, för toleranserna, för att gjutningen kan ske i tid. Vi tar bort det gränssnittet genom att utföra båda leden själva.
+              </p>
+              <p>
+                Vår egen markprojektering bedömer tomten innan avtal skrivs, och gjutplanen läggs utifrån verkliga förhållanden. På Kvarteret Persikan höll vi gjutplanerna genom två vintersäsonger trots ovanligt långa kallperioder, på en pressad innerstadstomt med begränsade ytor.
+              </p>
+              <p>
+                Betongarbeten är en del av vår <a href="/tjanster/mark-och-anlaggning" class="text-[color:var(--color-brand-red)] hover:underline font-medium">mark- och anläggningsentreprenad</a> och ingår i våra <a href="/tjanster/bygg" class="text-[color:var(--color-brand-red)] hover:underline font-medium">totalentreprenader</a>.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Så går en gjutning till</h2>
+            <ol class="space-y-6">
+              <li class="flex gap-6">
+                <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">1</span>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">Underlag och gjutplan</h3>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Schaktbotten kontrolleras och godkänns, gjutplanen läggs mot tidplan, väder och betongleveranser.</p>
+                </div>
+              </li>
+              <li class="flex gap-6">
+                <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">2</span>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">Formsättning och armering</h3>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Form och armering enligt konstruktionshandlingarna, med egenkontroll och dokumentation före varje gjutning.</p>
+                </div>
+              </li>
+              <li class="flex gap-6">
+                <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">3</span>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">Gjutning</h3>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Gjutning med rätt betongkvalitet för konstruktionen, vinteråtgärder när det krävs, och kontroll av utförandet.</p>
+                </div>
+              </li>
+              <li class="flex gap-6">
+                <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">4</span>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">Härdning och efterarbeten</h3>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Skydd under härdning, avformning, tätskikt och återfyllning. Dokumenterad överlämning till nästa skede.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Vanliga frågor</h2>
+        <div class="grid gap-6 max-w-4xl">
+          {faq.map((f) => (
+            <div class="p-8 bg-white rounded-2xl">
+              <h3 class="text-lg font-semibold mb-3">{f.q}</h3>
+              <p class="text-[color:var(--color-ink-60)] leading-relaxed">{f.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Referensprojekt med tunga betongarbeten</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {referenser.map((p) => (
+            <a href={`/projekt/${p.slug}`} class="group block p-8 bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+              <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">{p.client}</p>
+              <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">{p.title}</h3>
+              <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed line-clamp-3 mb-4">{p.summary}</p>
+              {p.volume && <p class="text-sm font-semibold text-[color:var(--color-brand-red)]">{p.volume}</p>}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>

@@ -1,6 +1,6 @@
 export interface Location {
   slug: string;
-  service: "fasadrenovering" | "skyddsrum" | "betongrenovering" | "totalentreprenad";
+  service: "fasadrenovering" | "skyddsrum" | "betongrenovering" | "totalentreprenad" | "markarbeten";
   serviceLabel: string;
   ort: string;
   region?: string;
@@ -308,6 +308,95 @@ export const LOCATIONS: Location[] = [
       "Solnas Bagartorp och Hagalund är typiska för Stockholmsregionens 60–70-tal med stora behov av modernisering. Skol- och institutionsprojekt har särskilda krav på tidplan (skolstart) och driftkänsliga miljöer (förskolor parallellt).",
     referenser: [
       { slug: "raul-wallenberg-bagartorp", titel: "Raul Wallenbergskolan Bagartorp", client: "Raul Wallenberg Academy" },
+    ],
+    tjansteLank: "/tjanster/bygg",
+  },
+
+  // MARKARBETEN, geo-sidor för orter med egna referensprojekt
+  {
+    slug: "markarbeten-norrtalje",
+    service: "markarbeten",
+    serviceLabel: "Markarbeten",
+    ort: "Norrtälje",
+    title: "Markarbeten Norrtälje, schakt, grundläggning, VA",
+    description:
+      "Markentreprenör i Norrtälje. Schakt, grundläggning, ledningsarbeten och finplanering. Referens: totalentreprenad sprinklercentral åt Norrtälje sjukhus.",
+    intro:
+      "Vi utför markarbeten i Norrtälje med omnejd: schakt, grundläggning, VA- och ledningsarbeten samt finplanering. På Norrtälje sjukhus projekterade och utförde vi en komplett sprinklercentral i driftkänslig sjukhusmiljö.",
+    localContext:
+      "Norrtälje växer med både bostäder och samhällsfastigheter, och uppdragen spänner från nyproduktion till arbeten i känsliga driftmiljöer. Vårt arbete på Norrtälje sjukhus utfördes med anslutningar, dränering och finplanering i full drift, den typ av samordning som avgör om ett markjobb stör verksamheten eller inte.",
+    referenser: [
+      { slug: "norrtalje-sjukhus", titel: "Norrtälje sjukhus, sprinklercentral", client: "Norrtälje sjukhus" },
+    ],
+    tjansteLank: "/tjanster/mark-och-anlaggning",
+  },
+  {
+    slug: "markarbeten-sigtuna",
+    service: "markarbeten",
+    serviceLabel: "Markarbeten",
+    ort: "Sigtuna",
+    title: "Markarbeten Sigtuna, markanläggning och ledningsarbeten",
+    description:
+      "Markentreprenör i Sigtuna och Märsta. Markanläggning, schakt och ledningsarbeten. Referens: Internationella Engelska skolan i Sigtuna.",
+    intro:
+      "Vi utför markarbeten i Sigtuna kommun: schakt, markanläggning, ledningsarbeten och finplanering. Referensprojektet Engelska skolan Sigtuna omfattade markanläggning och ledningsarbeten i anslutning till skolbyggnad.",
+    localContext:
+      "I Sigtuna och Märsta pågår utbyggnad av både skolor, bostäder och logistikytor. Skolprojekt ställer särskilda krav: arbetena ska samordnas med verksamhetens tider och färdigställas mot hårda datum, ofta med skolstart som absolut deadline. Det är en miljö vi arbetat i flera gånger, även i Solna med Raul Wallenbergskolan.",
+    referenser: [
+      { slug: "engelska-skolan-sigtuna", titel: "Engelska skolan Sigtuna", client: "Internationella Engelska skolan" },
+    ],
+    tjansteLank: "/tjanster/mark-och-anlaggning",
+  },
+  {
+    slug: "markarbeten-knivsta",
+    service: "markarbeten",
+    serviceLabel: "Markarbeten",
+    ort: "Knivsta",
+    title: "Markarbeten Knivsta, VA-omläggning och schakt i gatumiljö",
+    description:
+      "Markentreprenör i Knivsta. VA-arbeten, ledningsomläggning och schakt i gatumiljö. Referens: ledningsomläggning i centrala Knivsta åt Knivsta kommun.",
+    intro:
+      "Vi utför markarbeten i Knivsta: VA- och ledningsarbeten, schakt och finplanering. Åt Knivsta kommun har vi lagt om kommunal vatten- och avloppsinfrastruktur i centrala Knivsta, i trafikerad gatumiljö.",
+    localContext:
+      "Knivsta är en av regionens snabbast växande kommuner, och tillväxten ställer krav på både ny och omlagd infrastruktur. Ledningsarbeten i gatumiljö kräver trafikanordningsplaner, etappindelning och tät dialog med kommunens driftorganisation, precis så vi arbetade i uppdraget åt Knivsta kommun.",
+    referenser: [
+      { slug: "ledningsomlaggning-knivsta", titel: "Ledningsomläggning Knivsta", client: "Knivsta kommun" },
+    ],
+    tjansteLank: "/tjanster/mark-och-anlaggning",
+  },
+  {
+    slug: "markarbeten-vallentuna",
+    service: "markarbeten",
+    serviceLabel: "Markarbeten",
+    ort: "Vallentuna",
+    title: "Markarbeten Vallentuna, grundläggning för nyproduktion",
+    description:
+      "Markentreprenör i Vallentuna. Schakt, grundläggning och platsgjuten betong för nyproduktion. Pågående: LSS-boende Ubby 1:43 på totalentreprenad.",
+    intro:
+      "Vi utför markarbeten och grundläggning i Vallentuna. Just nu bygger vi ett LSS-boende på fastigheten Ubby 1:43 på totalentreprenad, där mark, grundläggning och byggnation utförs av samma organisation.",
+    localContext:
+      "Vallentuna bygger ut med både bostäder och samhällsfastigheter. Tomter utanför de centrala delarna innebär ofta blandade markförhållanden där schakt, eventuell sprängning och grundläggning behöver bedömas rätt från start. Vår egen markprojektering gör den bedömningen innan avtal skrivs, vilket ger färre överraskningar under produktionen.",
+    referenser: [
+      { slug: "lss-ubby-vallentuna", titel: "LSS-boende Ubby 1:43", client: "Omsorgsaktör" },
+    ],
+    tjansteLank: "/tjanster/mark-och-anlaggning",
+  },
+  {
+    slug: "totalentreprenad-stockholm",
+    service: "totalentreprenad",
+    serviceLabel: "Totalentreprenad",
+    ort: "Stockholm",
+    title: "Totalentreprenad Stockholm, ABT 06 från 20 Mkr",
+    description:
+      "Totalentreprenör i Stockholm. ABT 06 från cirka 20 Mkr och uppåt: nyproduktion, LSS-boenden, kontorsanpassning och komplexa markarbeten. Referens: Axfood huvudkontor.",
+    intro:
+      "Vi driver totalentreprenader i Stockholm från cirka 20 Mkr och uppåt, gärna projekt med komplexa markarbeten. En avtalspart, egen mark- och byggprojektering och en projektledare genom hela utförandet, från första skiss till inflyttningsklart.",
+    localContext:
+      "I Stockholm har vi levererat totalombyggnad av Axfoods huvudkontor med kvarvarande hyresgäster, tunga mark- och betongarbeten vid Slussen och grundläggning på Södermalm åt Stockholmshem. Innerstadsproduktion kräver logistik på begränsade ytor, samordning mot tredje man och tidplaner som håller, det är den miljö vårt arbetssätt är byggt för.",
+    referenser: [
+      { slug: "axfood-huvudkontor", titel: "Axfood huvudkontor", client: "Axfood AB" },
+      { slug: "t11-katarinahuset", titel: "T11 Katarinahuset & Mosebackebron", client: "Atrium Ljungberg" },
+      { slug: "kvarteret-persikan", titel: "Kvarteret Persikan", client: "Stockholmshem AB" },
     ],
     tjansteLank: "/tjanster/bygg",
   },

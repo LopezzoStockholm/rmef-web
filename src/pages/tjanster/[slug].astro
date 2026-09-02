@@ -39,14 +39,67 @@ const seo = seoOverrides[service.slug] ?? {};
 const pageTitle = seo.title ?? service.title;
 const pageDesc = seo.desc ?? service.long.slice(0, 155);
 
+// FAQ per tjänst. Renderas som sektion och som FAQPage-schema (formatet AI-sök oftast citerar).
+const faqBySlug: Record<string, { q: string; a: string }[]> = {
+  bygg: [
+    {
+      q: "Vad kostar en totalentreprenad?",
+      a: "Priset sätts av omfattning, markförhållanden och verksamhetens krav, inte av en kvadratmeterprislista. Vi åtar oss totalentreprenader från cirka 20 Mkr och uppåt och lämnar besked inom 48 timmar efter genomgång av underlaget. Faktureringen följer en milstolpsstyrd betalplan så att beställaren ser vad som är utfört före varje betalning.",
+    },
+    {
+      q: "Vad är skillnaden mellan totalentreprenad ABT 06 och utförandeentreprenad AB 04?",
+      a: "I en totalentreprenad enligt ABT 06 ansvarar entreprenören för både projektering och utförande, beställaren har en avtalspart med helhetsansvar. I en utförandeentreprenad enligt AB 04 tar beställaren fram färdiga handlingar och entreprenören ansvarar för utförandet. Vi driver båda formerna och hjälper gärna till att välja rätt form för projektet.",
+    },
+    {
+      q: "Hur stora projekt åtar ni er?",
+      a: "Totalentreprenader från cirka 20 Mkr och uppåt, gärna projekt med komplexa markarbeten där vår egen mark- och byggprojektering gör störst skillnad. Just nu bygger vi bland annat LSS-boenden i Oskarshamn och Vallentuna.",
+    },
+    {
+      q: "Kan ni ta över ett pågående projekt?",
+      a: "Ja. Vi har tagit över entreprenader mitt i pågående projekt efter byte av entreprenör och hållit både kvalitet och budget, utan att störa hyresgäster eller pågående verksamhet.",
+    },
+  ],
+  "mark-och-anlaggning": [
+    {
+      q: "Vad kostar markarbeten?",
+      a: "Kostnaden styrs av markförhållandena: berg som ska sprängas, jordarnas bärighet, schaktvolym, grundvatten och hur trång arbetsplatsen är. Därför prissätter vi efter platsbesök och genomgång av handlingarna, med besked inom 48 timmar.",
+    },
+    {
+      q: "När krävs spontning?",
+      a: "Spontning krävs när en schakt går djupt intill befintliga byggnader, gator eller ledningar, eller när jorden är för lös för att stå med slänt. Sponten håller tillbaka jorden och skyddar omgivande konstruktioner medan grundläggningen utförs.",
+    },
+    {
+      q: "Utför ni betongarbeten?",
+      a: "Ja. Platsgjutna bottenplattor, källarväggar och skyddsrum är en central del av vår markentreprenad, med egen formsättning, armering och gjutning. Se vår sida om betongarbeten för referenser och arbetssätt.",
+    },
+  ],
+};
+const faq = faqBySlug[service.slug];
+
 const serviceSchema = {
   "@context": "https://schema.org",
-  "@type": "Service",
-  serviceType: service.title,
-  provider: { "@id": `${SITE.url}/#organization` },
-  areaServed: "Stockholm",
-  description: service.long,
-  url: `${SITE.url}/tjanster/${service.slug}`,
+  "@graph": [
+    {
+      "@type": "Service",
+      serviceType: service.title,
+      provider: { "@id": `${SITE.url}/#organization` },
+      areaServed: "Stockholm",
+      description: service.long,
+      url: `${SITE.url}/tjanster/${service.slug}`,
+    },
+    ...(faq
+      ? [
+          {
+            "@type": "FAQPage",
+            mainEntity: faq.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
+          },
+        ]
+      : []),
+  ],
 };
 ---
 
@@ -99,6 +152,22 @@ const serviceSchema = {
         </ul>
       </div>
     </section>
+
+    {faq && (
+      <section class="py-12 lg:py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
+          <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Vanliga frågor</h2>
+          <div class="grid gap-6 max-w-4xl">
+            {faq.map((f) => (
+              <div class="p-8 bg-[color:var(--color-paper-2)] rounded-2xl">
+                <h3 class="text-lg font-semibold mb-3">{f.q}</h3>
+                <p class="text-[color:var(--color-ink-60)] leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
 
     {relatedProjects.length > 0 && (
       <section class="py-20 lg:py-32">
