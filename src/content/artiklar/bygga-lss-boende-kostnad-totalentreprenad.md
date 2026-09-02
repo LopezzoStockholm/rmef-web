@@ -5,8 +5,8 @@ published: 2026-09-01
 category: "Kostnad"
 tags: ["LSS", "LSS-boende", "totalentreprenad", "nyproduktion", "kostnad", "omsorgsfastigheter"]
 readingTime: 6
-heroImage: "/projekt/bygg_image3.webp"
-heroImageAlt: "Markarbeten och grundläggning vid nyproduktion av bostäder"
+heroImage: "/projekt/lss_grund2.webp"
+heroImageAlt: "Grundläggning med cellplast och grundbalkar vid nyproduktion av boende"
 faq:
   - q: "Vad kostar det att bygga ett LSS-boende?"
     a: "En nyproduktion av ett LSS-boende är typiskt ett projekt i storleksordningen 15 Mkr och uppåt. Kostnaden styrs främst av antal lägenheter, tomtens markförhållanden, verksamhetens krav och vald entreprenadform."

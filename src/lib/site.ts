@@ -142,8 +142,8 @@ export const PROJECTS: Project[] = [
       "Nyproduktion av LSS-boende i Oskarshamn på totalentreprenad. Vi driver projektet från projektering till inflyttningsklart boende: egen mark- och byggprojektering, en ansvarig projektledare och milstolpsstyrd fakturering med full dokumentation genom hela utförandet.",
     challenges:
       "Ett boende för omsorgsverksamhet ställer krav på funktion och tillgänglighet i varje detalj. Leveransen styrs mot en fast milstolpsplan där varje etapp dokumenteras innan nästa startar.",
-    image: "/projekt/bygg_image3.webp",
-    imageAlt: "Markarbeten och grundläggning vid nyproduktion av bostäder",
+    image: "/projekt/lss_grund1.webp",
+    imageAlt: "Grundläggning med cellplastisolering vid nyproduktion av LSS-boende",
     featured: true,
   },
   {
@@ -157,8 +157,8 @@ export const PROJECTS: Project[] = [
       "Nyproduktion av LSS-boende i Vallentuna på totalentreprenad. Gränssnitten mellan mark, stomme och installationer löstes i projekteringen innan produktionen startade, med upphandlade underentreprenörer på tydliga avtal.",
     challenges:
       "Totalentreprenad med full samordning av egen produktion och underentreprenörer. Betalplanen har hållits milstolpe för milstolpe genom produktionen.",
-    image: "/projekt/bygg_image5.webp",
-    imageAlt: "Finplanering vid nyproducerat boende",
+    image: "/projekt/lss_stomme1.webp",
+    imageAlt: "Prefabricerat väggelement lyfts med travers i fabrik",
     featured: true,
   },
   {
