@@ -5,6 +5,12 @@ import { SERVICES } from "../../lib/site";
 
 const specialtjanster = [
   {
+    title: "LSS-boenden",
+    href: "/lss-boenden",
+    desc: "Nyproduktion av LSS-boenden på totalentreprenad. Pågående projekt i Oskarshamn och Vallentuna, med kapacitet för cirka fem boenden per år.",
+    tag: "Nyproduktion",
+  },
+  {
     title: "Skyddsrum",
     href: "/tjanster/skyddsrum",
     desc: "Skyddsrumssanering, skyddsrumsbesiktning och nyproduktion av ersättnings­skyddsrum enligt MSB:s krav.",
@@ -32,17 +38,17 @@ const specialtjanster = [
 ---
 
 <BaseLayout
-  title="Tjänster, skyddsrum, fasad, betong, totalentreprenad"
-  description="RM Entreprenad & Fasad levererar skyddsrumssanering, fasadrenovering, betongrenovering, ombyggnation och totalentreprenad i Stockholm och Mälardalen. Fast pris, egen projektledning, full dokumentation."
+  title="Tjänster, LSS-boenden, totalentreprenad, mark, fasad"
+  description="RM Entreprenad & Fasad bygger LSS-boenden och levererar totalentreprenad, mark och anläggning, fasadrenovering och betongrenovering i Stockholm och Mälardalen. Egen projektledning, full dokumentation."
 >
   <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
     <div class="mx-auto max-w-7xl px-6 lg:px-10">
       <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">Tjänster</p>
       <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
-        Skyddsrum. Fasad. Betong. Totalentreprenad.
+        LSS-boenden. Totalentreprenad. Mark. Fasad.
       </h1>
       <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
-        Vi är specialister på skyddsrumssanering, skyddsrumsbesiktning och komplexa byggprojekt där andra entreprenörer tackar nej. Egen projektledning, egna hantverkare och beprövade underentreprenörer ger kontroll över tid, kvalitet och budget.
+        Vi bygger LSS-boenden och tar oss an komplexa byggprojekt där andra entreprenörer tackar nej. Totalentreprenader från cirka 20 Mkr och uppåt, gärna med komplexa markarbeten. Egen projektledning, egna hantverkare och beprövade underentreprenörer ger kontroll över tid, kvalitet och budget.
       </p>
     </div>
   </section>
@@ -106,7 +112,11 @@ const specialtjanster = [
   <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
     <div class="mx-auto max-w-7xl px-6 lg:px-10">
       <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">För olika beställartyper</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/for-omsorgsaktorer" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+          <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Omsorgsaktörer</h3>
+          <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Nyproduktion av LSS- och SoL-boenden på totalentreprenad, från mark till inflyttningsklart.</p>
+        </a>
         <a href="/for-brf" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
           <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Bostads­rätts­föreningar</h3>
           <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Skyddsrum, fasad, balkonger och totalentreprenader med tydliga beslutsunderlag.</p>
@@ -117,7 +127,7 @@ const specialtjanster = [
         </a>
         <a href="/for-kommun" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
           <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Kommuner</h3>
-          <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">LOU-upphandling, antikvariska restaureringar och skol- och institutionsbygg.</p>
+          <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">LOU-upphandling, LSS-boenden, antikvariska restaureringar och skol- och institutionsbygg.</p>
         </a>
         <a href="/for-industri" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
           <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Industri</h3>

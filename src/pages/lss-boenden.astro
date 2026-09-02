@@ -1,0 +1,118 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import { PROJECTS } from "../lib/site";
+
+const title = "LSS-boenden på totalentreprenad, pågående i Oskarshamn och Vallentuna";
+const description =
+  "Vi bygger LSS-boenden på totalentreprenad i Stockholm och Mälardalen. Pågående projekt i Oskarshamn och Vallentuna, kapacitet för cirka fem boenden per år. Egen projektering, milstolpsstyrd betalplan, full dokumentation.";
+
+const lssProjects = PROJECTS.filter((p) => p.slug.startsWith("lss-"));
+
+const leveranser = [
+  {
+    title: "Totalentreprenad ABT 06",
+    desc: "Ett avtal, en ansvarig part. Vi tar projektet från första skiss till inflyttningsklart boende och äger samordningen mellan mark, stomme och installationer.",
+  },
+  {
+    title: "Egen mark- och byggprojektering",
+    desc: "Gränssnitten löses innan spaden går i marken. Det ger färre överraskningar, lägre ÄTA-volym och en tidplan som håller, även på tomter med komplexa markförhållanden.",
+  },
+  {
+    title: "Milstolpsstyrd betalplan",
+    desc: "Faktureringen följer en fast lyftplan kopplad till verifierade milstolpar. Beställaren ser exakt vad som är utfört innan varje betalning.",
+  },
+  {
+    title: "Full dokumentation och KMA",
+    desc: "KMA-plan per projekt, egenkontroller, dagbok och överlämningsdokumentation. Allt paketerat för förvaltning och tillsyn från dag ett.",
+  },
+];
+
+const forVem = [
+  {
+    title: "Privata omsorgsaktörer",
+    desc: "Stabila och finansiellt starka beställare som driver LSS- och SoL-verksamhet och behöver en byggpartner som levererar färdiga boenden på utsatt tid.",
+  },
+  {
+    title: "Kommuner",
+    desc: "Vi är etablerad leverantör till kommunal sektor och van vid LOU:s krav på referenser, dokumentation och finansiell stabilitet.",
+  },
+  {
+    title: "Fastighetsutvecklare",
+    desc: "Utvecklare som bygger samhällsfastigheter för långsiktig förvaltning eller försäljning till institutionella ägare.",
+  },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">LSS-boenden</p>
+        <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
+          Vi bygger LSS-boenden på totalentreprenad.
+        </h1>
+        <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
+          Just nu bygger vi LSS-boenden i Oskarshamn och Vallentuna, och vi planerar för cirka fem boenden per år.
+          Våra beställare är stabila och finansiellt starka aktörer: stora privata företag och kommuner.
+          Vi åtar oss totalentreprenader från cirka 20 Mkr och uppåt, gärna projekt med komplexa markarbeten där vår egen mark- och byggprojektering gör störst skillnad.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Vad vi levererar</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          {leveranser.map((item) => (
+            <div class="p-8 bg-white rounded-2xl">
+              <h3 class="text-xl font-semibold mb-3">{item.title}</h3>
+              <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-base text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl mt-10">
+          Vår kassaflödesprincip skyddar beställaren:
+          <strong class="text-[color:var(--color-ink)]">ingen underentreprenör får betalt innan ni godkänt leveransen enligt avtal.</strong>
+          Det ger ordning i varje led och en leverantörskedja som presterar hela vägen till slutbesiktning.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Pågående LSS-projekt</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          {lssProjects.map((p) => (
+            <a href={`/projekt/${p.slug}`} class="group block p-8 bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+              <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-3">{p.period}</p>
+              <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">{p.title}</h3>
+              <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">{p.type}{p.volume ? ` · ${p.volume}` : ""}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">För vem</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          {forVem.map((item) => (
+            <div class="p-8 bg-white rounded-2xl">
+              <h3 class="text-xl font-semibold mb-3">{item.title}</h3>
+              <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-base text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl mt-10">
+          Ett LSS-boende är en fastighet där funktion, tillgänglighet och driftsäkerhet avgör verksamhetens vardag i decennier.
+          Därför bygger vi med samma styrsystem som i våra mest komplexa entreprenader.
+          <a href="/systemet" class="text-[color:var(--color-brand-red)] hover:underline font-medium">Läs om Systemet →</a>
+        </p>
+      </div>
+    </section>
+
+    <CTA />
+  </article>
+</BaseLayout>

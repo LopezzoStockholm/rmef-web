@@ -71,6 +71,8 @@ const organizationSchema = {
     ...Object.values(SITE.businessListings),
   ].filter(Boolean),
   knowsAbout: [
+    "LSS-boenden",
+    "Nyproduktion LSS-boende",
     "Totalentreprenad ABT 06",
     "Utförandeentreprenad AB 04",
     "Markarbeten",
@@ -93,6 +95,7 @@ const organizationSchema = {
     "@type": "OfferCatalog",
     name: "Entreprenadtjänster",
     itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "LSS-boenden på totalentreprenad" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Projektering" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mark och anläggning" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Bygg och totalentreprenad" } },

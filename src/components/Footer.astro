@@ -42,7 +42,7 @@ const year = new Date().getFullYear();
           <img src="/logo.svg" alt={SITE.name} width="180" height="44" class="h-10 w-auto" style="filter: invert(1) brightness(2);" />
         </a>
         <p class="text-sm text-white/60 leading-relaxed max-w-sm mb-6">
-          Specialister på skyddsrum och komplex entreprenad i Stockholm och Mälardalen.
+          Vi bygger LSS-boenden och driver komplex entreprenad i Stockholm och Mälardalen.
           Egen projektledning, egna hantverkare, beprövade underentreprenörer.
         </p>
         <div class="flex flex-wrap gap-2 text-[10px] font-semibold uppercase tracking-[0.15em] mb-8">
@@ -66,10 +66,11 @@ const year = new Date().getFullYear();
       <div class="lg:col-span-2">
         <h3 class="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40 mb-5">Tjänster</h3>
         <ul class="space-y-3 text-sm">
-          <li><a href="/tjanster/skyddsrum/" class="text-white/80 hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrum</a></li>
+          <li><a href="/lss-boenden/" class="text-white/80 hover:text-[color:var(--color-brand-red)] transition-colors">LSS-boenden</a></li>
           <li><a href="/tjanster/betongrenovering/" class="text-white/80 hover:text-[color:var(--color-brand-red)] transition-colors">Betongrenovering</a></li>
           <li><a href="/tjanster/restaurering-kulturbyggnad/" class="text-white/80 hover:text-[color:var(--color-brand-red)] transition-colors">Restaurering K-märkt</a></li>
           <li><a href="/tjanster/ombyggnation/" class="text-white/80 hover:text-[color:var(--color-brand-red)] transition-colors">Ombyggnation</a></li>
+          <li><a href="/tjanster/skyddsrum/" class="text-white/80 hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrum</a></li>
           {
             Object.values(SERVICES).map((s) => (
               <li>

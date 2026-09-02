@@ -3,9 +3,9 @@ export const SITE = {
   shortName: "RM Entreprenad & Fasad",
   domain: "rmef.se",
   url: "https://rmef.se",
-  defaultTitle: "Skyddsrum och komplex entreprenad Stockholm | RM Entreprenad",
+  defaultTitle: "LSS-boenden och komplex totalentreprenad Stockholm | RM Entreprenad",
   defaultDescription:
-    "Skyddsrumssanering, MSB-besiktning och komplexa byggprojekt i Stockholm. Egen projektering och projektledning, 100+ års kärnerfarenhet, 75 Mkr-projekt levererade i tid. Besked inom 48 timmar.",
+    "Vi bygger LSS-boenden och driver komplexa totalentreprenader från 20 Mkr i Stockholm och Mälardalen. Egen projektering och projektledning, 100+ års kärnerfarenhet, 75 Mkr-projekt levererade i tid. Besked inom 48 timmar.",
   orgNumber: "559251-1462",
   phone: "+468128757 00",
   phoneDisplay: "08-12 87 57 00",
@@ -72,7 +72,7 @@ export const SERVICES: Record<ServiceKey, {
   mark: {
     slug: "mark-och-anlaggning",
     title: "Mark & anläggning",
-    short: "Schakt, grundläggning, spontning, skyddsrum och ledningsarbeten för professionella beställare.",
+    short: "Schakt, grundläggning, spontning och ledningsarbeten för professionella beställare.",
     long: "Kompletta markentreprenader från schakt och sprängning till färdig grundläggning. Spetskompetens inom komplex logistik, flerbostadshus i innerstaden, driftkänsliga sjukhusmiljöer och industri med höga hygieniska krav.",
     bullets: [
       "Schakt, sprängning och spontning",
@@ -86,9 +86,10 @@ export const SERVICES: Record<ServiceKey, {
   bygg: {
     slug: "bygg",
     title: "Bygg & totalentreprenad",
-    short: "Totalentreprenader från första skiss till inflyttningsklar lokal.",
-    long: "Vi driver totalentreprenader (ABT 06) och utförandeentreprenader (AB 04) med en projektledare genom hela utförandet. Spetskompetens inom kontorsanpassning med pågående verksamhet, nyproduktion och restaurering av K-märkta byggnader.",
+    short: "Totalentreprenader från första skiss till inflyttningsklart. Nyproduktion av LSS-boenden och kommersiella lokaler.",
+    long: "Vi driver totalentreprenader (ABT 06) och utförandeentreprenader (AB 04) med en projektledare genom hela utförandet. Spetskompetens inom nyproduktion av LSS-boenden, kontorsanpassning med pågående verksamhet och restaurering av K-märkta byggnader. Vi åtar oss totalentreprenader från cirka 20 Mkr och uppåt, gärna projekt med komplexa markarbeten.",
     bullets: [
+      "Nyproduktion av LSS-boenden och samhällsfastigheter",
       "Totalentreprenad ABT 06 och utförandeentreprenad AB 04",
       "Kontorsanpassning med kvarvarande hyresgäst",
       "Nyproduktion flerbostadshus",
@@ -129,6 +130,37 @@ export interface Project {
 }
 
 export const PROJECTS: Project[] = [
+  {
+    slug: "lss-lokremmen-oskarshamn",
+    title: "LSS-boende Lokremmen 1, Oskarshamn",
+    client: "Omsorgsaktör",
+    volume: "15 Mkr",
+    period: "Pågående",
+    category: "Bygg",
+    type: "Totalentreprenad · nyproduktion",
+    summary:
+      "Nyproduktion av LSS-boende i Oskarshamn på totalentreprenad. Vi driver projektet från projektering till inflyttningsklart boende: egen mark- och byggprojektering, en ansvarig projektledare och milstolpsstyrd fakturering med full dokumentation genom hela utförandet.",
+    challenges:
+      "Ett boende för omsorgsverksamhet ställer krav på funktion och tillgänglighet i varje detalj. Leveransen styrs mot en fast milstolpsplan där varje etapp dokumenteras innan nästa startar.",
+    image: "/projekt/bygg_image3.webp",
+    imageAlt: "Markarbeten och grundläggning vid nyproduktion av bostäder",
+    featured: true,
+  },
+  {
+    slug: "lss-ubby-vallentuna",
+    title: "LSS-boende Ubby 1:43, Vallentuna",
+    client: "Omsorgsaktör",
+    period: "Pågående",
+    category: "Bygg",
+    type: "Totalentreprenad · nyproduktion",
+    summary:
+      "Nyproduktion av LSS-boende i Vallentuna på totalentreprenad. Gränssnitten mellan mark, stomme och installationer löstes i projekteringen innan produktionen startade, med upphandlade underentreprenörer på tydliga avtal.",
+    challenges:
+      "Totalentreprenad med full samordning av egen produktion och underentreprenörer. Betalplanen har hållits milstolpe för milstolpe genom produktionen.",
+    image: "/projekt/bygg_image5.webp",
+    imageAlt: "Finplanering vid nyproducerat boende",
+    featured: true,
+  },
   {
     slug: "rocmore-signalisten",
     title: "Rocmore / Signalisten, Solna",
