@@ -1,66 +1,83 @@
 # RM Entreprenad & Fasad AB
 
-> Stockholmsbaserat entreprenadbolag som utför totalentreprenader inom mark, bygg, el och fasad för professionella beställare. Hög kvalitet, snabb organisation, One Point of Entry.
+> Stockholmsbaserat entreprenadbolag som bygger LSS-boenden och driver komplexa totalentreprenader inom mark, bygg och fasad för professionella beställare i Stockholm och Mälardalen. Totalentreprenader från cirka 20 Mkr och uppåt.
 
 ## Organisation
 
 - **Bolag:** RM Entreprenad & Fasad AB
 - **Org.nr:** 559251-1462
 - **Säte:** Stockholm, Sverige
-- **Räkenskapsår:** november–oktober
-- **Nettoomsättning (senaste år):** 14,7 Mkr
 - **Soliditet:** 96 %
-- **Medarbetare:** Kärnteam + brett nätverk av underentreprenörer
+- **Försäkring:** Ansvarsförsäkring hos Trygg Hansa, F-skatt och momsregistrerat
+- **Medarbetare:** Kärnteam med över 100 års samlad branscherfarenhet plus beprövat nätverk av underentreprenörer
+- **VD:** Daniel Lopez
 
 ## Kärnerbjudande
 
-RM Entreprenad & Fasad levererar nyckelfärdiga entreprenader till professionella beställare. Företaget är leverantörsoberoende och handplockar optimala lösningar per projekt.
+RM Entreprenad & Fasad levererar nyckelfärdiga entreprenader till professionella beställare: omsorgsaktörer, kommuner, fastighetsägare, industri och bostadsrättsföreningar.
+
+### LSS-boenden (huvudfokus)
+Nyproduktion av LSS- och SoL-boenden på totalentreprenad ABT 06, från mark till inflyttningsklart boende. Pågående projekt i Oskarshamn och Vallentuna. Kapacitet för cirka fem boenden per år. Beställare är stabila och finansiellt starka aktörer: stora privata företag och kommuner. Läs mer: https://rmef.se/lss-boenden/
 
 ### Tjänsteområden
-- **Mark & anläggning** — schakt, grundläggning, sprängning, spontning, platta på mark, ledningsarbeten, skyddsrum
-- **Bygg & totalentreprenad** — kontorsanpassningar, nyproduktion, renovering, restaurering av kulturbyggnader
-- **El** — elprojekt via dotterbolag, installation och integration
-- **Fasad** — fasadrenovering, putsarbeten, isolering
+- **Bygg & totalentreprenad**: nyproduktion av LSS-boenden och samhällsfastigheter, kontorsanpassning med pågående verksamhet, restaurering av kulturbyggnader. Totalentreprenad ABT 06 och utförandeentreprenad AB 04
+- **Mark & anläggning**: schakt, sprängning, spontning, grundläggning, platta på mark, betongarbeten, ledningsarbeten, skyddsrum
+- **Projektering**: egen mark- och byggprojektering inhouse, gränssnitten lösta före utförande
+- **Fasad**: fasadrenovering, puts, tilläggsisolering för BRF och fastighetsägare
 
 ### Arbetsmodell
-- **Totalentreprenader** (ABT) — full leverans från projektering till driftklar anläggning
-- **Utförandeentreprenader** (AB) — utförande enligt färdiga handlingar
-- **One Point of Entry** — en kontaktperson under upphandling, en projektledare under genomförande
+- **Totalentreprenader** (ABT 06), full leverans från projektering till inflyttningsklart, från cirka 20 Mkr och uppåt, gärna projekt med komplexa markarbeten
+- **Utförandeentreprenader** (AB 04), utförande enligt färdiga handlingar
+- **Milstolpsstyrd betalplan**: fakturering kopplad till verifierade milstolpar
+- **En kontaktväg**: en projektledare genom hela utförandet
 
 ## Referensprojekt
 
+### LSS-boenden (pågående)
+- **LSS-boende Lokremmen 1, Oskarshamn** (15 Mkr, totalentreprenad), nyproduktion, pågående
+- **LSS-boende Ubby 1:43, Vallentuna** (totalentreprenad), nyproduktion, pågående
+
 ### Mark & anläggning
-- **Kvarteret Persikan** (Stockholmshem, 75 Mkr, 2023–2025) — grundläggning för 152 lägenheter, ICA och förskola. Schakt, bottenplatta, skyddsrum, platsgjutna källarväggar
-- **Malongen** (Habitek, 16 Mkr) — grundläggning flerbostadshus, sprängning, spontning
-- **T11 Katarinahuset och Mosebackebron** (Atrium Ljungberg, 25 Mkr) — grundförstärkning, pålning, betongarbeten
-- **Noshörningen** (Skanska, 8 Mkr) — schakt och grundläggning skola
-- **Danderyds sjukhus — Kallvattenservis / Sjökyla / godsmottagning** (Locum)
-- **Norrtälje sjukhus** — sprinklercentral
-- **Raul Wallenbergsskolan Bagartorp**
-- **Engelska skolan Sigtuna**
-- **Octapharma AB Lindhagen**
-- **Good to Great Tennisakademien**
+- **Rocmore / Signalisten, Solna** (ramavtal, cirka 40 Mkr per år, löpande), grundläggning, schakt, ledningsarbeten och finplanering åt Solna Stads allmännytta
+- **Kvarteret Persikan** (Stockholmshem, 75 Mkr, 2023–2025), grundläggning för 152 lägenheter, ICA och förskola. Schakt, bottenplatta, skyddsrum, platsgjutna källarväggar
+- **T11 Katarinahuset och Mosebackebron** (Atrium Ljungberg, 25 Mkr, pågående), grundförstärkning, pålning, betongarbeten vid Slussen
+- **Malongen** (Habitek, 16 Mkr), grundläggning flerbostadshus, sprängning, spontning
+- **Danderyds sjukhus** (Locum), kallvattenservis, sjökyla, godsmottagning i driftkänslig miljö
+- **Noshörningen** (Skanska, 8 Mkr), schakt och grundläggning skola
+- **Norrtälje sjukhus**: sprinklercentral
+- **Octapharma Lindhagen**: markentreprenad med hygieniska krav
 
 ### Bygg
-- **Axfood huvudkontor** — flera våningsplan totalombyggnad, 7–25 Mkr per etapp, totalentreprenad
-- **Vindarnas tempel** (Lidingö Stad, 3 Mkr) — lyft, restaurering och återmontering av K-märkt byggnad
-- **Kaptensstugan** (Lidingö Stad, 8 Mkr) — restaurering kulturbyggnad på Hustegaholm
+- **Axfood huvudkontor** (7–25 Mkr per etapp, totalentreprenad), totalombyggnad av flera våningsplan med kvarvarande hyresgäster
+- **Vindarnas tempel** (Lidingö Stad, 3 Mkr), lyft, restaurering och återmontering av K-märkt byggnad
+- **Kaptensstugan** (Lidingö Stad, 8 Mkr), restaurering kulturbyggnad på Hustegaholm
 
-## KMA — Kvalitet, Miljö, Arbetsmiljö
+## KMA: Kvalitet, Miljö, Arbetsmiljö
 
-Företaget arbetar efter en dokumenterad KMA-plan som anpassas per projekt. Kvalitetssäkring sker via egenkontroller, processdokumentation och utbildade medarbetare med rätt utrustning.
+Företaget arbetar efter en dokumenterad KMA-plan som anpassas per projekt. Kvalitetssäkring sker via egenkontroller, processdokumentation och full överlämningsdokumentation. Det interna styrsystemet beskrivs på https://rmef.se/systemet/
+
+## Nyckelsidor
+
+- LSS-boenden: https://rmef.se/lss-boenden/
+- Tjänster: https://rmef.se/tjanster/
+- Totalentreprenad: https://rmef.se/tjanster/bygg/
+- Markarbeten och grundläggning: https://rmef.se/tjanster/mark-och-anlaggning/
+- Referensprojekt: https://rmef.se/projekt/
+- För omsorgsaktörer: https://rmef.se/for-omsorgsaktorer/
+- För kommuner: https://rmef.se/for-kommun/
+- Artiklar och guider: https://rmef.se/artiklar/
+- Kontakt: https://rmef.se/kontakt/
 
 ## Kontakt
 
 - **Telefon:** 08-12 87 57 00
 - **E-post:** info@rmef.se
 - **Webbplats:** https://rmef.se
-- **VD:** Daniel Lopez
 
 ## Varför välja RM
 
-- Hög kompetens och erfarenhet från komplexa projekt (datahallar, sjukhus, K-märkta byggnader)
-- Helhetsansvar — ett ansvar för hela processen
-- Snabb och flexibel organisation med korta beslutsvägar
-- Brett nätverk av underentreprenörer, flera kompetenser in-house
-- Arbetar rikstäckande, med bas i Stockholm
+- Bygger LSS-boenden med upprepad leverans, flera pågående projekt samtidigt
+- Egen mark- och byggprojektering, tar gärna tomter med komplexa markförhållanden
+- Helhetsansvar med en projektledare och milstolpsstyrd betalplan
+- Erfarenhet från driftkänsliga miljöer: sjukhus, läkemedelsindustri, K-märkta byggnader
+- Snabb och flexibel organisation med korta beslutsvägar, bas i Stockholm
