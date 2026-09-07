@@ -1,5 +1,5 @@
 ---
-title: "Vad kostar en fasadrenovering i Stockholm? Riktpriser, påverkansfaktorer och vad som ingår"
+title: "Vad kostar en fasadrenovering i Stockholm? Riktpriser 2026"
 description: "Realistiska riktpriser för fasadrenovering i Stockholm 2026. Kostnadsintervall per kvm, vad som påverkar priset och checklista inför offert."
 published: 2026-04-22
 category: "Kostnad"

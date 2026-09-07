@@ -1,5 +1,5 @@
 ---
-title: "Spontning: när krävs det, vilka typer finns och vad styr kostnaden?"
+title: "Spontning: när krävs det och vad styr kostnaden?"
 description: "När krävs spontning vid schakt och grundläggning? Genomgång av sponttyper, när slänt räcker, och vad som styr kostnaden för spont i stadsmiljö."
 published: 2026-09-02
 category: "Teknik"

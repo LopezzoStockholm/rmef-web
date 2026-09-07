@@ -1,5 +1,5 @@
 ---
-title: "Grundläggning för flerbostadshus i Stockholm, kostnad, metod och fallgropar 2026"
+title: "Grundläggning flerbostadshus Stockholm: kostnad och metod"
 description: "Realistiska riktpriser för grundläggning av flerbostadshus i Stockholm. Schakt, spontning, bottenplatta, skyddsrum och vanliga fällor i innerstadsprojekt."
 published: 2026-04-24
 category: "Kostnad"

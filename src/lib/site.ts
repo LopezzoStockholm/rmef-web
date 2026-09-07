@@ -3,9 +3,9 @@ export const SITE = {
   shortName: "RM Entreprenad & Fasad",
   domain: "rmef.se",
   url: "https://rmef.se",
-  defaultTitle: "LSS-boenden och komplex totalentreprenad Stockholm | RM Entreprenad",
+  defaultTitle: "LSS-boenden och totalentreprenad Stockholm | RM Entreprenad",
   defaultDescription:
-    "Vi bygger LSS-boenden och driver komplexa totalentreprenader från 20 Mkr i Stockholm och Mälardalen. Egen projektering och projektledning, 100+ års kärnerfarenhet, 75 Mkr-projekt levererade i tid. Besked inom 48 timmar.",
+    "Vi bygger LSS-boenden och driver komplexa totalentreprenader från 20 Mkr i Stockholm och Mälardalen. Egen projektering och projektledning. Besked inom 48 timmar.",
   orgNumber: "559251-1462",
   phone: "+468128757 00",
   phoneDisplay: "08-12 87 57 00",

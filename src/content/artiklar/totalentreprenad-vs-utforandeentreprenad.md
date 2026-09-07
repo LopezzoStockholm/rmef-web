@@ -1,5 +1,5 @@
 ---
-title: "Totalentreprenad eller utförandeentreprenad: vilken passar ert projekt?"
+title: "Totalentreprenad eller utförandeentreprenad: vilken passar?"
 description: "Skillnaden mellan ABT 06 och AB 04 förklarad. Ansvar, risk, pris och när respektive entreprenadform passar bäst. Guide för beställare 2026."
 published: 2026-04-22
 category: "Upphandling"

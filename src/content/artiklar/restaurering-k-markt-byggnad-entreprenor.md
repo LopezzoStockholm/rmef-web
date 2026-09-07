@@ -1,5 +1,5 @@
 ---
-title: "Restaurering av K-märkta byggnader, antikvariska krav och vad en entreprenör måste kunna"
+title: "Restaurering av K-märkt byggnad, krav och val av entreprenör"
 description: "Så ser processen ut vid restaurering av K-märkta byggnader i Stockholm. Antikvariska krav, myndighetsprocesser och vad som skiljer kulturbyggnadsentreprenör från vanlig byggfirma."
 published: 2026-04-24
 category: "Branschinsikt"

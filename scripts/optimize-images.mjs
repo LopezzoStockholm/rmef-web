@@ -36,7 +36,7 @@ for (const f of files) {
         .toFile(join(OUT_LARGE, `${outName}${v.suffix}.webp`));
       totalVariants++;
     }
-    // Thumb (smaller crop för project list cards) — keep original behavior
+    // Thumb (smaller crop för project list cards), keep original behavior
     await sharp(src)
       .rotate()
       .resize({ width: 800, withoutEnlargement: true })

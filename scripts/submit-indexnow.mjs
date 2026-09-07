@@ -1,5 +1,5 @@
 // Submit all URLs from the built sitemap to IndexNow (Bing, Yandex, Naver, Seznam).
-// Inget konto krävs — bara nyckelfil på /{key}.txt. Läser URL:er från dist/sitemap-0.xml
+// Inget konto krävs, bara nyckelfil på /{key}.txt. Läser URL:er från dist/sitemap-0.xml
 // så listan alltid matchar senaste bygget (kräver att `astro build` körts först).
 import { readFileSync, existsSync } from 'node:fs';
 
@@ -9,7 +9,7 @@ const HOST = 'rmef.se';
 function urlsFromSitemap() {
   const path = 'dist/sitemap-0.xml';
   if (!existsSync(path)) {
-    throw new Error(`${path} saknas — kör 'npm run build' först`);
+    throw new Error(`${path} saknas, kör 'npm run build' först`);
   }
   const xml = readFileSync(path, 'utf-8');
   return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);

@@ -21,7 +21,12 @@ const {
   schema,
 } = Astro.props;
 
-const fullTitle = title === SITE.defaultTitle ? title : `${title}, ${SITE.shortName}`;
+// Google klipper titeln runt 60 tecken. Varumarkessuffixet laggs darfor pa BARA
+// nar hela titeln ryms, annars staller det sig i vagen for nyckelorden.
+const TITLE_MAX = 62;
+const withBrand = `${title}, ${SITE.shortName}`;
+const fullTitle =
+  title === SITE.defaultTitle ? title : withBrand.length <= TITLE_MAX ? withBrand : title;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? SITE.url).toString();
 const ogImage = new URL(image, Astro.site ?? SITE.url).toString();
 
