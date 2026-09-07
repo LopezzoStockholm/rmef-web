@@ -1,6 +1,6 @@
 # RM Entreprenad & Fasad AB
 
-> Stockholmsbaserat entreprenadbolag som bygger LSS-boenden och driver komplexa totalentreprenader inom mark, bygg och stomme för professionella beställare i Stockholm och Mälardalen. Egen husfabrik för prefabricerad stomme. Totalentreprenader från cirka 20 Mkr och uppåt.
+> Stockholmsbaserat entreprenadbolag som bygger LSS-boenden och driver komplexa totalentreprenader inom mark, bygg och stomme för professionella beställare i Stockholm och Mälardalen. Prefabricerad stomme i nära samarbete med svensk husfabrik. Totalentreprenader från cirka 20 Mkr och uppåt.
 
 ## Organisation
 
@@ -21,7 +21,7 @@ Nyproduktion av LSS- och SoL-boenden på totalentreprenad ABT 06, från mark til
 
 ### Tjänsteområden
 - **Bygg & totalentreprenad**: nyproduktion av LSS-boenden och samhällsfastigheter, kontorsanpassning med pågående verksamhet, restaurering av kulturbyggnader. Totalentreprenad ABT 06 och utförandeentreprenad AB 04
-- **Stomme & husfabrik**: svensktillverkad prefabricerad stomme ur egen husfabrik. Utfackningsväggar med isolering och fönster monterade, samt kompletta modulvolymer. Projekterad för byggnader som certifieras enligt Miljöbyggnad Brons, Silver eller Guld. Element som omfattas av harmoniserad standard levereras med prestandadeklaration och CE-märkning. Samma KMA-process som i entreprenaderna. Läs mer: https://rmef.se/tjanster/stomme-husfabrik/
+- **Stomme & husfabrik**: svensktillverkad prefabricerad stomme i nära samarbete med husfabrik. Utfackningsväggar med isolering och fönster monterade, samt kompletta modulvolymer. CE-märkta element med prestandadeklaration. Projekterad för byggnader som certifieras enligt Miljöbyggnad Brons, Silver eller Guld. Samma KMA-process som i entreprenaderna. RM är beställarens enda avtalspart genom hela kedjan. Läs mer: https://rmef.se/tjanster/stomme-husfabrik/
 - **Mark & anläggning**: schakt, sprängning, spontning, grundläggning, platta på mark, betongarbeten, ledningsarbeten, skyddsrum
 - **Projektering**: egen mark- och byggprojektering inhouse, gränssnitten lösta före utförande
 - **Fasad**: fasadrenovering, puts, tilläggsisolering för BRF och fastighetsägare

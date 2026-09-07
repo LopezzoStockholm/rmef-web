@@ -107,12 +107,12 @@ export const SERVICES: Record<ServiceKey, {
   stomme: {
     slug: "stomme-husfabrik",
     title: "Stomme & husfabrik",
-    short: "Svensktillverkad stomme ur egen husfabrik: utfackningsväggar och modulvolymer, färdiga att resa på plats.",
-    long: "Vi levererar och monterar prefabricerad stomme från svensk husfabrik: utfackningsväggar och kompletta modulvolymer, tillverkade inomhus under kontrollerade förhållanden och resta på plats med kort byggtid. Elementen projekteras för byggnader som ska certifieras enligt Miljöbyggnad Brons, Silver eller Guld, och tillverkningen följer samma KMA-process som våra entreprenader.",
+    short: "Svensktillverkad och CE-märkt stomme i nära samarbete med husfabrik: utfackningsväggar och modulvolymer, färdiga att resa på plats.",
+    long: "Vi levererar och monterar prefabricerad stomme i nära samarbete med svensk husfabrik: utfackningsväggar och kompletta modulvolymer, tillverkade inomhus under kontrollerade förhållanden och resta på plats med kort byggtid. Elementen är CE-märkta och projekteras för byggnader som ska certifieras enligt Miljöbyggnad Brons, Silver eller Guld. Genom hela kedjan är vi beställarens enda avtalspart.",
     bullets: [
       "Utfackningsväggar med färdig isolering, fönster och ytskikt",
       "Modulvolymer, kompletta rumsenheter färdiga inifrån",
-      "Svensktillverkat i fabrik, kortare byggtid och färre väderstopp",
+      "Svensktillverkat och CE-märkt, kortare byggtid och färre väderstopp",
       "Projekterad för Miljöbyggnad Brons, Silver och Guld",
       "Samma KMA-process och dokumentation som i våra entreprenader",
     ],
