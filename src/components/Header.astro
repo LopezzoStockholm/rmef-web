@@ -1,13 +1,14 @@
 ---
 import { SITE } from "../lib/site";
 
+// Max 7 flikar. Lokalt och Artiklar bor i footern: de ar SEO-ytor, inte
+// navigationsvagar for en bestallare, och natt via sitemap + interna lankar.
 const nav = [
   { href: "/systemet", label: "Systemet" },
   { href: "/lss-boenden", label: "LSS-boenden" },
+  { href: "/tjanster/stomme-husfabrik", label: "Stomme" },
   { href: "/tjanster", label: "Tjänster" },
-  { href: "/lokalt", label: "Lokalt" },
   { href: "/projekt", label: "Referensprojekt" },
-  { href: "/artiklar", label: "Artiklar" },
   { href: "/om-oss", label: "Om oss" },
   { href: "/kontakt", label: "Kontakt" },
 ];

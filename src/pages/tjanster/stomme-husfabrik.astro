@@ -1,0 +1,264 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { SITE, PROJECTS } from "../../lib/site";
+
+const title = "Stomme och husfabrik, utfackningsväggar och modulvolymer";
+const description =
+  "Svensktillverkad prefabricerad stomme: utfackningsväggar och modulvolymer ur egen husfabrik. Projekterad för Miljöbyggnad Brons, Silver och Guld, med samma KMA-process som i våra entreprenader.";
+
+const referensSlugs = ["lss-ubby-vallentuna", "lss-lokremmen-oskarshamn"];
+const referenser = referensSlugs
+  .map((slug) => PROJECTS.find((p) => p.slug === slug))
+  .filter((p): p is NonNullable<typeof p> => !!p);
+
+const faq = [
+  {
+    q: "Vad är skillnaden mellan utfackningsväggar och modulvolymer?",
+    a: "En utfackningsvägg är ett väggelement som fyller ut mellan den bärande stommen, färdigt med regelverk, isolering, vindskydd och ofta fönster redan monterade. En modulvolym är en komplett rumsenhet som byggs färdig inifrån i fabrik, med ytskikt och installationer, och lyfts på plats som en färdig del av byggnaden. Utfackningsväggar ger störst frihet i arkitekturen, modulvolymer ger kortast byggtid på plats.",
+  },
+  {
+    q: "Kan stommen användas i byggnader som ska certifieras enligt Miljöbyggnad?",
+    a: "Ja. Elementen projekteras för byggnader som ska certifieras enligt Miljöbyggnad Brons, Silver eller Guld. Certifieringen görs alltid på den färdiga byggnaden, inte på en enskild produkt, men stommens materialval, fuktsäkring, lufttäthet och dokumentation är avgörande för flera av indikatorerna och underlaget levereras med elementen.",
+  },
+  {
+    q: "Hur mycket kortare blir byggtiden?",
+    a: "Stommen tillverkas inomhus parallellt med att marken och grunden färdigställs, i stället för efter. Det tar bort väderberoendet i den mest kritiska fasen och kortar tiden på arbetsplatsen väsentligt. Hur mycket beror på projektets storlek och logistik, vi redovisar det i tidplanen vid offert.",
+  },
+  {
+    q: "Levererar ni bara stomme, eller hela byggnaden?",
+    a: "Båda. Vi levererar stomme som separat leverans till andra byggherrar och entreprenörer, och vi använder samma stomme i våra egna totalentreprenader, där mark, grund, stomme och färdigställande ligger i ett och samma åtagande.",
+  },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      serviceType: "Prefabricerad stomme",
+      provider: { "@id": `${SITE.url}/#organization` },
+      areaServed: ["Stockholm", "Stockholms län", "Mälardalen", "Sverige"],
+      description:
+        "Svensktillverkad prefabricerad stomme från egen husfabrik: utfackningsväggar och kompletta modulvolymer, projekterade för byggnader som certifieras enligt Miljöbyggnad Brons, Silver eller Guld.",
+      url: `${SITE.url}/tjanster/stomme-husfabrik`,
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faq.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Tjänster", item: `${SITE.url}/tjanster` },
+        { "@type": "ListItem", position: 3, name: "Stomme och husfabrik", item: `${SITE.url}/tjanster/stomme-husfabrik` },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={schema} image="/projekt/lss_stomme1.webp">
+  <article>
+    <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <nav class="text-xs text-[color:var(--color-ink-40)] mb-8" aria-label="Brödsmulor">
+          <a href="/" class="hover:text-[color:var(--color-brand-red)]">Hem</a>
+          <span class="mx-2">/</span>
+          <a href="/tjanster" class="hover:text-[color:var(--color-brand-red)]">Tjänster</a>
+          <span class="mx-2">/</span>
+          <span>Stomme och husfabrik</span>
+        </nav>
+
+        <div class="inline-flex items-center gap-2 bg-[color:var(--color-brand-red)]/10 border border-[color:var(--color-brand-red)]/20 rounded-full px-4 py-1.5 text-xs font-semibold text-[color:var(--color-brand-red)] mb-6 tracking-wide">
+          <span>Svensktillverkat i egen husfabrik</span>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div class="lg:col-span-7">
+            <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight mb-8">
+              Stommen byggs inomhus.
+              <span class="block text-[color:var(--color-brand-red)]">Sedan reser vi den på en dag.</span>
+            </h1>
+            <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed">
+              Vi tillverkar utfackningsväggar och kompletta modulvolymer i egen husfabrik, under tak och under kontrollerade förhållanden. Medan marken och grunden färdigställs står stommen redan och byggs. Resultatet är kortare byggtid, jämnare kvalitet och en produktion som inte stannar när vintern kommer.
+            </p>
+          </div>
+          <div class="lg:col-span-5">
+            <div class="aspect-[4/5] rounded-3xl overflow-hidden bg-[color:var(--color-steel)] shadow-2xl shadow-black/10">
+              <img
+                src="/projekt/lss_stomme1-800.webp"
+                srcset="/projekt/lss_stomme1-400.webp 400w, /projekt/lss_stomme1-800.webp 800w, /projekt/lss_stomme1-1200.webp 1200w"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                alt="Färdigt väggelement med fönsteröppningar lyfts med travers i husfabriken"
+                width="800"
+                height="1000"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Två sätt att bygga med prefab</h2>
+        <div class="grid lg:grid-cols-2 gap-6">
+          <div class="p-10 bg-white rounded-3xl">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">Elementbyggt</p>
+            <h3 class="text-3xl font-semibold mb-5">Utfackningsväggar</h3>
+            <p class="text-[color:var(--color-ink-60)] leading-relaxed mb-6">
+              Väggelement som fyller ut mellan den bärande stommen, färdiga med regelverk, isolering, vindskydd, fönster och ytskikt när de lämnar fabriken. Elementen lyfts på plats och sluts till tätt hus på kort tid, vilket ger friheten i arkitekturen kvar samtidigt som väderberoendet försvinner.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-[color:var(--color-brand-red)] flex-shrink-0"></span><span class="leading-relaxed">Isolering, vindskydd och fönster monterade i fabrik</span></li>
+              <li class="flex items-start gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-[color:var(--color-brand-red)] flex-shrink-0"></span><span class="leading-relaxed">Fri planlösning, passar både bostad och samhällsfastighet</span></li>
+              <li class="flex items-start gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-[color:var(--color-brand-red)] flex-shrink-0"></span><span class="leading-relaxed">Fukt- och lufttäthet kontrollerad inomhus, inte i regn</span></li>
+            </ul>
+          </div>
+          <div class="p-10 bg-white rounded-3xl">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">Volymbyggt</p>
+            <h3 class="text-3xl font-semibold mb-5">Modulvolymer</h3>
+            <p class="text-[color:var(--color-ink-60)] leading-relaxed mb-6">
+              Kompletta rumsenheter som byggs färdiga inifrån i fabrik, med ytskikt, installationer och inredning på plats i volymen. Modulerna lyfts på färdig grund och kopplas ihop. Det är den snabbaste vägen från grund till inflyttningsklart, och den passar särskilt boenden där rummen upprepas.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-[color:var(--color-brand-red)] flex-shrink-0"></span><span class="leading-relaxed">Färdiga rumsenheter med ytskikt och installationer</span></li>
+              <li class="flex items-start gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-[color:var(--color-brand-red)] flex-shrink-0"></span><span class="leading-relaxed">Kortast tid på arbetsplatsen, minimal störning för omgivningen</span></li>
+              <li class="flex items-start gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-[color:var(--color-brand-red)] flex-shrink-0"></span><span class="leading-relaxed">Repeterbar kvalitet, väl lämpat för LSS- och SoL-boenden</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-6">Miljö, kvalitet och märkning</h2>
+        <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl mb-12">
+          En stomme som ska sitta i femtio år ska gå att dokumentera från första regel. Vi bygger med samma krav i fabriken som på byggarbetsplatsen.
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-8 bg-[color:var(--color-paper-2)] rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Miljöbyggnad Brons, Silver och Guld</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Elementen projekteras för byggnader som ska certifieras enligt Miljöbyggnad, oavsett nivå. Certifieringen görs på den färdiga byggnaden, och vi levererar det underlag stommen ska bidra med.</p>
+          </div>
+          <div class="p-8 bg-[color:var(--color-paper-2)] rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">CE-märkning och prestandadeklaration</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Element som omfattas av harmoniserad standard levereras med prestandadeklaration och CE-märkning enligt byggproduktförordningen, så att egenskaperna går att kontrollera mot handlingarna.</p>
+          </div>
+          <div class="p-8 bg-[color:var(--color-paper-2)] rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Samma KMA-process</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">KMA-plan, egenkontroller och dokumentation följer elementet hela vägen från fabriksgolv till monterad byggnad. Samma process som i alla våra entreprenader.</p>
+          </div>
+          <div class="p-8 bg-[color:var(--color-paper-2)] rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Svensktillverkat</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Tillverkning i Sverige med svenska kollektivavtal, korta transporter och en fabrik beställaren kan besöka. Inga oklara led i leverantörskedjan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-asphalt)] text-white">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-12">Från ritning till rest stomme</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          <div>
+            <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">1</span>
+            <h3 class="text-xl font-semibold mt-4 mb-3">Projektering</h3>
+            <p class="text-white/60 leading-relaxed text-sm">Elementindelning, konstruktion och installationer löses innan tillverkningen startar. Vår egen projektering äger gränssnittet mot grund och installationer.</p>
+          </div>
+          <div>
+            <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">2</span>
+            <h3 class="text-xl font-semibold mt-4 mb-3">Tillverkning</h3>
+            <p class="text-white/60 leading-relaxed text-sm">Element och volymer byggs inomhus parallellt med markarbetet på plats. Egenkontroller och fuktmätning dokumenteras löpande.</p>
+          </div>
+          <div>
+            <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">3</span>
+            <h3 class="text-xl font-semibold mt-4 mb-3">Transport och montage</h3>
+            <p class="text-white/60 leading-relaxed text-sm">Leverans i montageordning direkt till kran. Stommen reses på dagar i stället för veckor, med väderskydd där det behövs.</p>
+          </div>
+          <div>
+            <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">4</span>
+            <h3 class="text-xl font-semibold mt-4 mb-3">Färdigställande</h3>
+            <p class="text-white/60 leading-relaxed text-sm">Tätt hus, installationer och invändigt färdigställande, med samma projektledare hela vägen fram till dokumenterad överlämning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Fabrik och byggplats i samma hand</h2>
+            <div class="space-y-6 text-lg text-[color:var(--color-ink-60)] leading-relaxed">
+              <p>
+                De flesta som köper prefab köper en leverans. Sedan står byggherren själv med gränssnittet mellan fabrikens toleranser, grundens verklighet och montörens tidplan. Det är där prefabprojekt tappar den tid de skulle spara.
+              </p>
+              <p>
+                Vi levererar båda leden. Egen <a href="/tjanster/mark-och-anlaggning" class="text-[color:var(--color-brand-red)] hover:underline font-medium">mark och grundläggning</a>, egna <a href="/tjanster/betongarbeten" class="text-[color:var(--color-brand-red)] hover:underline font-medium">betongarbeten</a> och egen stomme betyder att grunden är gjuten mot fabrikens mått, inte tvärtom. I våra <a href="/tjanster/bygg" class="text-[color:var(--color-brand-red)] hover:underline font-medium">totalentreprenader</a> ligger hela kedjan i ett åtagande.
+              </p>
+              <p>
+                Vill ni bara ha stommen levererad går det lika bra. Vi säljer element och volymer till andra byggherrar och entreprenörer, med montage om ni vill ha det.
+              </p>
+            </div>
+          </div>
+          <div class="rounded-3xl overflow-hidden bg-[color:var(--color-steel)]">
+            <img
+              src="/projekt/lss_grund1-800.webp"
+              srcset="/projekt/lss_grund1-400.webp 400w, /projekt/lss_grund1-800.webp 800w, /projekt/lss_grund1-1200.webp 1200w"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              alt="Färdig grundläggning med cellplast och grundbalkar, klar för stommontage"
+              width="800"
+              height="1067"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Vanliga frågor</h2>
+        <div class="grid gap-6 max-w-4xl">
+          {faq.map((f) => (
+            <div class="p-8 bg-white rounded-2xl">
+              <h3 class="text-lg font-semibold mb-3">{f.q}</h3>
+              <p class="text-[color:var(--color-ink-60)] leading-relaxed">{f.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {referenser.length > 0 && (
+      <section class="py-20 lg:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
+          <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Projekt med prefabricerad stomme</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            {referenser.map((p) => (
+              <a href={`/projekt/${p.slug}`} class="group block p-8 bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+                <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">{p.type}</p>
+                <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">{p.title}</h3>
+                <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed line-clamp-3 mb-4">{p.summary}</p>
+                {p.volume && <p class="text-sm font-semibold text-[color:var(--color-brand-red)]">{p.volume}</p>}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <CTA />
+  </article>
+</BaseLayout>

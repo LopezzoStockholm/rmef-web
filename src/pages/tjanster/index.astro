@@ -3,6 +3,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { SERVICES } from "../../lib/site";
 
+// Karndiscipliner = de fyra ben vi ager sjalva. Fasad ligger under Specialistomraden.
+const coreServices = Object.values(SERVICES).filter((s) => s.core !== false);
+
 const specialtjanster = [
   {
     title: "LSS-boenden",
@@ -21,6 +24,12 @@ const specialtjanster = [
     href: "/tjanster/betongarbeten",
     desc: "Platsgjutna bottenplattor, källarväggar och skyddsrum. Mark och betong i samma organisation, utan gränssnitt.",
     tag: "Nyproduktion",
+  },
+  {
+    title: "Fasad",
+    href: "/tjanster/fasad",
+    desc: "Fasadrenovering, puts och tilläggsisolering för bostadsrättsföreningar och fastighetsägare. Riktpris från 1 500 kr per kvm.",
+    tag: "BRF & Fastighet",
   },
   {
     title: "Betongrenovering",
@@ -44,14 +53,14 @@ const specialtjanster = [
 ---
 
 <BaseLayout
-  title="Tjänster, LSS-boenden, totalentreprenad, mark, fasad"
-  description="RM Entreprenad & Fasad bygger LSS-boenden och levererar totalentreprenad, mark och anläggning, fasadrenovering och betongrenovering i Stockholm och Mälardalen. Egen projektledning, full dokumentation."
+  title="Tjänster, LSS-boenden, totalentreprenad, mark, stomme"
+  description="RM Entreprenad & Fasad bygger LSS-boenden och levererar totalentreprenad, markarbeten, betongarbeten och prefabricerad stomme ur egen husfabrik i Stockholm och Mälardalen. Egen projektledning, full dokumentation."
 >
   <section class="pt-24 lg:pt-32 pb-12 lg:pb-20">
     <div class="mx-auto max-w-7xl px-6 lg:px-10">
       <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">Tjänster</p>
       <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
-        LSS-boenden. Totalentreprenad. Mark. Fasad.
+        LSS-boenden. Totalentreprenad. Mark. Stomme.
       </h1>
       <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
         Vi bygger LSS-boenden och tar oss an komplexa byggprojekt där andra entreprenörer tackar nej. Totalentreprenader från cirka 20 Mkr och uppåt, gärna med komplexa markarbeten. Egen projektledning, egna hantverkare och beprövade underentreprenörer ger kontroll över tid, kvalitet och budget.
@@ -85,7 +94,7 @@ const specialtjanster = [
         Vi är inte en generalentreprenör som köper in allt externt. Kärnan i varje område ligger hos oss, det gör att vi äger kvalitet, tid och gränssnitt från dag ett.
       </p>
       <div class="space-y-6">
-        {Object.values(SERVICES).map((service, idx) => (
+        {coreServices.map((service, idx) => (
           <article class="grid lg:grid-cols-5 gap-8 lg:gap-12 p-8 lg:p-12 bg-[color:var(--color-paper-2)] rounded-3xl">
             <div class="lg:col-span-2">
               <span class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] font-semibold">0{idx + 1}</span>

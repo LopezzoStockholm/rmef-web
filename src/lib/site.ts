@@ -44,7 +44,7 @@ export const SITE = {
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d130499.6!2d17.9!3d59.33!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d5f9f9f9f9f%3A0x0!2zU3RvY2tob2xt!5e0!3m2!1ssv!2sse!4v1700000000",
 } as const;
 
-export type ServiceKey = "projektering" | "mark" | "bygg" | "fasad";
+export type ServiceKey = "projektering" | "mark" | "bygg" | "stomme" | "fasad";
 
 export const SERVICES: Record<ServiceKey, {
   slug: string;
@@ -54,6 +54,12 @@ export const SERVICES: Record<ServiceKey, {
   bullets: string[];
   icon: string;
   fromPrice?: string;
+  // core=false visas under Specialistomraden i stallet for i disciplin-griden.
+  // Sidan lever kvar oforandrat, bara placeringen i navigationen andras.
+  core?: boolean;
+  // customPage=true betyder att sidan har en egen .astro-fil och alltsa INTE
+  // ska genereras av tjanster/[slug].astro.
+  customPage?: boolean;
 }> = {
   projektering: {
     slug: "projektering",
@@ -98,8 +104,24 @@ export const SERVICES: Record<ServiceKey, {
     ],
     icon: "bygg",
   },
+  stomme: {
+    slug: "stomme-husfabrik",
+    title: "Stomme & husfabrik",
+    short: "Svensktillverkad stomme ur egen husfabrik: utfackningsväggar och modulvolymer, färdiga att resa på plats.",
+    long: "Vi levererar och monterar prefabricerad stomme från svensk husfabrik: utfackningsväggar och kompletta modulvolymer, tillverkade inomhus under kontrollerade förhållanden och resta på plats med kort byggtid. Elementen projekteras för byggnader som ska certifieras enligt Miljöbyggnad Brons, Silver eller Guld, och tillverkningen följer samma KMA-process som våra entreprenader.",
+    bullets: [
+      "Utfackningsväggar med färdig isolering, fönster och ytskikt",
+      "Modulvolymer, kompletta rumsenheter färdiga inifrån",
+      "Svensktillverkat i fabrik, kortare byggtid och färre väderstopp",
+      "Projekterad för Miljöbyggnad Brons, Silver och Guld",
+      "Samma KMA-process och dokumentation som i våra entreprenader",
+    ],
+    icon: "stomme",
+    customPage: true,
+  },
   fasad: {
     slug: "fasad",
+    core: false,
     title: "Fasad",
     short: "Fasadrenovering, puts och tilläggsisolering för bostads­rättsföreningar och fastighetsägare.",
     long: "Kompletta fasadlösningar för bostadsrätts­föreningar, fastighets­ägare och kommersiella fastigheter. Vi hanterar besiktning, ställning, puts, målning och tilläggsisolering.",

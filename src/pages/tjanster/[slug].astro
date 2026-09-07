@@ -4,10 +4,12 @@ import CTA from "../../components/CTA.astro";
 import { SERVICES, PROJECTS, SITE } from "../../lib/site";
 
 export function getStaticPaths() {
-  return Object.values(SERVICES).map((s) => ({
-    params: { slug: s.slug },
-    props: { service: s },
-  }));
+  return Object.values(SERVICES)
+    .filter((s) => !s.customPage)
+    .map((s) => ({
+      params: { slug: s.slug },
+      props: { service: s },
+    }));
 }
 
 const { service } = Astro.props;

@@ -15,11 +15,19 @@ const serviceImages: Record<string, { src: string; alt: string }> = {
     src: "/projekt/thumb/foretag_16.webp",
     alt: "Byggnadsarbete med materialhantering, T11 Katarinahuset",
   },
+  stomme: {
+    src: "/projekt/thumb/lss_stomme1.webp",
+    alt: "Prefabricerat väggelement lyfts med travers i husfabrik",
+  },
   fasad: {
     src: "/projekt/thumb/foretag_3.webp",
     alt: "Innergård med fasadrenovering och balkonger",
   },
 };
+
+// Griden visar karndisciplinerna. Fasad (core: false) bor under Specialistomraden
+// pa /tjanster, sidan sjalv ar oforandrad.
+const coreServices = Object.values(SERVICES).filter((s) => s.core !== false);
 ---
 
 <section class="py-20 lg:py-32 bg-[color:var(--color-paper)]">
@@ -30,13 +38,13 @@ const serviceImages: Record<string, { src: string; alt: string }> = {
         Fyra discipliner. En leverans.
       </h2>
       <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">
-        Hela entreprenadkedjan i egen regi, från projektering och mark till färdig fasad. Egna experter ersätter mellanhänder, minimerar friktion och håller kontrollen där den ska vara: hos er.
+        Hela entreprenadkedjan i egen regi, från projektering och mark till stomme ur egen husfabrik. Egna experter ersätter mellanhänder, minimerar friktion och håller kontrollen där den ska vara: hos er.
       </p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-4 lg:gap-6">
       {
-        Object.values(SERVICES).map((service, idx) => (
+        coreServices.map((service, idx) => (
           <a
             href={`/tjanster/${service.slug}`}
             class="group relative overflow-hidden bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500"
