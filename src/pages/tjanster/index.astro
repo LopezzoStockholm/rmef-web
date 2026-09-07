@@ -70,25 +70,6 @@ const specialtjanster = [
 
   <section class="pb-12">
     <div class="mx-auto max-w-7xl px-6 lg:px-10">
-      <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Specialistområden</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        {specialtjanster.map((t) => (
-          <a href={t.href} class="group block p-10 bg-[color:var(--color-paper-2)] rounded-3xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
-            <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">{t.tag}</p>
-            <h3 class="text-3xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">{t.title}</h3>
-            <p class="text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed mb-6">{t.desc}</p>
-            <span class="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--color-brand-red)] group-hover:text-white">
-              Läs mer
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="py-12">
-    <div class="mx-auto max-w-7xl px-6 lg:px-10">
       <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Kärndiscipliner</h2>
       <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl mb-10">
         Vi är inte en generalentreprenör som köper in allt externt. Kärnan i varje område ligger hos oss, det gör att vi äger kvalitet, tid och gränssnitt från dag ett.
@@ -119,6 +100,28 @@ const specialtjanster = [
               </a>
             </div>
           </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-6">Specialistområden</h2>
+      <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl mb-10">
+        Inom disciplinerna har vi områden där vi går djupare än de flesta, från LSS-boenden och skyddsrum till antikvarisk restaurering.
+      </p>
+      <div class="grid md:grid-cols-2 gap-6">
+        {specialtjanster.map((t) => (
+          <a href={t.href} class="group block p-10 bg-[color:var(--color-paper-2)] rounded-3xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
+            <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-4">{t.tag}</p>
+            <h3 class="text-3xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">{t.title}</h3>
+            <p class="text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed mb-6">{t.desc}</p>
+            <span class="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--color-brand-red)] group-hover:text-white">
+              Läs mer
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
         ))}
       </div>
     </div>
