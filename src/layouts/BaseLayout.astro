@@ -47,7 +47,7 @@ const organizationSchema = {
   vatID: `SE${SITE.orgNumber.replace(/-/g, "")}01`,
   foundingDate: SITE.founded,
   founder: { "@type": "Person", name: SITE.vd },
-  numberOfEmployees: { "@type": "QuantitativeValue", minValue: 5, maxValue: 25 },
+  numberOfEmployees: { "@type": "QuantitativeValue", value: 10 },
   priceRange: "$$$",
   areaServed: [
     { "@type": "AdministrativeArea", name: "Stockholm" },
