@@ -3,14 +3,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { SITE } from "../../lib/site";
 
-const title = "Skyddsrumsbesiktning Stockholm, MSB-förberedande";
+const title = "Skyddsrumsbesiktning Stockholm, MCF-förberedande";
 const description =
-  "Skyddsrumsbesiktning i Stockholm för BRF och fastighetsägare. Statusbedömning före MSB-kontroll, åtgärdsplan och kostnadsbedömning. Besked inom 48 timmar.";
+  "Skyddsrumsbesiktning i Stockholm för BRF och fastighetsägare. Statusbedömning före MCF-kontroll, åtgärdsplan och kostnadsbedömning. Besked inom 48 timmar.";
 
 const faqs = [
   {
-    q: "Vad är skillnaden på MSB-kontroll och vår skyddsrumsbesiktning?",
-    a: "MSB-kontrollen är myndighetens egen kontroll som utförs av MSB-certifierade kontrollanter ungefär vart femte år. Vår skyddsrumsbesiktning är en oberoende statusbedömning som ni beställer själva, antingen inför en kommande MSB-kontroll eller som en löpande genomgång. Vi rapporterar samma typ av brister som MSB skulle göra, men ger samtidigt en åtgärdsplan med kostnadsbedömning så ni kan agera innan myndigheten utfärdar ett föreläggande.",
+    q: "Vad är skillnaden på MCF-kontroll och vår skyddsrumsbesiktning?",
+    a: "MCF-kontrollen är myndighetens egen kontroll som utförs av MCF-certifierade kontrollanter ungefär vart femte år. Vår skyddsrumsbesiktning är en oberoende statusbedömning som ni beställer själva, antingen inför en kommande MCF-kontroll eller som en löpande genomgång. Vi rapporterar samma typ av brister som MCF skulle göra, men ger samtidigt en åtgärdsplan med kostnadsbedömning så ni kan agera innan myndigheten utfärdar ett föreläggande.",
   },
   {
     q: "Vad kostar en skyddsrumsbesiktning?",
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "Hur ofta ska skyddsrum besiktigas?",
-    a: "MSB:s egen kontroll sker normalt vart femte år. Som fastighetsägare bör ni göra en oberoende statusbedömning vart tredje år, eller före varje större fastighetsåtgärd som kan påverka skyddsrummet. Det kostar mindre att hitta en spricka i tid än att få den noterad i MSB-protokollet med vitespress.",
+    a: "MCF:s egen kontroll sker normalt vart femte år. Som fastighetsägare bör ni göra en oberoende statusbedömning vart tredje år, eller före varje större fastighetsåtgärd som kan påverka skyddsrummet. Det kostar mindre att hitta en spricka i tid än att få den noterad i MCF-protokollet med vitespress.",
   },
   {
     q: "Hur lång tid tar en besiktning?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "Vad innehåller besiktningsrapporten?",
-    a: "Rapporten innehåller: aktuella ritningar verifierade på plats, statusbedömning av betong, fukt, sluss, ventilation och dokumentation, lista över identifierade brister kopplade till MSB:s anmärkningskategorier, åtgärdsplan med prioritering, och kostnadsbedömning per åtgärd. Den fungerar som beslutsunderlag för styrelsen och som offertunderlag mot entreprenörer.",
+    a: "Rapporten innehåller: aktuella ritningar verifierade på plats, statusbedömning av betong, fukt, sluss, ventilation och dokumentation, lista över identifierade brister kopplade till MCF:s anmärkningskategorier, åtgärdsplan med prioritering, och kostnadsbedömning per åtgärd. Den fungerar som beslutsunderlag för styrelsen och som offertunderlag mot entreprenörer.",
   },
   {
     q: "Vem ska närvara vid besiktningen?",
@@ -47,7 +47,7 @@ const schema = {
       provider: { "@id": `${SITE.url}/#organization` },
       areaServed: ["Stockholm", "Stockholms län", "Mälardalen"],
       description:
-        "Statusbedömning av skyddsrum inför MSB-kontroll. Dokumentation, åtgärdsplan, kostnadsbedömning och underlag för styrelsen.",
+        "Statusbedömning av skyddsrum inför MCF-kontroll. Dokumentation, åtgärdsplan, kostnadsbedömning och underlag för styrelsen.",
       url: `${SITE.url}/tjanster/skyddsrumsbesiktning`,
       offers: {
         "@type": "AggregateOffer",
@@ -101,7 +101,7 @@ const checkpoints = [
     items: [
       "Packningar och tätningslister",
       "Gångjärn och stängningsmekanik",
-      "Gastäthetstest enligt MSB:s krav",
+      "Gastäthetstest enligt MCF:s krav",
       "48-timmars stängningsfunktion",
     ],
   },
@@ -128,7 +128,7 @@ const checkpoints = [
     items: [
       "Aktuella skyddsrumsritningar",
       "Drift- och skötselinstruktioner",
-      "MSB-protokoll från senaste kontrollen",
+      "MCF-protokoll från senaste kontrollen",
       "Fastighetsägarens egenkontroller",
     ],
   },
@@ -159,7 +159,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
           Skyddsrumsbesiktning i Stockholm
         </h1>
         <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl mb-10">
-          Oberoende statusbedömning av skyddsrum för bostadsrättsföreningar, fastighetsägare och kommuner. Vi rapporterar samma typ av brister som MSB skulle hitta, men ger samtidigt en åtgärdsplan med kostnadsbedömning så ni kan agera innan myndigheten utfärdar föreläggande.
+          Oberoende statusbedömning av skyddsrum för bostadsrättsföreningar, fastighetsägare och kommuner. Vi rapporterar samma typ av brister som MCF (tidigare MSB) skulle hitta, men ger samtidigt en åtgärdsplan med kostnadsbedömning så ni kan agera innan myndigheten utfärdar föreläggande.
         </p>
 
         <!-- Innehållsförteckning -->
@@ -189,7 +189,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
           </div>
           <div class="lg:col-span-7 prose prose-lg max-w-none text-[color:var(--color-ink-60)] leading-relaxed">
             <p>
-              <strong class="text-[color:var(--color-ink)]">Inför en MSB-kontroll.</strong> MSB kommer ut vart femte år. När ni vet att kontrollen närmar sig är det betydligt billigare att låta oss göra en oberoende statusbedömning först, så ni kan rätta till bristerna i tid och slippa bli upptagna i ett officiellt åtgärdsföreläggande.
+              <strong class="text-[color:var(--color-ink)]">Inför en MCF-kontroll.</strong> MCF kommer ut vart femte år. När ni vet att kontrollen närmar sig är det betydligt billigare att låta oss göra en oberoende statusbedömning först, så ni kan rätta till bristerna i tid och slippa bli upptagna i ett officiellt åtgärdsföreläggande.
             </p>
             <p>
               <strong class="text-[color:var(--color-ink)]">Vid byte av fastighetsförvaltning.</strong> När en BRF byter förvaltare eller fastighetsägare köps är skyddsrummet en av de mest underdokumenterade delarna. En besiktning ger ny förvaltning eller ägare en tydlig statusbild från dag ett.
@@ -198,7 +198,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
               <strong class="text-[color:var(--color-ink)]">Före större fastighetsåtgärder.</strong> Stambyte, fasadrenovering, eller ombyggnation av källarvåningen kan påverka skyddsrummet. Att besiktiga före åtgärden ger en baslinje, så ni kan dokumentera att inga nya brister tillkom under entreprenaden.
             </p>
             <p>
-              Som löpande rutin rekommenderar vi en oberoende statusbedömning vart tredje år. Det kostar mindre att hitta en spricka i tid än att få den noterad i MSB-protokollet med vitespress.
+              Som löpande rutin rekommenderar vi en oberoende statusbedömning vart tredje år. Det kostar mindre att hitta en spricka i tid än att få den noterad i MCF-protokollet med vitespress.
             </p>
           </div>
         </div>
@@ -214,7 +214,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
             Sex områden, ett protokoll.
           </h2>
           <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">
-            Vår besiktning täcker samma sex områden som MSB:s kontrollanter går igenom. Skillnaden är att vi också ger en åtgärdsplan och en kostnadsbedömning per identifierad brist.
+            Vår besiktning täcker samma sex områden som MCF:s kontrollanter går igenom. Skillnaden är att vi också ger en åtgärdsplan och en kostnadsbedömning per identifierad brist.
           </p>
         </div>
 
@@ -302,7 +302,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
           <div class="p-8 bg-[color:var(--color-paper-2)] rounded-2xl">
             <p class="text-3xl font-semibold text-[color:var(--color-brand-red)] mb-4">01</p>
             <h3 class="text-lg font-semibold mb-3">Förberedelse</h3>
-            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Vi ber om skyddsrumsritningar, MSB-protokoll från tidigare kontroller och uppgifter om eventuella ombyggnationer.</p>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Vi ber om skyddsrumsritningar, MCF-protokoll från tidigare kontroller och uppgifter om eventuella ombyggnationer.</p>
           </div>
           <div class="p-8 bg-[color:var(--color-paper-2)] rounded-2xl">
             <p class="text-3xl font-semibold text-[color:var(--color-brand-red)] mb-4">02</p>
@@ -336,7 +336,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
               {[
                 "Aktuella ritningar verifierade på plats",
                 "Statusbedömning per kontrollområde med foto",
-                "Lista över identifierade brister kopplade till MSB:s anmärkningskategorier",
+                "Lista över identifierade brister kopplade till MCF:s anmärkningskategorier",
                 "Åtgärdsplan med prioritering (akut, planerat, långsiktigt)",
                 "Kostnadsbedömning per åtgärd, riktprisspann",
                 "Tidsuppskattning för åtgärder",
@@ -391,16 +391,16 @@ import RelatedServices from "../../components/RelatedServices.astro";
           <a href="/artiklar/skyddsrumsbesiktning-checklista" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
             <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] group-hover:text-white/40 font-semibold mb-3">Artikel</p>
             <h3 class="text-xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumsbesiktning checklista, 30 punkter</h3>
-            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Konkret checklista att gå igenom innan MSB:s kontroll.</p>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Konkret checklista att gå igenom innan MCF:s kontroll.</p>
           </a>
           <a href="/tjanster/skyddsrumssanering" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
             <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] group-hover:text-white/40 font-semibold mb-3">Tjänst</p>
             <h3 class="text-xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumssanering</h3>
-            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Åtgärd av brister efter MSB-kontroll.</p>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Åtgärd av brister efter MCF-kontroll.</p>
           </a>
           <a href="/artiklar/msb-ersattning-skyddsrum-statsbidrag" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
             <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] group-hover:text-white/40 font-semibold mb-3">Artikel</p>
-            <h3 class="text-xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">MSB-ersättning skyddsrum 2026</h3>
+            <h3 class="text-xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">MCF-ersättning skyddsrum 2026</h3>
             <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Så söker BRF ersättning från 100 Mkr-anslaget.</p>
           </a>
         </div>

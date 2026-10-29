@@ -3,9 +3,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { SITE } from "../../lib/site";
 
-const title = "Filterbyte skyddsrum, MSB betalar via 100 Mkr-anslag";
+const title = "Filterbyte skyddsrum, MCF betalar via 100 Mkr-anslag";
 const description =
-  "Filterbyte i skyddsrum efter MSB-kontroll. Vi utför, dokumenterar och hjälper er ansöka om MSB-ersättning. Stockholm, Mälardalen.";
+  "Filterbyte i skyddsrum efter MCF-kontroll. Vi utför, dokumenterar och hjälper er ansöka om MCF-ersättning. Stockholm, Mälardalen.";
 
 const schema = {
   "@context": "https://schema.org",
@@ -16,7 +16,7 @@ const schema = {
       provider: { "@id": `${SITE.url}/#organization` },
       areaServed: ["Stockholm", "Stockholms län", "Mälardalen"],
       description:
-        "Filterbyte i skyddsrum efter MSB-kontroll. Vi utför åtgärden, dokumenterar och hjälper fastighetsägaren att ansöka om ersättning från MSB:s 100 Mkr/år-anslag.",
+        "Filterbyte i skyddsrum efter MCF-kontroll. Vi utför åtgärden, dokumenterar och hjälper fastighetsägaren att ansöka om ersättning från MCF:s 100 Mkr/år-anslag.",
       url: `${SITE.url}/tjanster/filterbyte-skyddsrum`,
     },
     {
@@ -34,7 +34,7 @@ const schema = {
         {
           "@type": "Question",
           name: "Vad kostar ett filterbyte i skyddsrum?",
-          acceptedAnswer: { "@type": "Answer", text: "Typiskt 30 000–80 000 kr beroende på skyddsrummets storlek och antal filter. Inkluderar luftfilter, gasfilter, packningar och installation. MSB återbetalar kostnaden enligt 100 Mkr-anslaget vid filterbyte beordrat av kontrollant." }
+          acceptedAnswer: { "@type": "Answer", text: "Typiskt 30 000–80 000 kr beroende på skyddsrummets storlek och antal filter. Inkluderar luftfilter, gasfilter, packningar och installation. MCF återbetalar kostnaden enligt 100 Mkr-anslaget vid filterbyte beordrat av kontrollant." }
         },
         {
           "@type": "Question",
@@ -44,11 +44,11 @@ const schema = {
         {
           "@type": "Question",
           name: "Måste man byta filter trots att de ser bra ut?",
-          acceptedAnswer: { "@type": "Answer", text: "Ja om MSB-kontrollanten anmärkt på filtren. Filter har bäst-före-datum (gasfilter typiskt 10 år) och tappar funktion även utan synlig förändring. MSB:s krav baseras på datum och funktion, inte utseende." }
+          acceptedAnswer: { "@type": "Answer", text: "Ja om MCF-kontrollanten anmärkt på filtren. Filter har bäst-före-datum (gasfilter typiskt 10 år) och tappar funktion även utan synlig förändring. MCF:s krav baseras på datum och funktion, inte utseende." }
         },
         {
           "@type": "Question",
-          name: "Kan vi sköta MSB-ansökan själva?",
+          name: "Kan vi sköta MCF-ansökan själva?",
           acceptedAnswer: { "@type": "Answer", text: "Ja, men vi rekommenderar att vi tar fram dokumentationen åt er. Felaktig eller ofullständig ansökan riskerar avslag. Vi gör det utan extra kostnad som del av filterbytet." }
         }
       ],
@@ -72,24 +72,24 @@ import RelatedServices from "../../components/RelatedServices.astro";
           <span>Filterbyte</span>
         </nav>
 
-        <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">Skyddsrum · MSB-ersättning</p>
+        <p class="text-xs uppercase tracking-wider text-[color:var(--color-brand-red)] font-semibold mb-6">Skyddsrum · MCF-ersättning</p>
         <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
-          Filterbyte skyddsrum, MSB betalar
+          Filterbyte skyddsrum, MCF (tidigare MSB) betalar
         </h1>
         <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
-          Filter har bäst-före-datum och behöver bytas regelbundet. Sedan 2024 har regeringen avsatt <strong>100 miljoner kronor per år</strong> till MSB för att finansiera filterbyten i Sveriges skyddsrum. Vi utför bytet, dokumenterar och hjälper er ansöka om ersättningen.
+          Filter har bäst-före-datum och behöver bytas regelbundet. Sedan 2024 har regeringen avsatt <strong>100 miljoner kronor per år</strong> till MCF för att finansiera filterbyten i Sveriges skyddsrum. Vi utför bytet, dokumenterar och hjälper er ansöka om ersättningen.
         </p>
       </div>
     </section>
 
     <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
       <div class="mx-auto max-w-7xl px-6 lg:px-10">
-        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Process från start till MSB-ersättning</h2>
+        <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Process från start till MCF-ersättning</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="bg-white rounded-2xl p-8">
             <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] block mb-4">01</span>
-            <h3 class="text-lg font-semibold mb-3">Anmärkning från MSB</h3>
-            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">MSB-kontrollanten noterar behov av filterbyte i kontrollprotokollet.</p>
+            <h3 class="text-lg font-semibold mb-3">Anmärkning från MCF</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">MCF-kontrollanten noterar behov av filterbyte i kontrollprotokollet.</p>
           </div>
           <div class="bg-white rounded-2xl p-8">
             <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] block mb-4">02</span>
@@ -103,8 +103,8 @@ import RelatedServices from "../../components/RelatedServices.astro";
           </div>
           <div class="bg-white rounded-2xl p-8">
             <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] block mb-4">04</span>
-            <h3 class="text-lg font-semibold mb-3">Ansökan till MSB</h3>
-            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Vi tar fram all dokumentation. Ni signerar och skickar in. MSB återbetalar inom 4-8 veckor.</p>
+            <h3 class="text-lg font-semibold mb-3">Ansökan till MCF</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed">Vi tar fram all dokumentation. Ni signerar och skickar in. MCF återbetalar inom 4-8 veckor.</p>
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
                 "Installation och funktionstest",
                 "Bilddokumentation före, under, efter",
                 "Leverantörsintyg och certifikat",
-                "MSB-ansökan med komplett dokumentation",
+                "MCF-ansökan med komplett dokumentation",
               ].map((b) => (
                 <li class="flex items-start gap-3">
                   <svg width="22" height="22" viewBox="0 0 20 20" fill="none" class="mt-1 flex-shrink-0 text-[color:var(--color-brand-red)]" aria-hidden="true">
@@ -153,7 +153,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
                 <dd class="font-semibold tabular-nums whitespace-nowrap">65 000–120 000 kr</dd>
               </div>
               <div class="flex justify-between pt-2 text-[color:var(--color-brand-red)] font-semibold">
-                <dt>MSB-ersättning</dt>
+                <dt>MCF-ersättning</dt>
                 <dd class="tabular-nums">100 % av godkänd kostnad</dd>
               </div>
             </dl>
@@ -169,15 +169,15 @@ import RelatedServices from "../../components/RelatedServices.astro";
         <div class="grid md:grid-cols-3 gap-6">
           <a href="/tjanster/skyddsrumsbesiktning/" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
             <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumsbesiktning</h3>
-            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Statusbedömning innan MSB-kontroll. Åtgärdsplan med kostnadsbedömning.</p>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Statusbedömning innan MCF-kontroll. Åtgärdsplan med kostnadsbedömning.</p>
           </a>
           <a href="/tjanster/skyddsrumssanering/" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
             <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumssanering</h3>
-            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Åtgärd av MSB-brister utöver filterbyte. Sprickor, tätningar, ventilation.</p>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Åtgärd av MCF-brister utöver filterbyte. Sprickor, tätningar, ventilation.</p>
           </a>
           <a href="/artiklar/msb-ersattning-skyddsrum-statsbidrag/" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
-            <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Guide: MSB-ersättning</h3>
-            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Komplett guide till MSB:s 100 Mkr-anslag och hur ansökan går till.</p>
+            <h3 class="text-xl font-semibold mb-3 group-hover:text-[color:var(--color-brand-red)] transition-colors">Guide: MCF-ersättning</h3>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Komplett guide till MCF:s 100 Mkr-anslag och hur ansökan går till.</p>
           </a>
         </div>
       </div>

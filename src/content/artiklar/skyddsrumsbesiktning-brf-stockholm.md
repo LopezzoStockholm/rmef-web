@@ -1,9 +1,9 @@
 ---
-title: "Skyddsrumsbesiktning BRF, MSB-krav och kostnad 2026"
-description: "Så fungerar MSB:s skyddsrumskontroll för BRF och fastighetsägare: krav, åtgärdsplan, typiska kostnader och vad styrelsen bör ha koll på."
+title: "Skyddsrumsbesiktning BRF, MCF-krav och kostnad 2026"
+description: "Så fungerar MCF:s skyddsrumskontroll för BRF och fastighetsägare: krav, åtgärdsplan, typiska kostnader och vad styrelsen bör ha koll på."
 published: 2026-04-24
 category: "Teknik"
-tags: ["skyddsrum", "MSB", "bostadsrättsförening", "besiktning", "Stockholm"]
+tags: ["skyddsrum", "MCF", "bostadsrättsförening", "besiktning", "Stockholm"]
 readingTime: 8
 heroImage: "/projekt/mark_image11.webp"
 heroImageAlt: "Skyddsrumsbesiktning, schaktning och betongarbeten i innergård"
@@ -11,7 +11,7 @@ heroImageAlt: "Skyddsrumsbesiktning, schaktning och betongarbeten i innergård"
 
 ## Kort svar
 
-Alla skyddsrum i Sverige ska hållas i skick av fastighetsägaren enligt lagen (2006:545) om skyddsrum. MSB (Myndigheten för samhällsskydd och beredskap) genomför återkommande kontroller och vid brist utfärdas ett **föreläggande om åtgärd**. För bostadsrättsföreningar i Stockholm handlar det oftast om kostnader mellan **50 000 och 500 000 kr** per skyddsrum beroende på skadebild och när rummet senast rustades.
+Alla skyddsrum i Sverige ska hållas i skick av fastighetsägaren enligt lagen (2006:545) om skyddsrum. Myndigheten för civilt försvar (MCF, tidigare MSB) genomför återkommande kontroller och vid brist utfärdas ett **föreläggande om åtgärd**. För bostadsrättsföreningar i Stockholm handlar det oftast om kostnader mellan **50 000 och 500 000 kr** per skyddsrum beroende på skadebild och när rummet senast rustades.
 
 ## Vad är ett skyddsrum och vem har ansvar
 
@@ -21,16 +21,16 @@ Ett skyddsrum är en del av en byggnad som i kristid kan användas av civilbefol
 
 För bostadsrättsföreningar är det styrelsen som företräder fastighetsägaren. Det går inte att delegera bort ansvaret till hyresgäst, förvaltare eller tidigare entreprenör.
 
-## MSB-kontrollen, så går den till
+## MCF-kontrollen, så går den till
 
-MSB genomför kontroll enligt en plan som rullar över cirka 10 år. Kontrollen består vanligtvis av:
+MCF genomför kontroll enligt en plan som rullar över cirka 10 år. Kontrollen består vanligtvis av:
 
 1. **Dokumentationsgenomgång**, ritningar, tidigare besiktningsprotokoll, åtgärdshistorik
 2. **Platsbesök** där kontrollanten går igenom konstruktion, slussar, ventilation, vatten-, värme- och avloppssystem
 3. **Kontrollprotokoll** med noteringar om brister
 4. **Eventuellt föreläggande** med åtgärdstid (vanligtvis 12–24 månader)
 
-Vid brist har föreningen en tidsfrist. Missar ni den kan MSB förelägga vite (typiskt 50 000–500 000 kr) som trycker på. Kostnaden för att åtgärda brister ingår inte i något statligt anslag, det är fastighetsägaren som betalar.
+Vid brist har föreningen en tidsfrist. Missar ni den kan MCF förelägga vite (typiskt 50 000–500 000 kr) som trycker på. Kostnaden för att åtgärda brister ingår inte i något statligt anslag, det är fastighetsägaren som betalar.
 
 ## Vanliga brister och åtgärder
 
@@ -59,7 +59,7 @@ Det vanligaste fyndet, någon har borrat håltagningar genom skyddsrummets vägg
 Vid nyproduktion av flerbostadshus med över 50 boende aktualiseras kravet på skyddsrum enligt plan. I praktiken får kommunen avgöra om det befintliga beståndet räcker eller om nytt ska uppföras. Entreprenörer som bygger skyddsrum i nyproduktion behöver:
 
 - **Betongteknisk kompetens**, skyddsrum har hårdare armeringskrav och kontrollprotokoll än ordinarie husbyggnad
-- **Erfarenhet av MSB:s kontrollplan** för att dokumentera rätt från start
+- **Erfarenhet av MCF:s kontrollplan** för att dokumentera rätt från start
 - **Samordning mot VVS och ventilation**, slussar och filtersystem måste hänga ihop med övriga installationer
 
 Kostnaden för ett nytt skyddsrum i flerbostadshus ligger typiskt på **8 000–14 000 kr per kvm**, betydligt dyrare än övrig källare. Volymen bakas in i projektets totalentreprenadpris.
@@ -68,7 +68,7 @@ Kostnaden för ett nytt skyddsrum i flerbostadshus ligger typiskt på **8 000–
 
 Innan ni begär offert på åtgärder, samla följande:
 
-- [ ] **Tidigare kontrollprotokoll** från MSB (begär från förvaltare eller via e-post till MSB)
+- [ ] **Tidigare kontrollprotokoll** från MCF (begär från förvaltare eller via e-post till MCF)
 - [ ] **Ritningar** över skyddsrummet, konstruktion, ventilation, slussar
 - [ ] **Åtgärdshistorik**, vad har gjorts, när, av vem
 - [ ] **Dokumentation av ombyggnader** som gjorts i rummet efter ursprunglig byggnation
@@ -77,14 +77,14 @@ Innan ni begär offert på åtgärder, samla följande:
 
 ## Vem får utföra skyddsrumsarbeten?
 
-Det finns inget formellt auktorisationssystem för skyddsrumsentreprenörer. I praktiken kräver dock MSB-kontrollen att:
+Det finns inget formellt auktorisationssystem för skyddsrumsentreprenörer. I praktiken kräver dock MCF-kontrollen att:
 
-- Åtgärden dokumenteras enligt MSB:s ritningsanvisningar
+- Åtgärden dokumenteras enligt MCF:s ritningsanvisningar
 - Betongarbeten utförs med rätt hållfasthetsklass och armering
 - Gastäthet verifieras vid slussar
 - Eventuella ventilationsarbeten utförs enligt AFS
 
-Det utesluter i praktiken renodlade målerifirmor och mindre byggbolag utan konstruktionskompetens. Efter utförd åtgärd krävs ny MSB-kontroll för att återfå godkänd status.
+Det utesluter i praktiken renodlade målerifirmor och mindre byggbolag utan konstruktionskompetens. Efter utförd åtgärd krävs ny MCF-kontroll för att återfå godkänd status.
 
 ## Tidsplan
 
@@ -94,17 +94,17 @@ En typisk process för en BRF med åtgärdskrav:
 |---|---|
 | Styrelsebeslut + extra stämma vid större belopp | 1–2 månader |
 | Upphandling (tre offerter) | 1–2 månader |
-| Projektering och kontroll mot MSB | 1 månad |
+| Projektering och kontroll mot MCF | 1 månad |
 | Utförande | 2–6 månader |
-| Slutbesiktning och ny MSB-kontroll | 1–2 månader |
+| Slutbesiktning och ny MCF-kontroll | 1–2 månader |
 
-Räkna med **8–12 månader** från beslut till godkänd status. Det är kortare än exempelvis fasadrenovering, men längre än vad ett MSB-föreläggande ofta ger, begär därför anstånd tidigt om tidsplanen är pressad.
+Räkna med **8–12 månader** från beslut till godkänd status. Det är kortare än exempelvis fasadrenovering, men längre än vad ett MCF-föreläggande ofta ger, begär därför anstånd tidigt om tidsplanen är pressad.
 
 ## Vanliga frågor
 
 ### Kan vi strunta i föreläggandet?
 
-Nej. Vid uteblivet åtgärdande utfärdar MSB vite och lyfter vitet stegvis. Vitet är normalt högre än åtgärdens kostnad efter ett par turer.
+Nej. Vid uteblivet åtgärdande utfärdar MCF vite och lyfter vitet stegvis. Vitet är normalt högre än åtgärdens kostnad efter ett par turer.
 
 ### Räcker det att göra åtgärden själv via vår förvaltare?
 
@@ -120,9 +120,9 @@ Ja. Skyddsrummet får användas i fredstid så länge det kan iordningställas i
 
 ## RM Entreprenad & Fasad
 
-Vi utför skyddsrumsbesiktningar, åtgärdsplaner och skyddsrumsrenoveringar i Stockholm och Mälardalen åt bostadsrättsföreningar, kommuner och fastighetsägare. Från MSB-protokoll till godkänd status hanterar vi hela kedjan. Läs om våra [byggtjänster](/tjanster/bygg/) eller [kontakta oss](/kontakt/) för platsbesök.
+Vi utför skyddsrumsbesiktningar, åtgärdsplaner och skyddsrumsrenoveringar i Stockholm och Mälardalen åt bostadsrättsföreningar, kommuner och fastighetsägare. Från MCF-protokoll till godkänd status hanterar vi hela kedjan. Läs om våra [byggtjänster](/tjanster/bygg/) eller [kontakta oss](/kontakt/) för platsbesök.
 
 → Vår tjänst: [Skyddsrumsbesiktning](/tjanster/skyddsrumsbesiktning/)
 → Hur vi arbetar: [Systemet, vårt arbetssätt](/systemet)
 
-Läs också: [Skyddsrumsbesiktning checklista](/artiklar/skyddsrumsbesiktning-checklista/) · [MSB-ersättning skyddsrum](/artiklar/msb-ersattning-skyddsrum-statsbidrag/)
+Läs också: [Skyddsrumsbesiktning checklista](/artiklar/skyddsrumsbesiktning-checklista/) · [MCF-ersättning skyddsrum](/artiklar/msb-ersattning-skyddsrum-statsbidrag/)

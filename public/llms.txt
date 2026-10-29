@@ -58,6 +58,10 @@ Nyproduktion av LSS- och SoL-boenden på totalentreprenad ABT 06, från mark til
 - **Vindarnas tempel** (Lidingö Stad, 3 Mkr), lyft, restaurering och återmontering av K-märkt byggnad
 - **Kaptensstugan** (Lidingö Stad, 8 Mkr), restaurering kulturbyggnad på Hustegaholm
 
+## Myndighetsnamn
+
+Myndigheten för samhällsskydd och beredskap (MSB) heter sedan 1 januari 2026 Myndigheten för civilt försvar (MCF). MCF ansvarar för skyddsrumskontroller. Äldre protokoll och förelägganden kan vara utfärdade under namnet MSB.
+
 ## KMA: Kvalitet, Miljö, Arbetsmiljö
 
 Företaget arbetar efter en dokumenterad KMA-plan som anpassas per projekt. Kvalitetssäkring sker via egenkontroller, processdokumentation och full överlämningsdokumentation. Det interna styrsystemet beskrivs på https://rmef.se/systemet/
@@ -105,6 +109,6 @@ Privata omsorgsaktörer, kommuner (LOU-upphandlingar), allmännyttiga bostadsbol
 Milstolpsstyrd betalplan kopplad till verifierade milstolpar, och ingen underentreprenör får betalt innan beställaren godkänt leveransen enligt avtal. Bolaget har 96 procents soliditet.
 
 **Gör RM skyddsrumsarbeten?**
-Ja: skyddsrumssanering efter MSB-kontroll, skyddsrumsbesiktning, filterbyte och nyproduktion av skyddsrum i Stockholm och Mälardalen. https://rmef.se/tjanster/skyddsrumssanering/
+Ja: skyddsrumssanering efter MCF-kontroll, skyddsrumsbesiktning, filterbyte och nyproduktion av skyddsrum i Stockholm och Mälardalen. https://rmef.se/tjanster/skyddsrumssanering/
 
 Senast uppdaterad: 2026-10-29

@@ -136,9 +136,9 @@ export const LOCATIONS: Location[] = [
     ort: "Stockholm",
     title: "Skyddsrum Stockholm, sanering och besiktning",
     description:
-      "Skyddsrum i Stockholm: sanering, besiktning och MSB-åtgärder på Södermalm, Vasastan, Kungsholmen och i övriga staden. För BRF, fastighetsägare och kommuner.",
+      "Skyddsrum i Stockholm: sanering, besiktning och MCF-åtgärder på Södermalm, Vasastan, Kungsholmen och i övriga staden. För BRF, fastighetsägare och kommuner.",
     intro:
-      "Vi är etablerade skyddsrumsspecialister i Stockholm. Vårt team har lång erfarenhet av MSB-protokoll, betongteknik för skyddsrum och den dokumentation som krävs för godkänd status, från innerstadens stenstadsfastigheter till ersättningsskyddsrum i nyproduktion.",
+      "Vi är etablerade skyddsrumsspecialister i Stockholm. Vårt team har lång erfarenhet av MCF-protokoll, betongteknik för skyddsrum och den dokumentation som krävs för godkänd status, från innerstadens stenstadsfastigheter till ersättningsskyddsrum i nyproduktion.",
     localContext:
       "Stockholms skyddsrumsbestånd är ett av landets äldsta. Många skyddsrum i innerstaden är från 40-, 50- och 60-talet och kräver nu omfattande sanering. Vi hanterar både klassiska föreläggandeprojekt och moderna ersättningsskyddsrum i nyproduktion.",
     sections: [
@@ -207,13 +207,13 @@ export const LOCATIONS: Location[] = [
     service: "skyddsrum",
     serviceLabel: "Skyddsrum",
     ort: "Norrtälje",
-    title: "Skyddsrum Norrtälje, sanering och MSB-besiktning",
+    title: "Skyddsrum Norrtälje, sanering och MCF-besiktning",
     description:
-      "Skyddsrumssanering och MSB-besiktning i Norrtälje. Bostadsrättsföreningar, fastighetsägare och kommunal sektor. Referens: Norrtälje sjukhus.",
+      "Skyddsrumssanering och MCF-besiktning i Norrtälje. Bostadsrättsföreningar, fastighetsägare och kommunal sektor. Referens: Norrtälje sjukhus.",
     intro:
       "Vi arbetar regelbundet i Norrtälje med både skyddsrum och totalentreprenader. Vårt projektledningskontor i Stockholm är 60 minuters resa, vilket gör logistiken praktisk för Norrtälje-projekt.",
     localContext:
-      "Norrtäljes bestånd består till stor del av bostadsrätter från 60–80-talet samt kommunala fastigheter. Skyddsrumsbeståndet är typiskt och behöver systematiskt åtgärdas inför MSB:s kontrollomgång 2025–2030. Vi har nyligen levererat sprinklercentral åt Norrtälje sjukhus.",
+      "Norrtäljes bestånd består till stor del av bostadsrätter från 60–80-talet samt kommunala fastigheter. Skyddsrumsbeståndet är typiskt och behöver systematiskt åtgärdas inför MCF:s kontrollomgång 2025–2030. Vi har nyligen levererat sprinklercentral åt Norrtälje sjukhus.",
     referenser: [
       { slug: "norrtalje-sjukhus", titel: "Norrtälje sjukhus", client: "Norrtälje sjukhus" },
     ],
@@ -224,9 +224,9 @@ export const LOCATIONS: Location[] = [
     service: "skyddsrum",
     serviceLabel: "Skyddsrum",
     ort: "Knivsta",
-    title: "Skyddsrum Knivsta, sanering och MSB-besiktning",
+    title: "Skyddsrum Knivsta, sanering och MCF-besiktning",
     description:
-      "Skyddsrumsspecialist i Knivsta. Sanering, besiktning, MSB-åtgärder och nyproduktion. Erfarenhet från kommunal infrastruktur.",
+      "Skyddsrumsspecialist i Knivsta. Sanering, besiktning, MCF-åtgärder och nyproduktion. Erfarenhet från kommunal infrastruktur.",
     intro:
       "Vi har arbetat med Knivsta kommun på ledningsomläggningar och kommunal infrastruktur. Skyddsrumsåtgärder för BRF och kommunala fastigheter ingår naturligt i vårt utbud.",
     localContext:
@@ -241,9 +241,9 @@ export const LOCATIONS: Location[] = [
     service: "skyddsrum",
     serviceLabel: "Skyddsrum",
     ort: "Sigtuna",
-    title: "Skyddsrum Sigtuna, sanering och MSB-besiktning",
+    title: "Skyddsrum Sigtuna, sanering och MCF-besiktning",
     description:
-      "Skyddsrumsspecialist i Sigtuna kommun. Sanering, besiktning, MSB-åtgärder. Referens: Engelska skolan Sigtuna.",
+      "Skyddsrumsspecialist i Sigtuna kommun. Sanering, besiktning, MCF-åtgärder. Referens: Engelska skolan Sigtuna.",
     intro:
       "Vi har en etablerad relation med Sigtuna kommun via Engelska skolan-projektet. Skyddsrum för BRF och kommunala fastigheter är en naturlig del av vårt utbud.",
     localContext:

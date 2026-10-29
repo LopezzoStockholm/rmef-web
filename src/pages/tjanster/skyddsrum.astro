@@ -3,9 +3,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { SITE } from "../../lib/site";
 
-const title = "Skyddsrum Stockholm, sanering, besiktning, MSB";
+const title = "Skyddsrum Stockholm, sanering, besiktning, MCF (MSB)";
 const description =
-  "Skyddsrumsspecialist i Stockholm och Mälardalen. MSB-kontroll, åtgärdsplan, sanering, besiktning och nyproduktion. Begär offert idag.";
+  "Skyddsrumsspecialist i Stockholm och Mälardalen. MCF-kontroll, åtgärdsplan, sanering, besiktning och nyproduktion. Begär offert idag.";
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -21,7 +21,7 @@ const serviceSchema = {
         "Uppland",
       ],
       description:
-        "Skyddsrumssanering, skyddsrumsbesiktning, MSB-åtgärder och nyproduktion av ersättningsskyddsrum för bostadsrättsföreningar, fastighetsägare, kommuner och industri.",
+        "Skyddsrumssanering, skyddsrumsbesiktning, MCF-åtgärder och nyproduktion av ersättningsskyddsrum för bostadsrättsföreningar, fastighetsägare, kommuner och industri.",
       url: `${SITE.url}/tjanster/skyddsrum`,
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -29,7 +29,7 @@ const serviceSchema = {
         itemListElement: [
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Skyddsrumssanering" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Skyddsrumsbesiktning" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "MSB-åtgärdsplan" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "MCF-åtgärdsplan" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Nyproduktion av skyddsrum" } },
         ],
       },
@@ -47,8 +47,8 @@ const serviceSchema = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "Vad ingår i en MSB-skyddsrumskontroll?",
-          acceptedAnswer: { "@type": "Answer", text: "MSB-kontrollanten besiktigar skyddsrummets täthet, ventilation, slussar, dörrar, filter och övriga komponenter. Kontrollen är gratis för fastighetsägaren och resulterar i ett protokoll med eventuella åtgärdskrav." }
+          name: "Vad ingår i en MCF-skyddsrumskontroll?",
+          acceptedAnswer: { "@type": "Answer", text: "MCF-kontrollanten besiktigar skyddsrummets täthet, ventilation, slussar, dörrar, filter och övriga komponenter. Kontrollen är gratis för fastighetsägaren och resulterar i ett protokoll med eventuella åtgärdskrav." }
         },
         {
           "@type": "Question",
@@ -58,12 +58,12 @@ const serviceSchema = {
         {
           "@type": "Question",
           name: "Vem är ansvarig för skyddsrum i en BRF?",
-          acceptedAnswer: { "@type": "Answer", text: "Fastighetsägaren är ansvarig, för en bostadsrättsförening innebär det styrelsen. Ansvaret omfattar löpande underhåll, säkerställd funktion och åtgärd av MSB-anmärkningar inom rimlig tid." }
+          acceptedAnswer: { "@type": "Answer", text: "Fastighetsägaren är ansvarig, för en bostadsrättsförening innebär det styrelsen. Ansvaret omfattar löpande underhåll, säkerställd funktion och åtgärd av MCF-anmärkningar inom rimlig tid." }
         },
         {
           "@type": "Question",
-          name: "Kan ni hjälpa till med MSB-ansökan om ersättning?",
-          acceptedAnswer: { "@type": "Answer", text: "Ja. Vi tillhandahåller komplett dokumentation, foton, fakturaunderlag och leverantörsintyg som krävs vid ansökan om MSB-ersättning för filterbyten enligt 100 Mkr-anslaget." }
+          name: "Kan ni hjälpa till med MCF-ansökan om ersättning?",
+          acceptedAnswer: { "@type": "Answer", text: "Ja. Vi tillhandahåller komplett dokumentation, foton, fakturaunderlag och leverantörsintyg som krävs vid ansökan om MCF-ersättning för filterbyten enligt 100 Mkr-anslaget." }
         },
         {
           "@type": "Question",
@@ -93,10 +93,10 @@ import RelatedServices from "../../components/RelatedServices.astro";
           Skyddsrumsspecialist i Stockholm
         </p>
         <h1 class="text-[length:var(--text-display)] font-semibold leading-[1] tracking-tight max-w-4xl mb-8">
-          Skyddsrum, från MSB-protokoll till godkänd status
+          Skyddsrum, från MCF-protokoll till godkänd status
         </h1>
         <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl">
-          Vi är specialister på skyddsrumssanering, skyddsrumsbesiktning och komplexa byggprojekt där andra entreprenörer tackar nej. Vi hanterar hela processen från MSB-kontroll och åtgärdsplan till färdigt, godkänt skyddsrum enligt gällande krav, för bostadsrättsföreningar, fastighetsägare, kommuner och industri i Stockholm och Mälardalen.
+          Vi är specialister på skyddsrumssanering, skyddsrumsbesiktning och komplexa byggprojekt där andra entreprenörer tackar nej. Vi hanterar hela processen från MCF-kontroll och åtgärdsplan till färdigt, godkänt skyddsrum enligt gällande krav, för bostadsrättsföreningar, fastighetsägare, kommuner och industri i Stockholm och Mälardalen.
         </p>
       </div>
     </section>
@@ -109,7 +109,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
             <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">01</p>
             <h3 class="text-2xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumssanering</h3>
             <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">
-              Åtgärd av brister efter MSB-kontroll: sprickor, fukt, otäta slussar, ventilationssystem och återställning av felaktiga ombyggnationer.
+              Åtgärd av brister efter MCF-kontroll: sprickor, fukt, otäta slussar, ventilationssystem och återställning av felaktiga ombyggnationer.
             </p>
             <span class="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-[color:var(--color-brand-red)] group-hover:text-white">
               Läs mer
@@ -120,7 +120,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
             <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">02</p>
             <h3 class="text-2xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumsbesiktning</h3>
             <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">
-              Statusbedömning, dokumentation och åtgärdsplan inför MSB-kontroll, eller som föreningsstyrelsens egen årliga genomgång.
+              Statusbedömning, dokumentation och åtgärdsplan inför MCF-kontroll, eller som föreningsstyrelsens egen årliga genomgång.
             </p>
             <span class="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-[color:var(--color-brand-red)] group-hover:text-white">
               Läs mer
@@ -131,7 +131,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
             <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] group-hover:text-white/40 mb-4">03</p>
             <h3 class="text-2xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Nyproduktion av skyddsrum</h3>
             <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">
-              Nybyggnad av ersättnings­skyddsrum i samband med bostadsbyggnation, betongteknik, slussar, ventilation och MSB-dokumentation.
+              Nybyggnad av ersättnings­skyddsrum i samband med bostadsbyggnation, betongteknik, slussar, ventilation och MCF-dokumentation.
             </p>
             <span class="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-[color:var(--color-brand-red)] group-hover:text-white">
               Läs mer
@@ -140,9 +140,9 @@ import RelatedServices from "../../components/RelatedServices.astro";
           </a>
           <div class="p-8 bg-white rounded-2xl border border-[color:var(--color-ink-10)]">
             <p class="text-xs uppercase tracking-wider text-[color:var(--color-ink-40)] mb-4">+</p>
-            <h3 class="text-2xl font-semibold mb-4">MSB-föreläggande?</h3>
+            <h3 class="text-2xl font-semibold mb-4">MCF-föreläggande?</h3>
             <p class="text-sm text-[color:var(--color-ink-60)] leading-relaxed mb-4">
-              Har ni fått ett föreläggande från MSB med åtgärdstid? Vi kan starta åtgärder inom 4–8 veckor och levererar inom föreläggandets tidsram.
+              Har ni fått ett föreläggande från MCF (tidigare MSB) med åtgärdstid? Vi kan starta åtgärder inom 4–8 veckor och levererar inom föreläggandets tidsram.
             </p>
             <a href="/kontakt" class="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--color-brand-red)] hover:gap-3 transition-all">
               Kontakta oss
@@ -160,10 +160,10 @@ import RelatedServices from "../../components/RelatedServices.astro";
             <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Därför specialister</h2>
             <div class="space-y-6 text-lg text-[color:var(--color-ink-60)] leading-relaxed">
               <p>
-                Skyddsrumsarbete kräver en kombination av betongteknisk kompetens, kunskap om MSB:s regelverk och erfarenhet av gastäthet, ventilation och slussfunktion. Det är inte ett tilläggsarbete till ordinarie byggnation, det är en egen disciplin.
+                Skyddsrumsarbete kräver en kombination av betongteknisk kompetens, kunskap om MCF:s regelverk och erfarenhet av gastäthet, ventilation och slussfunktion. Det är inte ett tilläggsarbete till ordinarie byggnation, det är en egen disciplin.
               </p>
               <p>
-                Vår kärnkompetens ligger i komplexa projekt där andra entreprenörer tackar nej: skyddsrum med svår åtkomst, kulturhistoriskt värdefulla miljöer, driftkänslig verksamhet ovan mark och projekt med snäva tidsramar efter MSB-föreläggande.
+                Vår kärnkompetens ligger i komplexa projekt där andra entreprenörer tackar nej: skyddsrum med svår åtkomst, kulturhistoriskt värdefulla miljöer, driftkänslig verksamhet ovan mark och projekt med snäva tidsramar efter MCF-föreläggande.
               </p>
               <p>
                 Vi arbetar i egen regi med projektledning, egna hantverkare och beprövade underentreprenörer. Det ger oss kontroll över tid, kvalitet och budget, och en naturlig ansvarskedja mot beställaren.
@@ -177,7 +177,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
                 <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">1</span>
                 <div>
                   <h3 class="text-lg font-semibold mb-2">Genomgång av protokoll</h3>
-                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Vi läser MSB-protokollet och ritningar tillsammans med er, föreslår åtgärdsplan och tidsplan mot föreläggandets frist.</p>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Vi läser MCF-protokollet och ritningar tillsammans med er, föreslår åtgärdsplan och tidsplan mot föreläggandets frist.</p>
                 </div>
               </li>
               <li class="flex gap-6">
@@ -191,14 +191,14 @@ import RelatedServices from "../../components/RelatedServices.astro";
                 <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">3</span>
                 <div>
                   <h3 class="text-lg font-semibold mb-2">Utförande med dokumentation</h3>
-                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Arbete utförs enligt MSB:s ritningsanvisningar. Fotodokumentation före och efter varje moment, protokoll för betongarbeten och gastäthet.</p>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Arbete utförs enligt MCF:s ritningsanvisningar. Fotodokumentation före och efter varje moment, protokoll för betongarbeten och gastäthet.</p>
                 </div>
               </li>
               <li class="flex gap-6">
                 <span class="text-3xl font-semibold text-[color:var(--color-brand-red)] leading-none">4</span>
                 <div>
                   <h3 class="text-lg font-semibold mb-2">Ombesiktning och godkännande</h3>
-                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Vi koordinerar ombesiktning med MSB och levererar komplett dokumentation till er förvaltning.</p>
+                  <p class="text-[color:var(--color-ink-60)] leading-relaxed">Vi koordinerar ombesiktning med MCF och levererar komplett dokumentation till er förvaltning.</p>
                 </div>
               </li>
             </ol>
@@ -213,17 +213,17 @@ import RelatedServices from "../../components/RelatedServices.astro";
         <div class="space-y-4 max-w-4xl">
           <details class="group bg-white rounded-2xl p-6 lg:p-8">
             <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
-              Vad händer om vi inte åtgärdar bristen inom MSB:s frist?
+              Vad händer om vi inte åtgärdar bristen inom MCF:s frist?
               <span class="text-[color:var(--color-brand-red)] group-open:rotate-45 transition-transform text-2xl leading-none">+</span>
             </summary>
-            <p class="mt-4 text-[color:var(--color-ink-60)] leading-relaxed">MSB utfärdar vite som stiger stegvis vid fortsatt uteblivet åtgärdande. Vitet är normalt högre än åtgärdens kostnad efter ett par turer. Bättre att begära anstånd tidigt än att missa fristen.</p>
+            <p class="mt-4 text-[color:var(--color-ink-60)] leading-relaxed">MCF utfärdar vite som stiger stegvis vid fortsatt uteblivet åtgärdande. Vitet är normalt högre än åtgärdens kostnad efter ett par turer. Bättre att begära anstånd tidigt än att missa fristen.</p>
           </details>
           <details class="group bg-white rounded-2xl p-6 lg:p-8">
             <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">
-              Kan vi få ekonomiskt stöd från MSB?
+              Kan vi få ekonomiskt stöd från MCF?
               <span class="text-[color:var(--color-brand-red)] group-open:rotate-45 transition-transform text-2xl leading-none">+</span>
             </summary>
-            <p class="mt-4 text-[color:var(--color-ink-60)] leading-relaxed">Ja, regeringen har avsatt 100 Mkr/år till MSB för skyddsrumsåtgärder. När MSB i sin kontroll noterar behov av filterbyte genomför fastighetsägaren åtgärden och får ersättning från MSB för kostnaden. Vi hjälper till med ansökan.</p>
+            <p class="mt-4 text-[color:var(--color-ink-60)] leading-relaxed">Ja, regeringen har avsatt 100 Mkr/år till MCF för skyddsrumsåtgärder. När MCF i sin kontroll noterar behov av filterbyte genomför fastighetsägaren åtgärden och får ersättning från MCF för kostnaden. Vi hjälper till med ansökan.</p>
           </details>
           <details class="group bg-white rounded-2xl p-6 lg:p-8">
             <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg">

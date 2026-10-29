@@ -1,32 +1,32 @@
 ---
 title: "Skyddsrumsbesiktning checklista, 30 punkter att kontrollera"
-description: "Komplett checklista för skyddsrumsbesiktning. 30 kontrollpunkter som MSB tittar på, vad åtgärder kostar och hur ni förbereder er BRF inför kontrollen."
+description: "Komplett checklista för skyddsrumsbesiktning. 30 kontrollpunkter som MCF tittar på, vad åtgärder kostar och hur ni förbereder er BRF inför kontrollen."
 published: 2026-04-25
 category: "Teknik"
-tags: ["skyddsrumsbesiktning", "MSB", "checklista", "BRF", "kontroll"]
+tags: ["skyddsrumsbesiktning", "MCF", "checklista", "BRF", "kontroll"]
 readingTime: 9
 heroImage: "/projekt/bygg_image3.webp"
 heroImageAlt: "Markarbeten med grävmaskin och rör i Solnaprojekt"
 faq:
-  - q: "Vad kostar det att förbereda skyddsrummet inför MSB-kontroll?"
+  - q: "Vad kostar det att förbereda skyddsrummet inför MCF-kontroll?"
     a: "Förberedande städning och sortering kostar typiskt 5 000–25 000 kr för en BRF. Större förberedande åtgärder (typ borttagning av installationer som inte hör hemma, demontering av tillfälliga väggar): 30 000–100 000 kr. Mycket billigare än att få omfattande anmärkningar."
   - q: "Hur ofta görs skyddsrumsbesiktning?"
-    a: "MSB:s kontrollintervall är vanligen 10 år, men kan variera. Aktuell kontrollomgång (2025-2030) går igenom landets skyddsrum systematiskt. Fastighetsägaren får varsel via brev när det är dags."
+    a: "MCF:s kontrollintervall är vanligen 10 år, men kan variera. Aktuell kontrollomgång (2025-2030) går igenom landets skyddsrum systematiskt. Fastighetsägaren får varsel via brev när det är dags."
   - q: "Vad händer om vi inte åtgärdar anmärkningarna?"
-    a: "MSB kan utfärda förelägganden med tidsfrist. Vid fortsatt försummelse kan vite utdömas. Ansvar ligger hos fastighetsägaren, för en BRF innebär det styrelsen. Ta anmärkningar på allvar."
+    a: "MCF kan utfärda förelägganden med tidsfrist. Vid fortsatt försummelse kan vite utdömas. Ansvar ligger hos fastighetsägaren, för en BRF innebär det styrelsen. Ta anmärkningar på allvar."
 ---
 
 ## Kort svar
 
-En **MSB-skyddsrumsbesiktning** kontrollerar 30+ punkter i skyddsrummet, från betongens täthet till luftfilters skick. Förberedelse minskar antalet anmärkningar och sparar pengar. Denna checklista går igenom alla kontrollpunkter MSB tittar på, så ni vet vad ni har att förvänta er.
+En **MCF-skyddsrumsbesiktning** kontrollerar 30+ punkter i skyddsrummet, från betongens täthet till luftfilters skick. Förberedelse minskar antalet anmärkningar och sparar pengar. Denna checklista går igenom alla kontrollpunkter MCF (tidigare MSB) tittar på, så ni vet vad ni har att förvänta er.
 
-## Innan MSB-besiktningen, förbered er BRF
+## Innan MCF-besiktningen, förbered er BRF
 
 ### 1. Hitta rätt utrymme
 Skyddsrummet är ofta i källaren. Identifiera tydligt vilket rum det är, märkning eller skylt på dörren.
 
 ### 2. Töm utrymmet
-Skyddsrum är ofta använt som förråd. Inför kontrollen ska utrymmet vara TOMT eller ha en tydlig plan för snabbevakuering vid kris. MSB godtar lagring så länge det inte hindrar 8-timmars startupp.
+Skyddsrum är ofta använt som förråd. Inför kontrollen ska utrymmet vara TOMT eller ha en tydlig plan för snabbevakuering vid kris. MCF godtar lagring så länge det inte hindrar 8-timmars startupp.
 
 ### 3. Granska era handlingar
 Leta upp:
@@ -36,7 +36,7 @@ Leta upp:
 - Lista över installerad utrustning
 
 ### 4. Kontrollera tillträde
-MSB-kontrollanten ska kunna komma in. Säkerställ nyckel, koder, kontaktpersoner.
+MCF-kontrollanten ska kunna komma in. Säkerställ nyckel, koder, kontaktpersoner.
 
 ## De 30 kontrollpunkterna
 
@@ -93,14 +93,14 @@ Nödutgångens funktion, blockering, tätning.
 ### Ventilation (8 punkter)
 
 #### 11. Filter, luftfilter
-Filtrets ålder och skick. Ofta primär anmärkning. **MSB betalar filterbyte** enligt 100 Mkr-anslaget.
+Filtrets ålder och skick. Ofta primär anmärkning. **MCF betalar filterbyte** enligt 100 Mkr-anslaget.
 
-**Vanlig åtgärd:** Filterbyte. Kostnad: 30 000–80 000 kr (refunderas av MSB).
+**Vanlig åtgärd:** Filterbyte. Kostnad: 30 000–80 000 kr (refunderas av MCF).
 
 #### 12. Filter, gasfilter
 Gasfiltrets skick och giltighet. Har bäst-före-datum.
 
-**Vanlig åtgärd:** Filterbyte. Kostnad: 25 000–70 000 kr (refunderas av MSB).
+**Vanlig åtgärd:** Filterbyte. Kostnad: 25 000–70 000 kr (refunderas av MCF).
 
 #### 13. Ventilationskanaler
 Kanalernas täthet och skick.
@@ -156,7 +156,7 @@ Existens, skick och rengöring.
 Antingen vanlig toalett eller tillfällig (campingtoalett-lösning).
 
 #### 24. Första hjälpen-utrustning
-Förbandslåda enligt MSB:s krav.
+Förbandslåda enligt MCF:s krav.
 
 **Vanlig åtgärd:** Komplettering eller utbyte. Kostnad: 1 000–5 000 kr.
 
@@ -184,7 +184,7 @@ Originalhandling med ritningar och beskrivning. Ska finnas tillgänglig.
 
 ## Vad händer efter besiktningen?
 
-MSB-kontrollanten skriver ett **kontrollprotokoll** med:
+MCF-kontrollanten skriver ett **kontrollprotokoll** med:
 
 1. **Godkända delar**, utan anmärkning
 2. **Mindre brister**, bör åtgärdas, men ingen tidsfrist
@@ -193,24 +193,24 @@ MSB-kontrollanten skriver ett **kontrollprotokoll** med:
 
 Protokollet skickas till fastighetsägaren. **Spara det**, det är viktig dokumentation och utgångspunkt för åtgärdsplan.
 
-## Få MSB-ersättning för filterbyten
+## Få MCF-ersättning för filterbyten
 
-Filterbyten omfattas av **100 Mkr/år-anslaget** från regeringen via MSB. Steg-för-steg-process: [Läs vår guide om MSB-ersättning](/artiklar/msb-ersattning-skyddsrum-statsbidrag/).
+Filterbyten omfattas av **100 Mkr/år-anslaget** från regeringen via MCF. Steg-för-steg-process: [Läs vår guide om MCF-ersättning](/artiklar/msb-ersattning-skyddsrum-statsbidrag/).
 
 ## RM Entreprenads roll
 
 Vi hjälper BRF:er och fastighetsägare med:
 
-- **Förberedande inspektion** innan MSB-kontrollen, billigare än omfattande anmärkningar
-- **Åtgärd av MSB-anmärkningar** med rätt material och dokumentation
-- **MSB-ersättningsansökan**, vi tar fram all dokumentation
+- **Förberedande inspektion** innan MCF-kontrollen, billigare än omfattande anmärkningar
+- **Åtgärd av MCF-anmärkningar** med rätt material och dokumentation
+- **MCF-ersättningsansökan**, vi tar fram all dokumentation
 - **Slutdokumentation** för fastighetsarkivet
 
 ## Begär offert
 
-[Kontakta oss](/kontakt) för förberedande inspektion eller åtgärd av MSB-anmärkningar i ert skyddsrum.
+[Kontakta oss](/kontakt) för förberedande inspektion eller åtgärd av MCF-anmärkningar i ert skyddsrum.
 
 → Vår tjänst: [Skyddsrumsbesiktning](/tjanster/skyddsrumsbesiktning/)
 → Hur vi arbetar: [Systemet, vårt arbetssätt](/systemet)
 
-Läs också: [Skyddsrumsbesiktning för BRF, krav och kostnader](/artiklar/skyddsrumsbesiktning-brf-stockholm/) · [MSB-ersättning för skyddsrumsåtgärd](/artiklar/msb-ersattning-skyddsrum-statsbidrag/)
+Läs också: [Skyddsrumsbesiktning för BRF, krav och kostnader](/artiklar/skyddsrumsbesiktning-brf-stockholm/) · [MCF-ersättning för skyddsrumsåtgärd](/artiklar/msb-ersattning-skyddsrum-statsbidrag/)

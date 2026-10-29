@@ -3,14 +3,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { SITE } from "../../lib/site";
 
-const title = "Skyddsrumssanering Stockholm, MSB-åtgärd och godkännande";
+const title = "Skyddsrumssanering Stockholm, MCF-åtgärd och godkännande";
 const description =
-  "Skyddsrumssanering efter MSB-kontroll i Stockholm. Sprickor, fukt, otäta slussar, ventilation och filterbyte. Riktpriser, tidsplan och MSB-ersättning.";
+  "Skyddsrumssanering efter MCF-kontroll i Stockholm. Sprickor, fukt, otäta slussar, ventilation och filterbyte. Riktpriser, tidsplan och MCF-ersättning.";
 
 const faqs = [
   {
     q: "Vad är skyddsrumssanering?",
-    a: "Skyddsrumssanering är åtgärdsarbetet som krävs efter en MSB-kontroll där brister identifierats. Det kan röra sig om betongreparationer, fuktåtgärder, byte av slussdörrar, ventilationsservice eller återställning av otillåtna ombyggnationer. Målet är att rummet ska klara MSB:s ombesiktning och få godkänd status.",
+    a: "Skyddsrumssanering är åtgärdsarbetet som krävs efter en MCF-kontroll där brister identifierats. Det kan röra sig om betongreparationer, fuktåtgärder, byte av slussdörrar, ventilationsservice eller återställning av otillåtna ombyggnationer. Målet är att rummet ska klara MCF:s ombesiktning och få godkänd status.",
   },
   {
     q: "Vad kostar en skyddsrumssanering i Stockholm?",
@@ -18,23 +18,23 @@ const faqs = [
   },
   {
     q: "Hur lång tid tar en skyddsrumssanering?",
-    a: "Ett typiskt saneringsprojekt för en BRF i Stockholm tar 6 till 14 månader från MSB-beslut till godkänd status. Av detta är själva utförandet 2 till 6 månader. Resten är styrelsebeslut, upphandling, projektering och MSB:s ombesiktning. MSB:s åtgärdsfrist är normalt 12 till 24 månader, så tidsplanen är genomförbar om beslut fattas tidigt.",
+    a: "Ett typiskt saneringsprojekt för en BRF i Stockholm tar 6 till 14 månader från MCF-beslut till godkänd status. Av detta är själva utförandet 2 till 6 månader. Resten är styrelsebeslut, upphandling, projektering och MCF:s ombesiktning. MCF:s åtgärdsfrist är normalt 12 till 24 månader, så tidsplanen är genomförbar om beslut fattas tidigt.",
   },
   {
-    q: "Får BRF ersättning från MSB för saneringskostnader?",
-    a: "Filterbyte kan ersättas av MSB enligt det 100 miljoners-anslag som regeringen avsatt. Andra saneringsåtgärder (betong, fukt, sluss) bekostas normalt av fastighetsägaren själv. Vi hjälper er ansöka om filterersättning som en del av saneringsuppdraget.",
+    q: "Får BRF ersättning från MCF för saneringskostnader?",
+    a: "Filterbyte kan ersättas av MCF enligt det 100 miljoners-anslag som regeringen avsatt. Andra saneringsåtgärder (betong, fukt, sluss) bekostas normalt av fastighetsägaren själv. Vi hjälper er ansöka om filterersättning som en del av saneringsuppdraget.",
   },
   {
-    q: "Vad händer om vi inte sanerar inom MSB:s frist?",
-    a: "MSB kan utdöma vite eller besluta att skyddsrummet inte längre uppfyller kraven, vilket innebär att fastighetsägaren förlorar avdragsrätten för uppvärmning av utrymmet. I praktiken är det dock så att MSB hellre förlänger fristen än utdömer vite om åtgärdsarbetet är påbörjat och dokumenterat.",
+    q: "Vad händer om vi inte sanerar inom MCF:s frist?",
+    a: "MCF kan utdöma vite eller besluta att skyddsrummet inte längre uppfyller kraven, vilket innebär att fastighetsägaren förlorar avdragsrätten för uppvärmning av utrymmet. I praktiken är det dock så att MCF hellre förlänger fristen än utdömer vite om åtgärdsarbetet är påbörjat och dokumenterat.",
   },
   {
     q: "Vem är ansvarig för saneringen, BRF eller den enskilda lägenhetsinnehavaren?",
     a: "Ansvaret ligger hos fastighetsägaren, som i en bostadsrättsförening är BRF:en (juridiskt sett föreningen, inte enskilda medlemmar). Beslutet om att sanera tas av styrelsen. Vid större kostnader kan extrastämma krävas enligt stadgarna.",
   },
   {
-    q: "Måste vi använda en MSB-certifierad entreprenör?",
-    a: "MSB-certifiering krävs för skyddsrumsbesiktning, men inte för själva saneringsarbetet. Däremot ska entreprenören ha dokumenterad kunskap om MSB:s ritningsanvisningar, hållfasthetsklasser och täthetstest. RM:s kärnteam har MSB-utbildad personal och egna projektledare för skyddsrumsuppdrag.",
+    q: "Måste vi använda en MCF-certifierad entreprenör?",
+    a: "MCF-certifiering krävs för skyddsrumsbesiktning, men inte för själva saneringsarbetet. Däremot ska entreprenören ha dokumenterad kunskap om MCF:s ritningsanvisningar, hållfasthetsklasser och täthetstest. RM:s kärnteam har MCF-utbildad personal och egna projektledare för skyddsrumsuppdrag.",
   },
 ];
 
@@ -47,7 +47,7 @@ const schema = {
       provider: { "@id": `${SITE.url}/#organization` },
       areaServed: ["Stockholm", "Stockholms län", "Mälardalen"],
       description:
-        "Åtgärd av MSB-brister i skyddsrum: sprickor, fuktskador, otäta slussar, ventilationssystem, återställning av felaktiga ombyggnationer och filterbyte. Komplett dokumentation och MSB-ombesiktning ingår.",
+        "Åtgärd av MCF-brister i skyddsrum: sprickor, fuktskador, otäta slussar, ventilationssystem, återställning av felaktiga ombyggnationer och filterbyte. Komplett dokumentation och MCF-ombesiktning ingår.",
       url: `${SITE.url}/tjanster/skyddsrumssanering`,
       offers: {
         "@type": "AggregateOffer",
@@ -100,13 +100,13 @@ const fixes = [
   },
   {
     name: "Återställning av otillåtna ombyggnader",
-    desc: "Otillåtna håltagningar för el- eller VS-dragningar tätas. Felaktiga dörrar byts ut mot gastäta varianter. Original-utförandet dokumenteras i MSB-ritningarna och förvaltningens register.",
+    desc: "Otillåtna håltagningar för el- eller VS-dragningar tätas. Felaktiga dörrar byts ut mot gastäta varianter. Original-utförandet dokumenteras i MCF-ritningarna och förvaltningens register.",
     price: "15 000–100 000 kr",
   },
   {
-    name: "Filterbyte (med MSB-ersättning)",
-    desc: "När MSB i sin kontroll noterar filterbyte bekostar de åtgärden via 100 Mkr-anslaget. Vi hanterar filterbytet och hjälper er ansöka om ersättning. För BRF blir detta nästan kostnadsneutralt.",
-    price: "30 000–80 000 kr (kan ersättas av MSB)",
+    name: "Filterbyte (med MCF-ersättning)",
+    desc: "När MCF i sin kontroll noterar filterbyte bekostar de åtgärden via 100 Mkr-anslaget. Vi hanterar filterbytet och hjälper er ansöka om ersättning. För BRF blir detta nästan kostnadsneutralt.",
+    price: "30 000–80 000 kr (kan ersättas av MCF)",
   },
 ];
 import RelatedServices from "../../components/RelatedServices.astro";
@@ -135,7 +135,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
           Skyddsrumssanering i Stockholm
         </h1>
         <p class="text-lg lg:text-xl text-[color:var(--color-ink-60)] leading-relaxed max-w-3xl mb-10">
-          När MSB har identifierat brister i ert skyddsrum tar vi hela åtgärdsarbetet från analys till godkänd status. Egen projektering, egen projektledning, MSB-utbildad personal. Vi arbetar åt bostadsrättsföreningar, fastighetsägare, kommuner och industri i Stockholm och Mälardalen.
+          När MCF (tidigare MSB) har identifierat brister i ert skyddsrum tar vi hela åtgärdsarbetet från analys till godkänd status. Egen projektering, egen projektledning, MCF-utbildad personal. Vi arbetar åt bostadsrättsföreningar, fastighetsägare, kommuner och industri i Stockholm och Mälardalen.
         </p>
 
         <!-- Innehållsförteckning -->
@@ -146,7 +146,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
             <li><a href="#brister" class="hover:text-[color:var(--color-brand-red)]">Vanliga brister och åtgärder</a></li>
             <li><a href="#kostnader" class="hover:text-[color:var(--color-brand-red)]">Kostnader och riktpriser</a></li>
             <li><a href="#process" class="hover:text-[color:var(--color-brand-red)]">Process och tidsplan</a></li>
-            <li><a href="#msb" class="hover:text-[color:var(--color-brand-red)]">MSB-ersättning</a></li>
+            <li><a href="#msb" class="hover:text-[color:var(--color-brand-red)]">MCF-ersättning</a></li>
             <li><a href="#faq" class="hover:text-[color:var(--color-brand-red)]">Vanliga frågor</a></li>
           </ol>
         </div>
@@ -160,18 +160,18 @@ import RelatedServices from "../../components/RelatedServices.astro";
           <div class="lg:col-span-5">
             <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">När behöver ni sanering</p>
             <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight">
-              MSB har identifierat brister.
+              MCF har identifierat brister.
             </h2>
           </div>
           <div class="lg:col-span-7 prose prose-lg max-w-none text-[color:var(--color-ink-60)] leading-relaxed">
             <p>
-              Skyddsrumssanering blir aktuell när MSB i sin kontroll har noterat brister som måste åtgärdas inom en viss frist. Kontrollen sker normalt vart femte år, eller på initiativ av fastighetsägaren själv. Brister kan vara tekniska (sprickor, fukt, otät sluss) eller administrativa (felaktig dokumentation, otillåtna ombyggnationer som inte återställts).
+              Skyddsrumssanering blir aktuell när MCF i sin kontroll har noterat brister som måste åtgärdas inom en viss frist. Kontrollen sker normalt vart femte år, eller på initiativ av fastighetsägaren själv. Brister kan vara tekniska (sprickor, fukt, otät sluss) eller administrativa (felaktig dokumentation, otillåtna ombyggnationer som inte återställts).
             </p>
             <p>
-              Som fastighetsägare har ni en åtgärdsfrist, oftast 12 till 24 månader, att rätta till bristerna. När arbetet är klart bokar MSB en ombesiktning, och först då anses skyddsrummet ha godkänd status igen. Tar ni inte tag i åtgärderna inom fristen kan MSB utdöma vite eller dra in den avdragsrätt fastighetsägaren har för uppvärmning av utrymmet.
+              Som fastighetsägare har ni en åtgärdsfrist, oftast 12 till 24 månader, att rätta till bristerna. När arbetet är klart bokar MCF en ombesiktning, och först då anses skyddsrummet ha godkänd status igen. Tar ni inte tag i åtgärderna inom fristen kan MCF utdöma vite eller dra in den avdragsrätt fastighetsägaren har för uppvärmning av utrymmet.
             </p>
             <p>
-              Vårt jobb är att gå från MSB-protokollet till godkänd status med så liten friktion för er styrelse som möjligt. Vi tar hela kedjan, från statusbedömning på plats till MSB:s ombesiktning, och dokumenterar varje moment så att ni kan stå inför nästa kontroll om fem år utan att börja om från noll.
+              Vårt jobb är att gå från MCF-protokollet till godkänd status med så liten friktion för er styrelse som möjligt. Vi tar hela kedjan, från statusbedömning på plats till MCF:s ombesiktning, och dokumenterar varje moment så att ni kan stå inför nästa kontroll om fem år utan att börja om från noll.
             </p>
           </div>
         </div>
@@ -187,7 +187,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
             Sex moment vi åtgärdar.
           </h2>
           <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">
-            De flesta MSB-protokoll vi ser handlar om en kombination av betongproblem, fuktskador, packnings­utbyten, ventilationsservice och otillåtna ombyggnationer. Vi tar varje moment med samma struktur och dokumentation.
+            De flesta MCF-protokoll vi ser handlar om en kombination av betongproblem, fuktskador, packnings­utbyten, ventilationsservice och otillåtna ombyggnationer. Vi tar varje moment med samma struktur och dokumentation.
           </p>
         </div>
 
@@ -247,7 +247,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
                   <tr class="bg-[color:var(--color-paper-2)]/50">
                     <td class="px-6 py-4">
                       <strong>Filterbyte (separat)</strong><br/>
-                      <span class="text-[color:var(--color-ink-60)]">Kan ersättas av MSB</span>
+                      <span class="text-[color:var(--color-ink-60)]">Kan ersättas av MCF</span>
                     </td>
                     <td class="px-6 py-4 text-right font-semibold">30 000–80 000 kr</td>
                   </tr>
@@ -267,10 +267,10 @@ import RelatedServices from "../../components/RelatedServices.astro";
       <div class="mx-auto max-w-7xl px-6 lg:px-10">
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <div>
-            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Tidsplan vid MSB-föreläggande</p>
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">Tidsplan vid MCF-föreläggande</p>
             <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">6 till 14 månader, tre vägval.</h2>
             <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed mb-6">
-              Ett typiskt saneringsprojekt för en BRF i Stockholm tar mellan 6 och 14 månader från beslut till godkänd status. MSB:s åtgärdsfrist är normalt 12 till 24 månader, så tidsplanen är genomförbar om beslut fattas tidigt.
+              Ett typiskt saneringsprojekt för en BRF i Stockholm tar mellan 6 och 14 månader från beslut till godkänd status. MCF:s åtgärdsfrist är normalt 12 till 24 månader, så tidsplanen är genomförbar om beslut fattas tidigt.
             </p>
             <div class="bg-[color:var(--color-paper-2)] rounded-2xl p-8 space-y-4">
               <div class="flex justify-between text-sm">
@@ -282,7 +282,7 @@ import RelatedServices from "../../components/RelatedServices.astro";
                 <span class="text-[color:var(--color-ink-60)]">1–2 mån</span>
               </div>
               <div class="flex justify-between text-sm">
-                <span class="font-semibold">Projektering mot MSB</span>
+                <span class="font-semibold">Projektering mot MCF</span>
                 <span class="text-[color:var(--color-ink-60)]">1 mån</span>
               </div>
               <div class="flex justify-between text-sm">
@@ -300,13 +300,13 @@ import RelatedServices from "../../components/RelatedServices.astro";
             <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">9 punkter, ett kontrakt.</h2>
             <ul class="space-y-4">
               {[
-                "Genomgång av MSB-protokollet och aktuella ritningar",
+                "Genomgång av MCF-protokollet och aktuella ritningar",
                 "Platsbesök med åtgärdsbedömning och provpunkter",
                 "Fast pris per åtgärd eller totalpris för hela saneringen",
-                "Utförande enligt MSB:s ritningsanvisningar med hållfasthetsklass",
+                "Utförande enligt MCF:s ritningsanvisningar med hållfasthetsklass",
                 "Fotodokumentation före och efter varje moment",
                 "Protokoll för betongarbeten, gastäthet och ventilation",
-                "Koordinering av MSB:s ombesiktning",
+                "Koordinering av MCF:s ombesiktning",
                 "Komplett dokumentation levererad till er förvaltning",
                 "Garanti på utförande enligt AB 04 / ABT 06",
               ].map((b) => (
@@ -324,23 +324,23 @@ import RelatedServices from "../../components/RelatedServices.astro";
       </div>
     </section>
 
-    <!-- MSB-ersättning -->
+    <!-- MCF-ersättning -->
     <section id="msb" class="py-20 lg:py-28 bg-[color:var(--color-ink)] text-white">
       <div class="mx-auto max-w-7xl px-6 lg:px-10">
         <div class="grid lg:grid-cols-12 gap-12">
           <div class="lg:col-span-5">
-            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">MSB:s 100 Mkr-anslag</p>
-            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight">Filterbyte ersätts av MSB.</h2>
+            <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-brand-red)] font-semibold mb-4">MCF:s 100 Mkr-anslag</p>
+            <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight">Filterbyte ersätts av MCF.</h2>
           </div>
           <div class="lg:col-span-7 prose prose-lg prose-invert max-w-none text-white/80 leading-relaxed">
             <p>
-              För filterbyte i skyddsrum har regeringen avsatt 100 Mkr som administreras av MSB. Det innebär att fastighetsägare som tvingats byta filter efter MSB-kontroll kan få sina kostnader ersatta enligt MSB:s riktlinjer.
+              För filterbyte i skyddsrum har regeringen avsatt 100 Mkr som administreras av MCF. Det innebär att fastighetsägare som tvingats byta filter efter MCF-kontroll kan få sina kostnader ersatta enligt MCF:s riktlinjer.
             </p>
             <p>
-              Vi hanterar både filterbytet och ersättningsansökan som en del av saneringsuppdraget. Det betyder att ni inte behöver navigera MSB:s ansökningsprocess själva, vi sköter dialogen och dokumentationen.
+              Vi hanterar både filterbytet och ersättningsansökan som en del av saneringsuppdraget. Det betyder att ni inte behöver navigera MCF:s ansökningsprocess själva, vi sköter dialogen och dokumentationen.
             </p>
             <p>
-              <a href="/artiklar/msb-ersattning-skyddsrum-statsbidrag" class="text-[color:var(--color-brand-red)] hover:underline font-medium">Läs mer om MSB-ersättning →</a>
+              <a href="/artiklar/msb-ersattning-skyddsrum-statsbidrag" class="text-[color:var(--color-brand-red)] hover:underline font-medium">Läs mer om MCF-ersättning →</a>
             </p>
           </div>
         </div>
@@ -381,17 +381,17 @@ import RelatedServices from "../../components/RelatedServices.astro";
           <a href="/artiklar/skyddsrumsbesiktning-brf-stockholm" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
             <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] group-hover:text-white/40 font-semibold mb-3">Artikel</p>
             <h3 class="text-xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumsbesiktning för BRF</h3>
-            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Vad MSB kräver, typiska brister och kostnadsnivåer.</p>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Vad MCF kräver, typiska brister och kostnadsnivåer.</p>
           </a>
           <a href="/tjanster/skyddsrumsbesiktning" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
             <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] group-hover:text-white/40 font-semibold mb-3">Tjänst</p>
             <h3 class="text-xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Skyddsrumsbesiktning</h3>
-            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Statusbedömning och åtgärdsplan före MSB-kontrollen.</p>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Statusbedömning och åtgärdsplan före MCF-kontrollen.</p>
           </a>
           <a href="/tjanster/filterbyte-skyddsrum" class="group block p-8 bg-white rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-500">
             <p class="text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-40)] group-hover:text-white/40 font-semibold mb-3">Tjänst</p>
             <h3 class="text-xl font-semibold mb-4 group-hover:text-[color:var(--color-brand-red)] transition-colors">Filterbyte skyddsrum</h3>
-            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Filterbyte med MSB-ersättning enligt 100 Mkr-anslaget.</p>
+            <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 leading-relaxed">Filterbyte med MCF-ersättning enligt 100 Mkr-anslaget.</p>
           </a>
         </div>
         <div class="mt-8">
