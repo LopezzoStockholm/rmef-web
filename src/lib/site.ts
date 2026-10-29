@@ -12,8 +12,8 @@ export const SITE = {
   email: "info@rmef.se",
   whatsapp: "+46871287570",
   address: {
-    street: "",
-    postalCode: "",
+    street: "Segelbåtsvägen 15",
+    postalCode: "112 64",
     city: "Stockholm",
     region: "Stockholms län",
     country: "SE",
