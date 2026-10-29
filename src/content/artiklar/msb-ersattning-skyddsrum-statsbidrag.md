@@ -1,6 +1,6 @@
 ---
 title: "MSB-ersättning skyddsrum 2026, så söker BRF"
-description: "Regeringen har avsatt 100 Mkr/år till MSB för skyddsrumsåtgärder. Så fungerar ersättningen för fastighetsägare och bostadsrättsföreningar, vad som täcks, hur ansökan går till och vilka åtgärder som betalas."
+description: "Regeringen har avsatt 100 Mkr/år till MSB för skyddsrumsåtgärder. Så fungerar ersättningen för BRF och fastighetsägare: vad som täcks och hur ni söker."
 published: 2026-04-24
 category: "Upphandling"
 tags: ["skyddsrum", "MSB", "statsbidrag", "BRF", "fastighetsägare"]

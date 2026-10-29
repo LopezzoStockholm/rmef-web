@@ -1,0 +1,29 @@
+---
+// Internlänkblock i brödtext: ger varje sida väg vidare till kärnsidorna.
+// Sidan man står på filtreras bort.
+const links = [
+  { href: "/lss-boenden/", label: "LSS-boenden", desc: "Nyproduktion på totalentreprenad" },
+  { href: "/tjanster/bygg/", label: "Bygg & totalentreprenad", desc: "ABT 06 och AB 04, från cirka 20 Mkr" },
+  { href: "/tjanster/mark-och-anlaggning/", label: "Mark & anläggning", desc: "Schakt, spontning, grundläggning" },
+  { href: "/tjanster/stomme-husfabrik/", label: "Stomme & husfabrik", desc: "Prefabricerad, CE-märkt stomme" },
+  { href: "/tjanster/projektering/", label: "Projektering", desc: "Egen mark- och byggprojektering" },
+  { href: "/tjanster/skyddsrumssanering/", label: "Skyddsrumssanering", desc: "MSB-åtgärder till godkänd status" },
+  { href: "/systemet/", label: "Systemet", desc: "Vårt interna styrsystem" },
+];
+const path = Astro.url.pathname.replace(/\/?$/, "/");
+const shown = links.filter((l) => l.href !== path).slice(0, 6);
+---
+
+<section class="py-12 lg:py-16">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10">
+    <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-8">Fler tjänster och områden</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {shown.map((l) => (
+        <a href={l.href} class="group block p-6 bg-[color:var(--color-paper-2)] rounded-2xl hover:bg-[color:var(--color-ink)] hover:text-white transition-all duration-300">
+          <p class="text-base font-semibold group-hover:text-[color:var(--color-brand-red)] transition-colors">{l.label}</p>
+          <p class="text-sm text-[color:var(--color-ink-60)] group-hover:text-white/60 mt-1">{l.desc}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

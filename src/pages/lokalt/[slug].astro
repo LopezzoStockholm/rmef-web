@@ -19,6 +19,39 @@ const relatedProjects = location.referenser
       .filter((p): p is NonNullable<typeof p> => !!p)
   : [];
 
+// FAQ per tjänstetyp. Endast fakta som finns verifierade på sajten (riktpriser från
+// kostnadsguiderna, referensprojekt). Ortnamnet gör frågan lokal, svaren ska hålla överallt.
+const ort = location.ort;
+const faqByService: Record<string, { q: string; a: string }[]> = {
+  fasadrenovering: [
+    { q: `Vad kostar en fasadrenovering i ${ort}?`, a: "Riktpriset i Stockholmsregionen är 1 500 till 3 500 kr per kvadratmeter fasadyta, beroende på om fasaden lagas lokalt, putsas om helt eller tilläggsisoleras. Exakt pris lämnas efter platsbesök och statusbedömning." },
+    { q: "Vad ingår i en fasadrenovering?", a: "Besiktning och statusbedömning, ställning och väderskydd, lagning eller omputsning, målning och vid behov tilläggsisolering. Balkong- och betongåtgärder kan samordnas i samma entreprenad, vilket sparar ställnings- och etableringskostnader." },
+    { q: "Arbetar ni med kulturhistoriska fasader?", a: "Ja. Vi har restaurerat K-märkta byggnader åt Lidingö Stad, bland annat Vindarnas tempel och Kaptensstugan, med antikvarisk kontroll genom hela processen." },
+  ],
+  skyddsrum: [
+    { q: `Vad kostar skyddsrumssanering i ${ort}?`, a: "Mindre åtgärder som slussjustering och packningsbyte ligger på 10 000 till 50 000 kr. Medelomfattande sanering med betong, fukt och ventilation ligger på 50 000 till 150 000 kr, och större saneringar på 150 000 till 400 000 kr. Filterbyte kan ersättas av MSB." },
+    { q: "Vad händer efter en MSB-kontroll med anmärkningar?", a: "Fastighetsägaren får normalt en åtgärdsfrist på 12 till 24 månader. När bristerna är åtgärdade bokas en ombesiktning och skyddsrummet får godkänd status igen. Ett typiskt saneringsprojekt tar 6 till 14 månader från beslut till godkännande." },
+    { q: "Kan BRF:en få ersättning från MSB?", a: "Filterbyte kan ersättas av MSB. Övriga saneringsåtgärder som betong, fukt och slussar bekostas normalt av fastighetsägaren. Vi hjälper till med ansökan om filterersättning som en del av uppdraget." },
+  ],
+  betongrenovering: [
+    { q: `Vad kostar betongrenovering i ${ort}?`, a: "Riktpriset är 1 200 till 7 500 kr per kvadratmeter beroende på omfattning. Enklare karbonatiseringsåtgärder hamnar i den lägre delen, omfattande renovering med utbyte av armering och nygjutning i den högre." },
+    { q: "Vilka skador är vanligast?", a: "Karbonatisering och armeringskorrosion, som ger sprickor och spjälkning i balkonger, bjälklag och betongfasader. Flerbostadshus från 1950 till 1980 når nu den ålder då skadorna syns." },
+    { q: "Hur börjar man?", a: "Med en statusbedömning där betongens skick provas och dokumenteras. Den ger styrelsen ett objektivt underlag för beslut och upphandling innan skadorna växer och blir dyrare att åtgärda." },
+  ],
+  totalentreprenad: [
+    { q: `Vilka totalentreprenader tar ni i ${ort}?`, a: "Totalentreprenader enligt ABT 06 från cirka 20 Mkr och uppåt: nyproduktion av LSS-boenden och samhällsfastigheter, kontorsanpassning och projekt med komplexa markarbeten. Vi driver även utförandeentreprenader enligt AB 04." },
+    { q: "Hur skyddas beställaren ekonomiskt?", a: "Faktureringen följer en milstolpsstyrd betalplan kopplad till verifierade milstolpar, och ingen underentreprenör får betalt innan beställaren godkänt leveransen enligt avtal." },
+    { q: "Varför egen projektering?", a: "Med egen mark- och byggprojektering löses gränssnitten innan produktionen startar. Det ger färre överraskningar, lägre ÄTA-volym och en tidplan som håller." },
+  ],
+  markarbeten: [
+    { q: `Vilka markarbeten utför ni i ${ort}?`, a: "Schakt, sprängning, spontning, grundläggning med bottenplatta eller platta på mark, platsgjutna källarväggar och skyddsrum, ledningsarbeten, isodrän och finplanering." },
+    { q: "Vad styr kostnaden för markarbeten?", a: "Markförhållandena: berg som ska sprängas, jordarnas bärighet, schaktvolym, grundvatten och hur trång arbetsplatsen är. Därför prissätter vi efter platsbesök och genomgång av handlingarna, med besked inom 48 timmar." },
+    { q: "Hur stora markentreprenader har ni genomfört?", a: "Från ledningsomläggningar till grundläggningen av Kvarteret Persikan åt Stockholmshem, 75 Mkr, med schakt, bottenplatta, skyddsrum och platsgjutna källarväggar." },
+  ],
+};
+const faq = faqByService[location.service] ?? [];
+const otherPlaces = LOCATIONS.filter((l) => l.service === location.service && l.slug !== location.slug);
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -38,8 +71,12 @@ const schema = {
         { "@type": "ListItem", position: 3, name: `${location.serviceLabel} ${location.ort}`, item: `${SITE.url}/lokalt/${location.slug}` },
       ],
     },
+    ...(faq.length
+      ? [{ "@type": "FAQPage", mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }]
+      : []),
   ],
 };
+import RelatedServices from "../../components/RelatedServices.astro";
 ---
 
 <BaseLayout title={location.title} description={location.description} schema={schema}>
@@ -123,6 +160,35 @@ const schema = {
       </div>
     </section>
 
+    {location.sections && location.sections.length > 0 && (
+      <section class="py-12 lg:py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-3 gap-8">
+          {location.sections.map((sec) => (
+            <div>
+              <h2 class="text-xl lg:text-2xl font-semibold tracking-tight mb-4">{sec.h}</h2>
+              <p class="text-[color:var(--color-ink-60)] leading-relaxed">{sec.p}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {faq.length > 0 && (
+      <section class="py-12 lg:py-20 bg-[color:var(--color-paper-2)]">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
+          <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-10">Vanliga frågor</h2>
+          <div class="grid gap-6 max-w-4xl">
+            {faq.map((f) => (
+              <div class="p-8 bg-white rounded-2xl">
+                <h3 class="text-lg font-semibold mb-3">{f.q}</h3>
+                <p class="text-[color:var(--color-ink-60)] leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
     {relatedProjects.length > 0 && (
       <section class="py-20 lg:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-10">
@@ -140,6 +206,21 @@ const schema = {
         </div>
       </section>
     )}
+
+    {otherPlaces.length > 0 && (
+      <section class="pt-12 lg:pt-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
+          <h2 class="text-xl font-semibold tracking-tight mb-4">{location.serviceLabel} på fler orter</h2>
+          <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            {otherPlaces.map((l) => (
+              <li><a href={`/lokalt/${l.slug}/`} class="text-[color:var(--color-brand-red)] hover:underline">{l.serviceLabel} {l.ort}</a></li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )}
+
+    <RelatedServices />
 
     <CTA />
   </article>

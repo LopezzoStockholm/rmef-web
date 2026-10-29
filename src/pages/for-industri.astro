@@ -5,6 +5,7 @@ import CTA from "../components/CTA.astro";
 const title = "För industri, entreprenad i driftkänsliga miljöer";
 const description =
   "Vi arbetar åt industrin i Stockholm och Mälardalen. Driftkänsliga miljöer, hygieniska krav, noll driftstörningar. Referens: Octapharma och Danderyds sjukhus.";
+import RelatedServices from "../components/RelatedServices.astro";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -80,6 +81,8 @@ const description =
         </div>
       </div>
     </section>
+
+    <RelatedServices />
 
     <CTA />
   </article>

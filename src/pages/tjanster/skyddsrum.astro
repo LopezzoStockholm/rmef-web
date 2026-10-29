@@ -74,6 +74,7 @@ const serviceSchema = {
     },
   ],
 };
+import RelatedServices from "../../components/RelatedServices.astro";
 ---
 
 <BaseLayout title={title} description={description} schema={serviceSchema}>
@@ -248,6 +249,8 @@ const serviceSchema = {
         </div>
       </div>
     </section>
+
+    <RelatedServices />
 
     <CTA />
   </article>

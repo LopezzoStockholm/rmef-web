@@ -3,9 +3,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { SITE } from "../../lib/site";
 
-const title = "Nyproduktion av skyddsrum, ersättnings­skyddsrum i flerbostadshus";
+const title = "Nyproduktion av skyddsrum i flerbostadshus";
 const description =
-  "Nyproduktion av skyddsrum i Stockholm och Mälardalen. Ersättnings­skyddsrum i samband med bostadsbyggnation, betongteknik, slussar, ventilation och MSB-dokumentation.";
+  "Nyproduktion av skyddsrum i Stockholm och Mälardalen. Ersättningsskyddsrum vid bostadsbyggnation: betongteknik, slussar, ventilation och MSB-dokumentation.";
 
 const schema = {
   "@context": "https://schema.org",
@@ -30,6 +30,7 @@ const schema = {
     },
   ],
 };
+import RelatedServices from "../../components/RelatedServices.astro";
 ---
 
 <BaseLayout title={title} description={description} schema={schema}>
@@ -124,6 +125,8 @@ const schema = {
         </div>
       </div>
     </section>
+
+    <RelatedServices />
 
     <CTA />
   </article>

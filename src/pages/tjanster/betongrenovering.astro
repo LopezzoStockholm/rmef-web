@@ -3,9 +3,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { SITE } from "../../lib/site";
 
-const title = "Betongrenovering Stockholm, karbonatisering, balkong och bjälklag";
+const title = "Betongrenovering för BRF och fastighetsägare i Stockholm";
 const description =
-  "Betongrenovering i Stockholm och Mälardalen. Vi åtgärdar karbonatisering, armeringskorrosion, spjälkning på balkonger, bjälklag och betongfasader för BRF och fastighetsägare.";
+  "Betongrenovering i Stockholm och Mälardalen: karbonatisering, armeringskorrosion och spjälkning i balkonger, bjälklag och fasader. För BRF och fastighetsägare.";
 
 const schema = {
   "@context": "https://schema.org",
@@ -29,6 +29,7 @@ const schema = {
     },
   ],
 };
+import RelatedServices from "../../components/RelatedServices.astro";
 ---
 
 <BaseLayout title={title} description={description} schema={schema}>
@@ -139,6 +140,8 @@ const schema = {
         </div>
       </div>
     </section>
+
+    <RelatedServices />
 
     <CTA />
   </article>

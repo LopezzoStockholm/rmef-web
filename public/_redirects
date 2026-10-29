@@ -5,3 +5,11 @@
 # 301 så befintliga inlänkar bevarar SEO-värde och pekar mot tjänsteöversikten.
 /tjanster/el  /tjanster  301
 /tjanster/el/ /tjanster/ 301
+
+# Stadsdelssidor för skyddsrum sammanslagna 2026-10-29 (tunt innehåll, konkurrerade med varandra).
+/lokalt/skyddsrum-sodermalm   /lokalt/skyddsrum-stockholm/  301
+/lokalt/skyddsrum-sodermalm/  /lokalt/skyddsrum-stockholm/  301
+/lokalt/skyddsrum-vasastan    /lokalt/skyddsrum-stockholm/  301
+/lokalt/skyddsrum-vasastan/   /lokalt/skyddsrum-stockholm/  301
+/lokalt/skyddsrum-kungsholmen  /lokalt/skyddsrum-stockholm/ 301
+/lokalt/skyddsrum-kungsholmen/ /lokalt/skyddsrum-stockholm/ 301

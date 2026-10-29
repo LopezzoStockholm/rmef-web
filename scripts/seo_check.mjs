@@ -25,8 +25,9 @@ const seenDesc = new Map();
 for (const f of files) {
   const h = readFileSync(f, "utf8");
   const url = "/" + f.replace(/^dist\/?/, "").replace(/index\.html$/, "");
-  const t = (h.match(/<title>([\s\S]*?)<\/title>/) || [, ""])[1].trim();
-  const d = (h.match(/<meta name="description" content="([\s\S]*?)"/) || [, ""])[1].trim();
+  const dec = (x) => x.replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+  const t = dec((h.match(/<title>([\s\S]*?)<\/title>/) || [, ""])[1].trim());
+  const d = dec((h.match(/<meta name="description" content="([\s\S]*?)"/) || [, ""])[1].trim());
   if (t.length > TITLE_MAX) long.push([t.length, url, t]);
   if (d.length > DESC_MAX || d.length < DESC_MIN) desc.push([d.length, url]);
   seenTitle.set(t, [...(seenTitle.get(t) || []), url]);

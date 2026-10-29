@@ -5,7 +5,7 @@ import { SITE } from "../../lib/site";
 
 const title = "Kontorsanpassning Stockholm, ombyggnad med drift pågående";
 const description =
-  "Kontorsanpassning i Stockholm. Totalombyggnad av våningsplan med kvarvarande hyresgäst, nya personalrum, kök och moderniserade arbetsytor. Referens: Axfoods huvudkontor.";
+  "Kontorsanpassning i Stockholm med kvarvarande hyresgäst: totalombyggnad av våningsplan, personalrum, kök och arbetsytor. Referens: Axfoods huvudkontor.";
 
 const schema = {
   "@context": "https://schema.org",
@@ -30,6 +30,7 @@ const schema = {
     },
   ],
 };
+import RelatedServices from "../../components/RelatedServices.astro";
 ---
 
 <BaseLayout title={title} description={description} schema={schema}>
@@ -120,6 +121,8 @@ const schema = {
         </div>
       </div>
     </section>
+
+    <RelatedServices />
 
     <CTA />
   </article>

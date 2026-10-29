@@ -5,7 +5,7 @@ import { SITE } from "../../lib/site";
 
 const title = "Balkongrenovering BRF Stockholm, kostnad och process";
 const description =
-  "Balkongrenovering för bostadsrättsföreningar i Stockholm och Mälardalen. Karbonatiserad betong, armeringskorrosion, räckesbyten och tätskikt, fast pris och full dokumentation.";
+  "Balkongrenovering för BRF i Stockholm och Mälardalen. Karbonatiserad betong, armeringskorrosion, räcken och tätskikt. Fast pris och full dokumentation.";
 
 const schema = {
   "@context": "https://schema.org",
@@ -30,6 +30,7 @@ const schema = {
     },
   ],
 };
+import RelatedServices from "../../components/RelatedServices.astro";
 ---
 
 <BaseLayout title={title} description={description} schema={schema}>
@@ -131,6 +132,8 @@ const schema = {
         </div>
       </div>
     </section>
+
+    <RelatedServices />
 
     <CTA />
   </article>

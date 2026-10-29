@@ -1,6 +1,6 @@
 ---
-title: "Skyddsrumsbesiktning för BRF, vad MSB kräver och vad det kostar 2026"
-description: "Så fungerar skyddsrumskontrollen enligt MSB för bostadsrättsföreningar och fastighetsägare. Krav, åtgärdsplan, typiska kostnader och vad du som styrelse bör ha koll på."
+title: "Skyddsrumsbesiktning BRF, MSB-krav och kostnad 2026"
+description: "Så fungerar MSB:s skyddsrumskontroll för BRF och fastighetsägare: krav, åtgärdsplan, typiska kostnader och vad styrelsen bör ha koll på."
 published: 2026-04-24
 category: "Teknik"
 tags: ["skyddsrum", "MSB", "bostadsrättsförening", "besiktning", "Stockholm"]

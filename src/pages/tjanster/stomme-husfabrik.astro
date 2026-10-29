@@ -61,6 +61,7 @@ const schema = {
     },
   ],
 };
+import RelatedServices from "../../components/RelatedServices.astro";
 ---
 
 <BaseLayout title={title} description={description} schema={schema} image="/projekt/lss_stomme1.webp">
@@ -297,6 +298,8 @@ Vill ni bara ha stommen levererad går det lika bra. Vi levererar element och vo
         </div>
       </section>
     )}
+
+    <RelatedServices />
 
     <CTA />
   </article>

@@ -11,6 +11,8 @@ export interface Location {
   referenser?: { slug: string; titel: string; client: string }[];
   tjansteLank: string;
   h1?: string;
+  // Extra unika avsnitt, t.ex. stadsdelar som slagits ihop till en sida.
+  sections?: { h: string; p: string }[];
 }
 
 export const LOCATIONS: Location[] = [
@@ -40,7 +42,7 @@ export const LOCATIONS: Location[] = [
     ort: "Solna",
     title: "Fasadrenovering Solna, BRF och kommersiell fastighet",
     description:
-      "Fasadrenovering i Solna för bostadsrättsföreningar, fastighetsägare och kommuner. Strategisk samarbetspartner till Rocmore med löpande uppdrag åt Signalisten, Solnas allmännyttiga bostadsbolag.",
+      "Fasadrenovering i Solna för BRF, fastighetsägare och kommuner. Löpande uppdrag åt Signalisten, Solnas allmännyttiga bostadsbolag, via Rocmore.",
     intro:
       "Solna är en av våra kärnkommuner. Vi har ramavtal med Rocmore och arbetar löpande mot Signalisten, Solna Stads allmännyttiga bostadsbolag, årlig projektvolym cirka 40 Mkr inom mark, bygg och fasad.",
     localContext:
@@ -134,59 +136,31 @@ export const LOCATIONS: Location[] = [
     ort: "Stockholm",
     title: "Skyddsrum Stockholm, sanering och besiktning",
     description:
-      "Skyddsrumsspecialist i Stockholm. Skyddsrumssanering, skyddsrumsbesiktning, MSB-åtgärder och nyproduktion för bostadsrättsföreningar, fastighetsägare, kommuner och industri.",
+      "Skyddsrum i Stockholm: sanering, besiktning och MSB-åtgärder på Södermalm, Vasastan, Kungsholmen och i övriga staden. För BRF, fastighetsägare och kommuner.",
     intro:
-      "Vi är etablerade skyddsrumsspecialister i Stockholm. Vårt team har lång erfarenhet av MSB-protokoll, betongteknik för skyddsrum och dokumentation som krävs för godkänd status.",
+      "Vi är etablerade skyddsrumsspecialister i Stockholm. Vårt team har lång erfarenhet av MSB-protokoll, betongteknik för skyddsrum och den dokumentation som krävs för godkänd status, från innerstadens stenstadsfastigheter till ersättningsskyddsrum i nyproduktion.",
     localContext:
-      "Stockholms skyddsrumsbestånd är ett av landets äldsta. Många skyddsrum i innerstaden är från 50–70-talet och kräver nu omfattande sanering. Vi hanterar både klassiska föreläggandeprojekt och moderna ersättnings­skyddsrum i nyproduktion.",
-    tjansteLank: "/tjanster/skyddsrum",
-  },
-  {
-    slug: "skyddsrum-sodermalm",
-    service: "skyddsrum",
-    serviceLabel: "Skyddsrumsspecialist",
-    ort: "Södermalm",
-    title: "Skyddsrum Södermalm, sanering och besiktning i innerstaden",
-    description:
-      "Skyddsrumsspecialist på Södermalm. Sanering, besiktning och åtgärd av MSB-brister i innerstadens äldre skyddsrum. Vana av kulturmiljöer och känsliga fastigheter.",
-    intro:
-      "Södermalm har ett av Stockholms äldsta skyddsrumsbestånd. Vi har erfarenhet av både klassiska 50-tals anläggningar under stenstadsfastigheter och moderna ersättnings­skyddsrum i nybyggda kvarter.",
-    localContext:
-      "Arbetet på Södermalm kräver särskild logistik, smala innergårdar, tunga betongtransporter och arbete i bebodd stadsmiljö ställer krav på stöddämpning, vibrationsmätning och snäv APD-plan.",
+      "Stockholms skyddsrumsbestånd är ett av landets äldsta. Många skyddsrum i innerstaden är från 40-, 50- och 60-talet och kräver nu omfattande sanering. Vi hanterar både klassiska föreläggandeprojekt och moderna ersättningsskyddsrum i nyproduktion.",
+    sections: [
+      {
+        h: "Skyddsrum på Södermalm",
+        p: "Södermalm har ett av Stockholms äldsta skyddsrumsbestånd, med klassiska 50-talsanläggningar under stenstadsfastigheter och moderna ersättningsskyddsrum i nybyggda kvarter. Arbetet kräver särskild logistik: smala innergårdar, tunga betongtransporter och arbete i bebodd stadsmiljö ställer krav på vibrationsmätning och en snäv APD-plan. Vi har byggt flera projekt på Södermalm, bland annat grundläggningen av Kvarteret Persikan med skyddsrum åt Stockholmshem.",
+      },
+      {
+        h: "Skyddsrum i Vasastan",
+        p: "Vasastan har en stor andel skyddsrum från sent 40-tal och 50-tal med typiska åldersrelaterade brister: karbonatisering, fuktproblem och otäta slussar. Skyddsrummen ligger oftast i källarplan under kulturhistoriskt värdefulla bostadshus, vilket kräver minimala ingrepp i synliga ytor och kvalitativa återställningar.",
+      },
+      {
+        h: "Skyddsrum på Kungsholmen",
+        p: "Kungsholmen har skyddsrum i både äldre stenstadsfastigheter och moderna kontorskvarter. Här används skyddsrummen ofta som förråd, cykelrum eller parkering i vardagsläge. Vi säkerställer att kravet på iordningställande inom 48 timmar uppfylls utan att den löpande användningen påverkas i onödan.",
+      },
+    ],
     referenser: [
+      { slug: "kvarteret-persikan", titel: "Kvarteret Persikan", client: "Stockholmshem AB" },
       { slug: "t11-katarinahuset", titel: "T11 Katarinahuset & Mosebackebron", client: "Atrium Ljungberg" },
       { slug: "malongen", titel: "Malongen", client: "Habitek Bygg AB" },
-      { slug: "kvarteret-persikan", titel: "Kvarteret Persikan", client: "Stockholmshem AB" },
     ],
-    tjansteLank: "/tjanster/skyddsrum",
-  },
-  {
-    slug: "skyddsrum-vasastan",
-    service: "skyddsrum",
-    serviceLabel: "Skyddsrumsspecialist",
-    ort: "Vasastan",
-    title: "Skyddsrum Vasastan, sanering och besiktning",
-    description:
-      "Skyddsrum-specialist i Vasastan. Skyddsrumssanering, skyddsrumsbesiktning och åtgärd av MSB-brister i stenstadens äldre fastigheter.",
-    intro:
-      "Vasastan har en stor andel skyddsrum från sent 40-tal och 50-tal med typiska åldersrelaterade brister: karbonatisering, fuktproblem och otäta slussar. Vi känner beståndet väl.",
-    localContext:
-      "Stenstadens skyddsrum ligger oftast i källarplan under kulturhistoriskt värdefulla bostadshus. Arbete kräver minimala ingrepp i synliga ytor, kvalitativa återställningar och dialog med kulturhistoriska myndigheter vid behov.",
-    tjansteLank: "/tjanster/skyddsrum",
-  },
-  {
-    slug: "skyddsrum-kungsholmen",
-    service: "skyddsrum",
-    serviceLabel: "Skyddsrumsspecialist",
-    ort: "Kungsholmen",
-    title: "Skyddsrum Kungsholmen, sanering och besiktning",
-    description:
-      "Skyddsrum-entreprenör på Kungsholmen. Sanering, besiktning och åtgärd av MSB-brister. Vana av innerstadslogistik, väggenomföringar och gastäthetskrav.",
-    intro:
-      "Kungsholmen har skyddsrum i både äldre stenstadsfastigheter och moderna kontorskvarter. Vi driver hela kedjan från MSB-protokoll till godkänd status, med fast pris och dokumentation.",
-    localContext:
-      "Kungsholmens mix av bostad och kontor innebär att skyddsrum ofta används som förråd, cykelrum eller parkering i vardagsläge. Vi säkerställer att 48-timmars-kravet uppfylls utan att påverka den löpande användningen i onödan.",
-    tjansteLank: "/tjanster/skyddsrum",
+    tjansteLank: "/tjanster/skyddsrumssanering"
   },
 
   // BETONGRENOVERING
@@ -212,7 +186,7 @@ export const LOCATIONS: Location[] = [
     serviceLabel: "Totalentreprenad",
     ort: "Mälardalen",
     region: "Sigtuna, Knivsta, Uppsala, Norrtälje",
-    title: "Totalentreprenad Mälardalen, Sigtuna, Knivsta, Uppsala, Norrtälje",
+    title: "Totalentreprenad Mälardalen, Sigtuna, Knivsta, Norrtälje",
     description:
       "Totalentreprenad i Mälardalen för kommuner, fastighetsägare och byggherrar. Referens: Engelska skolan Sigtuna, Ledningsomläggning Knivsta, Norrtälje sjukhus.",
     intro:
@@ -278,20 +252,6 @@ export const LOCATIONS: Location[] = [
       { slug: "engelska-skolan-sigtuna", titel: "Engelska skolan Sigtuna", client: "Internationella Engelska skolan" },
     ],
     tjansteLank: "/tjanster/skyddsrum",
-  },
-  {
-    slug: "fasadrenovering-sundbyberg",
-    service: "fasadrenovering",
-    serviceLabel: "Fasadrenovering",
-    ort: "Sundbyberg",
-    title: "Fasadrenovering Sundbyberg, BRF och fastighetsägare",
-    description:
-      "Fasadrenovering i Sundbyberg för bostadsrättsföreningar och fastighetsägare. Putsrenovering, tilläggsisolering, balkonger.",
-    intro:
-      "Sundbybergs blandning av äldre stenstadskvarter och 70-talets miljonprogram ger två olika typer av fasadprojekt. Vi har erfarenhet från båda, antikvariska restaureringar och storskalig putsrenovering.",
-    localContext:
-      "Sundbyberg är Sveriges minsta kommun till ytan men en av de tätaste. Bostadsrättsbeståndet är stort och 70-talets fasader når nu sin underhållscykel. Vårt Stockholmskontor är 15 minuter med tunnelbana.",
-    tjansteLank: "/tjanster/fasad",
   },
   {
     slug: "totalentreprenad-bagartorp",
@@ -388,7 +348,7 @@ export const LOCATIONS: Location[] = [
     ort: "Stockholm",
     title: "Totalentreprenad Stockholm, ABT 06 från 20 Mkr",
     description:
-      "Totalentreprenör i Stockholm. ABT 06 från cirka 20 Mkr och uppåt: nyproduktion, LSS-boenden, kontorsanpassning och komplexa markarbeten. Referens: Axfood huvudkontor.",
+      "Totalentreprenör i Stockholm. ABT 06 från cirka 20 Mkr: nyproduktion, LSS-boenden, kontorsanpassning och komplexa markarbeten. Referens: Axfood.",
     intro:
       "Vi driver totalentreprenader i Stockholm från cirka 20 Mkr och uppåt, gärna projekt med komplexa markarbeten. En avtalspart, egen mark- och byggprojektering och en projektledare genom hela utförandet, från första skiss till inflyttningsklart.",
     localContext:

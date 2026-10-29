@@ -5,6 +5,7 @@ import CTA from "../components/CTA.astro";
 const title = "För kommuner, upphandling, referenser och ramavtal";
 const description =
   "RM Entreprenad & Fasad är etablerad leverantör till kommuner i Stockholms län och Mälardalen. Referens: Lidingö Stad, Sigtuna kommun, Knivsta kommun, Solna Stad.";
+import RelatedServices from "../components/RelatedServices.astro";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -77,6 +78,8 @@ const description =
         </div>
       </div>
     </section>
+
+    <RelatedServices />
 
     <CTA />
   </article>

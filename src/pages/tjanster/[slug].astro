@@ -14,9 +14,16 @@ export function getStaticPaths() {
 
 const { service } = Astro.props;
 
-const relatedProjects = PROJECTS.filter((p) =>
-  p.category.toLowerCase().includes(service.title.split(" ")[0].toLowerCase())
-).slice(0, 3);
+// Explicita referenser för discipliner som inte motsvaras av en projektkategori.
+const relatedBySlug: Record<string, string[]> = {
+  projektering: ["lss-ubby-vallentuna", "norrtalje-sjukhus", "lss-lokremmen-oskarshamn"],
+  fasad: ["vindarnas-tempel", "kaptensstugan", "rocmore-signalisten"],
+};
+const relatedProjects = relatedBySlug[service.slug]
+  ? relatedBySlug[service.slug].map((s) => PROJECTS.find((p) => p.slug === s)).filter((p): p is NonNullable<typeof p> => !!p)
+  : PROJECTS.filter((p) =>
+      p.category.toLowerCase().includes(service.title.split(" ")[0].toLowerCase())
+    ).slice(0, 3);
 
 // SEO-optimerade titlar/descriptions per service-slug. Faller tillbaka till service.title.
 const seoOverrides: Record<string, { title?: string; desc?: string }> = {
@@ -75,7 +82,31 @@ const faqBySlug: Record<string, { q: string; a: string }[]> = {
       a: "Ja. Platsgjutna bottenplattor, källarväggar och skyddsrum är en central del av vår markentreprenad, med egen formsättning, armering och gjutning. Se vår sida om betongarbeten för referenser och arbetssätt.",
     },
   ],
+  projektering: [
+    { q: "Vad innebär det att entreprenören har egen projektering?", a: "Att mark- och byggprojekteringen görs av samma organisation som bygger. Gränssnitten mellan mark, stomme och installationer löses innan produktionen startar, i stället för att upptäckas på byggplatsen. Det ger färre överraskningar, lägre ÄTA-volym och en kostnadsram som håller redan i anbudsskedet." },
+    { q: "Kan ni granska handlingar vi redan har?", a: "Ja. Vi granskar befintliga handlingar före anbud och pekar ut oklara gränssnitt och risker för ÄTA. Underlaget kan sedan användas för både totalentreprenad och utförandeentreprenad." },
+    { q: "Hur minskar projektering ÄTA-kostnaderna?", a: "ÄTA-arbeten uppstår oftast ur ofullständiga handlingar och olösta gränssnitt mellan discipliner. Genomarbetade handlingar och en KMA-plan kopplad till projekteringen gör att färre frågor måste lösas i efterhand, när varje ändring är som dyrast." },
+    { q: "I vilka projekt har ni projekterat själva?", a: "Bland annat LSS-boendet Ubby 1:43 i Vallentuna, där gränssnitten mellan mark, stomme och installationer löstes i projekteringen innan produktionen startade, och sprinklercentralen vid Norrtälje sjukhus, som vi både projekterade och utförde." },
+  ],
+  fasad: [
+    { q: "Vad kostar en fasadrenovering?", a: "Riktpriset i Stockholmsregionen är 1 500 till 3 500 kr per kvadratmeter fasadyta, beroende på om fasaden lagas lokalt, putsas om helt eller tilläggsisoleras. Exakt pris lämnas efter platsbesök och statusbedömning." },
+    { q: "Vad ingår i en fasadrenovering?", a: "Besiktning och statusbedömning, ställning och väderskydd, lagning eller omputsning, målning och vid behov tilläggsisolering. Balkong- och betongåtgärder kan samordnas i samma entreprenad, vilket sparar ställnings- och etableringskostnader." },
+    { q: "Arbetar ni med kulturhistoriska och K-märkta fasader?", a: "Ja. Vi har restaurerat K-märkta byggnader åt Lidingö Stad, bland annat Vindarnas tempel och Kaptensstugan, med antikvarisk kontroll genom hela processen och återanvändning av originalmaterial där det varit möjligt." },
+    { q: "Var utför ni fasadrenovering?", a: "I Stockholm och Mälardalen, bland annat Lidingö, Solna, Sundbyberg, Nacka, Täby, Danderyd och Sollentuna. Se våra lokala sidor för referenser per ort." },
+  ],
 };
+// Fördjupning för discipliner som annars blir tunna sidor.
+const detailsBySlug: Record<string, { h: string; p: string }[]> = {
+  projektering: [
+    { h: "Därför bygger vi med egen projektering", p: "De dyraste problemen i en entreprenad uppstår i gränssnitten: där marken möter stommen, där stommen möter installationerna och där en konsults handlingar möter en annan entreprenörs verklighet. När projekteringen görs av samma organisation som bygger, ägs gränssnitten av en part från start. Därför kan vi lämna en kostnadsram som håller och en tidplan som går att lita på." },
+    { h: "Så går det till", p: "Vi går igenom ert underlag och platsens förutsättningar, granskar befintliga handlingar eller tar fram nya inom mark och bygg, kopplar KMA-planen till projekteringen och löser gränssnitten innan produktionen startar. Resultatet blir ett genomarbetat underlag för anbud och produktion, oavsett om projektet drivs som totalentreprenad enligt ABT 06 eller utförandeentreprenad enligt AB 04." },
+  ],
+  fasad: [
+    { h: "Statusbedömning först", p: "En fasadrenovering börjar med en statusbedömning av putsens, betongens och fogarnas skick. Den visar om fasaden kan lagas lokalt eller behöver putsas om, och om det är rätt tillfälle att tilläggsisolera. Styrelsen får ett underlag som går att fatta beslut och upphandla på." },
+    { h: "Samordnat med balkong och betong", p: "Fasad, balkonger och betong har ofta samma ålder och samma skador. Genom att samordna åtgärderna i en entreprenad delas ställning, etablering och projektledning, vilket sänker kostnaden per åtgärd och kortar tiden med ställning för de boende." },
+  ],
+};
+const details = detailsBySlug[service.slug];
 const faq = faqBySlug[service.slug];
 
 const serviceSchema = {
@@ -103,6 +134,7 @@ const serviceSchema = {
       : []),
   ],
 };
+import RelatedServices from "../../components/RelatedServices.astro";
 ---
 
 <BaseLayout
@@ -155,6 +187,19 @@ const serviceSchema = {
       </div>
     </section>
 
+    {details && (
+      <section class="py-12 lg:py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-12">
+          {details.map((d) => (
+            <div>
+              <h2 class="text-[length:var(--text-h2)] font-semibold tracking-tight mb-6">{d.h}</h2>
+              <p class="text-lg text-[color:var(--color-ink-60)] leading-relaxed">{d.p}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
     {faq && (
       <section class="py-12 lg:py-20">
         <div class="mx-auto max-w-7xl px-6 lg:px-10">
@@ -198,6 +243,8 @@ const serviceSchema = {
         </div>
       </section>
     )}
+
+    <RelatedServices />
 
     <CTA />
   </article>

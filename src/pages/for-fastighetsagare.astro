@@ -6,6 +6,7 @@ import { SITE } from "../lib/site";
 const title = "För fastighetsägare, skalbar partner i Stockholm";
 const description =
   "Vi arbetar åt fastighetsägare i Stockholm och Mälardalen. Ramavtal, löpande underhåll och större entreprenader. Referens: Stockholmshem och Atrium Ljungberg.";
+import RelatedServices from "../components/RelatedServices.astro";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -67,6 +68,8 @@ const description =
         </div>
       </div>
     </section>
+
+    <RelatedServices />
 
     <CTA />
   </article>

@@ -5,6 +5,7 @@ import CTA from "../components/CTA.astro";
 const title = "För omsorgsaktörer, nyproduktion av LSS- och SoL-boenden";
 const description =
   "Byggpartner för omsorgsaktörer. Nyproduktion av LSS- och SoL-boenden på totalentreprenad, pågående i Oskarshamn och Vallentuna, cirka fem boenden per år.";
+import RelatedServices from "../components/RelatedServices.astro";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -73,6 +74,8 @@ const description =
         </div>
       </div>
     </section>
+
+    <RelatedServices />
 
     <CTA />
   </article>

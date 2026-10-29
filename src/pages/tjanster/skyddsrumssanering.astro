@@ -5,7 +5,7 @@ import { SITE } from "../../lib/site";
 
 const title = "Skyddsrumssanering Stockholm, MSB-åtgärd och godkännande";
 const description =
-  "Skyddsrumssanering efter MSB-kontroll i Stockholm och Mälardalen. Sprickor, fuktskador, otäta slussar, ventilation, filterbyte. Riktpriser, tidsplan och MSB-ersättning. Besked inom 48 timmar.";
+  "Skyddsrumssanering efter MSB-kontroll i Stockholm. Sprickor, fukt, otäta slussar, ventilation och filterbyte. Riktpriser, tidsplan och MSB-ersättning.";
 
 const faqs = [
   {
@@ -109,6 +109,7 @@ const fixes = [
     price: "30 000–80 000 kr (kan ersättas av MSB)",
   },
 ];
+import RelatedServices from "../../components/RelatedServices.astro";
 ---
 
 <BaseLayout title={title} description={description} schema={schema}>
@@ -403,6 +404,8 @@ const fixes = [
         </div>
       </div>
     </section>
+
+    <RelatedServices />
 
     <CTA />
   </article>
