@@ -17,7 +17,7 @@ const { service } = Astro.props;
 // Explicita referenser för discipliner som inte motsvaras av en projektkategori.
 const relatedBySlug: Record<string, string[]> = {
   projektering: ["lss-ubby-vallentuna", "norrtalje-sjukhus", "lss-lokremmen-oskarshamn"],
-  fasad: ["vindarnas-tempel", "kaptensstugan", "rocmore-signalisten"],
+  fasad: ["vindarnas-tempel", "kaptensstugan", "signalisten-solna"],
 };
 const relatedProjects = relatedBySlug[service.slug]
   ? relatedBySlug[service.slug].map((s) => PROJECTS.find((p) => p.slug === s)).filter((p): p is NonNullable<typeof p> => !!p)

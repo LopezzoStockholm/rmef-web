@@ -184,17 +184,16 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    slug: "rocmore-signalisten",
-    title: "Rocmore / Signalisten, Solna",
-    client: "Rocmore (strategisk partner) · Signalisten (Solna Stad)",
-    volume: "40 Mkr/år",
-    period: "Löpande avtal",
+    slug: "signalisten-solna",
+    title: "Signalisten, Solna",
+    client: "Signalisten (Solna Stad)",
+    period: "Flera uppdrag sedan 2022",
     category: "Mark & anläggning",
-    type: "Ramavtal · strategiskt partnerskap",
+    type: "Utförandeentreprenad",
     summary:
-      "Långsiktigt ramavtal inom mark och anläggning i Solna. Vi är strategisk samarbetspartner till Rocmore och arbetar direkt mot Signalisten, Solna Stads allmännyttiga bostadsbolag. Uppdrag omfattar grundläggning, schakt, ledningsarbeten, finplanering och markanläggning kring nyproduktion och förvaltning av befintligt bestånd. Årlig projektvolym cirka 40 Mkr.",
+      "Uppdrag inom mark och anläggning åt Signalisten, Solna Stads allmännyttiga bostadsbolag. Grundläggning, schakt, ledningsarbeten, finplanering och markanläggning kring nyproduktion och förvaltning av befintligt bestånd.",
     challenges:
-      "Återkommande arbete i bebodd stadsmiljö med höga krav på samordning mot hyresgäster, trafik och logistik. Långsiktig relation kräver förutsägbar leverans, konsekvent KMA-arbete och dokumentation över tid.",
+      "Återkommande arbete i bebodd stadsmiljö med höga krav på samordning mot hyresgäster, trafik och logistik, med konsekvent KMA-arbete och dokumentation över tid.",
     image: "/projekt/mark_image3.webp",
     imageAlt: "Pågående markarbete i Solna med orange grävmaskin och flerbostadshus i bakgrunden",
     featured: true,
@@ -412,7 +411,7 @@ export const PROJECTS: Project[] = [
 
 export const CLIENTS = [
   { name: "Signalisten", type: "allmännyttan Solna" },
-  { name: "Rocmore", type: "fastighetsutvecklare" },
+  { name: "HSB", type: "bostadsrättsorganisation" },
   { name: "Stockholmshem", type: "allmännyttan" },
   { name: "Atrium Ljungberg", type: "fastighetsägare" },
   { name: "Skanska", type: "generalentreprenör" },

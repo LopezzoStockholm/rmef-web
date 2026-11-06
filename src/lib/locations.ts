@@ -42,13 +42,13 @@ export const LOCATIONS: Location[] = [
     ort: "Solna",
     title: "Fasadrenovering Solna, BRF och kommersiell fastighet",
     description:
-      "Fasadrenovering i Solna för BRF, fastighetsägare och kommuner. Löpande uppdrag åt Signalisten, Solnas allmännyttiga bostadsbolag, via Rocmore.",
+      "Fasadrenovering i Solna för BRF, fastighetsägare och kommuner. Uppdrag åt Signalisten, Solnas allmännyttiga bostadsbolag, sedan 2022.",
     intro:
-      "Solna är en av våra kärnkommuner. Vi har ramavtal med Rocmore och arbetar löpande mot Signalisten, Solna Stads allmännyttiga bostadsbolag, årlig projektvolym cirka 40 Mkr inom mark, bygg och fasad.",
+      "Solna är en av våra kärnkommuner. Sedan 2022 har vi utfört uppdrag inom mark, bygg och fasad åt Signalisten, Solna Stads allmännyttiga bostadsbolag.",
     localContext:
       "Solna har ett stort bestånd av flerbostadshus från 50–80-talet med typiska behov av fasadrenovering och tilläggsisolering. Miljonprogramshus i Hallonbergen, Råsunda och Huvudsta har ofta kombinerade behov, fasad, balkong och betong samordnat.",
     referenser: [
-      { slug: "rocmore-signalisten", titel: "Rocmore / Signalisten", client: "Signalisten" },
+      { slug: "signalisten-solna", titel: "Signalisten, Solna", client: "Signalisten" },
       { slug: "raul-wallenberg-bagartorp", titel: "Raul Wallenbergskolan", client: "Raul Wallenberg Academy" },
     ],
     tjansteLank: "/tjanster/fasad",

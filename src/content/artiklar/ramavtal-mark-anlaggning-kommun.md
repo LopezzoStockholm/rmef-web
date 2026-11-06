@@ -94,7 +94,7 @@ Ett bra ramavtal ska tydligt reglera:
 
 ## Hur RM Entreprenad arbetar med ramavtal
 
-Vi har erfarenhet från **strategiskt partnerskap med Rocmore** för Signalisten i Solna sedan 2022. Vår modell:
+Vi har erfarenhet från återkommande uppdrag åt Signalisten, Solnas allmännyttiga bostadsbolag, sedan 2022. Vår modell:
 
 - **Dedikerad projektledare** för ramavtalet
 - **Veckomöten** med beställarens organisation

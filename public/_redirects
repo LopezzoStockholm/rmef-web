@@ -13,3 +13,7 @@
 /lokalt/skyddsrum-vasastan/   /lokalt/skyddsrum-stockholm/  301
 /lokalt/skyddsrum-kungsholmen  /lokalt/skyddsrum-stockholm/ 301
 /lokalt/skyddsrum-kungsholmen/ /lokalt/skyddsrum-stockholm/ 301
+
+# Projektet bytte adress 2026-11-06 när Rocmore togs bort.
+/projekt/rocmore-signalisten   /projekt/signalisten-solna/  301
+/projekt/rocmore-signalisten/  /projekt/signalisten-solna/  301

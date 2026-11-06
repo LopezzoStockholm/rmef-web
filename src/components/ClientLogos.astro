@@ -15,6 +15,8 @@ type Client = {
   note?: string;
   style: "sans" | "serif" | "bold" | "italic";
   useImage?: boolean;
+  // Filformat i public/clients/. SVG som standard; png när avsändaren bara publicerar raster.
+  ext?: "svg" | "png";
   mode?: "mono" | "color";
   heightClass?: string;
 };
@@ -38,8 +40,9 @@ const categories: Category[] = [
     label: "Allmännytta & bostadsbolag",
     clients: [
       { name: "Stockholmshem", slug: "stockholmshem", style: "serif", note: "75 Mkr grundläggning Persikan", useImage: true, mode: "mono" },
-      { name: "Signalisten", slug: "signalisten", style: "sans", note: "Ramavtal Solna", useImage: true, mode: "mono", heightClass: "max-h-10 lg:max-h-11" },
+      { name: "Signalisten", slug: "signalisten", style: "sans", note: "Uppdrag i Solna", useImage: true, mode: "mono", heightClass: "max-h-10 lg:max-h-11" },
       { name: "Atrium Ljungberg", slug: "atrium", style: "sans", note: "Kontorsfastigheter", useImage: true, mode: "mono" },
+      { name: "HSB", slug: "hsb", style: "bold", note: "Dränering, pågående", useImage: true, mode: "color", heightClass: "max-h-11 lg:max-h-12", ext: "png" },
     ],
   },
   {
@@ -50,7 +53,6 @@ const categories: Category[] = [
       { name: "Patriam", slug: "patriam", style: "italic", note: "Stocksund nyproduktion", useImage: true, mode: "mono" },
       { name: "Skanska", slug: "skanska", style: "bold", note: "Underentreprenad", useImage: true, mode: "mono" },
       { name: "Habitek", slug: "habitek", style: "bold", note: "Totalentreprenad", useImage: true, mode: "mono" },
-      { name: "Rocmore", slug: "rocmore", style: "italic", note: "Strategisk partner" },
     ],
   },
 ];
@@ -101,7 +103,7 @@ const COLOR_TREATMENT = "opacity-90 group-hover:opacity-100";
                 <div class="h-14 lg:h-16 flex items-center">
                   {c.useImage ? (
                     <img
-                      src={`/clients/${c.slug}.svg`}
+                      src={`/clients/${c.slug}.${c.ext ?? "svg"}`}
                       alt={c.name}
                       width="160"
                       height="48"
