@@ -411,6 +411,7 @@ export const PROJECTS: Project[] = [
 
 export const CLIENTS = [
   { name: "Signalisten", type: "allmännyttan Solna" },
+  { name: "SBG", type: "beställare" },
   { name: "HSB", type: "bostadsrättsorganisation" },
   { name: "Stockholmshem", type: "allmännyttan" },
   { name: "Atrium Ljungberg", type: "fastighetsägare" },
