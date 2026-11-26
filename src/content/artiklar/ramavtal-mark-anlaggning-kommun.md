@@ -20,7 +20,7 @@ faq:
 
 ## Kort svar
 
-Ett **ramavtal** är ett upphandlingsavtal för en avtalsperiod (typiskt 2-4 år) där beställaren kan avropa enskilda uppdrag utan ny upphandling per projekt. Vanligt hos kommuner, allmännytta och stora fastighetsbolag som har återkommande behov av mark- och anläggningsarbeten. Vi har ramavtal med Rocmore som strategisk partner till Signalisten (Solna Stad) på cirka 40 Mkr/år.
+Ett **ramavtal** är ett upphandlingsavtal för en avtalsperiod (typiskt 2-4 år) där beställaren kan avropa enskilda uppdrag utan ny upphandling per projekt. Vanligt hos kommuner, allmännytta och stora fastighetsbolag som har återkommande behov av mark- och anläggningsarbeten. Vi har utfört återkommande uppdrag åt Signalisten i Solna sedan 2022.
 
 ## Hur ramavtal fungerar
 
@@ -102,8 +102,6 @@ Vi har erfarenhet från återkommande uppdrag åt Signalisten, Solnas allmännyt
 - **Långsiktig planering** av personal och utrustning
 - **Komplett dokumentation** av varje avropat projekt
 - **KMA-plan** anpassad för ramavtalets typprojekt
-
-Ungefär **40 Mkr/år** levereras inom ramavtalet, med säsongsvariation för markarbeten.
 
 ## Är ramavtal rätt för er organisation?
 

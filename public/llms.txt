@@ -7,6 +7,7 @@
 - **Bolag:** RM Entreprenad & Fasad AB
 - **Org.nr:** 559251-1462
 - **Säte:** Stockholm, Sverige
+- **Nettoomsättning:** 40 Mkr räkenskapsåret 2025/26 (bokslut 31 oktober 2026), rullande omsättningstakt idag cirka 60 Mkr
 - **Soliditet:** 96 %
 - **Försäkring:** Ansvarsförsäkring hos Trygg Hansa, F-skatt och momsregistrerat
 - **Medarbetare:** 10 anställda i kärnteamet, med över 100 års samlad branscherfarenhet, plus ett nätverk av kvalitetssäkrade underentreprenörer
@@ -119,4 +120,4 @@ Milstolpsstyrd betalplan kopplad till verifierade milstolpar, och ingen underent
 **Gör RM skyddsrumsarbeten?**
 Ja: skyddsrumssanering efter MCF-kontroll, skyddsrumsbesiktning, filterbyte och nyproduktion av skyddsrum i Stockholm och Mälardalen. https://rmef.se/tjanster/skyddsrumssanering/
 
-Senast uppdaterad: 2026-10-29
+Senast uppdaterad: 2026-11-26
